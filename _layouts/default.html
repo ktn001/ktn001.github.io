@@ -18,7 +18,6 @@
 
   </head>
   <body>
-
       <header>
 	      <p>page: {{ page.title }}</BR> site: {{site.title}}</BR> git: {{site.github.repository_name}}</p>
         <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
