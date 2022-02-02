@@ -6,7 +6,6 @@
 
 <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="{{ '/assets/css/main.css?v=' | append: site.github.build_revision | relative_url }}">
 
     <script src="https://code.jquery.com/jquery-3.3.0.min.js" integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
@@ -18,16 +17,9 @@
 
   </head>
   <body>
-      <header>
-	      <p>page: {{ page.title }}</BR> site: {{site.title}}</BR> git: {{site.github.repository_name}}</p>
-        <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-        <p>{{ page.description | default: site.description | default: site.github.project_tagline }}</p>
-      </header>
-
+    <header>
       <div id="banner">
         <span id="logo"></span>
-
-        <a href="{{ site.github.repository_url }}" class="button fork"><strong>View On GitHub</strong></a>
         {% if site.show_downloads %}
           <div class="downloads">
             <span>Downloads:</span>
@@ -38,14 +30,12 @@
           </div>
         {% endif %}
       </div><!-- end banner -->
-
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
+        <nav>
+          <ul></ul>
+        </nav>
+    </header>
       <section>
         {{ content }}
-
       </section>
       <footer>
         {% if site.github.is_project_page %}
@@ -54,5 +44,7 @@
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></small></p>
       </footer>
     </div>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="{{ 'assets/js/materialize.min.js' | relative_url }} "></script>
   </body>
 </html>

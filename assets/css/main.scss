@@ -1,6 +1,6 @@
 ---
 ---
 
-header {
-	background-color : #f3f3f3;
-}
+@import "assets/css/materialize/components/color-variables";
+$primary-color: color("grey", "lighten-2") !default;
+@import 'assets/css/materialize/materialize';

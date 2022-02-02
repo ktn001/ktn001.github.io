@@ -1,3 +1,3 @@
-site:
-  title: chargeurVE_config
+title: chargeurVE_config
 description: Plugin <strong>Jeedom</strong> pour chargeurs de véhicules électriques
+show_downloads : true
