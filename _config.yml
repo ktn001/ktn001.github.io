@@ -2,3 +2,9 @@ title: chargeurVE_config
 description: Plugin <strong>Jeedom</strong> pour chargeurs de véhicules électriques
 sass:
   sass_dir: _sass
+
+monNom : ktn
+jeeplugins:
+  - name : chargeurVE
+  - name : swassist
+  - name : defauts

@@ -2,5 +2,39 @@
 ---
 
 @import "materialize/components/color-variables";
-$primary-color: color("grey", "lighten-2") !default;
+$primary-color: color("indigo", "lighten-5") !default;
+$navbar-font-color: color("indigo", "darken-4");
 @import 'materialize/materialize';
+
+body {
+	@extend .grey, .lighten-3;
+}
+
+#slide-out{
+	top: 65px;
+	height: calc(100% - 65px);
+}	
+
+.sidenav {
+	width : 280px;
+	ul {
+		ul {
+			padding-left : 30px;
+		}
+	}
+	li {
+		line-height : 32px;
+	}
+}
+
+#div_content {
+	text-align: justify;
+	padding-left : 200px !important;
+	border-right: 1px solid var(--form-bg-color);
+}
+
+@media only screen and (max-width : 992px) {
+	#div_content {
+		padding-left : 10px !important;
+	}
+}
