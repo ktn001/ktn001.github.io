@@ -1,10 +1,9 @@
 ---
 layout : default
+title : swassist
 ---
 
 # Release notes
-
-[Documentation](index.md)
 
 **IMPORTANT**
 

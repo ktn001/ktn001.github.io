@@ -2,12 +2,23 @@
 ---
 
 @import "materialize/components/color-variables";
-$primary-color: color("indigo", "lighten-5") !default;
 $navbar-font-color: color("indigo", "darken-4");
-@import 'materialize/materialize';
+$primary-color: color("indigo", "lighten-4") !default;
+$sidenav-bg-color: color("indigo", "lighten-4");
+$sidenav-font-color: color("indigo", "darken-2");
+$collapsible-header-color: color("indigo", "lighten-5");
+$sidenav-width: 180px;
 
-body {
-	@extend .grey, .lighten-3;
+$h1-fontsize: 2.5rem !default;
+$h2-fontsize: 2.2rem !default;
+$h3-fontsize: 1.9rem !default;
+$h4-fontsize: 1.6rem !default;
+$h5-fontsize: 1.3rem !default;
+$h6-fontsize: 1.07rem !default;
+@import 'materialize/materialize';
+ 
+html {
+	@extend .indigo, .lighten-5;
 }
 
 #slide-out{
@@ -15,22 +26,48 @@ body {
 	height: calc(100% - 65px);
 }	
 
-.sidenav {
-	width : 280px;
-	ul {
-		ul {
-			padding-left : 30px;
-		}
-	}
-	li {
-		line-height : 32px;
-	}
+#logo_container {
+	height: 60px;
+	padding-top: 5px;
+}
+
+.sidenav li.menu_active > a{
+	background-color: rgba(0, 0, 0, 0.10);
 }
 
 #div_content {
 	text-align: justify;
-	padding-left : 200px !important;
+	padding-left : 10px;
 	border-right: 1px solid var(--form-bg-color);
+	counter-reset: l1;
+	h1, h2, h3, h4, h5, h6 {
+		@extend .indigo-text, .text-darken-4;
+	}
+	h1:not(h1:first-of-type):before {
+		counter-increment: l1;
+		content: counter(l1) ": ";
+	}
+	h1{
+		counter-reset: l2;
+	}
+	h2:before {
+		counter-increment: l2;
+		content: counter(l1) "." counter(l2) ": ";
+	}
+	h2{
+		counter-reset: l3;
+	}
+	h3:before {
+		counter-increment: l3;
+		content: counter(l1) "." counter(l2) "." counter(l3) ": ";
+	}
+	h3{
+		counter-reset: l4;
+	}
+	h4:before {
+		counter-increment: l4;
+		content: counter(l1) "." counter(l2) "." counter(l3) "." counter(l4) ": ";
+	}
 }
 
 @media only screen and (max-width : 992px) {
