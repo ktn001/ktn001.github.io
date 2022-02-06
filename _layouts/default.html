@@ -1,10 +1,7 @@
 <!doctype html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: "fr_FR" }}">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/main.css?v=' | append: site.github.build_revision | relative_url }}">
 
@@ -34,7 +31,7 @@
       </nav>
     </div>
     <div class="container hide-on-print">
-      <div id="slide-out" class="sidenav sidenav-fixed" style="transform: translateX(0px);">
+      <div id="slide-out" class="sidenav sidenav-fixed">
         <ul id="ul_menu" class="collapsible">
           {% for plugin in site.jeeplugins %}
             <li>
@@ -52,10 +49,17 @@
         <ul>
       </div>
     </div>
+
     <div id="div_main" class="row">
-      <div id="div_content">
+      <div id="div_content" class="col s12 m8 offset-m1 xl9 offset xl1">
         {{ content }}
       </div>
+      <div class="col hide-on-small-only m3 xl2">
+	<div id="div_summary" class="spinned" style="overflow: auto; height: 100%; top: 64px">
+	  <ul>
+	    <li>TOTO</li>
+	    <li>LULU</li>
+	  </ul>
     </div>
   </div>
   <!--JavaScript at end of body for optimized loading-->

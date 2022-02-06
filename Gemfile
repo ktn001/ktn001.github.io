@@ -6,3 +6,5 @@ end
 
 gem "webrick", "~> 1.7"
 gem "materialize-sass"
+
+# gem "github-pages", "~> 223", group: :jekyll_plugins

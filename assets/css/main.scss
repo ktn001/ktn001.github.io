@@ -2,23 +2,29 @@
 ---
 
 @import "materialize/components/color-variables";
-$navbar-font-color: color("indigo", "darken-4");
 $primary-color: color("indigo", "lighten-4") !default;
-$sidenav-bg-color: color("indigo", "lighten-4");
-$sidenav-font-color: color("indigo", "darken-2");
+$navbar-font-color: color("indigo", "darken-4");
+$sidenav-bg-color: $primary-color;
 $collapsible-header-color: color("indigo", "lighten-5");
+
+$sidenav-font-color: color("indigo", "darken-4");
+
 $sidenav-width: 180px;
 
-$h1-fontsize: 2.5rem !default;
-$h2-fontsize: 2.2rem !default;
-$h3-fontsize: 1.9rem !default;
-$h4-fontsize: 1.6rem !default;
-$h5-fontsize: 1.3rem !default;
-$h6-fontsize: 1.07rem !default;
+$h1-fontsize: 2.0rem !default;
+$h2-fontsize: 1.8rem !default;
+$h3-fontsize: 1.6rem !default;
+$h4-fontsize: 1.4rem !default;
+$h5-fontsize: 1.0rem !default;
+$h6-fontsize: 1.0rem !default;
 @import 'materialize/materialize';
  
-html {
-	@extend .indigo, .lighten-5;
+body {
+	background-color: color("indigo", "lighten-5");
+}
+
+.sidenav {
+	color: $navbar-font-color;
 }
 
 #slide-out{
@@ -31,47 +37,70 @@ html {
 	padding-top: 5px;
 }
 
-.sidenav li.menu_active > a{
+.sidenav li.menu_active > a:not(:hover){
 	background-color: rgba(0, 0, 0, 0.10);
+	color: color("light-green", "darken-4");
 }
 
 #div_content {
 	text-align: justify;
-	padding-left : 10px;
+	padding-left : 30px;
+	margin-left : $sidenav-width;
 	border-right: 1px solid var(--form-bg-color);
 	counter-reset: l1;
-	h1, h2, h3, h4, h5, h6 {
-		@extend .indigo-text, .text-darken-4;
+	h1, h2, h3, h4 {
+		text-align: left;
+		color: color("indigo","darken-3");
 	}
-	h1:not(h1:first-of-type):before {
+
+	h1.num:before {
 		counter-increment: l1;
 		content: counter(l1) ": ";
 	}
-	h1{
+	h1.num{
 		counter-reset: l2;
 	}
-	h2:before {
+	h2.num:before {
 		counter-increment: l2;
 		content: counter(l1) "." counter(l2) ": ";
 	}
-	h2{
+	h2.num{
 		counter-reset: l3;
 	}
-	h3:before {
+	h3.num:before {
 		counter-increment: l3;
 		content: counter(l1) "." counter(l2) "." counter(l3) ": ";
 	}
-	h3{
+	h3.num{
 		counter-reset: l4;
 	}
-	h4:before {
+	h4.num:before {
 		counter-increment: l4;
 		content: counter(l1) "." counter(l2) "." counter(l3) "." counter(l4) ": ";
 	}
+	h5 {
+		font-weight: bolder;
+		margin-bottom: 0px;
+		margin-left : 20px;
+		+ p {
+			margin-top : 0px;
+			margin-left : 20px;
+		}
+	}
+	h6 {
+		font-weight: bolder;
+		margin-bottom: 0px;
+		margin-left : 40px;
+		+ p {
+			margin-top : 0px;
+			margin-left : 40px;
+		}
+	}
 }
 
-@media only screen and (max-width : 992px) {
+//@media only screen and (max-width : 992px) {
+@media #{$medium-and-down} {
 	#div_content {
-		padding-left : 10px !important;
+		margin : 0px !important;
 	}
 }
