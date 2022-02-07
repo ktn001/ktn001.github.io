@@ -42,12 +42,17 @@ body {
 	color: color("light-green", "darken-4");
 }
 
+#div_main {
+	margin-left : $sidenav-width;
+}
+
 #div_content {
 	text-align: justify;
 	padding-left : 30px;
-	margin-left : $sidenav-width;
 	border-right: 1px solid var(--form-bg-color);
 	counter-reset: l1;
+	border-right: 1px solid color("indigo", "lighten-4");;
+	height: calc(100% - 65px);
 	h1, h2, h3, h4 {
 		text-align: left;
 		color: color("indigo","darken-3");
@@ -96,11 +101,34 @@ body {
 			margin-left : 40px;
 		}
 	}
+	img {
+		max-width:100%;
+	}
 }
 
 //@media only screen and (max-width : 992px) {
 @media #{$medium-and-down} {
-	#div_content {
+	#div_main {
 		margin : 0px !important;
 	}
 }
+
+.tocAnchor {
+	color: color("indigo", "lighten-2");
+	font-size: 0.9rem;
+}
+
+.tocAnchor:hover {
+	color: color("indigo", "darken-3");
+}
+
+.tocAnchor.active {
+	color: color("indigo", "base");
+	font-weight: bolder;
+}
+
+.tocAnchor.active:hover {
+	color: color("indigo", "darken-4");
+	font-weight: bolder;
+}
+

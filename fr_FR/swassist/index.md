@@ -151,12 +151,12 @@ On voit dans le dashboard que les définition des widgets ont été reprises de 
 
 Un click sur l'icône de l'ampoule de l'équipement swassist provoquera l'extinction ou l'allumage de l'équipement assisté. On peut donc rendre l'équipement assisté invisible et l'on utilisera uniquement l'équipement swassist et ses commandes pourront également être utilisées dans les alertes et scénarios à la place des commandes de l'équipement assisté.
 
-## 3.2. Création manuelle ##
+## Création manuelle ##
 {: .num}
 
 A titre d'exemple, nous allons créer manuellement un équipement swassist identique à celui qui a été créé automatiquemen ci-dessus.
 
-### 3.2.1. Création de l'équipement *swassist* ###
+### Création de l'équipement *swassist* ###
 {: .num}
 Ouvrir la page de gestion des équipements du plugin *swassist* et cliquer sur le bouton **ajouter**
 
