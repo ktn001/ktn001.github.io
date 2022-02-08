@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Release notes
 
 **IMPORTANT**

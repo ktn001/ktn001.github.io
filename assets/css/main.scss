@@ -2,14 +2,21 @@
 ---
 
 @import "materialize/components/color-variables";
-$primary-color: color("indigo", "lighten-4") !default;
-$navbar-font-color: color("indigo", "darken-4");
-$sidenav-bg-color: $primary-color;
-$collapsible-header-color: color("indigo", "lighten-5");
+// couleur de la page
+$couleur : "indigo";
 
-$sidenav-font-color: color("indigo", "darken-4");
+// Couleur de base des élément "materialize"
+$primary-color: color( $couleur , "lighten-4"); 
 
+// Caractères de la barre de navigation
+$navbar-font-color: color($couleur, "darken-4");
+
+// Barre de navigation latérale de gauche
+$sidenav-bg-color: color( $couleur, "lighten-2");
+$sidenav-font-color: color($couleur, "darken-4");
+$collapsible-header-color: color($couleur, "lighten-3");
 $sidenav-width: 180px;
+$sidenav-item-height: 25px;
 
 $h1-fontsize: 2.0rem !default;
 $h2-fontsize: 1.8rem !default;
@@ -20,26 +27,45 @@ $h6-fontsize: 1.0rem !default;
 @import 'materialize/materialize';
  
 body {
-	background-color: color("indigo", "lighten-5");
+	background-color: color($couleur, "lighten-5");
 }
 
-.sidenav {
-	color: $navbar-font-color;
+nav .brand-logo {
+	margin-top: 4px;
 }
 
 #slide-out{
 	top: 65px;
 	height: calc(100% - 65px);
+	.title {
+		line-height: 30px;
+		padding-top: 15px;
+		font-weight: 900;
+		font-size: 1.1rem;
+	}
+	li.menu_active {
+		font-weight: 900;
+		background-color: color($couleur, "lighten-4");
+		a {
+			font-weight: 900;
+		}
+	}
+	.divider {
+		background-color: black;
+	}
+	img {
+		margin-top: 3px;
+		margin-right: 5px;
+		height: 25px;
+	}
+	.collapsible .collapsible .collapsible-body a {
+		font-size: 0.8rem;
+	}
 }	
 
 #logo_container {
 	height: 60px;
 	padding-top: 5px;
-}
-
-.sidenav li.menu_active > a:not(:hover){
-	background-color: rgba(0, 0, 0, 0.10);
-	color: color("light-green", "darken-4");
 }
 
 #div_main {
@@ -51,11 +77,11 @@ body {
 	padding-left : 30px;
 	border-right: 1px solid var(--form-bg-color);
 	counter-reset: l1;
-	border-right: 1px solid color("indigo", "lighten-4");;
+	border-right: 1px solid color($couleur, "lighten-4");;
 	height: calc(100% - 65px);
 	h1, h2, h3, h4 {
 		text-align: left;
-		color: color("indigo","darken-3");
+		color: color($couleur,"darken-3");
 	}
 
 	h1.num:before {
@@ -105,8 +131,9 @@ body {
 		max-width:100%;
 	}
 
-	code {
-		background-color: rgba(0,0,0,0.1);
+	div.language-plaintext{
+		font-size: 0.65rem;
+		background-color: color($couleur, "lighten-4");
 	}
 }
 
@@ -118,20 +145,20 @@ body {
 }
 
 .tocAnchor {
-	color: color("indigo", "lighten-2");
+	color: color($couleur, "lighten-2");
 	font-size: 0.9rem;
 }
 
 .tocAnchor:hover {
-	color: color("indigo", "darken-3");
+	color: color($couleur, "darken-3");
 }
 
 .tocAnchor.active {
-	color: color("indigo", "base");
+	color: color($couleur, "base");
 	font-weight: bolder;
 }
 
 .tocAnchor.active:hover {
-	color: color("indigo", "darken-4");
+	color: color($couleur, "darken-4");
 	font-weight: bolder;
 }

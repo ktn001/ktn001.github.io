@@ -1,10 +1,27 @@
-title: chargeurVE_config
-description: Plugin <strong>Jeedom</strong> pour chargeurs de véhicules électriques
 sass:
   sass_dir: _sass
 
 monNom : ktn
-jeeplugins:
-  - name : chargeurVE
-  - name : swassist
-  - name : defauts
+
+docs:
+  Plugins:
+    chargeurVE:
+      icon : chargeurVE_icon.png
+      pages:
+        doc: index.html
+        changeLog: changelog.html
+    swassist:
+      icon : swassist_icon.png
+      pages:
+        doc: index.html
+        changeLog: changelog.html
+    defauts:
+      icon : defauts_icon.png
+      pages:
+        doc: index.html
+        changeLog: changelog.html
+  Utilitaires:
+    traduitjdm: 
+      pages:
+        doc: index.html
+        changeLog: release_notes.html

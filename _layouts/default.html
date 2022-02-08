@@ -16,9 +16,10 @@
             <i class="material-icons">menu</i>
           </a>
           <a id="navTopLeft" class="left hide-on-med-and-down" href="/fr_FR/index.html">Plugins Jeedom de KTN</a>
-	  {% if page.title %}
-	  <img id="logo_container" class="brand-logo center" src="/images/{{page.title}}/{{page.title}}_icon.png"></img>
-	  {% endif %}
+          {% if site.docs.Plugins[page.title].icon %}
+	  {% capture iconPath %}/images/{{page.title}}/{{site.docs.Plugins[page.title].icon}}{% endcapture %}
+	  <img id="logo_container" class="brand-logo center" src="{{iconPath}}"></img>
+          {% endif %}
           <ul class="right hide-on-med-and-down">
             <li>Liens Jeedom:</li>
             <li><a href="https://www.jeedom.com" target="_blank">Site</a></li>
@@ -32,21 +33,38 @@
     </div>
     <div class="container hide-on-print">
       <div id="slide-out" class="sidenav sidenav-fixed">
-        <ul id="ul_menu" class="collapsible">
-          {% for plugin in site.jeeplugins %}
+        <ul id='ul_menu' class='collapsible'>
+          {% for type in site.docs %}
             <li>
-              <div class="collapsible-header" tabindex="0">
-                {{plugin.name}}
-              </div>
+              <div class="title collapsible-header level1">{{ type[0] | upcase }}</div>
               <div class="collapsible-body">
-                <ul>
-                  <li><a href="/fr_FR/{{plugin.name}}/index.html">doc</a></li>
-                  <li><a href="/fr_FR/{{plugin.name}}/changelog.html">changelog</a></li>
+                <ul class="collapsible">
+                  {% for entry in type[1] %}
+                    <li>
+		      <div class="collapsible-header">
+			{% capture plName %}{{entry[0]}}{% endcapture %}
+			{% if site.docs.Plugins[plName].icon %}
+			  <img src="/images/{{entry[0]}}/{{site.docs.Plugins[plName].icon}}"></img>
+			{% endif %}
+			{{entry[0]}}
+		      </div>
+                      <div class="collapsible-body">
+                        <ul>
+                          {% for page in entry[1].pages %}
+                            <li>
+                              <a href="/fr_FR/{{entry[0]}}/{{page[1]}}">{{page[0]}}</a>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </li>
+                  {% endfor %}
                 </ul>
               </div>
-            </li>
+            </li>  
+            <div class="divider"></div>
           {% endfor %}
-        <ul>
+        </ul>
       </div>
     </div>
 
@@ -56,7 +74,7 @@
       </div>
       <div class="col hide-on-small-only m4 xl3">
         <div id="div_summary" class="pinned" style="overflow:auto; height: 100%;">
-	</div>
+        </div>
       </div>
     </div>
     <!--JavaScript at end of body for optimized loading-->

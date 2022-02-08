@@ -8,6 +8,7 @@ title : defauts
 Le plugin **Défauts** permet de détecter des défauts en vérifiant la cohérence entre un état et une mesure.
 
 # Quelques exemples:
+{: .num}
 
 - une lampe allumée mais pas de consommation (ampoule défectueuse ou mauvais signal de retour).
 - Une lampe éteinte mais consomation de plus de 1 watt (mauvais état de retour).
@@ -16,11 +17,13 @@ Le plugin **Défauts** permet de détecter des défauts en vérifiant la cohére
 Le plugin peut aussi remonter des défaut lorsque la valeur d'une mesure s'écarte trop d'une consigne.
 
 # Configuration du plugin
+{: .num}
 Le plugin ne nécessite aucune configuration, il faut juste l’activer.
 
 ![Page de configuration du plugin](/images/defauts/config_plugin.png)
 
 # Les équipements
+{: .num}
 Un équipement **Défauts** permet de surveiller la cohérence de plusieurs combinaisons d'état et de valeur. Une info
 indique pour chacune de ces surveillances si la situation actuelle est cohérente ou non.
 
@@ -28,6 +31,7 @@ De plus, une info **défaut** est activée lorsqu'une surveillance détecte une 
 jusqu'à ce qu'elle soit acquittée même si l'incohérence disparaît.
 
 ## Création
+{: .num}
 Les équipements **Défauts** sont créés sur la page du plugin qui est atteignable via le menu `plugins`==> `Monitoring` ==> `Défauts`.
 L'équipement est créé avec trois commandes:
 + Une commande **defaut**, de type info, qui indique si une incohérence est ou a été détectée par une des surveillances de l'équipement.
@@ -35,7 +39,9 @@ L'équipement est créé avec trois commandes:
 + Une commande **historique**, de type info, qui permet d'afficher les dernières anomalies détectées.
 
 ## Configuration
+{: .num}
 ### De l'équipement
+{: .num}
 Outre les configurations habituelles, l'équipement a deux paramêtres permettant de définir le fonctionnement de l'**Auto acquittement**:
 * **Auto Acquittement**   
    indique si les défauts doivent être acquittés automatiqeuement ou non.
@@ -43,9 +49,11 @@ Outre les configurations habituelles, l'équipement a deux paramêtres permettan
    Le délais d'attente
    
 ### Des surveillances de cohérence
+{: .num}
 Le panneau `surveillances` permet de géger les surveillances de l'équipement. Le bouton `Ajouter une surveillance` ajoute une surveillance de cohérence à l'équipement.
 
 #### Les surveillances de cohérence ont plusieurs paramètres:
+{: .num}
 ![configuration d'une surveillance de cohérence](/images/defauts/config_surveillance.png)
 * ***Nom :*** Nom de la surveillance.
 * ***Etat :*** Info binaire à surveiller.
@@ -60,6 +68,7 @@ Le panneau `surveillances` permet de géger les surveillances de l'équipement. 
 * ***Historiser :*** Historisation de l'info.
 
 ### Des surveillances de consigne
+{: .num}
 ![configuration d'une surveillance de consigne](/images/defauts/config_consigne.png)
 * ***Nom :*** Nom de la surveillance.
 * ***Etat :*** Info binaire utilisée pour controler le fonctonnement de lasurveillance.
@@ -72,6 +81,7 @@ Le panneau `surveillances` permet de géger les surveillances de l'équipement. 
 * ***Historiser :*** Historisation de l'info.
 
 ### De l'historique
+{: .num}
 ![historique](/images/defauts/historique.png)
 
 La commande *historique* et son widget permettent de voir les cinq derniers défauts qui se sont produits. Le nombre d'événements listés est configurable.
@@ -79,6 +89,7 @@ La commande *historique* et son widget permettent de voir les cinq derniers déf
 Une durée de rétention des events listés peut-être configurée. Les events qui se sont produit avant la durée de rétention sont retiré de la liste. Ainsi les events qui se sont produit il y a plus de 2 jours sont retirés de la liste si la rétention est de 2 jours.
 
 #### L'historique a plusieurs paramètres:
+{: .num}
 
 ![configuration de l'historique](/images/defauts/config_histo.png)
 
@@ -98,6 +109,7 @@ Une durée de rétention des events listés peut-être configurée. Les events q
 * ***Afficher :*** Indique si le widget doit être affiché ou non.
 
 ## Exemple
+{: .num}
 
 | Etape | Widget de l'équipement (couleur) | Widget de l'équipement (noir/blanc) | Observations |
 | :---- | :----:  | :----: | :---- |
