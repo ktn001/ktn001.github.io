@@ -7,7 +7,7 @@ function setLeftMenu(){
       if ($(this).closest('li').closest('ul').closest('li')) {
         $(this).closest('li').closest('ul').closest('li').find('.collapsible-header').click().css("font-weight","bolder");
         $collapsHeader = $(this).closest('li').closest('ul').closest('li').find('.collapsible-header')
-	$collapsHeader.closest('li').closest('ul').closest('li').find('.collapsible-header.level1').click();
+	//$collapsHeader.closest('li').closest('ul').closest('li').find('.collapsible-header.level1').click();
         return false
       }
     }
@@ -20,6 +20,8 @@ $(function(){
   })
   $('.sidenav').sidenav();
   $('.collapsible').collapsible();
+  var elem = document.querySelector('.collapsible.expandable');
+  M.Collapsible.init(elem, {accordion: false});
   $('.dropdown-trigger').dropdown();
   setLeftMenu();
 

@@ -33,9 +33,9 @@
     </div>
     <div class="container hide-on-print">
       <div id="slide-out" class="sidenav sidenav-fixed">
-        <ul id='ul_menu' class='collapsible'>
+        <ul id='ul_menu' class='collapsible expandable'>
           {% for type in site.docs %}
-            <li>
+            <li class="active">
               <div class="title collapsible-header level1">{{ type[0] | upcase }}</div>
               <div class="collapsible-body">
                 <ul class="collapsible">
@@ -44,7 +44,7 @@
 		      <div class="collapsible-header">
 			{% capture plName %}{{entry[0]}}{% endcapture %}
 			{% if site.docs.Plugins[plName].icon %}
-			  <img src="/images/{{entry[0]}}/{{site.docs.Plugins[plName].icon}}"></img>
+			<img src="/images/{{entry[0]}}/{{site.docs.Plugins[plName].icon}}"></img>
 			{% endif %}
 			{{entry[0]}}
 		      </div>
@@ -62,7 +62,7 @@
                 </ul>
               </div>
             </li>  
-            <div class="divider"></div>
+	    <li><div class="divider"></div></li>
           {% endfor %}
         </ul>
       </div>

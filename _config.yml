@@ -5,11 +5,11 @@ monNom : ktn
 
 docs:
   Plugins:
-    chargeurVE:
-      icon : chargeurVE_icon.png
-      pages:
-        doc: index.html
-        changeLog: changelog.html
+    #    chargeurVE:
+    #  icon : chargeurVE_icon.png
+    #  pages:
+    #    doc: index.html
+    #    changeLog: changelog.html
     swassist:
       icon : swassist_icon.png
       pages:
