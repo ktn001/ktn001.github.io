@@ -12,8 +12,10 @@ Pour le moment, seule l'intégration de chargeurs ***[Easee](http://easee.com)**
 Le plugin doit être installer via le market Jeedom. Ce plugin est gratuit.
 
 # Configuration
-Après installation du plugin, il faut se rendre sur sa page de configuration et l'activer. 
-Une fois le :
+Après installation du plugin, il faut se rendre sur la page de configuration et effctuer les opérations suivantes: 
++ Activer le plugin
 + Lancer l'installation des dépendances
-+ Sélectionner le(s) modèle(s) de chargeur que l'on vaut intégrer dans son Jeedom
++ Sélectionner le(s) modèle(s) de chargeur que l'on veut intégrer dans son Jeedom
 + Démarrer le démon
+
+# Les comptes 
