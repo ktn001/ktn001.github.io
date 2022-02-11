@@ -3,8 +3,12 @@ layout: default
 ---
 # Release Notes
 
+## v0.10.2 (7/1/2022)
+[tgz](https://github.com/ktn001/traduitjdm/archive/refs/tags/v0.10.2.tar.gz) [zip](https://github.com/ktn001/traduitjdm/archive/refs/tags/v0.10.2.zip)
+
+- Correction de bug (les texte __('...'),__FILE__ n'étaient plus pris en compte
+
 ## v0.10.1 (7/1/2022)
-[tgz](https://github.com/ktn001/traduitjdm/archive/refs/tags/v0.10.1.tar.gz) [zip](https://github.com/ktn001/traduitjdm/archive/refs/tags/v0.10.1.zip)
 
 - Ammélioration de la recherche pour les functions `__()` de php: Les textes peuvent contenir des `\"`ou `\'`
 
