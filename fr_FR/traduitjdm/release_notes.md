@@ -3,6 +3,9 @@ layout: default
 ---
 # Release Notes
 
+## v0.10.3 (12/2/2022)
+[tgz](https://github.com/ktn001/traduitjdm/archive/refs/tags/v0.10.3.tar.gz) [zip](https://github.com/ktn001/traduitjdm/archive/refs/tags/v0.10.3.zip)
+
 ## v0.10.2 (11/2/2022)
 [tgz](https://github.com/ktn001/traduitjdm/archive/refs/tags/v0.10.2.tar.gz) [zip](https://github.com/ktn001/traduitjdm/archive/refs/tags/v0.10.2.zip)
 
