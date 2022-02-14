@@ -3,6 +3,10 @@ layout: default
 ---
 # Release Notes
 
+## v1.0.1 (14/2/2022)
+[tgz](https://github.com/ktn001/traduitjdm/archive/refs/tags/v1.0.1.tar.gz) [zip](https://github.com/ktn001/traduitjdm/archive/refs/tags/v1.0.1.zip)
+- Corrections dans le fichier d'exemple de configuration
+
 ## v1.0.0 (14/2/2022)
 [tgz](https://github.com/ktn001/traduitjdm/archive/refs/tags/v1.0.0.tar.gz) [zip](https://github.com/ktn001/traduitjdm/archive/refs/tags/v1.0.0.zip)
 - Possibilité d'exclure des fichiers ou répertoires pour la recherche de textes à traduire
@@ -13,7 +17,6 @@ layout: default
     - La syntyxe de la liste des langues fournie avec l'option `-l` est modifiée
     - Ajout de nouvelles options permettant de désactiver des options configurées dans le fichier de configuration
 - Amélioration du fichier de configuration (voir le fichier `etc/traduitjdm.cfg.exemple`)
-
 
 ## v0.10.3 (12/2/2022)
 [tgz](https://github.com/ktn001/traduitjdm/archive/refs/tags/v0.10.3.tar.gz) [zip](https://github.com/ktn001/traduitjdm/archive/refs/tags/v0.10.3.zip)
