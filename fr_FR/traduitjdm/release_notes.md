@@ -3,19 +3,17 @@ layout: default
 ---
 # Release Notes
 
-## v0.11.0 (??/??/2022)
+## v1.0.0 (14/2/2022)
+[tgz](https://github.com/ktn001/traduitjdm/archive/refs/tags/v1.0.0.tar.gz) [zip](https://github.com/ktn001/traduitjdm/archive/refs/tags/v1.0.0.zip)
+- Possibilité d'exclure des fichiers ou répertoires pour la recherche de textes à traduire
+- Refonte des optionis de la ligne de commande
+    - options courtes et longues
+    - Les options `-c` et `-C` sont inversées
+    - L'usage de l'option `-f` est modifié
+    - La syntyxe de la liste des langues fournie avec l'option `-l` est modifiée
+    - Ajout de nouvelles options permettant de désactiver des options configurées dans le fichier de configuration
+- Amélioration du fichier de configuration (voir le fichier `etc/traduitjdm.cfg.exemple`)
 
-- Amélioration du code
-- Des option longues ont été ajoutées aux options courtes
-
-| :exclamation: Les options `-c` et `-C` sont inversées |
-|-------------------------------------------------------|
-
-| :explamation: L'usage de l'option `-f` est modifié |
-|----------------------------------------------------|
-
-| :explamation: La syntyxe de la liste des langues fournie avec l'option `-l` est modifiée |
-|------------------------------------------------------------------------------------------|
 
 ## v0.10.3 (12/2/2022)
 [tgz](https://github.com/ktn001/traduitjdm/archive/refs/tags/v0.10.3.tar.gz) [zip](https://github.com/ktn001/traduitjdm/archive/refs/tags/v0.10.3.zip)
