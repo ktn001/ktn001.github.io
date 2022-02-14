@@ -66,12 +66,64 @@ Traduction:
                         sources sont "precedent"s et "core"
   plugin                Le plugin à traduire
 ```
+## Les options en détail
+{: .num}
+
+### Langues
+{: .num}
+
+### Verbose
+{: .num}
+Par défaut, le mode verbose est désactivé.   
+Il peut être activé en utilisant l'option `-v` ou `--verbose` dans la ligne de commande ou en mettaant le paramètre `verbose` à `True` dans le fichier de configuration.L'activation du mode verbose dans le fichier de configuration peut être désactivé lors d'une exécution avec l'option `--noverbose`.
+
+L'activation du mode `debug` (option `-d`) force le mode `verbose`. Le mode `debug` est essentiellement prévu pour le développement du script, les informations affichées lorsque ce mode est activé peuvent changer selon les besoins du développement.
+
+### Couleur
+{: .num}
+Par défaut, les messages d'erreur et de warning sont affichés en couleurs.  
+La colorisation de ces messages peut être désactivée avec l'option `--nocolor` de la ligne de commande ou en mettant le paramèetre `color` à `False` dans le fichier de configuration. Si la colorisation est désactivée dans le fichier de configuration, il est possible de la réactivé lors d'une exécution avec l'option `-C` ou `--color`.
+
+### Backup
+{: .num}
+Par défaut, la sauvegarde des anciens fichiers de traduction est désactivée.  
+La sauvegarde des anciennes version des fichiers de configuration peut être activée avec l'option `-b`ou `--backup` dans la ligne de commande ou en mettant le paramètre `backup`à `True` dans le fichier de configuration. Si la sauvegarde est activéei dans le fichier de configuration, il est possible de la désactier lors d'une exécution avec l'option `--nobackup`.
+
+Lorsque la sauvegarde est activée:
++ Les fichiers nommés `<langue>.json.bck.5` sont supprimés
++ Les fichiers nommés `<langue>.json.bck.N` sont renommés `<langue>.json.bck.<N+1>` (N valant de 1 à 4)
++ Les fichiers nommés `<langue>.json.bck` sont renommés `<langue>.json.bck.1`
++ Les fichiers nommés `<langue>.json` sont renommés `<langue>.json.bck`
+
+### Purge
+{: .num}
+Par défaut, la purge des textes qui ne sont pas/plus dans le code source du plugin n'est pas activée.  
+La purge des anciens texte peut être activée avec l'option `-p` ou `--purge` dans le ligne de commande ou en mettant le paramètre `purge` à `True` dans le fichier de configuration. Si la purge est activée dans le fichier de configuration, il est possible de la désactiver lors d'une exécution avec l'option `--nopurge`.
+
+La purge élimie les textes qui se trouvent dans la dernière version des fichiers de traduction mais n'ont pas été trouvés dans le code du plugin. Le risque est que des textes qui auraient été ajouté manuellement pourcontourné un cas particulier non reconnus pas tradiutjdn soient éliminés.
+
+### Indentation
+{: .num}
+Par défaut, les indentations dans les fichiers de traduction sont de quatre caractères d'espacement.
+On peut utiliser des tabulations pour les indentation avec l'option `-t` ou `--tab` dans la ligne de commande ou en mettant le paramètre `tab` à `True` dans le fichier de configuration. Si l'utilisation de tabulation est ectivée dans le fichier de configuration, il est possible de la désactiver lors d'une exécution avec l'option `--notab`.
+
+### Répertoire Jeedom
+{: .num}
+Par défaut, Jeedom est installé dans le répertoire `/var/www/html` et le plugin à trduire doit se trouver dans le répertoire `plugins` est dans le répertoire de base de l'installation Jeedom.
+Le chemine d'accès à Jeedom, et au plugin à traduire, peut être redéfini avec l'option `-j` ou `--JeeDir` dans la ligne de commande ou en dèfimissant le paramètre `JeedomDir` dans le fichier de configuration.
+
+### Exclusion de fichiers source
+{: .num}
+
+# Le fichier de configuration
+{: .num}
+Des fichiers ou répertoires peuvent être erplus de la recheche de textes à traduire en utilisant l'option `-x` ou `--exclude
 
 # Principe de fonctionnement
 {: .num}
 ## Recherche des textes à traduire
 {: .num}
-**traduitjdm** commence par constuire une lise des textes à traduire en cherchant les textes dans le code du plugin puis en y ajoutant les textes trouvés lors d'exécutions précédentes qui se trouvent dans le fichier de traduction existant.
+**traduitjdm** commence par constuire une lise des textes à traduire en cherchant les textes dans le code du plugin puis en y ajoutant les textes trouvés lors d'exécutions précédentes qui se trouvent dans le fichier de traduction existant. Les textes resultants d'exécution précédentes peuvent être explus s'ils ne se trouvent plus dans le code du plusgin en utilisant l'option `--purge`.
 
 ## Recherche de traductions
 {: .num}
@@ -81,7 +133,7 @@ Traduction:
 2. Dans le **core** de Jeedom.
     Les traductions définies dans le *core* de Jeedom sont récupérées.
 
-Les textes traduits par la fonction `__('texte',__FILE__)` dans les scripts phpdoivent être encdrés par des quotes ou double quotes (`'` ou `"`). De plus, ils ne doivent pas contenir le caractère d'encadrement. 
+Les textes traduits par la fonction `__('texte',__FILE__)` dans les scripts php doivent être encadrés par des quotes ou double quotes (`'` ou `"`). De plus, ils ne doivent pas contenir le caractère d'encadrement. 
 
 ## Sélection des traductions
 {: .num}
