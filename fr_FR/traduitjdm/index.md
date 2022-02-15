@@ -3,9 +3,9 @@ layout: default
 ---
 # Documentation de "*traduitjdm*"
 
-*traduitjdm* est un programme, en Python, d'aide à la traduction des plugins de [Jeedom](http://jeedom.com)
-
-Le programme peut être téléchargé depuis la page [release_note](release_notes.html)
+---
+> *traduitjdm* est un programme, en Python, d'aide à la traduction des plugins de [Jeedom](http://jeedom.com)   
+> Le programme peut être téléchargé depuis la page [release_note](release_notes.html)
 
 # Introduction
 {: .num}
@@ -60,7 +60,7 @@ Traduction:
                         Liste des langues cibles
   -x EXCLUDE, --exclude EXCLUDE
                         Fichiers ou répertoires à exclure des traductions
-  --noexclude           Fichiers ou répertoires à exclure des traductions
+  --noexclude           Pas d'exclusion de fichiers et répertoires 
   -f source1[,source2 ...], --force source1[,source2 ...]
                         Ordre de priorité des sources de traduction. Les
                         sources sont "precedent"s et "core"
@@ -69,55 +69,63 @@ Traduction:
 ## Les options en détail
 {: .num}
 
-### Langues
-{: .num}
+**Langues**:
+: Aucune langue n'est définie par défaut.
+: Les langues cible des traductions peuvent être indiquées via l'option `-l` ou `--langues` de la ligne de commande ou en mettant la liste des langues dans le paramètre `langues` du fichier de configuration.
+: La listes des langues confgurée dasn le fichier de configuration est ignorée si l'option `-l`ou `--langues` est utilisée.
 
-### Verbose
-{: .num}
-Par défaut, le mode verbose est désactivé.   
-Il peut être activé en utilisant l'option `-v` ou `--verbose` dans la ligne de commande ou en mettaant le paramètre `verbose` à `True` dans le fichier de configuration.L'activation du mode verbose dans le fichier de configuration peut être désactivé lors d'une exécution avec l'option `--noverbose`.
+**Verbose**:
+: Par défaut, le mode verbose est désactivé.
+: Il peut être activé en utilisant l'option `-v` ou `--verbose` dans la ligne de commande ou en mettaant le paramètre `verbose` à `True` dans le fichier de configuration.L'activation du mode verbose dans le fichier de configuration peut être désactivé lors d'une exécution avec l'option `--noverbose`.
+: L'activation du mode `debug` (option `-d`) force le mode `verbose`. Le mode `debug` est essentiellement prévu pour le développement du script, les informations affichées lorsque ce mode est activé peuvent changer selon les besoins du développement.
 
-L'activation du mode `debug` (option `-d`) force le mode `verbose`. Le mode `debug` est essentiellement prévu pour le développement du script, les informations affichées lorsque ce mode est activé peuvent changer selon les besoins du développement.
+**Couleur**:
+: Par défaut, les messages d'erreur et de warning sont affichés en couleurs.
+: La colorisation de ces messages peut être désactivée avec l'option `--nocolor` de la ligne de commande ou en mettant le paramèetre `color` à `False` dans le fichier de configuration. Si la colorisation est désactivée dans le fichier de configuration, il est possible de la réactivé lors d'une exécution avec l'option `-C` ou `--color`.
 
-### Couleur
-{: .num}
-Par défaut, les messages d'erreur et de warning sont affichés en couleurs.  
-La colorisation de ces messages peut être désactivée avec l'option `--nocolor` de la ligne de commande ou en mettant le paramèetre `color` à `False` dans le fichier de configuration. Si la colorisation est désactivée dans le fichier de configuration, il est possible de la réactivé lors d'une exécution avec l'option `-C` ou `--color`.
+**Backup:**
+: Par défaut, la sauvegarde des anciens fichiers de traduction est désactivée.
+: La sauvegarde des anciennes version des fichiers de configuration peut être activée avec l'option `-b`ou `--backup` dans la ligne de commande ou en mettant le paramètre `backup`à `True` dans le fichier de configuration. Si la sauvegarde est activéei dans le fichier de configuration, il est possible de la désactier lors d'une exécution avec l'option `--nobackup`.
+: 
+: Lorsque la sauvegarde est activée:
+: + Les fichiers nommés `<langue>.json.bck.5` sont supprimés
+: + Les fichiers nommés `<langue>.json.bck.N` sont renommés `<langue>.json.bck.<N+1>` (N valant de 1 à 4)
+: + Les fichiers nommés `<langue>.json.bck` sont renommés `<langue>.json.bck.1`
+: + Les fichiers nommés `<langue>.json` sont renommés `<langue>.json.bck`
 
-### Backup
-{: .num}
-Par défaut, la sauvegarde des anciens fichiers de traduction est désactivée.  
-La sauvegarde des anciennes version des fichiers de configuration peut être activée avec l'option `-b`ou `--backup` dans la ligne de commande ou en mettant le paramètre `backup`à `True` dans le fichier de configuration. Si la sauvegarde est activéei dans le fichier de configuration, il est possible de la désactier lors d'une exécution avec l'option `--nobackup`.
+**Purge:**
+: Par défaut, la purge des textes qui ne sont pas/plus dans le code source du plugin n'est pas activée.
+: La purge des anciens texte peut être activée avec l'option `-p` ou `--purge` dans le ligne de commande ou en mettant le paramètre `purge` à `True` dans le fichier de configuration. Si la purge est activée dans le fichier de configuration, il est possible de la désactiver lors d'une exécution avec l'option `--nopurge`.
+:
+: La purge élimie les textes qui se trouvent dans la dernière version des fichiers de traduction mais n'ont pas été trouvés dans le code du plugin. Le risque est que des textes qui auraient été ajouté manuellement pourcontourné un cas particulier non reconnus pas tradiutjdn soient éliminés.
 
-Lorsque la sauvegarde est activée:
-+ Les fichiers nommés `<langue>.json.bck.5` sont supprimés
-+ Les fichiers nommés `<langue>.json.bck.N` sont renommés `<langue>.json.bck.<N+1>` (N valant de 1 à 4)
-+ Les fichiers nommés `<langue>.json.bck` sont renommés `<langue>.json.bck.1`
-+ Les fichiers nommés `<langue>.json` sont renommés `<langue>.json.bck`
+**Indentation:**
+: Par défaut, les indentations dans les fichiers de traduction sont de quatre caractères d'espacement.
+: On peut utiliser des tabulations pour les indentation avec l'option `-t` ou `--tab` dans la ligne de commande ou en mettant le paramètre `tab` à `True` dans le fichier de configuration. Si l'utilisation de tabulation est ectivée dans le fichier de configuration, il est possible de la désactiver lors d'une exécution avec l'option `--notab`.
 
-### Purge
-{: .num}
-Par défaut, la purge des textes qui ne sont pas/plus dans le code source du plugin n'est pas activée.  
-La purge des anciens texte peut être activée avec l'option `-p` ou `--purge` dans le ligne de commande ou en mettant le paramètre `purge` à `True` dans le fichier de configuration. Si la purge est activée dans le fichier de configuration, il est possible de la désactiver lors d'une exécution avec l'option `--nopurge`.
+**Répertoire Jeedom:**
+: Par défaut, Jeedom est installé dans le répertoire `/var/www/html` et le plugin à trduire doit se trouver dans le répertoire `plugins` est dans le répertoire de base de l'installation Jeedom.
+: Le chemine d'accès à Jeedom, et au plugin à traduire, peut être redéfini avec l'option `-j` ou `--JeeDir` dans la ligne de commande ou en dèfimissant le paramètre `JeedomDir` dans le fichier de configuration.
 
-La purge élimie les textes qui se trouvent dans la dernière version des fichiers de traduction mais n'ont pas été trouvés dans le code du plugin. Le risque est que des textes qui auraient été ajouté manuellement pourcontourné un cas particulier non reconnus pas tradiutjdn soient éliminés.
-
-### Indentation
-{: .num}
-Par défaut, les indentations dans les fichiers de traduction sont de quatre caractères d'espacement.
-On peut utiliser des tabulations pour les indentation avec l'option `-t` ou `--tab` dans la ligne de commande ou en mettant le paramètre `tab` à `True` dans le fichier de configuration. Si l'utilisation de tabulation est ectivée dans le fichier de configuration, il est possible de la désactiver lors d'une exécution avec l'option `--notab`.
-
-### Répertoire Jeedom
-{: .num}
-Par défaut, Jeedom est installé dans le répertoire `/var/www/html` et le plugin à trduire doit se trouver dans le répertoire `plugins` est dans le répertoire de base de l'installation Jeedom.
-Le chemine d'accès à Jeedom, et au plugin à traduire, peut être redéfini avec l'option `-j` ou `--JeeDir` dans la ligne de commande ou en dèfimissant le paramètre `JeedomDir` dans le fichier de configuration.
-
-### Exclusion de fichiers source
-{: .num}
+**Exclusion de fichiers source:**
+: Par défaut, aucun fichier ou répertoire n'est exclus.
+: L'option `-x` ou `--exclude` de la ligne de commande et le paramètre `exclude` dans le fichier de configuraion permettent d'indiquer une liste de fichiers ou répertoires à exclure de la recherche de textes à traduire. Il est possible de désactiver des exclusions définies dans le fichier de configuration n utilisant l'option `--noexclude`.
 
 # Le fichier de configuration
 {: .num}
-Des fichiers ou répertoires peuvent être erplus de la recheche de textes à traduire en utilisant l'option `-x` ou `--exclude
+
+Le fichier de configuration par défaut est le fichier `../etc/tradtuitjdm.cfg` (relatif au répartoire où se trouve `traduitjdm`.
+> Si traduitjmd se trouve dans `/home/jeedom/traduitjdm/bin`, le fichier de config par défaut sera `/home/jeedom/traduitjdm/etc/traduitjdm.conf`
+
+> `traduitjdm` retourne un message d'erreur et termine son exécution s'il ne trouve pas le fichier de configuration. Dans ce cas, on peut:
+> + Utiliser l'option `--noconfig`
+> + Créer un fichier de configuration vide
+> + Utiliser l'option `-c <configFile>` pour indiquer le nom d'un fichier de configuration autre que le fichier par défaut.
+
+Le caractère `#` marque le début d'un commentaire qui se termine à la fin de la ligne.
+
+Le fichier est subdivisé en sections (Actuellement seule la section `global` est reconnue). Chaque section commence par une ligne contenant le nom de la section entre des crochets `[global]`.  
+Dans chaques section, on a des lignes de définition de paramètre sous la forme `parametre = valeur`. Voir le contenu du fichier `etc/traduitjdm.cfg.exemple` pour la liste des paramèetre reconnus et la syntaxes de valeurs correspondantes.
 
 # Principe de fonctionnement
 {: .num}
@@ -133,14 +141,13 @@ Des fichiers ou répertoires peuvent être erplus de la recheche de textes à tr
 2. Dans le **core** de Jeedom.
     Les traductions définies dans le *core* de Jeedom sont récupérées.
 
-Les textes traduits par la fonction `__('texte',__FILE__)` dans les scripts php doivent être encadrés par des quotes ou double quotes (`'` ou `"`). De plus, ils ne doivent pas contenir le caractère d'encadrement. 
+Les textes traduits par la fonction `__('texte',__FILE__)` dans les scripts php doivent être encadrés par des quotes ou double quotes (`'` ou `"`). De plus, ils ne doivent pas contenir le caractère d'encadrement.
 
 ## Sélection des traductions
 {: .num}
 Pour chaque texte à traduire une traduction sera reprise de l'une des soures de traduction dans l'ordre de piorité suivant:
-
 1. Traduction trouvée dans la version précédente.
 1. Traduction trouvée dans le core.
 1. Si aucune traduction n'a été trouvée, on garde le texte en français comme proposition de traduction.
 
-L'option `-f core` force l'usage de la traduction trouvée dans le core en priorité 
+L'option `-f core` force l'usage de la traduction trouvée dans le core en priorité
