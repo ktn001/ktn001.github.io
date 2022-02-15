@@ -10,7 +10,7 @@ layout: default
 # Introduction
 {: .num}
 {% raw %}
-Les textes dans les interfaces Jeedom peuvent être affichés en diverses langues selon le context. Pour celà, les textes devant pouvoir être affichés en différentes langues doivent être marqués sous la forme `{{texte à afficher}}` ou `__("texte à afficher".__FILE__)`. Les traductions de ces textes sont configurées dans des fichiers placés dans le répertoire `core/i18n` du plugin.
+Les textes dans les interfaces Jeedom peuvent être affichés en diverses langues selon le contexte. Les textes devant être affichés en différentes langues doivent être marqués sous la forme `{{texte à afficher}}` ou `__("texte à afficher".__FILE__)`. Les traductions de ces textes sont configurées dans des fichiers placés dans le répertoire `core/i18n` du plugin.
 
 Le but de **traduitjdm** est de chercher les occurrences `{{texte à afficher}}` et `__("texte à afficher",__FILE__)` dans le code d'un plugin et de créer les fichiers de traductions dans `core/i18n`.
 {% endraw %}
@@ -72,7 +72,7 @@ Traduction:
 **Langues**:
 : Aucune langue n'est définie par défaut.
 : Les langues cible des traductions peuvent être indiquées via l'option `-l` ou `--langues` de la ligne de commande ou en mettant la liste des langues dans le paramètre `langues` du fichier de configuration.
-: La listes des langues confgurée dasn le fichier de configuration est ignorée si l'option `-l`ou `--langues` est utilisée.
+: La listes des langues confgurée dans le fichier de configuration est ignorée si l'option `-l` ou `--langues` est utilisée.
 
 **Verbose**:
 : Par défaut, le mode verbose est désactivé.
@@ -85,7 +85,7 @@ Traduction:
 
 **Backup:**
 : Par défaut, la sauvegarde des anciens fichiers de traduction est désactivée.
-: La sauvegarde des anciennes version des fichiers de configuration peut être activée avec l'option `-b`ou `--backup` dans la ligne de commande ou en mettant le paramètre `backup`à `True` dans le fichier de configuration. Si la sauvegarde est activéei dans le fichier de configuration, il est possible de la désactier lors d'une exécution avec l'option `--nobackup`.
+: La sauvegarde des anciennes version des fichiers de configuration peut être activée avec l'option `-b` ou `--backup` dans la ligne de commande ou en mettant le paramètre `backup` à `True` dans le fichier de configuration. Si la sauvegarde est activéei dans le fichier de configuration, il est possible de la désactier lors d'une exécution avec l'option `--nobackup`.
 : 
 : Lorsque la sauvegarde est activée:
 : + Les fichiers nommés `<langue>.json.bck.5` sont supprimés
