@@ -6,11 +6,13 @@ layout: default
 #### v1.0.2 (14/2/2022)
 [tgz](https://github.com/ktn001/traduitjdm/archive/refs/tags/v1.0.2.tar.gz) [zip](https://github.com/ktn001/traduitjdm/archive/refs/tags/v1.0.2.zip)
 - Corrections de l'aide pour l'option `--noexclude`
+- La version retournée par l'option `-v` n'a pas été mise à jour
 
 ---
 #### v1.0.1 (14/2/2022)
 [tgz](https://github.com/ktn001/traduitjdm/archive/refs/tags/v1.0.1.tar.gz) [zip](https://github.com/ktn001/traduitjdm/archive/refs/tags/v1.0.1.zip)
 - Corrections dans le fichier d'exemple de configuration
+- La version retournée par l'option `-v` n'a pas été mise à jour
 
 ---
 #### v1.0.0 (14/2/2022)
