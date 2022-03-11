@@ -3,6 +3,16 @@ layout: default
 ---
 # Release Notes
 ---
+#### v1.0.4 (11/3/2022)
+[tgz](https://github.com/ktn001/traduitjdm/archive/refs/tags/v1.0.4.tar.gz) [zip](https://github.com/ktn001/traduitjdm/archive/refs/tags/v1.0.4.zip)
+- Correction de bugs
+    - Typo
+    - Traitement de l'option "jeedomDir" du fichier de configuration
+    - Traitement des exclusions
+
+Merci à @mguyard
+
+---
 #### v1.0.3 (23/2/2022)
 [tgz](https://github.com/ktn001/traduitjdm/archive/refs/tags/v1.0.3.tar.gz) [zip](https://github.com/ktn001/traduitjdm/archive/refs/tags/v1.0.3.zip)
 - Correction du traitement du fichier de config par défaut
