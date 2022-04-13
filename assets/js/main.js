@@ -46,3 +46,6 @@ $(function(){
   $('.scrollspy').scrollSpy();
 })
 
+$('blockquote p img[title*="bulb"]').closest('blockquote').css('background', "#70db70");
+$('blockquote p img[title*="bulb"]').closest('p').css('text-indent', '-40px').css('margin-left', '40px').css('margin-right','1em');
+$('blockquote p img[title*="bulb"]').attr('width','30').attr('height','30');
