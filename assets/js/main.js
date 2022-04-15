@@ -31,6 +31,7 @@ $(function(){
     $(this).attr('id',id)
     if($(this).is('h1')){
       $('#div_summary ul').append('<li><a href="#'+id+'" class="tocAnchor">'+$(this).text()+'</a></li>')
+      $(this).after('<hr>')
     }
     if($(this).is('h2')){
       $('#div_summary ul').append('<li><a href="#'+id+'" class="tocAnchor" style="margin-left:10px;">'+$(this).text()+'</a></li>')

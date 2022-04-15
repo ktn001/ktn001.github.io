@@ -3,23 +3,22 @@ layout: default
 title: EVcharger
 ---
 # Introduction
+{: .num}
 
-Le plugin **EVchargerVE** est conçu de manière à ce que l'on puisse y intégrer divers types de bornes de charge. Cette documentation décrit la la procédure pour ajouter un types de bornes.
+Le plugin **EVchargerVE** est conçu de manière à ce que l'on puisse y intégrer divers types de bornes de charge. Cette documentation décrit la procédure pour ajouter le support d'un modeèle de borne.
 
-A terme, un développeur devrait pouvoir ajouter le support d'un type de borne puis faire un PM dans github pour demander l'intégration des modification dans la branche beta puis master du plugin.
+A terme, un développeur devrait pouvoir ajouter le support d'un medèle de borne puis faire un PM dans github pour demander l'intégration des modifications dans la branche beta puis master du plugin.
 
 Merci d'informer `ktn` via le forum de la communauté Jeedom si vous désirez intégrer un nouveau type de chargeur. Ceci permettra d'éviter que deux personnes effectuent l'intégration d'un même modèle de borne sans coordination.
-<br/>
-<br/>
 # Création du modèle
 {: .num}
-___________
+
 ## Nom du modèle
 {: .num}
 
-Un nom unique doit être choisi pour le modèle de chargeur à intégrer. Le liste des modèle existants peut être déterminiée en consultant le fichier `core/config/models.ini` du plugin. Le nom de chaque section de ce fichier correspond à un modèle. Il faut donc choisir un nom de modèle qui ne corresponde pas à une section existante.
+Un nom unique doit être choisi pour le modèle de chargeur à intégrer. La liste des modèles déjà intégrés peut être déterminée en consultant le fichier `core/config/models.ini` du plugin. Le nom de chaque section de ce fichier correspond à un modèle. Il faut donc choisir un nom de modèle qui ne corresponde pas à une section existante.
 
-Le premier caratère du nom du modèle ne doit pas être `_`. Dans ce tuto, le nom du modèle sera représenté par `<model>` et les exemples seront basés sur la création d'un modèle nommé `virtual`
+Le premier caratère du nom du modèle ne doit pas être `_`. Dans ce tuto, le nom du modèle sera représenté par `<model>` et les exemples seront basés sur la création du modèle nommé `virtual`
 
 Une fois le nom défini, il faut éditer le fichier `core/config/model.ini` pour y ajouter une section dont le nom sera le nom du modèle. Cette section contiendra la définition du paramèetre `label` qui sera le nom du modèle qui sera affiché dans l'interface utilisateur.
 
@@ -39,7 +38,7 @@ Les images des accounts et chargeurs du modèle sont placées dans le répertoir
 {: .num}
 Un choix de différentes images d'account peut être proposé à l'utilisateur. Les fichiers image des accounts doivent être placés dans le répertoire `desktop/img/<model>` et respecter les règles suivantes:
 
- + Le nom du fichier doit être `account.png` ou `account_XXX.png` (`XXX` est une chaîne de caractères quelquonques)
+ + Le nom du fichier doit être `account.png` (s'il n'y en a qu'un seul) ou `account_XXX.png` (`XXX` est une chaîne de caractères quelquonques)
  + La hauteur de l'image doit être égale à la largeur (100x100 pixels par exemple).
  + Le fond de l'image doit être transparent
  + L'image doit être bien visible dans les différents thèmes de Jeedom.
@@ -50,7 +49,7 @@ Un choix de différentes images d'account peut être proposé à l'utilisateur. 
 {: .num}
 Un choix de différentes images de chargeurs peut être proposé à l'utilisateur. Les fichiers image des chargeurs doivent être placés dans le répertoire `desktop/img/<model>` et respecter les règles suivantes:
 
- + Le nom du fichier doit être `charger.png` ou `charger.png` (`XXX` est une chaîne de caractères quelquonques)
+ + Le nom du fichier doit être `charger.png` (s'il n'y en a qu'un seul) ou `charger_XXX.png` (`XXX` est une chaîne de caractères quelquonques)
  + Le rapport largeur/hauteur doit être de 3/4 (300x400 pixels par exemple)
  + Le fond de l'image doit être transparent
  + L'image doit être bien visible dans les différents thèmes de Jeedom.
@@ -94,11 +93,8 @@ Editer le fichier `core/class/EVcharger_account.class.php` pour y ajouter `requi
 require_once __DIR__ . '/EVcharger_account_easee.class.php';
 require_once __DIR__ . '/EVcharger_account_virtual.class.php';
 ```
-<br/>
-<br/>
 # Test de l'intégration du modèle
 {: .num}
-_________________
 
 ## Activation du modèle
 {: .num}

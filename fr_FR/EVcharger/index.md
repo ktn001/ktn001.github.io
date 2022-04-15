@@ -3,6 +3,7 @@ layout: default
 title: EVcharger
 ---
 # Description
+{: .num}
 
 Le plugin **EVchargerVE** permet d'intégrer des chargeurs pour véhicules électriques dans Jeedom.
 
