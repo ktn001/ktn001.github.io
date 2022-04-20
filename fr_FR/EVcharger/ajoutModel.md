@@ -165,7 +165,7 @@ rounding = 2
 : Le nom de la commande ne sera pas affiché dans le widget si ce paramèetre est à *0*
 
 **group**
-: Le groupe auquel cette commande appartient. Voir pls bas comment les paramètres du groupe sont repris dans la cnfiguration de la commande.
+: Le groupe auquel cette commande appartient. Voir plus bas comment les paramètres du groupe sont repris dans la configuration de la commande.
 
 **name**
 : Le nom de la commande. (Aucune gestion multilingue n'est implémentée pour le moment).
@@ -205,4 +205,36 @@ rounding = 2
 **visible**
 : Indique si le widget est visible ou non.
 
+### Les groupes de commandes
+{: .num}
 
+Des commandes qui partagent un certains nombre de paramètres peuvent être rassemblées dans un groupe. Les paramètres du groupe seront repris comme paramètres des commandes s'ils ne sont pas redéfinis dans la commande.
+
+Les groupes sont définis dans des section comme les commandes sauf que le nom de la section de sera pas un logicalId mais la chaine de caractères `group:` suivie du nom du groupe. Les commandes qui appartiennent au groupe doivent avoir le paramètre `group` dont la valeur est le nom du groupe.
+
+##### Exemple de group de commandes
+
+```
+[group:voltage]
+required = no
+type=info
+subType = numeric
+unite = V
+rounding = 0
+
+[voltage_1]
+group = voltage
+name = tension phase 1
+order = 12
+
+[voltage_2]
+group = voltage
+name = tension phase 2
+order = 13
+
+[voltage_3]
+group = voltage
+name = tension phase 3
+order = 14
+```
+On pourra redéfinir le paramètre `required` du groupe *voltage* à `yes` pour que le trois commandes *voltage_#* soient créées. Si le modèle de chargeur n'est pas triphasé mais monophasé, il faudra définir le paramètre `required` à `yes` uniquement pour la commande *voltage_1*.
