@@ -117,6 +117,7 @@ require_once __DIR__ . '/EVcharger_account_virtual.class.php';
 
 ## Ajout d'un chargeur
 {: .num}
+
 + Revenir sur la page de configuration des équipements du plugin.
 + Cliquer sur *Ajouter un chargeur*.
 + Saisir un nom de chargeur (*Ctest* par exemple) et sélectionner le modèle.     
@@ -125,116 +126,12 @@ require_once __DIR__ . '/EVcharger_account_virtual.class.php';
 + Vérifier si les images de chargeur peuvent être sélectionnées.   
    ![Images du chargeur](/images/EVcharger/test1/SelectChargerImage.png)
 
-# Configuration des commandes
+# Configuration des commandes des chargeurs
 {: .num}
 
-Les commandes sont définies de manière globale dans le fichier `core/config/cmd.config.ini`. Les paramètres de configuration peuvent être redéfinis pour le modèle dans le fichier `core/config/<model>/cmd.config.ini`.
-
-Une description des commandes définies dans le fichier global se trouve à la page <a href="cmdCharger.html" target="_blank">Cmd des chargeurs</a>
-
-## Syntaxe du fichier de configuration des commandes
-{: .num}
-
-Les fichiers de configuration des commandes sont subdivisés en sections dont le nom est le *logicalId* d'une commande ou le nom d'un groupe de commandes.
-
-##### Exemple d'une section définissaant une commande
-```
-[power]
-required = no
-type = info
-subType = numeric
-name = Puissance
-order = 8
-display::graphStep = 1
-unite = kW
-rounding = 2
-```
-
-### Les paramètres de définition de commandes
-{: .num}
-
-**calcul**
-: Formule de calcul. Ce paramètre est utilisé pour les commandes des types infos dont la valeur ne provient pas directement d'un équipement mais est le résultat d'un calcul.
-: Une info de l'équipement peut être utilisée dans le calcul en indiquant son *logicalid* entre deux *#*
-: **exemple**: `calcul = #cable_locked# + 2 * #cable_locked_permanently#`
-
-**display::graphStep**
-: Le graphique de l'historique sera afficher en *escalier* si ce paramètre est à *1*
-
-**displayName**
-: Le nom de la commande ne sera pas affiché dans le widget si ce paramèetre est à *0*
-
-**group**
-: Le groupe auquel cette commande appartient. Voir plus bas comment les paramètres du groupe sont repris dans la configuration de la commande.
-
-**name**
-: Le nom de la commande. (Aucune gestion multilingue n'est implémentée pour le moment).
-
-**order**
-: Position de la commande dans la liste des commandes. Ce paramètre influence la position du wigdet dans la tuile de l'équipement.
-
-**required**
-: Ce paramètre doit avoir une des trois valeur suivantes:
-	+ **yes**
-	: Commande obligatoire pour le modèle
-
-	+ **optional**
-	: Commande optionnelle pour le modèle
-
-	+ **no**
-	: Commende pas implémentée pour le modèle
-
-**rounding**
-: Arrondissement (nombre de chiffre apès la virgule) de la valeur.
-
-**subType**
-: Sous-type de la commande
-
-**template**
-: texte
-
-**type**
-: type (*info* ou *action*) de la commande.
-
-**unite**
-: Unité de la mesure
-
-**value**
-: Le *logicalId* de la commande de type *info* qui est associé à l'*action*
-
-**visible**
-: Indique si le widget est visible ou non.
-
-### Les groupes de commandes
-{: .num}
-
-Des commandes qui partagent un certains nombre de paramètres peuvent être rassemblées dans un groupe. Les paramètres du groupe seront repris comme paramètres des commandes s'ils ne sont pas redéfinis dans la commande.
-
-Les groupes sont définis dans des section comme les commandes sauf que le nom de la section de sera pas un logicalId mais la chaine de caractères `group:` suivie du nom du groupe. Les commandes qui appartiennent au groupe doivent avoir le paramètre `group` dont la valeur est le nom du groupe.
-
-##### Exemple de group de commandes
-
-```
-[group:voltage]
-required = no
-type=info
-subType = numeric
-unite = V
-rounding = 0
-
-[voltage_1]
-group = voltage
-name = tension phase 1
-order = 12
-
-[voltage_2]
-group = voltage
-name = tension phase 2
-order = 13
-
-[voltage_3]
-group = voltage
-name = tension phase 3
-order = 14
-```
-On pourra redéfinir le paramètre `required` du groupe *voltage* à `yes` pour que le trois commandes *voltage_#* soient créées. Si le modèle de chargeur n'est pas triphasé mais monophasé, il faudra définir le paramètre `required` à `yes` uniquement pour la commande *voltage_1*.
++ Créer un répertoire `core/config/<model>`.
+: `mkdir core/config/virtual`
++ Se placer dans le répertoire créer.
+: `cd core/config/virtual`
++ Créer un fichier de configuration des commandes avec les sections vides
+: `egrep '(^\[)|(^\s*$)' ../cmd.config.ini > cmd.config.ini`
