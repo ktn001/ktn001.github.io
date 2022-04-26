@@ -19,7 +19,7 @@ Liste de toutes les commandes (info et action) qui peuvent être attribuées à 
 
 **Etat**
 
-> | *logicalId:* state | *type:* info | *subType:* numeric |
+> | *logicalId:* status | *type:* info | *subType:* numeric |
 >
 > Cette info numérique indique l'état du véhicule connecté au chargeur.
 >
