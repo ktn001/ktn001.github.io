@@ -130,6 +130,15 @@ rounding = 2
 : Une info de l'équipement peut être utilisée dans le calcul en indiquant son *logicalid* entre deux *#*
 : **exemple**: `calcul = #cable_locked# + 2 * #cable_locked_permanently#`
 
+**destination**
+: Valable uniquement pour les commandes de type *action"
+: Ce paramètre doit avoir une des valeurs suivantes;
+	+ ***charger***
+	: La commande sera envoyée au chargeur.
+
+	+ ***cmd***
+	: La commande sera envoyée à un équipement d'un plugin tiers
+
 **display::graphStep**
 : Le graphique de l'historique sera afficher en *escalier* si ce paramètre est à *1*
 
@@ -159,7 +168,7 @@ rounding = 2
 **rounding**
 : Arrondissement (nombre de chiffre apès la virgule) de la valeur.
 
-**Source**
+**source**
 : Valable uniquement pour les commandes de type *info*.
 : Ce paramètre doit avoir une des valeurs suivantes:
 	+ ***deamon***
