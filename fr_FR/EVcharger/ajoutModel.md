@@ -126,12 +126,100 @@ require_once __DIR__ . '/EVcharger_account_virtual.class.php';
 + Vérifier si les images de chargeur peuvent être sélectionnées.   
    ![Images du chargeur](/images/EVcharger/test1/SelectChargerImage.png)
 
-# Configuration des commandes des chargeurs
+# Configurations
+{: .num}
+
+## Configurations du modèle
 {: .num}
 
 + Créer un répertoire `core/config/<model>`.
 : `mkdir core/config/virtual`
++ Créer et éditer le fichier `core/config/<model>/config.ini`
+: Ce fichier doit contenir une section nommée *charger* avec le paramèetre *identifiant*
+: Ce paramètre indique quel est la configuration des équipements *EVcharger_charger_<model>* qui permet d'identifier le chargeur dans les API du chargeur lorsque qu'un même copte est utilisé pour gérer plusieurs chageurs.
+##### Exemple pour le modèle *Easee*:
+    ```
+    [charger]
+    identifiant = serial
+    ```
+
+## Configuration du chargeur
+{: .num}
+
+### Panneau de configuration
+{: .num}
+
+Le panneau de configuration des chargeurs permet la saisie des configurations standards de Jeedom  et des paramètre génériques valables pour tous la modèles de chargeurs (la position GPS du chargeur et le compte associé par exemple).
+
+##### Config chargeur générique:
+  ![Config chargeur générique](/images/EVcharger/configChargeurVirtual.png)
+
+Certains modèles de chargeurs peuvent nécessité l'ajout de paramètres spécifique. Le numéro se série des chargeurs Easee par exemple.
+
+Dans ce cas, il faut:
+1. Créer un répertoire `desktop/php/<model>`
+1. Créer un fichier nommé `desktop/php/<model>/charger_params.inc.php`. Ce fichier doit contenir, ou générer, les tag HTML pour la saisie des configuration spécifiques.
+##### Code pour la saisie du numéro de série:
+    ```
+    <div class='form-group'>
+      <label class="col-sm-3 control-label">{{N° de série}}</label>
+      <div class="col-sm-7">
+        <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="serial" placeholder="{{N° du chargeur}}"/>
+      </div>
+    </div>
+    ```
+
+##### Config chargeur avec numéro de série:
+  ![Config chargeur avec numéro de série](/images/EVcharger/configChargeurEasee.png)
+
+### Configuration des commandes des chargeurs
+{: .num}
+
 + Se placer dans le répertoire créer.
 : `cd core/config/virtual`
 + Créer un fichier de configuration des commandes avec les sections vides
 : `egrep '(^\[)|(^\s*$)' ../cmd.config.ini > cmd.config.ini`
++ Editer le fichier `core/config/<model>/cmd.config.ini
+: Voir *Configuration des commandes" sur la page [Cmd des chargeurs](cmdCharger.html)
+
+Pour vérifier les configurations, allez sur la page des commandes du chargeur créé plus haut et utilisez:
++ Le bouton **Créer les commandes manquante** pour créer les commandes.
++ Le bouton **Reconfigurer les commandes** pour mettre à jour les commandes existantes.
++ Les commandes qui n'ont pas le paramètre *required* à **yes** peuvent être supprimées puis recréées. Le chargeur doit être sauvegarder entre la suppression des commande et leurs recréations.
++ Il est aussi possible de supprimer le chargeur puis de la recréer. Les commandes seront créées avec la chargeur.
+
+# Code d'exécution des commandes de type "*action*"
+{: .num}
+
+## Les commandes ayant "*cmd*" comme destination
+{: .num}
+
+Les commandes ayant le paramètre *destination* à **cmd** sont traitées par le 'core' du plugin.
+
+## Les commandes ayant "*charger*" comme destination
+{: .num}
+
+Une méthode nommée `execute_<logicalId>` doit être créée dans la classe `EVcharger_account_<model>`. Cette méthode prend la commande en argument et doit envoyer l'instrauction au chargeur (via le deamon, les API, ...) pour qu'il effectue l'opération demandées.
+
+##### Exemple pour l'execution de *cable_lock* (dans *core/class/EVcharger_account_easee.class.php*)
+```
+class EVcharger_account_easee extends EVcharger_account {
+  ...
+  ...
+  private function sendRequest($path, $data = '', $token='' ) {
+    //
+    // Envoi de la requête au cloud Easee 
+    //
+  }
+  ...
+  ...
+  public function execute_cable_lock($cmd) {
+    $serial = $cmd->getEqLogic()->getConfiguration("serial");
+    $path = '/api/chargers/' . $serial . '/commands/lock_state';
+    $data = array ( 'state' => 'true');
+    $this->sendRequest($path, $data);
+  }
+  ...
+  ...
+}
+```
