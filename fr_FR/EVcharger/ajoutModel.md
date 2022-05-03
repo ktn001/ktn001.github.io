@@ -38,7 +38,7 @@ Les images des accounts et chargeurs du modèle sont placées dans le répertoir
 {: .num}
 Un choix de différentes images d'account peut être proposé à l'utilisateur. Les fichiers image des accounts doivent être placés dans le répertoire `desktop/img/<model>` et respecter les règles suivantes:
 
- + Le nom du fichier doit être `account.png` (s'il n'y en a qu'un seul) ou `account_XXX.png` (`XXX` est une chaîne de caractères quelquonques)
+ + Le nom du fichier doit être `account.png` (s'il n'y en a qu'un seul) ou `account_XXX.png` (`XXX` est une chaîne de caractères quelconques)
  + La hauteur de l'image doit être égale à la largeur (100x100 pixels par exemple).
  + Le fond de l'image doit être transparent
  + L'image doit être bien visible dans les différents thèmes de Jeedom.
@@ -49,7 +49,7 @@ Un choix de différentes images d'account peut être proposé à l'utilisateur. 
 {: .num}
 Un choix de différentes images de chargeurs peut être proposé à l'utilisateur. Les fichiers image des chargeurs doivent être placés dans le répertoire `desktop/img/<model>` et respecter les règles suivantes:
 
- + Le nom du fichier doit être `charger.png` (s'il n'y en a qu'un seul) ou `charger_XXX.png` (`XXX` est une chaîne de caractères quelquonques)
+ + Le nom du fichier doit être `charger.png` (s'il n'y en a qu'un seul) ou `charger_XXX.png` (`XXX` est une chaîne de caractères quelconques)
  + Le rapport largeur/hauteur doit être de 3/4 (300x400 pixels par exemple)
  + Le fond de l'image doit être transparent
  + L'image doit être bien visible dans les différents thèmes de Jeedom.
@@ -188,6 +188,9 @@ La saisie de ces paramètres peut être ajoutée au panneau de config des compte
 
 > :bulb: Les configurations nommées *password* sont automatiquement encryptées dans la base de donnée.
 
+##### Config compte générique:
+  ![Config compte avec paramètres spécifique](/images/EVcharger/configCompteEasee.png)
+
 ## Configuration du chargeur
 {: .num}
 
@@ -205,6 +208,7 @@ Dans ce cas, il faut:
 1. Créer un répertoire `desktop/php/<model>`
 1. Créer un fichier nommé `desktop/php/<model>/charger_params.inc.php`. Ce fichier doit contenir, ou générer, les tag HTML pour la saisie des configuration spécifiques.
 ##### Code pour la saisie du numéro de série:
+{% raw %}
     ```
     <div class='form-group'>
       <label class="col-sm-3 control-label">{{N° de série}}</label>
@@ -213,6 +217,7 @@ Dans ce cas, il faut:
       </div>
     </div>
     ```
+{% endraw %}
 
 ##### Config chargeur avec numéro de série:
   ![Config chargeur avec numéro de série](/images/EVcharger/configChargeurEasee.png)
@@ -268,3 +273,9 @@ class EVcharger_account_easee extends EVcharger_account {
   ...
 }
 ```
+
+# Le deamon
+{: .num}
+
+## Les thread
+{: .num}
