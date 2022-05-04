@@ -279,3 +279,30 @@ class EVcharger_account_easee extends EVcharger_account {
 
 ## Les thread
 {: .num}
+
+## Adaptation des valeurs retournées par le chargeur
+{: .num}
+
+Les valeurs retournées par le chargeur ipour une info peuvent ne pas correspondre aux valeurs attendues par le plugin.
+
+Le chargeur peut, par exemple, retourner les valeurs suivantes pour l'info 'status':
++ disconnectd
++ waiting
++ charging
++ charged
++ ready
++ error
+
+alors que le plugin attend des valeur allant de 1 à 6. Dans ce cas, il faut créer un fichier `core/config/<model>/transforms.ini` avec une section dont la nom est le logicalId de la commande. Les paramètres de la section seront les valeurs retournée par le chargeur et la valeur de ces paramètres sera la valeur attendue par le plugin.
+
+##### Section *status* du fichier `transforms.ini` pour l'exemple ci-dessu:
+```
+[status]
+disconnectd = 1
+waiting = 2
+charging = 3
+charged = 4
+ready = 5
+error = 6
+```
+
