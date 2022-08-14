@@ -32,6 +32,12 @@ Liste de toutes les commandes (info et action) qui peuvent être attribuées à 
 > | 5 | Erreur | Erreur | ![](/images/EVcharger/compact_5.png) |
 > | 6 | Prêt | Chargeur prêt | ![](/images/EVcharger/compact_6.png) |
 
+**Vehicule**
+
+> | *logicalId:* vehicle | *type:* info | *subType:* numeric |
+>
+> Id du véhicule branché au chargeur. (0 si pas de véhicule connecté)
+
 ## Connection du câble au chargeur
 {: .num}
 Ces commandes sont prévues pour les chargeurs qui n'ont pas de câble attaché mais un connecteur.
@@ -171,8 +177,8 @@ rounding = 2
 **source**
 : Valable uniquement pour les commandes de type *info*.
 : Ce paramètre doit avoir une des valeurs suivantes:
-	+ ***deamon***
-	: L'info sera mise à jour par le deamon.
+	+ ***daemon***
+	: L'info sera mise à jour par le daemon ou le plugin.
 
 	+ ***calcul***
 	: La valeur de l'info est la résultat d'un calcul

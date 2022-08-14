@@ -12,6 +12,10 @@ docs:
       pages:
         doc: index.html
         changeLog: changelog.html
+    EaseeCharger:
+      icon: EaseeCharger_icon.png
+      pages:
+        doc: index.html
     EVcharger:
       icon : EVcharger_icon.png
       pages:
