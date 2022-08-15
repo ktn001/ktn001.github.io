@@ -31,6 +31,7 @@ $(function(){
     $(this).attr('id',id)
     if($(this).is('h1')){
       $('#div_summary ul').append('<li><a href="#'+id+'" class="tocAnchor">'+$(this).text()+'</a></li>')
+      $(this).after('<hr>')
     }
     if($(this).is('h2')){
       $('#div_summary ul').append('<li><a href="#'+id+'" class="tocAnchor" style="margin-left:10px;">'+$(this).text()+'</a></li>')
@@ -46,3 +47,6 @@ $(function(){
   $('.scrollspy').scrollSpy();
 })
 
+$('blockquote p img[title*="bulb"]').closest('blockquote').css('background', "#70db70");
+$('blockquote p img[title*="bulb"]').closest('p').css('text-indent', '-40px').css('margin-left', '40px').css('margin-right','1em');
+$('blockquote p img[title*="bulb"]').attr('width','30').attr('height','30');

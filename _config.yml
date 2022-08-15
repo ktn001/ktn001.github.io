@@ -1,3 +1,5 @@
+plugins:
+  - jemoji
 sass:
   sass_dir: _sass
 
@@ -5,18 +7,24 @@ monNom : ktn
 
 docs:
   Plugins:
-    #    chargeurVE:
-    #  icon : chargeurVE_icon.png
-    #  pages:
-    #    doc: index.html
-    #    changeLog: changelog.html
-    swassist:
-      icon : swassist_icon.png
+    defauts:
+      icon : defauts_icon.png
       pages:
         doc: index.html
         changeLog: changelog.html
-    defauts:
-      icon : defauts_icon.png
+    EaseeCharger:
+      icon: EaseeCharger_icon.png
+      pages:
+        doc: index.html
+    EVcharger:
+      icon : EVcharger_icon.png
+      pages:
+        doc utilisateurs: index.html
+        changeLog: changelog.html
+        Ajout d'un modèle: ajoutModel.html
+        Cmd des chargeurs: cmdCharger.html
+    swassist:
+      icon : swassist_icon.png
       pages:
         doc: index.html
         changeLog: changelog.html

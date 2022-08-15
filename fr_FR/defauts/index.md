@@ -108,7 +108,7 @@ Une durée de rétention des events listés peut-être configurée. Les events q
 
 * ***Afficher :*** Indique si le widget doit être affiché ou non.
 
-## Exemple
+# Exemples
 {: .num}
 
 | Etape | Widget de l'équipement (couleur) | Widget de l'équipement (noir/blanc) | Observations |
