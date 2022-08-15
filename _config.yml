@@ -16,13 +16,13 @@ docs:
       icon: EaseeCharger_icon.png
       pages:
         doc: index.html
-    EVcharger:
-      icon : EVcharger_icon.png
-      pages:
-        doc utilisateurs: index.html
-        changeLog: changelog.html
-        Ajout d'un modèle: ajoutModel.html
-        Cmd des chargeurs: cmdCharger.html
+    #EVcharger:
+    #  icon : EVcharger_icon.png
+    #  pages:
+    #    doc utilisateurs: index.html
+    #    changeLog: changelog.html
+    #    Ajout d'un modèle: ajoutModel.html
+    #    Cmd des chargeurs: cmdCharger.html
     swassist:
       icon : swassist_icon.png
       pages:
