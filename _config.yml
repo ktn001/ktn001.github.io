@@ -16,6 +16,7 @@ docs:
       icon: EaseeCharger_icon.png
       pages:
         doc: index.html
+        changeLog: changelog.html
     #EVcharger:
     #  icon : EVcharger_icon.png
     #  pages:

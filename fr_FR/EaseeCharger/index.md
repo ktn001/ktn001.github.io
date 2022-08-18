@@ -225,3 +225,10 @@ Le tableau suivant montre les différente icônes en fonction de l'état du vér
     </tr>
   </tbody>
 </table>
+
+### Mise en pose de la charge
+{: .num}
+
+![pause](/images/EaseeCharger/btn_pause.png) : Mise en pause le la charge
+
+![continue](/images/EaseeCharger/btn_continue.png) : Preprendre une charge qui a été mise en pause
