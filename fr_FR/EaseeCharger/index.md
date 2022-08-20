@@ -27,8 +27,7 @@ Le plugin s'installe de manière standard depuis le market de Jeedom. Après l'a
     : Numéro du port TCP utilisé pour la communication entre Jedon et le démon. Le port 34739 est configuré par défaut un autre port peut être défini en cas de conflit avec un autre plugin ou logiciel qui utilise le même port.
 
     + ***Debug étendu***
-    : Le module Python du démon qui assure la communication avec le cloud Easee est très verbeux lorsqu'il est en mode `debug`.
-    : Par défaut, le niveau de log de ce module est celui du plugin mais il sera à `info` si le niveau de log du plugin est `debug` et que l'option "**Debug étendu**" n'est pas activée.
+    : Le module Python du démon qui assure la communication avec le cloud Easee envoi des "ping" toutes les 5 secondes pour maintenir la connection. Chaque "ping", et ses réponses, génèrent 5 messages de log de niveau `debug`. Ces messages de log sont supprimé lorsque l'option **Debug étendu** n'est pas activée.
 
 **Sécurité**   
 :   
