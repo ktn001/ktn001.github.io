@@ -41,8 +41,8 @@ L'équipement est créé:
 
   * A la réception d'une commande **ouvrir** ou **fermer**
      * Le store s'ouvre ou se ferme. :smile:
-     * Si le store est complètement fermé, il y aurra une attente du temp de décollage configuré avant qu'il ne commence à monter.
-     * L'info **puissance** prend la valeur configurée pour la montée ou le descente du store.
+     * Si le store est complètement fermé, il y aura une attente du temps de décollage configuré avant qu'il ne commence à monter.
+     * L'info **puissance** prend la valeur configurée pour la montée ou la descente du store.
 
 
 ## Lorsque le store est en mouvement
