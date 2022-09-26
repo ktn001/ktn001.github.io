@@ -11,7 +11,7 @@ Pour le moment, seule l'intégration de chargeurs ***[Easee](http://easee.com)**
 
 # Installation
 {: .num}
-Le plugin doit être installer via le market Jeedom. Ce plugin est gratuit.
+Le plugin doit être installé via le market Jeedom. Ce plugin est gratuit.
 
 # Configuration
 {: .num}
