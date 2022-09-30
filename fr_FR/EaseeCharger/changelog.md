@@ -1,6 +1,6 @@
 ---
 layout : default
-title : defauts
+title : EaseeCharger
 ---
 # Release notes
 
