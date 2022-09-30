@@ -8,9 +8,11 @@ title : defauts
 
 Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
 
-### next
+### 30/09/2022 (Beta)
 * Le port de démon n'est plus réinitialisé à la valeur par defaut lors de l'activation de plugin
 * Une class a été renommée dans le code php
+* Infos pour la qualité des signeaux wifi et cellulaire
+* Création d'un widget pour les équipements EaseeCharger (sans le bouton de mise en pause de la charge)
 
 ### 24/08/2022 (Beta)
 * La port de démon n'est plus réinitialisé à la valeur par defaut lors de l'activation de plugin

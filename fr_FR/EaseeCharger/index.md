@@ -98,6 +98,9 @@ Le démon n'est pas notifié lorsque le login ou le password d'un compte est mod
    + **N° de série**  
       Le numéro de série tel qu'il doit être saisi, par exemple, dans l'app Easee pour smartphone.
 
+   + **Widget parsonalisé**   
+      Ne pas utiliser le wigdet standard de Jeedom mias le widget spécifique pour les équipements EaseeCharger.
+
    + **Couleur**  
       Couleur du chargeur. Permet de définir l'icon du chargeur.
 
@@ -127,6 +130,8 @@ Les chargeurs sont créés avec les commandes suivantes:
 | Tension phase 1 | info | numeric | Tension phase 1 |
 | Tension phase 2 | info | numeric | Tension phase 2 |
 | Tension phase 3 | info | numeric | Tension phase 3 |
+| Signal wifi | info | numeric | Force du signal wifi (0 si communication via le réseau cellulaire) |
+| Signal cellulaire | info | numeric | Force du signal cellulaire (0 si communication via le réseau wifi) |
 
 + Le bouton ![créer les commandes manquantes](/images/EaseeCharger/btn_creer_cmds.png) permet de recréer les commandes qui ont été supprimées.
 + Le bouton ![Reconfigurer les commandes](/images/EaseeCharger/btn_reconfig_cmds.png) reconfigure les commandes avec les valeurs par défaut. 
@@ -225,7 +230,7 @@ Le tableau suivant montre les différente icônes en fonction de l'état du vér
   </tbody>
 </table>
 
-### Mise en pose de la charge
+### Mise en pause de la charge
 {: .num}
 
 ![pause](/images/EaseeCharger/btn_pause.png) : Mise en pause le la charge
