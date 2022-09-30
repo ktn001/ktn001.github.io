@@ -8,6 +8,9 @@ title : EaseeCharger
 
 Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
 
+### next
+* Transarence des tuiles du widget pour visibilité du graphique de fond
+
 ### 30/09/2022 (Beta)
 * Le port de démon n'est plus réinitialisé à la valeur par defaut lors de l'activation de plugin
 * Une class a été renommée dans le code php
