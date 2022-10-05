@@ -24,15 +24,15 @@ Le plugin s'installe de manière standard depuis le market de Jeedom. Après l'a
 **Démon**
 : Les configurations du démon:
     + ***Port***
-    : Numéro du port TCP utilisé pour la communication entre Jedon et le démon. Le port 34739 est configuré par défaut un autre port peut être défini en cas de conflit avec un autre plugin ou logiciel qui utilise le même port.
+    : Numéro du port TCP utilisé pour la communication entre Jeedom et le démon. Le port 34739 est configuré par défaut, un autre port peut être défini en cas de conflit avec un autre plugin ou logiciel qui utilise le même port.
 
     + ***Debug étendu***
-    : Le module Python du démon qui assure la communication avec le cloud Easee envoi des "ping" toutes les 5 secondes pour maintenir la connection. Chaque "ping", et ses réponses, génèrent 5 messages de log de niveau `debug`. Ces messages de log sont supprimé lorsque l'option **Debug étendu** n'est pas activée.
+    : Le module Python du démon qui assure la communication avec le cloud Easee envoi des "ping" toutes les 5 secondes pour maintenir la connection. Chaque "ping", et ses réponses, génèrent 5 messages de log de niveau `debug`. Ces messages de log sont supprimés lorsque l'option **Debug étendu** n'est pas activée.
 
 **Sécurité**   
 :   
     + ***Log non sécurisé***
-    : Les données sensibles (password, token, etc...) sont remplacées dans les logs par des `********`. L'option "**Log non sécurisé**" désactive de remplacement et laisse les données sensenbles en clair dans les logs.
+    : Les données sensibles (password, token, etc...) sont remplacées dans les logs par des `********`. L'option "**Log non sécurisé**" désactive le remplacement et laisse les données sensibles en clair dans les logs.
 
 # Les comptes
 {: .num}
@@ -42,12 +42,12 @@ Un compte permet d'accéder au cloud Easee pour gérer un ou plusieurs chargeurs
 ## Création d'un compte
 {: .num}
 
-1. Sur la page de gestion du plugin, cliquer sur l'icône de création d'un comptes:  
+1. Sur la page de gestion du plugin, cliquer sur l'icône de création d'un compte:  
 ![Icone de création de compte](/images/EaseeCharger/icone_creation_compte.png)
 
 1. Saisir le nom du compte  
 ![Saisie nom su compte](/images/EaseeCharger/saisie_nom_compte.png)  
-  > :bulb: Une fois enregistré, le nom du compte ne peux plus être modifié.
+  > :bulb: Une fois enregistré, le nom du compte ne peut plus être modifié.
 
 1. Saisir le login et le password pour se connecter au cloud et activer le compte  
   ![Login_password](/images/EaseeCharger/saisie_login_password.png)
@@ -61,7 +61,7 @@ Un compte permet d'accéder au cloud Easee pour gérer un ou plusieurs chargeurs
 ### Désactivation d'un compte
 {: .num}
 
-Lorsqu'un compte est désactivé, tous les chargeurs qui utilise ce compte pour communiquer avec le serveur Easee sont également déasactivés. Les chargeurs doivent être réactiveés manuellement lorsque le compte est réactivé.
+Lorsqu'un compte est désactivé, tous les chargeurs qui utilisent ce compte pour communiquer avec le serveur Easee sont également désactivés. Les chargeurs doivent être réactivés manuellement lorsque le compte est réactivé.
 
 ### Suppression d'un compte
 {: .num}
@@ -71,7 +71,7 @@ Un compte ne peut pas être supprimé s'il est utilisé par au moins un chargeur
 ### Modification du login ou du password
 {: .num}
 
-Le démon n'est pas notifié lorsque le login ou le password d'un compte est modifé. Il faut donc relancer le démon chaque fois que le login ou le password est modifié.
+Le démon n'est pas notifié lorsque le login ou le password d'un compte est modifié. Il faut donc relancer le démon chaque fois que le login ou le password est modifié.
 
 # Les chargeurs
 {: .num}
@@ -88,7 +88,7 @@ Le démon n'est pas notifié lorsque le login ou le password d'un compte est mod
    ![Saisie nom du chargeur](/images/EaseeCharger/saisie_nom_chargeur.png)
 
 1. Paramétrer le chargeur  
-   Un chargeur est un équipement Jeedom. En plus des options de base (nom, objet, catégorie, option) des équipements, les configuration suivantes doivent être définies:
+   Un chargeur est un équipement Jeedom. En plus des options de base (nom, objet, catégorie, option) des équipements, les configurations suivantes doivent être définies:
 
    ![paramétrage du chargeur](/images/EaseeCharger/parametrage_chargeur.png)
 
@@ -102,7 +102,7 @@ Le démon n'est pas notifié lorsque le login ou le password d'un compte est mod
       Ne pas utiliser le wigdet standard de Jeedom mias le widget spécifique pour les équipements EaseeCharger.
 
    + **Couleur**  
-      Couleur du chargeur. Permet de définir l'icon du chargeur.
+      Couleur du chargeur. Permet de définir l'icône du chargeur.
 
 1. Cliquer sur `Valider`.   
 
@@ -119,9 +119,9 @@ Les chargeurs sont créés avec les commandes suivantes:
 | En pause | info | binary | La charge est en pause |
 | Câble verrouillé en permanance | info | binary | Le verrouillage permanent du câble est activé |
 | Câble verrouillé | info | binary | Le câble est verrouillé |
-| Etat du verrouillage | info | numeric | Combinaison de *Câble verrouiller en permanance* et *Câble verrouillé* pour le widget |
+| Etat du verrouillage | info | numeric | Combinaison de *Câble verrouillé en permanence* et *Câble verrouillé* pour le widget |
 | Verrouillage permanent ON | action | other | Activation du verrouillage permanent |
-| Verrouillage permanent OFF| action | other | Désctivation du verrouillage permanent |
+| Verrouillage permanent OFF| action | other | Désactivation du verrouillage permanent |
 | Branché | info | binary | Véhicule branché |
 | Puissance | info | numeric | Puissance de la charge en cours |
 | Courant phase 1 | info | numeric | Courant phase 1 |
@@ -142,7 +142,7 @@ Les chargeurs sont créés avec les commandes suivantes:
 ### Etat du chargeur
 {: .num}
 
-Le widget pas défaut pour l'état du serveur présente les six situations suivantes:
+Le widget par défaut pour l'état du serveur présente les six situations suivantes:
 
 ![debranche](/images/EaseeCharger/etat_0.png)
 ![attente](/images/EaseeCharger/etat_1.png)
@@ -151,7 +151,7 @@ Le widget pas défaut pour l'état du serveur présente les six situations suiva
 ![erreur](/images/EaseeCharger/etat_4.png)
 ![pret](/images/EaseeCharger/etat_5.png)
 
-Les option facultatives **notext : 1** et **noimage : 1** permettent de supprimer l'affichage du texte et de l'image:
+Les options facultatives **notext : 1** et **noimage : 1** permettent de supprimer l'affichage du texte et de l'image:
 
 ![option notext](/images/EaseeCharger/widget_etat_option_notext.png)
 
@@ -162,9 +162,9 @@ donne
 ### Verrouillage du câble
 {: .num}
 
-Le widget du vérouillage du câble permet d'activer ou désactiver le vérouillage permanent et indique si le câble est vérouillé et si le vérouillage permanent est activé.
+Le widget du verrouillage du câble permet d'activer ou désactiver le verrouillage permanent et indique si le câble est verrouillé et si le verrouillage permanent est activé.
 
-Le tableau suivant montre les différente icônes en fonction de l'état du vérouillage et du thème de l'interface WEB:
+Le tableau suivant montre les différentes icônes en fonction de l'état du verrouillage et du thème de l'interface WEB:
 
 <table style=" width:700px">
   <thead>
@@ -235,4 +235,4 @@ Le tableau suivant montre les différente icônes en fonction de l'état du vér
 
 ![pause](/images/EaseeCharger/btn_pause.png) : Mise en pause le la charge
 
-![continue](/images/EaseeCharger/btn_continue.png) : Preprendre une charge qui a été mise en pause
+![continue](/images/EaseeCharger/btn_continue.png) : Reprendre une charge qui a été mise en pause
