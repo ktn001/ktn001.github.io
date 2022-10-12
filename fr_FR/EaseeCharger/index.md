@@ -5,7 +5,7 @@ title : EaseeCharger
 
 # Plugin "EaseeCharger" pour Jeedom
 
-Le plugin **EaseeCharger** permet d'intégrer un chargeur `Easee` pour véhicules électriques dans une instance Jeedom.
+Le plugin **EaseeCharger** permet d'intégrer des chargeurs `Easee` pour véhicules électriques dans une instance Jeedom.
 
 Des informations sur les chargeurs `Easee` sont disponibles sur le site [Easee](https://easee.com)
 
@@ -105,6 +105,9 @@ Le démon n'est pas notifié lorsque le login ou le password d'un compte est mod
       Couleur du chargeur. Permet de définir l'icône du chargeur.
 
 1. Cliquer sur `Valider`.   
+
+## Le widget personalisé
+
 
 ## Les commandes
 {: .num}
