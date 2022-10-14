@@ -10,6 +10,7 @@ Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que 
 
 ### next
 * Transparence des tuiles du widget pour visibilité du graphique de fond
+* Boutons sur le widget des équipement pour la mise en/hors pause
 
 ### 14/10/2022
 Passage en stable
