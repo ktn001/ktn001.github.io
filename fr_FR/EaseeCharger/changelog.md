@@ -11,6 +11,9 @@ Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que 
 ### next
 * Transparence des tuiles du widget pour visibilité du graphique de fond
 
+### 14/10/2022
+Passage en stable
+
 ### 30/09/2022 (Beta)
 * Le port de démon n'est plus réinitialisé à la valeur par defaut lors de l'activation de plugin
 * Une class a été renommée dans le code php
