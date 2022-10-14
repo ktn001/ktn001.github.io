@@ -16,7 +16,7 @@ Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que 
 * Boutons sur le widget des équipements pour la mise en/hors pause
 
 ### 14/10/2022
-Passage en stable
+* Passage en stable
 
 ### 30/09/2022 (Beta)
 * Le port de démon n'est plus réinitialisé à la valeur par defaut lors de l'activation de plugin
