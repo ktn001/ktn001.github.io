@@ -9,14 +9,15 @@ title : EaseeCharger
 Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
 
 ### A venir
-* Informations sur la charge en court / dernière charche
+* Informations sur la charge en court / dernière charge
  
-### next
-* Transparence des tuiles du widget pour visibilité du graphique de fond
-* Boutons sur le widget des équipements pour la mise en/hors pause
+### 17/10/2022
++ Info indiquant si la communication avec le cloud est en wifi ou cellulaire
 
 ### 14/10/2022
 * Passage en stable
+* Transparence des tuiles du widget pour visibilité du graphique de fond
+* Boutons sur le widget des équipements pour la mise en/hors pause
 
 ### 30/09/2022 (Beta)
 * Le port de démon n'est plus réinitialisé à la valeur par defaut lors de l'activation de plugin
