@@ -8,6 +8,9 @@ title : defauts
 
 Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
 
+### 18/10/22
+Mise à jour de la présentation des commandes pour Jeedom v4.3
+
 ### v1.4.0 (16/07/21)
 Ajout de la recherche de commande orpheline.
 Menu jeedom: Analyses => Equipements => Commandes orphelines
