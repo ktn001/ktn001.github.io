@@ -8,6 +8,9 @@ title : defauts
 
 Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
 
+### 21/10/22
+Correction de bug mineur dans la présentation des commandes
+
 ### 18/10/22
 Mise à jour de la présentation des commandes pour Jeedom v4.3
 
