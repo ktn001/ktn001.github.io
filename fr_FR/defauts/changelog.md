@@ -10,6 +10,7 @@ Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que 
 
 ### 21/10/22
 Correction de bug mineur dans la présentation des commandes
+Bouton pour la présentation des équipements en mode "tableau"
 
 ### 18/10/22
 Mise à jour de la présentation des commandes pour Jeedom v4.3
