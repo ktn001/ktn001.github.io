@@ -9,7 +9,10 @@ title : swassist
 
 Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
 
-## 24/10/22 - beta
+## 17/11/22
++ Correction d'un bug lors du remplacement d'un équipement assisté par un autre
+
+## 24/10/22
 + Adaptation de la liste des commande pour V4.3
 + Possibilité de bois est équipement en mode tableau
 
