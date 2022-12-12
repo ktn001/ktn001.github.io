@@ -41,7 +41,7 @@ Traduction:
   --nocolor             Désactive l'affichage en couleur
   -b, --backup          Les fichiers existants sont renommés avec l'extension
                         ".bck"
-  --nobackup            Pa de suavegarde des fichiers existants
+  --nobackup            Pas de sauvegarde des fichiers existants
   -p, --purge           Retire les textes qui ne sont pas/plus trouvés dans le
                         code
   --nopurge             Pas de purge des traductions existantes
@@ -72,20 +72,20 @@ Traduction:
 **Langues**:
 : Aucune langue n'est définie par défaut.
 : Les langues cible des traductions peuvent être indiquées via l'option `-l` ou `--langues` de la ligne de commande ou en mettant la liste des langues dans le paramètre `langues` du fichier de configuration.
-: La listes des langues confgurée dans le fichier de configuration est ignorée si l'option `-l` ou `--langues` est utilisée.
+: La liste des langues configurées dans le fichier de configuration est ignorée si l'option `-l` ou `--langues` est utilisée.
 
 **Verbose**:
 : Par défaut, le mode verbose est désactivé.
-: Il peut être activé en utilisant l'option `-v` ou `--verbose` dans la ligne de commande ou en mettaant le paramètre `verbose` à `True` dans le fichier de configuration.L'activation du mode verbose dans le fichier de configuration peut être désactivé lors d'une exécution avec l'option `--noverbose`.
+: Il peut être activé en utilisant l'option `-v` ou `--verbose` dans la ligne de commandes ou en mettant le paramètre `verbose` à `True` dans le fichier de configuration. L'activation du mode verbose dans le fichier de configuration peut être désactivée lors d'une exécution avec l'option `--noverbose`.
 : L'activation du mode `debug` (option `-d`) force le mode `verbose`. Le mode `debug` est essentiellement prévu pour le développement du script, les informations affichées lorsque ce mode est activé peuvent changer selon les besoins du développement.
 
 **Couleur**:
 : Par défaut, les messages d'erreur et de warning sont affichés en couleurs.
-: La colorisation de ces messages peut être désactivée avec l'option `--nocolor` de la ligne de commande ou en mettant le paramèetre `color` à `False` dans le fichier de configuration. Si la colorisation est désactivée dans le fichier de configuration, il est possible de la réactivé lors d'une exécution avec l'option `-C` ou `--color`.
+: La colorisation de ces messages peut être désactivée avec l'option `--nocolor` de la ligne de commande ou en mettant le paramètre `color` à `False` dans le fichier de configuration. Si la colorisation est désactivée dans le fichier de configuration, il est possible de la réactiver lors d'une exécution avec l'option `-C` ou `--color`.
 
 **Backup:**
 : Par défaut, la sauvegarde des anciens fichiers de traduction est désactivée.
-: La sauvegarde des anciennes version des fichiers de configuration peut être activée avec l'option `-b` ou `--backup` dans la ligne de commande ou en mettant le paramètre `backup` à `True` dans le fichier de configuration. Si la sauvegarde est activéei dans le fichier de configuration, il est possible de la désactier lors d'une exécution avec l'option `--nobackup`.
+: La sauvegarde des anciennes versions des fichiers de configuration peut être activée avec l'option `-b` ou `--backup` dans la ligne de commande ou en mettant le paramètre `backup` à `True` dans le fichier de configuration. Si la sauvegarde est activée dans le fichier de configuration, il est possible de la désactiver lors d'une exécution avec l'option `--nobackup`.
 : 
 : Lorsque la sauvegarde est activée:
 : + Les fichiers nommés `<langue>.json.bck.5` sont supprimés
@@ -95,27 +95,27 @@ Traduction:
 
 **Purge:**
 : Par défaut, la purge des textes qui ne sont pas/plus dans le code source du plugin n'est pas activée.
-: La purge des anciens texte peut être activée avec l'option `-p` ou `--purge` dans le ligne de commande ou en mettant le paramètre `purge` à `True` dans le fichier de configuration. Si la purge est activée dans le fichier de configuration, il est possible de la désactiver lors d'une exécution avec l'option `--nopurge`.
+: La purge des anciens textes peut être activée avec l'option `-p` ou `--purge` dans la ligne de commandes ou en mettant le paramètre `purge` à `True` dans le fichier de configuration. Si la purge est activée dans le fichier de configuration, il est possible de la désactiver lors d'une exécution avec l'option `--nopurge`.
 :
-: La purge élimie les textes qui se trouvent dans la dernière version des fichiers de traduction mais n'ont pas été trouvés dans le code du plugin. Le risque est que des textes qui auraient été ajouté manuellement pourcontourné un cas particulier non reconnus pas tradiutjdn soient éliminés.
+: La purge élimine les textes qui se trouvent dans la dernière version des fichiers de traduction mais n'ont pas été trouvés dans le code du plugin. Le risque est que des textes qui auraient été ajoutés manuellement pour contourner un cas particulier non reconnu par traduitjdm soient éliminés.
 
 **Indentation:**
 : Par défaut, les indentations dans les fichiers de traduction sont de quatre caractères d'espacement.
-: On peut utiliser des tabulations pour les indentation avec l'option `-t` ou `--tab` dans la ligne de commande ou en mettant le paramètre `tab` à `True` dans le fichier de configuration. Si l'utilisation de tabulation est ectivée dans le fichier de configuration, il est possible de la désactiver lors d'une exécution avec l'option `--notab`.
+: On peut utiliser des tabulations pour les indentations avec l'option `-t` ou `--tab` dans la ligne de commandes ou en mettant le paramètre `tab` à `True` dans le fichier de configuration. Si l'utilisation de tabulation est activée dans le fichier de configuration, il est possible de la désactiver lors d'une exécution avec l'option `--notab`.
 
 **Répertoire Jeedom:**
-: Par défaut, Jeedom est installé dans le répertoire `/var/www/html` et le plugin à trduire doit se trouver dans le répertoire `plugins` est dans le répertoire de base de l'installation Jeedom.
-: Le chemine d'accès à Jeedom, et au plugin à traduire, peut être redéfini avec l'option `-j` ou `--JeeDir` dans la ligne de commande ou en dèfimissant le paramètre `JeedomDir` dans le fichier de configuration.
+: Par défaut, Jeedom est installé dans le répertoire `/var/www/html` et le plugin à traduire doit se trouver dans le répertoire `plugins` qui est dans le répertoire de base de l'installation Jeedom.
+: Le chemin d'accès à Jeedom, et au plugin à traduire, peut être redéfini avec l'option `-j` ou `--JeeDir` dans la ligne de commande ou en définissant le paramètre `JeedomDir` dans le fichier de configuration.
 
 **Exclusion de fichiers source:**
-: Par défaut, aucun fichier ou répertoire n'est exclus.
-: L'option `-x` ou `--exclude` de la ligne de commande et le paramètre `exclude` dans le fichier de configuraion permettent d'indiquer une liste de fichiers ou répertoires à exclure de la recherche de textes à traduire. Il est possible de désactiver des exclusions définies dans le fichier de configuration n utilisant l'option `--noexclude`.
+: Par défaut, aucun fichier ou répertoire ne sont exclus.
+: L'option `-x` ou `--exclude` de la ligne de commandes et le paramètre `exclude` dans le fichier de configuration permettent d'indiquer une liste de fichiers ou répertoires à exclure de la recherche de textes à traduire. Il est possible de désactiver des exclusions définies dans le fichier de configuration en utilisant l'option `--noexclude`.
 
 # Le fichier de configuration
 {: .num}
 
-Le fichier de configuration par défaut est le fichier `../etc/tradtuitjdm.cfg` (relatif au répartoire où se trouve `traduitjdm`.
-> Si traduitjmd se trouve dans `/home/jeedom/traduitjdm/bin`, le fichier de config par défaut sera `/home/jeedom/traduitjdm/etc/traduitjdm.conf`
+Le fichier de configuration par défaut est le fichier `../etc/tradtuitjdm.cfg` (relatif au répertoire où se trouve `traduitjdm`.
+> Si traduitjdm se trouve dans `/home/jeedom/traduitjdm/bin`, le fichier de config par défaut sera `/home/jeedom/traduitjdm/etc/traduitjdm.conf`
 
 > `traduitjdm` retourne un message d'erreur et termine son exécution s'il ne trouve pas le fichier de configuration. Dans ce cas, on peut:
 > + Utiliser l'option `--noconfig`
@@ -125,13 +125,13 @@ Le fichier de configuration par défaut est le fichier `../etc/tradtuitjdm.cfg` 
 Le caractère `#` marque le début d'un commentaire qui se termine à la fin de la ligne.
 
 Le fichier est subdivisé en sections (Actuellement seule la section `global` est reconnue). Chaque section commence par une ligne contenant le nom de la section entre des crochets `[global]`.  
-Dans chaques section, on a des lignes de définition de paramètre sous la forme `parametre = valeur`. Voir le contenu du fichier `etc/traduitjdm.cfg.exemple` pour la liste des paramèetre reconnus et la syntaxes de valeurs correspondantes.
+Dans chaques section, on a des lignes de définition de paramètre sous la forme `parametre = valeur`. Voir le contenu du fichier `etc/traduitjdm.cfg.exemple` pour la liste des paramètres reconnus et la syntaxe de valeurs correspondantes.
 
 # Principe de fonctionnement
 {: .num}
 ## Recherche des textes à traduire
 {: .num}
-**traduitjdm** commence par constuire une lise des textes à traduire en cherchant les textes dans le code du plugin puis en y ajoutant les textes trouvés lors d'exécutions précédentes qui se trouvent dans le fichier de traduction existant. Les textes resultants d'exécution précédentes peuvent être explus s'ils ne se trouvent plus dans le code du plusgin en utilisant l'option `--purge`.
+**traduitjdm** commence par constuire une liste des textes à traduire en cherchant les textes dans le code du plugin puis en y ajoutant les textes trouvés lors d'exécutions précédentes qui se trouvent dans le fichier de traduction existant. Les textes resultants d'exécution précédentes peuvent être exclus s'ils ne se trouvent plus dans le code du plugin en utilisant l'option `--purge`.
 
 ## Recherche de traductions
 {: .num}
@@ -145,7 +145,7 @@ Les textes traduits par la fonction `__('texte',__FILE__)` dans les scripts php 
 
 ## Sélection des traductions
 {: .num}
-Pour chaque texte à traduire une traduction sera reprise de l'une des soures de traduction dans l'ordre de piorité suivant:
+Pour chaque texte à traduire, une traduction sera reprise de l'une des sources de traduction dans l'ordre de priorité suivant:
 1. Traduction trouvée dans la version précédente.
 1. Traduction trouvée dans le core.
 1. Si aucune traduction n'a été trouvée, on garde le texte en français comme proposition de traduction.
