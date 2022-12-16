@@ -8,6 +8,7 @@ layout: default
 [tgz](https://github.com/ktn001/traduitjdm/archive/refs/tags/v1.1.0.tar.gz) [zip](https://github.com/ktn001/traduitjdm/archive/refs/tags/v1.1.0.zip)
 - Ajout de la date et de la version de traduitjdm dans les fichiers de traduction
 - Les textes non traduits sont préfixés `__AT__`
+- En cas d'erreur lors de la lecture d'un fichier *.json* existant, un message est affiché pour indiquer la position de l'erreur et le traitement est interrompu.
 
 ---
 #### v1.0.4 (11/3/2022)
