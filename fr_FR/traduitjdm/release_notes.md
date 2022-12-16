@@ -3,6 +3,13 @@ layout: default
 ---
 # Release Notes
 ---
+
+#### v1.1.0 (16/12/2022)
+[tgz](https://github.com/ktn001/traduitjdm/archive/refs/tags/v1.1.0.tar.gz) [zip](https://github.com/ktn001/traduitjdm/archive/refs/tags/v1.1.0.zip)
+- Ajout de la date et de la version de traduitjdm dans les fichiers de traduction
+- Les textes non traduits sont préfixés `__AT__`
+
+---
 #### v1.0.4 (11/3/2022)
 [tgz](https://github.com/ktn001/traduitjdm/archive/refs/tags/v1.0.4.tar.gz) [zip](https://github.com/ktn001/traduitjdm/archive/refs/tags/v1.0.4.zip)
 - Correction de bugs
