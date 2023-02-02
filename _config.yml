@@ -22,6 +22,11 @@ docs:
       pages:
         doc: index.html
         changeLog: changelog.html
+    devolo_cpl:
+      icon: devolo_cpl_icon.png
+      pages:
+        doc: index.html
+        changelog: changelog.html
     #EVcharger:
     #  icon : EVcharger_icon.png
     #  pages:
