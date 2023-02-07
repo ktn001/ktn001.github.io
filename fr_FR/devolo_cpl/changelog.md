@@ -4,6 +4,9 @@ title : devolo_cpl
 ---
 # Release notes
 
+### 8/2/23 beta
++ Ajout de logging pour analyse erreurs lors de la détection des DL550
+
 ### 7/2/23 beta
 + Correction d'un bug dans la sélection du pays.
 
