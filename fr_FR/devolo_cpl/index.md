@@ -7,6 +7,8 @@ title : devolo_cpl
 
 Le plugin permet d'intégrer les équipements CPL de Devolo dans Jeedom
 
+< :bulb: Attention si vous partagez des fichier de log. Les passwords de appareils peuvent y figurer en clair
+
 # Installation et configuration du plugin
 {: .num}
 ![Configuratin du plugin](/images/devolo_cpl/configuration_plugin.png)
