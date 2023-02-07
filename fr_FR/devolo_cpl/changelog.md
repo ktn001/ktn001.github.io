@@ -4,8 +4,8 @@ title : devolo_cpl
 ---
 # Release notes
 
-**IMPORTANT**
-
-Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
-
-### Le plugin n'est pas encore disponible
+### 7/2/23 BETA
+Première version pour
++ Valider la détection automatique des appareils.
++ Valider les images.
++ Valider l'envoi de commande pour allumer ou éteindre les LEDS des appareils.
