@@ -9,6 +9,31 @@ Le plugin permet d'intégrer les équipements CPL de Devolo dans Jeedom
 
 < :bulb: Attention si vous partagez des fichier de log. Les passwords de appareils peuvent y figurer en clair
 
+# Appareils compatibles
+{: .num}
+
+Le plugin utilise le module python [devolo_plc_api](https://pypi.org/project/devolo-plc-api/)
+La documentation de ce module précise qu'il est compatible avec les appareil suivants:
+
++ Magic 2 WiFi next
++ Magic 2 WiFi 2-1
++ Magic 2 LAN triple
++ Magic 2 DinRail
++ Magic 2 LAN 1-1
++ Magic 1 WiFi mini
++ Magic 1 WiFi 2-1
++ Magic 1 LAN 1-1
++ Repeater 5400
++ Repeater 3000
++ Repeater 1200
++ Repeater ac+
++ Repeater ac
++ dLAN 1200+ WiFi ac
++ dLAN 550+ Wifi
++ dLAN 550 WiFi
+
+On remarque, en particulier, que les appareils des gammes **dLan 550** et **dLan 1200** sans WiFi ne sont pas compatibles. Il ne peuvent donc pas être pris en compte par le Plugin. Il est toutefois probable qu'ils le seront partiellement dans une version future.
+
 # Installation et configuration du plugin
 {: .num}
 ![Configuratin du plugin](/images/devolo_cpl/configuration_plugin.png)
