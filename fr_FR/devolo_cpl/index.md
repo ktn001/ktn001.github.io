@@ -7,13 +7,15 @@ title : devolo_cpl
 
 Le plugin permet d'intégrer les équipements CPL de Devolo dans Jeedom
 
-< :bulb: Attention si vous partagez des fichier de log. Les passwords de appareils peuvent y figurer en clair
+> :bulb: Attention si vous partagez des fichiers de logs, les passwords des appareils peuvent y figurer en clair!
 
 # Appareils compatibles
 {: .num}
 
-Le plugin utilise le module python [devolo_plc_api](https://pypi.org/project/devolo-plc-api/)
-La documentation de ce module précise qu'il est compatible avec les appareil suivants:
+## Les appareils manageables
+{: .num}
+
+Le plugin utilise le module python [devolo_plc_api](https://pypi.org/project/devolo-plc-api/). La documentation de ce module précise qu'il est compatible avec les appareils suivants:
 
 + Magic 2 WiFi next
 + Magic 2 WiFi 2-1
@@ -32,11 +34,24 @@ La documentation de ce module précise qu'il est compatible avec les appareil su
 + dLAN 550+ Wifi
 + dLAN 550 WiFi
 
-On remarque, en particulier, que les appareils des gammes **dLan 550** et **dLan 1200** sans WiFi ne sont pas compatibles. Il ne peuvent donc pas être pris en compte par le Plugin. Il est toutefois probable qu'ils le seront partiellement dans une version future.
+## Les appareils non manageables
+{: .num}
+
+Les appareils, Devolo ou d'autres marques, qui ne sont pas dans la liste des appareils manageables peuvent être configurés dans le plugin. Ces appareils sont des appareils *non manageable*.
+
+Les équipements pour les appareils *non manageable* n'ont pas de commande. Aucune action ne peut donc être effectuée sur ces appareils et aucun statut ne peut être remonté dans Jeedom.
+
+Dans la version actuelle du plugin, la seule utilité de configurer ces appareilis dans Jeedom est d'en documenter l'existance. Ils seront probablement pris en compte dans une version future lors de la visualisation des vitesses de transfert entre les appareils.
+
+Des templates sont prévus dans le plugin pour les modèles suvants:
+
++ DL1200 LAN
++ DL550 LAN
++ autres
 
 # Installation et configuration du plugin
 {: .num}
-![Configuratin du plugin](/images/devolo_cpl/configuration_plugin.png)
+![Configuration du plugin](/images/devolo_cpl/configuration_plugin.png)
 
 ## Installation du plugin
 {: .num}
@@ -62,12 +77,9 @@ Après avoir installé les dépendances et effectué la configuration du plugin,
 # Configuration des équipements
 {: .num}
 
+Les équipements pour les appareils manageables peuvent être créé automatiquement a condition qu'ils se trouvent dans le même réseau que le serveur jeedom et qu'ils ne soient pas en veille. Sinon, il faudra les créer manuellement comme les appareils non manageables.
 ## La méthode automatique
 {: .num}
-
-> :bulb: Il n'y a pas encore eu de test en ce sens, mais il est fort probable que les équipements qui ne se touvent pas dans le même LAN (ou subnet) que Jeedom ne puissent pas être détectés. Si ceci se confirme, il faudra créer les équipements manuellement.
-
-> :bulb: Les appareils en mode `veille` ne peuvent pas être détectés. Il faut les `réveiller` en branchant un appareil allumé au port RJ45 ou créer l'équipement manuellement.
 
 Sur la page de gestion du plugin, cliquer sur l'icône `synchronisation`: 
 
@@ -93,13 +105,18 @@ Il faut saisir le nom du nouvel équipement avant d'accéder à la page de confi
 ![équipement non configuré](/images/devolo_cpl/equipement_non_configure.png)
 
 Il faut
-+ Saisir le numéro de série de l'appareil
-+ Saisir l'adresse IP de l'appareil
-+ Sélectioner le type d'appareil
++ Saisir le numéro de série de l'appareil. *(Si vous ne connaissez pas de n° de série, vous pouvez saisir un texte quelquonque.)*
++ Saisir l'adresse mac de l'appareil.
++ Saisir l'adresse IP de l'appareil. *(Uniquement pour les appareils manageables)*
++ Sélectionner le type d'appareil. *(Uniquement pour les appareils manageables)*
 
-> :bulb: Le n° de série doit être unique mais le plugin ne vérifie pas, pour le moment, s'il y a un autre équipement configuré avec le même n° de série.
+> :bulb: Le n° de série doit être unique mais, pour le moment, le plugin ne le vérifie pas.
 
-![équipement configuré](/images/devolo_cpl/equipement_configure.png)
+##### Equipement manageable:
+![équipement manageable_configuré](/images/devolo_cpl/equipement_manageable_configure.png)
+
+##### Equipement non manageable:
+![équipement non manageable_configuré](/images/devolo_cpl/equipement_non_manageable_configure.png)
 
 ## Finalisation de la configuration
 {: .num}
@@ -108,6 +125,11 @@ Après avoir créé un équipement automatiquement ou manuellement, il faut
 + Sasir le password.
 + L'activer.
 + Faire les configurations habituelles pour les équipements Jeedom.
+
+## Les commandes
+{: .num}
+
+Les commandes des équipements sont créées ou supprimées automatiquement lorsque le modèle de l'équipement est modifié. Les commande sont créées pour les modèles manageables et supprimées pour les modèles non manageable.
 
 ### Utilisation
 {: .num}

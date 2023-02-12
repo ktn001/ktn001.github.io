@@ -4,6 +4,12 @@ title : devolo_cpl
 ---
 # Release notes
 
+### 12/2/2023 beta
++ Distinction des appareils *manageables* et *non manageables*.
++ Ajout des modèles DL550 et DL1200 sans Wifi non manageables.
++ Ajout de l'adresse mac dans les configurationis des équipements.
++ Quelques corrections de bugs.
+
 ### 8/2/23 beta
 + Ajout de logging pour analyse erreurs lors de la détection des DL550
 
