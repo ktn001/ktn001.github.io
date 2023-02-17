@@ -47,7 +47,7 @@ Les équipements pour les appareils *non manageable* n'ont pas de commande. Aucu
 ne peut donc être effectuée sur ces appareils et aucun statut ne peut être remonté dans
 Jeedom.
 
-Dans la version actuelle du plugin, la seule utilité de configurer ces appareilis
+Dans la version actuelle du plugin, la seule utilité de configurer ces appareils
 dans Jeedom est d'en documenter l'existance. Ils seront probablement pris en compte
 dans une version future lors de la visualisation des vitesses de transfert entre les
 appareils.
