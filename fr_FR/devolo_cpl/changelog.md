@@ -6,6 +6,7 @@ title : devolo_cpl
 # Release notes
 
 ### 2023/02/18 beta
+
 ##### dépendances:
 + Ajout du module python *importlib-metadata*
 
