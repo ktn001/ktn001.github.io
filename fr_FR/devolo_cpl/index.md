@@ -83,6 +83,11 @@ installé, il faut l'activer puis lancer l'installation des dépendances
       Le port 34741 est configuré par défaut. Un autre port peut être défini en
       cas de conflit avec un autre plugin ou logiciel qui utilise le même port.
 
+    + ***Version devolo_plc_api***
+    : Version du module python à utiliser pour la communication avec les appareils.   
+      Sauf en cas de contre-indication, veuillez utiliser la dernière version.  
+      Merci d'ouvrir un sujet sur le forum Jeedom si un passage sur une ancienne version est nécessaire.
+
 ## Lancement du démon
 {: .num}
 Après avoir installé les dépendances et effectué la configuration du plugin,
