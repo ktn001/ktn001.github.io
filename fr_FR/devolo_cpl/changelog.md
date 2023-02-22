@@ -5,6 +5,22 @@ title : devolo_cpl
 
 # Release notes
 
+### 2023/02/22 beta
+
+##### Mise à jour ou installation:
++ Nouveau pluginLevel: 4
++ La rétention des débits est initialisée à une semaine.
++ La table pour l'enregistrmant des débits est créée dans la DB.
+
+##### Désinstallation
++ Suppression de la table des débits CPL
+
+##### Configuration des équipements
++ nouveau paramètre `Réseau`
+
+##### Interface:
++ Tableau de présentation des débits
+
 ### 2023/02/18 beta
 
 ##### dépendances:

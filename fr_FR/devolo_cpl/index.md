@@ -76,6 +76,12 @@ installé, il faut l'activer puis lancer l'installation des dépendances
     : Le pays dans lequel de trouvent les équipement Devolo. Ce paramètre sert
       à sélectioner les images des appareils avec le bon type de prises.
 
+**Base de données**
+: Configuration de la gestion des données:
+    + ***Rétention***
+    : Durée pendant laquelle les informations des débits CPL sont conservées en base
+      de données
+
 **Démon**
 : Configuration du démon:
     + ***Port***
@@ -125,14 +131,16 @@ Un équipement Jeedom est automatiquement créé pour chaque appareil détecté.
 
 Sur la page de gestion du plugin, cliquer sur l'icône `Ajouter`: 
 
-![Icone de synchronisation](/images/devolo_cpl/icones_gestion_plugin.png)
+![Icone Ajouter](/images/devolo_cpl/icones_gestion_plugin.png)
 
 Il faut saisir le nom du nouvel équipement avant d'accéder à la page de
 configuration de l'équipement.
 
 ![équipement non configuré](/images/devolo_cpl/equipement_non_configure.png)
 
-Il faut
+Il faut alors
++ Sélectionner le type d'équipement. La liste des paramètres spécifiques sera
+  adaptée en function du type déquipement sélectionné.
 + Saisir le numéro de série de l'appareil. *(Si vous ne connaissez pas de n°
   de série, vous pouvez saisir un texte quelquonque.)*
 + Saisir l'adresse mac de l'appareil.
@@ -151,8 +159,9 @@ Il faut
 {: .num}
 
 Après avoir créé un équipement automatiquement ou manuellement, il faut
-+ Sasir le password.
-+ L'activer.
++ Saisir le password.
++ Configurer le nom du réseau CPL (optionnel si vous n'avez qu'un seul réseau CPL)
++ Activer l'équipement.
 + Faire les configurations habituelles pour les équipements Jeedom.
 
 ## Les commandes
@@ -191,3 +200,31 @@ la commande refresh est activée.
       est activée.
     + L'état de l'info n'est pas modifié si la localisation est activée ou
       désactivée par un autre logiciel que le plugin (par Devolo cockpit par exemple).
+
+# Les débits CPL
+{: .num}
+
+![Icone réseaux CPL](/images/devolo_cpl/icones_gestion_plugin.png)
+
+Un click sur l'icône `Réseaux CPL` ouvre un modal de présentation des débits CPL.
+
+![modal CPL rates](/images/devolo_cpl/modal_CPL_rates.png)
+
+## Les réseaux
+{: .num}
+
+Si vous avez configuré différent noms de réseau dans le paramétrage des équipements,
+le modal contiendra un tab pour chacun de ces réseaux. Ceci permet, par exempée, d'
+avoir un tableau pour les débit entre des équipements DLan et un autre pour les
+équipements Magic.
+
+## Les débits
+{: .num}
+
+Les lignes du tableau représente les appareils source et les colonnes, les detinations.
+
+Dans l'image ci-dessus, nous avons donc un flux 734 Mbps de *cplbureau* vers *cplbureau*
+et de 804 Mbps dans le senc inverse.
+
+Les débits sont relevés toutes le 5 minutes. L'heure en bas à droite du modal indiques
+l'heure à laquelle les débits affichés ont été relevés.
