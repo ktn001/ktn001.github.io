@@ -7,7 +7,7 @@ title : devolo_cpl
 
 ### 2023/02/24 beta
 + Nouveau pluginlevel: 5
-+ (re)cération de la table des débits
++ (re)crération de la table des débits
 
 ##### Désinstallation
 + La table des débits n'est plus supprimée
