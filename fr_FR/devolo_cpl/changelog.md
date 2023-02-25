@@ -20,7 +20,7 @@ title : devolo_cpl
 ##### Mise à jour ou installation:
 + Nouveau pluginLevel: 4
 + La rétention des débits est initialisée à une semaine.
-+ La table pour l'enregistrmant des débits est créée dans la DB.
++ La table pour l'enregistrment des débits est créée dans la DB.
 
 ##### Désinstallation
 + Suppression de la table des débits CPL
