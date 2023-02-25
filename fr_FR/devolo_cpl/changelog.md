@@ -6,30 +6,30 @@ title : devolo_cpl
 # Release notes
 
 ### 2023/02/24 beta
-+ Nouveau pluginlevel: 5
-+ (Re)crération de la table des débits
++ Nouveau pluginlevel: 5.
++ (Re)crération de la table des débits.
 
 ##### Désinstallation
-+ La table des débits n'est plus supprimée
++ La table des débits n'est plus supprimée.
 
 ##### Correction de bug
-+ La table des débits était supprimée lors de la désactivation du plugin
++ La table des débits était supprimée lors de la désactivation du plugin.
 
 ### 2023/02/22 beta
 
 ##### Mise à jour ou installation:
-+ Nouveau pluginLevel: 4
++ Nouveau pluginLevel: 4.
 + La rétention des débits est initialisée à une semaine.
-+ La table pour l'enregistrment des débits est créée dans la DB.
++ La table pour l'enregistrement des débits est créée dans la DB.
 
 ##### Désinstallation
-+ Suppression de la table des débits CPL
++ Suppression de la table des débits CPL.
 
 ##### Configuration des équipements
-+ nouveau paramètre `Réseau`
++ nouveau paramètre `Réseau`.
 
 ##### Interface:
-+ Tableau de présentation des débits
++ Tableau de présentation des débits.
 
 ### 2023/02/18 beta
 
@@ -40,9 +40,9 @@ title : devolo_cpl
 
 ##### module devolo_plc_api:
 + Passage à la version 1.2.0
-+ La version 1.2.0 est une version modifiée pour être compatible python 3.7
-+ Une option dans la page de configuration du plugin permet de revenir à la version 1.1.0 en cas de nécessité
-+ Merci d'ouvrir un sujet sur le forum Jeedom si vous devez repasser à la version 1.1.0
++ La version 1.2.0 est une version modifiée pour être compatible python 3.7.
++ Une option dans la page de configuration du plugin permet de revenir à la version 1.1.0 en cas de nécessité.
++ Merci d'ouvrir un sujet sur le forum Jeedom si vous devez repasser à la version 1.1.0.
 
 ### 2023/2/14 beta bis
 + Indication des versions des modules dépendants.
