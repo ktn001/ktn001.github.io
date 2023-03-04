@@ -201,6 +201,20 @@ la commande refresh est activée.
     + L'état de l'info n'est pas modifié si la localisation est activée ou
       désactivée par un autre logiciel que le plugin (par Devolo cockpit par exemple).
 
+### Les versions de firmware
+{: .num}
+
++ La commande info `firmware` indique la version du firmware installé dans l'appareil.
++ La commande info `update_available` indique si une mise à jour du firmware est
+  disponible.
++ La commande info `next_firmware` indique la version disponible pour un upgrade. Cette
+  info et vide si l'appareil est à jour.
+
+> :bulb: Mes appareils étant tous à jour, je n'ai pas encore pu tester correctement
+  les commandes `update_available` et `next_firmware`. Tous retour d'expérience via
+  le [forum](https://community.jeedom.com) (ne pas oubler l'étiquette `plugin-devolo_cpl`)
+  sera le bienvenu.
+
 # Les débits CPL
 {: .num}
 
@@ -223,8 +237,8 @@ avoir un tableau pour les débit entre des équipements DLan et un autre pour le
 
 Les lignes du tableau représente les appareils source et les colonnes, les detinations.
 
-Dans l'image ci-dessus, nous avons donc un flux 734 Mbps de *cplbureau* vers *cplbureau*
-et de 804 Mbps dans le senc inverse.
+Dans l'image ci-dessus, nous avons donc un flux 833 Mbps de *cplphil* vers *cplbureau*
+et de 850 Mbps dans le senrsc inverse.
 
-Les débits sont relevés toutes le 5 minutes. L'heure en bas à droite du modal indiques
+Les débits sont relevés toutes le 5 minutes. L'heure en bas à droite du modal indique
 l'heure à laquelle les débits affichés ont été relevés.
