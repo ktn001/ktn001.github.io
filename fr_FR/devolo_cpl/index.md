@@ -75,12 +75,16 @@ installé, il faut l'activer puis lancer l'installation des dépendances
     + ***Pays***
     : Le pays dans lequel de trouvent les équipement Devolo. Ce paramètre sert
       à sélectioner les images des appareils avec le bon type de prises.
+    + ***Nom des équipements sans l'objet***
+    : Si cette option est sélectionnée, les noms des équipement dans les tableaux
+      et graphiques ne seront pas affichés sous la forme `[<objet>][<équipement>]`mais
+      `<équipement>`.
 
 **Base de données**
 : Configuration de la gestion des données:
     + ***Rétention***
     : Durée pendant laquelle les informations des débits CPL sont conservées en base
-      de données
+      de données.
 
 **Démon**
 : Configuration du démon:
@@ -190,30 +194,32 @@ la commande refresh est activée.
 
 + La commande action `locate_on` active la localisation de l'appareil en faisant
   clignoter drant deux minutes la led CPL de l'appareil.
-+ La commande action `locate_off` désactive la localisation avant l'expiration des
-  deux minutes.
++ La commande action `locate_off` désactive la localisation avant l'expiration
+  des deux minutes.
 + Les appareils ne retournent pas d'information indiquant si la lacalisation est
   active ou pas. L'info `locate` doit donc émuler l'état de l'appareil:
     + L'info est mis à 1 lors de l'activation par `locate_on`.
     + L'info repasse automatiquement à 0 après 2 minutes.
-    + L'info est mise à 0 avant l'expiration des deux minutes si la commande `locate_off`
-      est activée.
+    + L'info est mise à 0 avant l'expiration des deux minutes si la commande
+      `locate_off` est activée.
     + L'état de l'info n'est pas modifié si la localisation est activée ou
-      désactivée par un autre logiciel que le plugin (par Devolo cockpit par exemple).
+      désactivée par un autre logiciel que le plugin (par Devolo cockpit par
+      exemple).
 
 ### Les versions de firmware
 {: .num}
 
-+ La commande info `firmware` indique la version du firmware installé dans l'appareil.
-+ La commande info `update_available` indique si une mise à jour du firmware est
-  disponible.
-+ La commande info `next_firmware` indique la version disponible pour un upgrade. Cette
-  info et vide si l'appareil est à jour.
++ La commande info `firmware` indique la version du firmware installé dans
+  l'appareil.
++ La commande info `update_available` indique si une mise à jour du firmware
+  est disponible.
++ La commande info `next_firmware` indique la version disponible pour un upgrade.
+  Cette info et vide si l'appareil est à jour.
 
 > :bulb: Mes appareils étant tous à jour, je n'ai pas encore pu tester correctement
-  les commandes `update_available` et `next_firmware`. Tous retour d'expérience via
-  le [forum](https://community.jeedom.com) (ne pas oubler l'étiquette `plugin-devolo_cpl`)
-  sera le bienvenu.
+  les commandes `update_available` et `next_firmware`. Tous retour d'expérience
+  via le [forum](https://community.jeedom.com) (ne pas oublier l'étiquette
+  `plugin-devolo_cpl`) sera le bienvenu.
 
 # Les débits CPL
 {: .num}
@@ -227,18 +233,46 @@ Un click sur l'icône `Réseaux CPL` ouvre un modal de présentation des débits
 ## Les réseaux
 {: .num}
 
-Si vous avez configuré différent noms de réseau dans le paramétrage des équipements,
-le modal contiendra un tab pour chacun de ces réseaux. Ceci permet, par exempée, d'
-avoir un tableau pour les débit entre des équipements DLan et un autre pour les
-équipements Magic.
+Si vous avez configuré différents noms de réseauix dans le paramétrage des
+équipements, le modal contiendra un tab pour chacun de ces réseaux. Ceci permet,
+par exemple, d' avoir un tableau pour les débits entre des équipements DLan et
+un autre pour les équipements Magic.
 
 ## Les débits
 {: .num}
 
-Les lignes du tableau représente les appareils source et les colonnes, les detinations.
+Les lignes du tableau représenteint les appareils source et les colonnes, les
+destinations.
 
-Dans l'image ci-dessus, nous avons donc un flux 833 Mbps de *cplphil* vers *cplbureau*
-et de 850 Mbps dans le senrsc inverse.
+Dans l'image ci-dessus, nous avons donc un flux 833 Mbps de *cplphil* verss
+*cplbureau* et de 850 Mbps dans le senrsc inverse.
 
-Les débits sont relevés toutes le 5 minutes. L'heure en bas à droite du modal indique
-l'heure à laquelle les débits affichés ont été relevés.
+Les débits sont relevés toutes les 5 minutes. L'heure affichée en bas à droites
+du modal indique l'heure à laquelle les débits affichés ont été relevés.
+
+# Le panel
+{: .num}
+
+Le panel est accessible via le menu **Accueil**
+
+![Menu accueil](/images/devolo_cpl/menu_accueil.png)
+
+Le panel ne contient qu'un seul *tab* nommé `Débits CPL` (d'autres *tabs*
+viendront plus tard)
+
+## Débit CPL
+{: .num}
+
+A son ouverture, le tab présente un graphique de l'historique des débits entre
+deux appareils.
+
+![panel Débits CPL](/images/devolo_cpl/panel_debits_CPL.png)
+
+Il est possible:
++ D'ajouter u graphique via le bouton `Ajouter un graphique`
++ De changer la source et la destination via les sélecteur `de` et `vers`
+  puis en cliquant sur le bouton `OK`.
+
+Je vous laiss découvrir les autres fonctionalités du graphique.
+
+

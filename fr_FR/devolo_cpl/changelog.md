@@ -5,6 +5,20 @@ title : devolo_cpl
 
 # Release notes
 
+### 2023/03/09 beta
++ Nouveau pluginlevel: 7.
+  + Activation du panel
+ 
++ Configuration du plugin
+  + Une nouvelle option permet de définir si l'affichage des noms des équipements
+    dans les tableaux et graphiques doivent être affichés avec ou sans les noms d'objets:
+     + `[<nom_objet>][<nom_équipement>]`
+     + `<nom_équipement>`
+  + Le plugin contient maintenant un *panel*. Ce *panel* peut être activé ou désactivé
+    sur la page de configuration du plugin.
+  + Interface
+    + Nouveau *panel* pour l'affichage de graphiques des débits entre les équipements CPL.
+
 ### 2023/03/04 beta
 + Nouveau pluginlevel: 6.
   + Tris des commandes des équipements existants.
