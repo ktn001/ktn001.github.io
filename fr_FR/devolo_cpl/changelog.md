@@ -5,6 +5,14 @@ title : devolo_cpl
 
 # Release notes
 
+### 2023/03/03 beta
++ Nouveau pluginlevel: 8.
+  + Création d'une table `devolo_connection` pour enregistrer l'historique des
+    connections Wifi.
+  + Création d'une table `devolo_macinfo` pour les configurations des adresses mac.
++ Enregistrement de l'historique des connections de clients Wifi
++ Nouveau tab dans le panel pour les graphiques des historiques de connections WiFi.
+  
 ### 2023/03/09 beta
 + Nouveau pluginlevel: 7.
   + Activation du panel

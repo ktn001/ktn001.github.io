@@ -233,7 +233,7 @@ Un click sur l'icône `Réseaux CPL` ouvre un modal de présentation des débits
 ## Les réseaux
 {: .num}
 
-Si vous avez configuré différents noms de réseauix dans le paramétrage des
+Si vous avez configuré différents noms de réseaux dans le paramétrage des
 équipements, le modal contiendra un tab pour chacun de ces réseaux. Ceci permet,
 par exemple, d' avoir un tableau pour les débits entre des équipements DLan et
 un autre pour les équipements Magic.
@@ -250,6 +250,59 @@ Dans l'image ci-dessus, nous avons donc un flux 833 Mbps de *cplphil* verss
 Les débits sont relevés toutes les 5 minutes. L'heure affichée en bas à droites
 du modal indique l'heure à laquelle les débits affichés ont été relevés.
 
+# Les connections WiFi
+{: .num}
+
+Les adresses mac des client Wifi connectés aux point d'accès des équipement Devolo sont
+remontées dans le plugin Jeedom qui conserve un historique de ces connections.
+
+## Les adresses mac aléatoires
+{: .num}
+
+> :bulb: Une adresse mac dont le deuxième caractère est `2`, `6`, `A` ou `E` est une adresse aléatoire.
+
+Certains appareils utilisent une adresse mac aléatoire plutôt que leur adresse mac
+physique. Vu que l'adresse mac aléatoire change lors de chaque connection, il est
+impossible d'avoir un historique des connections de ces appareils. **Ces adresses sont
+donc ignorées par le plugin qui n'enregistre aucune donnée les concernant.**
+
+Certains de ces appareils peuvent être configurés pour utiliser une adresse fixe
+lorsqu'ils se connectent à certains réseaux WiFi. Il vous est donc possible de faire
+en sorte que ces appareils utilisent toujours la même adresse mac lorsqu'ils se
+connectent à un de vos pointis d'accès Devolo tout en conservant les avantages de
+l'utilisation d'une adresse mac aléatoire lorsque vous vous connectez à d'autres
+réseaux.
+
+Cette [page](https://support.plume.com/hc/fr/articles/360052070714-Comment-d%C3%A9sactiver-les-adresses-MAC-al%C3%A9atoires-sur-Android-10-)
+exlique comment configurer un Android pour qu'il utilise son adresse fixe lorsqu'il
+ce connecte sur votre réseau.
+
+## Recherche du vendeur pour une adresse MAC
+{: .num}
+
+Le site [macvendors.com](https://macvendors.com) permet de trouver quel est le fabriquant
+d'un appareil ou de son interface réseau à partir de l'adresse mac.
+
+Le plugin accède à l'API de ce site pour trouver le fabricant des appareils qui se sont
+connectés aux interfaces Wifi des équipement Devolo.
+
+L'accès à l'API se fait en respectant un délai minimum d'une seconde entre deux appels pour
+respecter la limite de deux accès secondes pour les accès libres. Par contre, le plugin ne vérifie pas le nombre d'accès durant une journée pour s'assurer que que limite de 1000
+accès par jour est respectée.
+
+## Association de noms aux adresses mac
+{: .num}
+
+![Icone adress](/images/devolo_cpl/icones_gestion_plugin.png)
+
+Le bouton `Adresses mac` de la page de gestion du plugin ouvre un modal pour
+gestion des adresses mac des équipements qui se sont connectés au réseaux Wifi.
+
+![Config MAC](/images/devolo_cpl/config_mac.png)
+
+Les noms associés ici aux adresses mac seront utilisés en lieu et place des adresse mac
+les graphiques.i9
+
 # Le panel
 {: .num}
 
@@ -257,8 +310,9 @@ Le panel est accessible via le menu **Accueil**
 
 ![Menu accueil](/images/devolo_cpl/menu_accueil.png)
 
-Le panel ne contient qu'un seul *tab* nommé `Débits CPL` (d'autres *tabs*
-viendront plus tard)
+Le panel ne contient deux *tabs*:
+* Un nommé `Débits CPL` pour l'historique des débits entre les équipements CPL
+* Un nommé `WiFi` pour l'historique des connections de clients Wifi
 
 ## Débit CPL
 {: .num}
@@ -275,4 +329,14 @@ Il est possible:
 
 Je vous laiss découvrir les autres fonctionalités du graphique.
 
+## Les connections WiFi
+{: .num}
+
+Ce tab permet de visualiser l'historique des connections WiFi à un point d'accès (AP):
+
+![panel WiFi AP](/images/devolo_cpl/panel_wifi_AP.png)
+
+Ce tab permet également de visualiser l'historique des connections WiFi d'une équipement Wifi (client):
+
+![panel WiFi client](/images/devolo_cpl/panel_wifi_client.png)
 
