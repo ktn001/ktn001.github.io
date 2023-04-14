@@ -5,6 +5,9 @@ title : devolo_cpl
 
 # Release notes
 
+### 2023/04/14 beta
++ Ajout du module *requests* dans le dépendances
+
 ### 2023/03/09 beta
 + Nouveau pluginlevel: 7.
   + Activation du panel
