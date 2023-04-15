@@ -5,8 +5,11 @@ title : devolo_cpl
 
 # Release notes
 
+### 2023/04/15 beta
++ Correction de l'affichage des images des équipements.
+
 ### 2023/04/14 beta
-+ Ajout du module *requests* dans les dépendances
++ Ajout du module *requests* dans les dépendances.
 
 ### 2023/03/09 beta
 + Nouveau pluginlevel: 7.
