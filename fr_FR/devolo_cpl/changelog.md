@@ -5,6 +5,9 @@ title : devolo_cpl
 
 # Release notes
 
+### ????/??/?? beta
++ Limitation de la saisie des noms des adresses mac à 30 caractères
+
 ### 2023/04/17 beta
 + Nouveau pluginlevel: 8.
   + Création d'une table `devolo_connection` pour enregistrer l'historique des
