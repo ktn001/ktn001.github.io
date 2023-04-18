@@ -5,8 +5,9 @@ title : devolo_cpl
 
 # Release notes
 
-### ????/??/?? beta
+### 2023/04/18 beta
 + Limitation de la saisie des noms des adresses mac à 30 caractères
++ Passage à la version 1.3.0 du module devolo_plc_api (les versions 1.1.0 et 1.2.0 sont toujours disponibles)
 
 ### 2023/04/17 beta
 + Nouveau pluginlevel: 8.
