@@ -7,6 +7,7 @@ title : devolo_cpl
 
 ### 2023/04/23 beta
 + Version min de protobuf: 4.21.12
+  + Les dépendances doivent être réinstallées après mise à jour
 
 ### 2023/04/18 beta
 + Nouveau pluginlevel: 9.
