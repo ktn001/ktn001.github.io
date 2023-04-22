@@ -5,6 +5,9 @@ title : devolo_cpl
 
 # Release notes
 
+### 2023/04/23 beta
++ Version min de protobuf: 4.21.12
+
 ### 2023/04/18 beta
 + Nouveau pluginlevel: 9.
   + Configuration pour utuliser la versio 1.3.0 de devolo_plc_api 
