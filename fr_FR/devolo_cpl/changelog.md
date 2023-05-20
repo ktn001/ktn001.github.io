@@ -5,9 +5,16 @@ title : devolo_cpl
 
 # Release notes
 
+### 2023/??/??
++ Nouveau pluginlevel: 9.
+  + Configuration pour utiliser la version 1.3.1 de devolo_plc_api 
++ Ajout d'une option de plugin pour limiter le loglevel debug
++ Optimisation du script de synchonisation
++ Les logs des synchronisation ne sont plus dans "devolo_cpl_out" mais dans "devolo_synchroniez"
+
 ### 2023/04/18 beta
 + Nouveau pluginlevel: 9.
-  + Configuration pour utuliser la versio 1.3.0 de devolo_plc_api 
+  + Configuration pour utiliser la version 1.3.0 de devolo_plc_api 
 + Limitation de la saisie des noms des adresses mac à 30 caractères
 + Ajout de la version 1.3.0 du module devolo_plc_api (les versions 1.1.0 et 1.2.0 sont toujours disponibles)
 
