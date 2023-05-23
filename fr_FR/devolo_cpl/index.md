@@ -10,7 +10,7 @@ Le plugin permet d'intégrer les équipements CPL de Devolo dans Jeedom
 > :bulb: Attention si vous partagez des fichiers de logs, les passwords des
 appareils peuvent y figurer en clair!
 
-# Appareils compatibles ou non
+# Appareils compatibles
 {: .num}
 
 ## Les appareils manageables
