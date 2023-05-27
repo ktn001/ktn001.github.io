@@ -12,6 +12,13 @@ title : devolo_cpl
 + Optimisation du script de synchonisation
 + Les logs des synchronisation ne sont plus dans "devolo_cpl_out" mais dans "devolo_synchroniez"
 
+### 2023/05/23 stable
++ **2023/04/23 beta** passée en stable
+
+### 2023/04/23 beta
++ Version min de protobuf: 4.21.12
+  + Les dépendances doivent être réinstallées après mise à jour
+
 ### 2023/04/18 beta
 + Nouveau pluginlevel: 9.
   + Configuration pour utiliser la version 1.3.0 de devolo_plc_api 
