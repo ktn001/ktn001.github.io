@@ -5,12 +5,14 @@ title : devolo_cpl
 
 # Release notes
 
-### 2023/??/??
-+ Nouveau pluginlevel: 9.
-  + Configuration pour utiliser la version 1.3.1 de devolo_plc_api 
-+ Ajout d'une option de plugin pour limiter le loglevel debug
+### 2023/05/26
++ Nouveau pluginlevel: 10.
+  + Configuration pour utiliser la version 1.3.1 de devolo_plc_api
+  + Création des commandes pour la gestion du wifi guest
+    + La commande `durée guest` (logicalId *guest_duration*) permet de définir temps, en minutes, après
+      lequel le wifi guest sera désactivé. La valeur 0 indique que le wifi ne doit pas être désactivé.
 + Optimisation du script de synchonisation
-+ Les logs des synchronisation ne sont plus dans "devolo_cpl_out" mais dans "devolo_synchroniez"
++ Les logs des synchronisations ne sont plus dans "devolo_cpl_out" mais dans "devolo_synchronize"
 
 ### 2023/05/23 stable
 + **2023/04/23 beta** passée en stable
