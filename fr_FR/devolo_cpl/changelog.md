@@ -5,6 +5,12 @@ title : devolo_cpl
 
 # Release notes
 
+### 2023/06/09
++ Nouveau pluginlevel: 11
+  + Nouveaux widgets pour le temps restant avant arrêt du wifi guest.
+    + La durée d'activation du Wifi guest ne peut pas encore être modifiée via le
+      widget pour les appareils mobiles.
+
 ### 2023/05/26
 + Nouveau pluginlevel: 10.
   + Configuration pour utiliser la version 1.3.1 de devolo_plc_api
