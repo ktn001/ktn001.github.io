@@ -5,6 +5,9 @@ title : devolo_cpl
 
 # Release notes
 
+### 2023/06/13 beta
++ Correction d'un bug du widget dashboard/action/j_h_m
+
 ### 2023/06/11 beta
 + Le widget mobile pour la configuration du temps d'activation du WifiGuest permet de modifier la valeur.
 
