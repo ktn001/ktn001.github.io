@@ -5,7 +5,7 @@ title : devolo_cpl
 
 # Release notes
 
-### 2023/06/14 stable
+### **2023/06/14 stable**
 + **2023/06/13 beta** passée en stable
 
 
@@ -30,7 +30,7 @@ title : devolo_cpl
 + Optimisation du script de synchonisation
 + Les logs des synchronisations ne sont plus dans "devolo_cpl_out" mais dans "devolo_synchronize"
 
-### 2023/05/23 stable
+### **2023/05/23 stable**
 + **2023/04/23 beta** passée en stable
 
 ### 2023/04/23 beta
