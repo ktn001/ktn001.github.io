@@ -177,9 +177,16 @@ modèles manageables et supprimées pour les modèles non manageables.
 
 Les appareils ne remontent pas leurs changement d'état en temps réel. Les
 commandes de type info (à l'exceptions de la commande locate) sont mise à jour
-toutes les 5 minutes via un cron. Les infos pour un appareil sont égalements
+toutes les minutes via un cron. Les infos pour un appareil sont égalements
 actualisées lorsqu'une commande est envoyée à l'appareil via le deamon ou lorsque
 la commande refresh est activée.
+
+### Refresh
+{: .num}
+
+La commande refresh envois un message au deamon pour qu'il interroge l'appareil
+sur sont état. Les commandes de type infos sont mise à jour de manière asynchrone
+lorsque l'appareil répond à la demande du deamon.
 
 ### Leds
 {: .num}
@@ -221,8 +228,40 @@ la commande refresh est activée.
   via le [forum](https://community.jeedom.com) (ne pas oublier l'étiquette
   `plugin-devolo_cpl`) sera le bienvenu.
 
+### Activation/désactivation du WiFi guest
+{: .num}
+
++ Les commandes action `guest_on` et `guest_off` permettent d'activer et de désactiver
+  le Wifi Guest des appareils Devolo. Dans le cas des Wifi mesh, l'actication ou la 
+  désactivation du Wifi Guest d'un appareil est répercuté sur les autres appareils
+  du réseau mesh.
++ La commande action `guest_duration` permet de configurer la durée durant laquelle
+  le WiFi guest doit être activé. Une fois cette durée écoulée, l'appareil Devolo
+  désactivera le Wifi guest. Si la valeur de cette commande est 0, le Wifi guest ne
+  sera pas désctivé automatiquement.   
+
+  La durée durant laquelle le WiFi guest doit être activé est exprimée en minute.
+
+  Le widget **Devolo_cpl/J_h_m** affiche cette valeur au format
+  `<jours> <heures>:<minute>` (`<heures>:<minutes>` si jours = 0)
+
+  ##### Widget et popup dashboard:
+  ![widget dashboard](/images/devolo_cpl/widget_dashboard.png) ![popup dashboard](/images/devolo_cpl/popup_j_h_m_dashboard.png)
+
+  ##### Widget et popup mobile:
+  ![widget dashboard](/images/devolo_cpl/widget_mobile.png) ![popup dashboard](/images/devolo_cpl/popup_j_h_m_mobile.png)
++ La commande info `guest_remaining` indique le temps restant avant la désactivation
+  du WiFi guest. Cette durée en enregistrée en minutes.
+
+  Le widget **Devolo_cpl/J_h_m** affiche cette valeur au format
+  `<jours> <heures>:<minute>` (`<heures>:<minutes>` si jours = 0)
+
 # Les débits CPL
 {: .num}
+
+Les débit CPL sont remontés des appareils toutes le 5 minutes. Le valeurs sont
+enregistrées dans la base de données et sont conservées durant la période le rétention
+configurée sur la page de configuration du plugin.
 
 ![Icone réseaux CPL](/images/devolo_cpl/icones_gestion_plugin.png)
 
