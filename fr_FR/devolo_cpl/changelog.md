@@ -5,6 +5,10 @@ title : devolo_cpl
 
 # Release notes
 
+### 2023/06/14 stable
++ **2023/06/13 beta** passée en stable
+
+
 ### 2023/06/13 beta
 + Correction d'un bug du widget dashboard/action/j_h_m
 
