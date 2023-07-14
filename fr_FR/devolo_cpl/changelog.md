@@ -5,6 +5,14 @@ title : devolo_cpl
 
 # Release notes
 
+### **2023/07/14 stable**
++ devolo_plv_api
+  + Ajout de la version 1.3.2 qui corrige un risque de fuite mémoire
+  + Supression de la version 1.1.0
+  + Supression de la version 1.2.0
++ Nouveau pluginlevel: 12
+  + Activation de devolo_plc_api 1.3.2
+
 ### **2023/06/14 stable**
 + **2023/06/13 beta** passée en stable
 
