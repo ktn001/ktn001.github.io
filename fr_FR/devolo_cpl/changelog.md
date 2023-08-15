@@ -5,6 +5,12 @@ title : devolo_cpl
 
 # Release notes
 
+### 2023/08/15 beta
++ Nouveau pluginlevel: 13
+  + Activation des alertes `offline` sur tous les équipements du plugin.
+  + Ajout d'un commande de type info `online` sur tous les équipements existants.
++ Nouvelle option pour (dés)activer les alertes lorsqu'un équipement est offline.
+
 ### **2023/07/14 stable**
 + devolo_plv_api
   + Ajout de la version 1.3.2 qui corrige un risque de fuite mémoire

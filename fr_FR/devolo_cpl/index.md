@@ -52,7 +52,7 @@ dans Jeedom est d'en documenter l'existance. Ils seront probablement pris en com
 dans une version future lors de la visualisation des vitesses de transfert entre les
 appareils.
 
-Des templates sont prévus dans le plugin pour les modèles suvants:
+Des templates sont prévus dans le plugin pour les modèles suivants:
 
 + DL1200 LAN
 + DL550 LAN
@@ -106,8 +106,8 @@ il faut lancer le démon.
 # Configuration des équipements
 {: .num}
 
-Les équipements pour les appareils manageables peuvent être créé automatiquements
-a condition qu'ils se trouvent dans le même réseau que le serveur jeedom et qu'ils
+Les équipements pour les appareils manageables peuvent être créés automatiquement
+à condition qu'ils se trouvent dans le même réseau que le serveur jeedom et qu'ils
 ne soient pas en veille. Sinon, il faudra les créer manuellement comme les appareils
 non manageables.
 
@@ -167,6 +167,8 @@ Après avoir créé un équipement automatiquement ou manuellement, il faut
 + Configurer le nom du réseau CPL (optionnel si vous n'avez qu'un seul réseau CPL)
 + Activer l'équipement.
 + Faire les configurations habituelles pour les équipements Jeedom.
++ Sélectionner `Surveillance Offline` si l'on veux avoir un message d'erreur lorsque
+  l'équipement n'est pas atteignable (en veille par exemple).
 
 ## Les commandes
 {: .num}
@@ -255,6 +257,11 @@ lorsque l'appareil répond à la demande du deamon.
 
   Le widget **Devolo_cpl/J_h_m** affiche cette valeur au format
   `<jours> <heures>:<minute>` (`<heures>:<minutes>` si jours = 0)
+
+### Online
+{: .num}
+
++ La commande `online` est une info binaire qui indique si l'équipement est online ou non.
 
 # Les débits CPL
 {: .num}
