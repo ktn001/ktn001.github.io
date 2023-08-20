@@ -5,6 +5,9 @@ title : devolo_cpl
 
 # Release notes
 
+### **2023/08/20 stable**
++ **2023/08/15 beta** passée en stable
+
 ### 2023/08/15 beta
 + Nouveau pluginlevel: 13
   + Activation des alertes `offline` sur tous les équipements du plugin.
@@ -21,7 +24,6 @@ title : devolo_cpl
 
 ### **2023/06/14 stable**
 + **2023/06/13 beta** passée en stable
-
 
 ### 2023/06/13 beta
 + Correction d'un bug du widget dashboard/action/j_h_m
