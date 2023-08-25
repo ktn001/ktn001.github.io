@@ -5,6 +5,9 @@ title : devolo_cpl
 
 # Release notes
 
+### **2023/08/25 stable**
++ Correction d'un bug qui générait des messages dans `http.error`.
+
 ### **2023/08/20 stable**
 + **2023/08/15 beta** passée en stable
 
