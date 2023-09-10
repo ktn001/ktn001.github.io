@@ -5,6 +5,12 @@ title : devolo_cpl
 
 # Release notes
 
+### 2023/09/19 beta
++ La liste des appareilis connectés aux WiFi est remontée toutes les 15 secondes (toutes les minutes auparavant)
+
+### **2023/08/29 stable**
++ La surveillance "offline" n'était pas désactivée dans certains cas
+
 ### **2023/08/25 stable**
 + Correction d'un bug qui générait des messages dans `http.error`.
 
