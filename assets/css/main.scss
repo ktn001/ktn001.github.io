@@ -3,7 +3,7 @@
 
 @import "materialize/components/color-variables";
 // couleur de la page
-$couleur : "indigo";
+$couleur : "grey";
 
 // Couleur de base des élément "materialize"
 $primary-color: color( $couleur , "lighten-4"); 
@@ -168,7 +168,7 @@ nav .brand-logo {
 }
 
 .tocAnchor {
-	color: color($couleur, "lighten-2");
+	color: color($couleur, "base");
 	font-size: 0.9rem;
 }
 
