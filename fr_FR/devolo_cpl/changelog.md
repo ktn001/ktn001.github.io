@@ -6,7 +6,7 @@ title : devolo_cpl
 # Release notes
 
 ### 2023/10/05 beta
-+ Ajout d'un traitement d'exception dans le daemon.
++ Ajout d'un traitement d'exception dans le daemon.    
   Cet ajout risque de provoquer beaucoup de messages d'erreur. J'attend vos retour d'infos à ce sujet.
 
 ### 2023/09/19 beta
