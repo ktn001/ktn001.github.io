@@ -5,8 +5,12 @@ title : devolo_cpl
 
 # Release notes
 
+### 2023/10/05 beta
++ Ajout d'un traitement d'exception dans le daemon.
+  Cet ajout risque de provoquer beaucoup de messages d'erreur. J'attend vos retour d'infos à ce sujet.
+
 ### 2023/09/19 beta
-+ La liste des appareilis connectés aux WiFi est remontée toutes les 15 secondes (toutes les minutes auparavant)
++ La liste des appareils connectés aux WiFi est remontée toutes les 15 secondes (toutes les minutes auparavant)
 
 ### **2023/08/29 stable**
 + La surveillance "offline" n'était pas désactivée dans certains cas
