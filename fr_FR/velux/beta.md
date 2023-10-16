@@ -14,8 +14,8 @@ plugin hkControl. Il est donc nécessaire que le plugin hkControl soit configur�
 actionner les fenêtres et volets roulants Velux avant d'installer ce plugin.
 
 > :warning: **Attention à la pluie**  
-  La fenêtre du Velux se ferme automatiquement en cas de pluie mais le plugin peut la réouvrir, sur commande
-  d'un scénario par exemple, au bout d'un certain temps même si la pluie n'a pas cessé.  
+  La fenêtre du Velux se ferme automatiquement en cas de pluie mais le plugin peut la réouvrir au bout d'un
+  certain temps même si la pluie n'a pas cessé (sur commande d'un scénario par exemple).
   <br>
   **Il est donc important de configurer une information *pluie* fiable qui bloquera l'ouverture de la fenêtre.**
 
