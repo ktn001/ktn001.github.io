@@ -39,6 +39,11 @@ docs:
       pages:
         doc: index.html
         changeLog: changelog.html
+    velux:
+      icon : velux_icon.png
+      pages:
+        doc: index.html
+        changeLog: changelog.html
   Utilitaires:
     traduitjdm: 
       pages:

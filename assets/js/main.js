@@ -47,6 +47,9 @@ $(function(){
   $('.scrollspy').scrollSpy();
 })
 
+$('blockquote').css({"padding-bottom":"1px"});
+$('blockquote p img[title*="warning"]').closest('blockquote').css('background', "red");
 $('blockquote p img[title*="bulb"]').closest('blockquote').css('background', "#70db70");
-$('blockquote p img[title*="bulb"]').closest('p').css('text-indent', '-40px').css('margin-left', '40px').css('margin-right','1em');
-$('blockquote p img[title*="bulb"]').attr('width','30').attr('height','30');
+$('blockquote p img[title]').closest('p').css({"text-indent":"-35px","margin-left":"30px","margin-right":"1em"});
+$('blockquote p img[title]').css({"width":"30px","height":"30px","position":"relative",top:"10px"});
+
