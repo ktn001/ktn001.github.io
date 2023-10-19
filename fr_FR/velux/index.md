@@ -66,7 +66,7 @@ un seuil.
 ## Positions prédéfinies.
 {: .num}
 
-Des commandes avec des positions de fenêtre et/ou volet roulant prédéfinies peuvent être ajoutées à volonter. Cess
+Des commandes avec des positions de fenêtre et/ou volet roulant prédéfinies peuvent être ajoutées à volonter. Ces
 commandes pourront être utilisées pour positionner les équipements en une seule action.
 
 # Installation et configuration du plugin
@@ -175,3 +175,40 @@ La formule permettant de définir s'il pleut ou non doit être déclarée le cha
 
 La valeur retournée par le calcul peut être une chaîne de caractères, un numérique ou un boolean. Les valeurs
 `'0'`, `0` et `false` signifient qu'il ne pleut pas. Dans tous les autres cas, on considère qu'il pleut.
+
+### Configuration des positions limites
+{: .num}
+
+![positions limites](/images/velux/positionsLimites.png)
+
+#### Position ventilation
+{: .num}
+
+Cette position est la position à laquelle la fenêtre est fermée mais la poignée est ouverte pour permettre la ventilation.
+
+Pour le plugin, cette limite est:
+  + L'ouverture maximale lorsqu'il pleut.
+  + L'ouverture de la fenêtre au dela de laquelle le volet roulant ne peut pas être déplacer dans la partie inféfieure.
+
+Cette valeur limite peut être déterminée en utilisant la télécommande ou l'app *Velux actve* pour positionner la fenêtre
+dans cette position. Il suffit alors de relever la valeur de la commande `w:position` puis de la saisir dans la 
+configuration de l'équipement `Velux`.
+
+#### Limite volet roulant
+{: .num}
+
+Cette limite la limite entre la partie inférieur et la partie supérieur de la course du volet roulant. Le Volet roulant
+peut être déplacé librment si sa position actuelle et la position cible sont toutes deux en deça de cette limite. Le plugin
+s'assurera que la fenêtre est fermée (position égale ou inférieur à la position de ventilation) avant de déplacer le volet
+roulant dans le partie inférieure.
+
+Pour déterminé cette limite, il faut
+1. Ouvrir complèetement le volet roulant.
+1. Ouvrir complètement la fenêtre.
+1. Fermer le volet roulant et interrompre le mouvement juste avant qu'il ne touche la fenêtre ouverte.
+1. Relever la valeur de la commande `s:position` et le saisir dans la page de configuration de l'équipement `Velux`.
+
+## Ajout d'une commande de position prédéfinie
+{: .num}
+
+
