@@ -208,7 +208,16 @@ Pour déterminé cette limite, il faut
 1. Fermer le volet roulant et interrompre le mouvement juste avant qu'il ne touche la fenêtre ouverte.
 1. Relever la valeur de la commande `s:position` et le saisir dans la page de configuration de l'équipement `Velux`.
 
-## Ajout d'une commande de position prédéfinie
+## Ajout d'une commande de positions prédéfinies
 {: .num}
 
+Le bouton `ajouter une commande "cible"` sur la page de configuration des commandes permet d'ajouter une commande
+de type action qui permettra de positionner la fenêtre et/ou le volet roulant à une position préconfigurée.
+
+![bouton ajout cmd cible](/images/velux/btnAjoutCmdCible.png)
+
+Après avoir créé la commande, il faut lui donner un nom et définir la position cible de la fenêtre et ou du volet
+roulant.
+
+![commande cible](/images/velux/cmdCible.png)
 

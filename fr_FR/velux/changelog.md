@@ -5,5 +5,5 @@ title : velux
 
 # Release notes
 
-### ??/??/2023 beta
-+ Ce plugin n'est pas encore dsponible
+### 21/10/2023 beta
++ Première publication
