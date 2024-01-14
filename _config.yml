@@ -44,6 +44,12 @@ docs:
       pages:
         doc: index.html
         changeLog: changelog.html
+    volvocars:
+      icon : volvocars_icon.png
+      pages:
+        doc: index.html
+        changelog: changelog.html
+
   Utilitaires:
     traduitjdm: 
       pages:
