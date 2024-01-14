@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-car-door" width="24" height="24" viewBox="0 0 240 240">
+	<path fill='red'
+		d= "M150,150
+			L127.5 149
+			V169
+			L150 170
+			V150
+			M175,230
+			L30 210
+			V110
+			L90,20
+			L165,10
+			A 10 10 0 0 1 175 20
+			V230
+			M96.25 38
+			L50,110
+			L157.5 112
+			V30
+			L96.25 38
+			" />
+	<line x1="0" y1='0' x2='240' y2='0' style="stroke:blue;stroke-width:1" />
+	<line x1="240" y1='0' x2='240' y2='240' style="stroke:blue;stroke-width:1" />
+	<line x1="240" y1='240' x2='0' y2='240' style="stroke:blue;stroke-width:1" />
+	<line x1="0" y1='240' x2='0' y2='0' style="stroke:blue;stroke-width:1" />
+</svg>
