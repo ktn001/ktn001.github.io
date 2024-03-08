@@ -19,8 +19,9 @@ En préparation...
 <table class="commandes">
 	<thead>
 		<tr>
-			<th>Nom</th>
+			<th style='min-width:150px'>Nom</th>
 			<th>LogicalId</th>
+			<th>API endpoint</th>
 			<th>SousType</th>
 			<th>Valeurs/Unité</th>
 			<th>Description</th>
@@ -32,12 +33,13 @@ En préparation...
 		<!-- GLOBALES -->
 		<!-- -------- -->
 		<tr>
-			<td class="subtitle" colspan="5">GLOBALES</td>
+			<td class="subtitle" colspan="6">GLOBALES</td>
 		</tr>
 		<tr>
-			<td rowspan="3">Disponibilité</td>
-			<td rowspan="3">availability</td>
-			<td rowspan="3">texte</td>
+			<td rowspan="4">Disponibilité</td>
+			<td rowspan="4">availability</td>
+			<td rowspan="4">accessibility</td>
+			<td rowspan="4">texte</td>
 			<td>"AVAILABLE"</td>
 			<td>Le véhicule est connecté</td>
 		</tr>
@@ -50,8 +52,13 @@ En préparation...
 			<td>Information indisponible</td>
 		</tr>
 		<tr>
+			<td>"QUOTA_OUT"</td>
+			<td>Le quota d'appels API a été atteint</td>
+		</tr>
+		<tr>
 			<td rowspan="5">raison indisponibilité</td>
 			<td rowspan="5">unavailableReason</td>
+			<td rowspan="5">accessibility</td>
 			<td rowspan="5">texte</td>
 			<td>"NO_INTERNET"</td>
 			<td>Pas d'internet</td>
@@ -65,15 +72,16 @@ En préparation...
 			<td>Véhicule cours d'utilisation</td>
 		</tr>
 		<tr>
-			<td>""</td>
-			<td>Le véhicule est disponible</td>
-		</tr>
-		<tr>
 			<td>"UNSPECIFIED"</td>
 			<td>Information indisponible</td>
 		</tr>
 		<tr>
+			<td>""</td>
+			<td>Le véhicule est disponible</td>
+		</tr>
+		<tr>
 			<td>odomètre</td>
+			<td>odometer</td>
 			<td>odometer</td>
 			<td>numérique</td>
 			<td>Km</td>
@@ -84,18 +92,27 @@ En préparation...
 		<!-- LOCALISATION -->
 		<!-- ------------ -->
 		<tr>
-			<td class="subtitle" colspan="5">LOCALISATION</td>
+			<td class="subtitle" colspan="6">LOCALISATION</td>
+		</tr>
+		<tr>
+			<td>position</td>
+			<td>position</td>
+			<td>location</td>
+			<td>coordonnées GPS</td>
+			<td>&lt;lattitude&gt;,&lt;longitude&gt;</td>
+			<td>position du véhicule</td>
 		</tr>
 	
 		<!-- -------- -->
 		<!-- OUVRANTS -->
 		<!-- -------- -->
 		<tr>
-			<td class="subtitle" colspan="5">OUVRANTS</td>
+			<td class="subtitle" colspan="6">OUVRANTS</td>
 		</tr>
 		<tr>
 			<td rowspan="3">Verrouillé</td>
 			<td rowspan="3">locked</td>
+			<td rowspan="3">doors</td>
 			<td rowspan="3">text</td>
 			<td>LOCKED</td>
 			<td>Véhicule Verrouiller</td>
@@ -109,49 +126,75 @@ En préparation...
 			<td>Information indisponible</td>
 		</tr>
 		<tr>
-			<td rowspan="4">
+			<td rowspan="8">
 				état porte avant gauche<br>
 				état porte avant droite<br>
 				état porte arrière gauche<br>
 				état porte arrière droite<br>
-				état vitre avant gauche<br>
-				état vitre avant droite<br>
-				état vitre arrière gauche<br>
-				état vitre arrière droite<br>
 				état capot<br>
-				état toit<br>
 				état hayon<br>
 				état trappe<br>
 			</td>
-			<td rowspan="4">
+			<td rowspan="8">
 				door_fl_state<br>
 				door_fr_state<br>
 				door_rl_state<br>
 				door_rr_state<br>
+				hood_state<br>
+				tail_state<br>
+				tank_state<br>
+			</td>
+			<td rowspan="8">
+				doors
+			</td>
+			<td rowspan="12">
+				texte
+			</td>
+			<td rowspan="3">CLOSED</td>
+			<td rowspan="3">fermé</td>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+			<td rowspan="3">AJAR</td>
+			<td rowspan="3">entre-ouvert</td>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+			<td rowspan="3">OPEN</td>
+			<td rowspan="3">ouvert</td>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+			<td rowspan="4">
+				état vitre avant gauche<br>
+				état vitre avant droite<br>
+				état vitre arrière gauche<br>
+				état vitre arrière droite<br>
+				état toit<br>
+			</td>
+			<td rowspan="4">
 				win_fl_state<br>
 				win_fr_state<br>
 				win_rl_state<br>
 				win_rr_state<br>
-				hood_state<br>
 				roof_state<br>
-				tail_state<br>
-				tank_state<br>
 			</td>
-			<td rowspan="4">texte</td>
-			<td>CLOSED</td>
-			<td>fermé</td>
+			<td rowspan="4">windows</td>
 		</tr>
 		<tr>
-			<td>AJAR</td>
-			<td>entre-ouvert</td>
+			<td rowspan="3">UNSPECIFIED</td>
+			<td rowspan="3">Information indisponible</td>
 		</tr>
 		<tr>
-			<td>OPEN</td>
-			<td>ouvert</td>
 		</tr>
 		<tr>
-			<td>UNSPECIFIED</td>
-			<td>Information indisponible</td>
 		</tr>
 		<tr>
 			<td rowspan="2">
@@ -182,6 +225,7 @@ En préparation...
 				tail_open<br>
 				tank_open<br>
 			</td>
+			<td rowspan="2"></td>
 			<td rowspan="2">binaire</td>
 			<td>0</td>
 			<td>pas ouvert</td>
@@ -219,6 +263,7 @@ En préparation...
 				tail_closed<br>
 				tank_closed<br>
 			</td>
+			<td rowspan="2"></td>
 			<td rowspan="2">binaire</td>
 			<td>0</td>
 			<td>pas fermé</td>
@@ -232,12 +277,13 @@ En préparation...
 		<!-- Moteur thermique -->
 		<!-- ---------------- -->
 		<tr>
-			<td class="subtitle" colspan="5">MOTEUR THERMIQUE</td>
+			<td class="subtitle" colspan="6">MOTEUR THERMIQUE</td>
 		</tr>
 	
 		<tr>
 			<td>consommation carburant</td>
 			<td>conso_fuel</td>
+			<td>statistics</td>
 			<td>numérique</td>
 			<td>l/100Km</td>
 			<td>consommation moyenne calculée par le véhicule</td>
@@ -245,6 +291,7 @@ En préparation...
 		<tr>
 			<td>consommation carburant (trajet)</td>
 			<td>conso_fuel_trip</td>
+			<td>statistics</td>
 			<td>numérique</td>
 			<td>l/100Km</td>
 			<td>consommation moyenne depuis de début du trajet automtique</td>
@@ -252,13 +299,15 @@ En préparation...
 		<tr>
 			<td>carburant</td>
 			<td>fuel_amount</td>
+			<td>fuel</td>
 			<td>numérique</td>
-			<td>Km</td>
-			<td>Autonomie avec le carburant restant</td>
+			<td>l</td>
+			<td>Quantité de carburant restant</td>
 		</tr>
 		<tr>
 			<td>autonomie themique</td>
 			<td>fuelAutonomy</td>
+			<td>statistics</td>
 			<td>numérique</td>
 			<td>Km</td>
 			<td>Autonomie avec le carburant restant</td>
@@ -268,6 +317,7 @@ En préparation...
 		<tr>
 			<td rowspan="5">niveau d'huile</td>
 			<td rowspan="5">oil_level</td>
+			<td rowspan="5">engine_dignostics</td>
 			<td rowspan="5">texte</td>
 			<td>"UNSPECIFIED"</td>
 			<td>Information indisponible</td>
@@ -291,6 +341,7 @@ En préparation...
 		<tr>
 			<td rowspan='2'>alerte huile</td>
 			<td rowspan='2'>al_oil</td>
+			<td rowspan='2'></td>
 			<td rowspan='2'>binaire</td>
 			<td>0</td>
 			<td>Le niveau d'huile est normal</td>
@@ -304,6 +355,7 @@ En préparation...
 		<tr>
 			<td rowspan="3">niveau liquide de refroidissement</td>
 			<td rowspan="3">coolant_level</td>
+			<td rowspan="3">engine_dignostics</td>
 			<td rowspan="3">texte</td>
 			<td>"UNSPECIFIED"</td>
 			<td>Information indisponible</td>
@@ -319,6 +371,7 @@ En préparation...
 		<tr>
 			<td rowspan='2'>alerte liquide de refroidissement</td>
 			<td rowspan='2'>al_coolant</td>
+			<td rowspan='2'></td>
 			<td rowspan='2'>binaire</td>
 			<td>0</td>
 			<td>Le niveau est normal</td>
@@ -328,16 +381,109 @@ En préparation...
 			<td>Alerte (voir la commande <i>coolant_level</i> pour plus de détails)</td>
 		</tr>
 	
+		<!-- ----------------- -->
+		<!-- Moteur électrique -->
+		<!-- ----------------- -->
+		<tr>
+			<td class="subtitle" colspan="6">MOTEUR ELECTRIQUE</td>
+		</tr>
+		<tr>
+			<td>consommation électrique</td>
+			<td>conso_electric</td>
+			<td>statistics</td>
+			<td>numérique</td>
+			<td>kW/100Km</td>
+			<td>Consomation moyenne calculé par le véhicule</td>
+		</tr>
+		<tr>
+			<td>Autonomie électrique</td>
+			<td>electricAutonomy</td>
+			<td>statistics</td>
+			<td>numérique</td>
+			<td>Km</td>
+			<td>Autonomie avec la charge restante</td>
+		</tr>
+		<tr>
+			<td>niveau charge batterie</td>
+			<td>batteryLevel</td>
+			<td>recharge_status</td>
+			<td>numérique</td>
+			<td>%</td>
+			<td>Pourcentage de charge de la batterie</td>
+		</tr>
+		<tr>
+			<td rowspan="6">Etat de la charge</td>
+			<td rowspan="6">chargingStatus</td>
+			<td rowspan="6">recharge_status</td>
+			<td rowspan="6">texte</td>
+			<td>"CHARGING_SYSTEM_CHARGING"</td>
+			<td>Recharge en cours</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>"CHARGING_SYSTEM_IDLE"</td>
+			<td>Système de recharge en attente</td>
+		</tr>
+		<tr>
+			<td>"CHARGING_SYSTEM_DONE"</td>
+			<td>Recharge terminée</td>
+		</tr>
+		<tr>
+			<td>"CHARGING_SYSTEM_FAULT"</td>
+			<td>Système de recharge en erreur</td>
+		</tr>
+		<tr>
+			<td>"CHARGING_SYSTEM_SCHEDULED"</td>
+			<td>Recharge programmée</td>
+		</tr>
+		<tr>
+			<td>"CHARGING_SYSTEM_UNSPECIFIED"</td>
+			<td>Etat indéterminé</td>
+		</tr>
+		<tr>
+			<td>Temps de charge restant</td>
+			<td>chargingRemainingTime</td>
+			<td>recharge_status</td>
+			<td>numérique</td>
+			<td>minutes</td>
+			<td>Temps estimé avant fin de recharge</td>
+		</tr>
+		<tr>
+			<td rowspan="5">Etat de la prise</td>
+			<td rowspan="5">connectorStatus</td>
+			<td rowspan="5">recharge_status</td>
+			<td rowspan="5">texte</td>
+			<td>"CONNECTION_STATUS_CONNECTED_AC"</td>
+			<td>Branchée à une borne AC</td>
+		</tr>
+		<tr>
+			<td>"CONNECTION_STATUS_CONNECTED_DC"</td>
+			<td>Branchée à une borne DC</td>
+		</tr>
+		<tr>
+			<td>"CONNECTION_STATUS_DISCONNECTED"</td>
+			<td>Débranchée</td>
+		</tr>
+		<tr>
+			<td>"CONNECTION_STATUS_FAULT"</td>
+			<td>Prise en erreur</td>
+		</tr>
+		<tr>
+			<td>"CONNECTION_STATUS_UNSPECIFIED"</td>
+			<td>Etat indéterminé</td>
+		</tr>
+	
 		<!-- ------ -->
 		<!-- WASHER -->
 		<!-- ------ -->
 		<tr>
-			<td class="subtitle" colspan="5">LAVE-VITRES</td>
+			<td class="subtitle" colspan="6">LAVE-VITRES</td>
 		</tr>
 		<tbody>
 			<tr>
 				<td rowspan="3">Niveau lave-vitres</td>
 				<td rowspan="3">washer_fluid_level</td>
+				<td rowspan="3">diagnostics</td>
 				<td rowspan="3">texte</td>
 				<td>"UNSPECIFIED"</td>
 				<td>Information indisponible</td>
@@ -366,12 +512,13 @@ En préparation...
 			<!-- BRAKE -->
 			<!-- ------ -->
 			<tr>
-				<td class="subtitle" colspan="5">LIQUIDE DE FREIN</td>
+				<td class="subtitle" colspan="6">LIQUIDE DE FREIN</td>
 			</tr>
 			</tbody>
 			<tr>
 				<td rowspan="3">Niveau liquide de frein</td>
 				<td rowspan="3">brake_fluid_level</td>
+				<td rowspan="3">brakes</td>
 				<td rowspan="3">texte</td>
 				<td>"UNSPECIFIED"</td>
 				<td>Information indisponible</td>
@@ -400,7 +547,7 @@ En préparation...
 			<!-- TYRE -->
 			<!-- ---- -->
 			<tr>
-				<td class="subtitle" colspan="5">PRESSION PNEUS</td>
+				<td class="subtitle" colspan="6">PRESSION PNEUS</td>
 			</tr>
 			<tr>
 				<td rowspan="5">
@@ -415,6 +562,7 @@ En préparation...
 					tyre_rl<br>
 					tyre_rr
 				</td>
+				<td rowspan="5">tyre</td>
 				<td rowspan="5">texte</td>
 				<td>"UNSPECIFIED"</td>
 				<td>Information indisponible</td>
@@ -438,6 +586,7 @@ En préparation...
 			<tr>
 				<td rowspan='2'>alerte pneus</td>
 				<td rowspan='2'>al_tyre</td>
+				<td rowspan="2"></td>
 				<td rowspan='2'>binaire</td>
 				<td>0</td>
 				<td>Les pressions sont normales</td>
@@ -451,7 +600,7 @@ En préparation...
 			<!-- LIGHTS -->
 			<!-- ------ -->
 			<tr>
-				<td class="subtitle" colspan="5">ECLAIRAGES</td>
+				<td class="subtitle" colspan="6">ECLAIRAGES</td>
 			</tr>
 			<tr>
 				<td rowspan="3">
@@ -504,6 +653,7 @@ En préparation...
 					al_turnIndication_rl<br>
 					al_turnIndication_rr
 				</td>
+				<td rowspan="3">warnings</td>
 				<td rowspan="3">texte</td>
 				<td>"UNSPECIFIED"</td>
 				<td>Information indisponible</td>
@@ -514,6 +664,18 @@ En préparation...
 			</tr>
 			<tr>
 				<td>"FAILURE"</td>
+				<td>Défaut</td>
+			</tr>
+			<tr>
+				<td rowspan="2">alerte lampes</td>
+				<td rowspan="2">al_light</td>
+				<td rowspan="2"></td>
+				<td rowspan="2">binaire</td>
+				<td>0</td>
+				<td>Pas de lampe défectueuse</td>
+			</tr>
+			<tr>
+				<td>1</td>
 				<td>Défaut (voir les commandes de feux pour plus de détails)</td>
 			</tr>
 	</tbody>
