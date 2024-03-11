@@ -87,6 +87,58 @@ En préparation...
 			<td>Km</td>
 			<td>Kilométrage du véhicule</td>
 		</tr>
+		<tr>
+			<td rowspan="12">service</td>
+			<td rowspan="12">service</td>
+			<td rowspan="12">texte</td>
+			<td rowspan="12"></td>
+			<td>"NO_WARNING"</td>
+			<td>Pas de service à effectuer</td>
+		</tr>
+		<tr>
+			<td>"REGULAR_MAINTENANCE_ALMOST_TIME_FOR_SERVICE"</td>
+			<td>Délai pour un service bientôt atteint</td>
+		</tr>
+		<tr>
+			<td>"ENGINE_HOURS_ALMOST_TIME_FOR_SERVICE"</td>
+			<td>Temps de fonctionnement du moteur avant service bientôt écoulé</td>
+		</tr>
+		<tr>
+			<td>"DISTANCE_DRIVEN_ALMOST_TIME_FOR_SERVICE"</td>
+			<td>Kilométrage pour un service bientôt atteint</td>
+		</tr>
+		<tr>
+			<td>"REGULAR_MAINTENANCE_TIME_FOR_SERVICE"</td>
+			<td>Délai pour un service atteint</td>
+		</tr>
+		<tr>
+			<td>"ENGINE_HOURS_TIME_FOR_SERVICE"</td>
+			<td>Temps de fonctionnement du moteur avant service écoulé</td>
+		</tr>
+		<tr>
+			<td>"DISTANCE_DRIVEN_TIME_FOR_SERVICE"</td>
+			<td>Kilométrage pour un service atteint</td>
+		</tr>
+		<tr>
+			<td>"REGULAR_MAINTENANCE_OVERDUE_FOR_SERVICE"</td>
+			<td>Délai pour un service dépassé</td>
+		</tr>
+		<tr>
+			<td>"ENGINE_HOURS_OVERDUE_FOR_SERVICE"</td>
+			<td>Temps de fonctionnement du moteur avant service dépassé</td>
+		</tr>
+		<tr>
+			<td>"DISTANCE_DRIVEN_OVERDUE_FOR_SERVICE."</td>
+			<td>Kilométrage pour un service dépassé</td>
+		</tr>
+		<tr>
+			<td>"UNKNOWN_WARNING"</td>
+			<td>Alerte inconnue</td>
+		</tr>
+		<tr>
+			<td>"UNSPECIFIED"</td>
+			<td>indéterminé</td>
+		</tr>
 	
 		<!-- ------------ -->
 		<!-- LOCALISATION -->
@@ -101,6 +153,46 @@ En préparation...
 			<td>coordonnées GPS</td>
 			<td>&lt;lattitude&gt;,&lt;longitude&gt;</td>
 			<td>position du véhicule</td>
+		</tr>
+		<tr>
+			<td>distance &lt;nom_site_1&gt;</td>
+			<td>distance_site1</td>
+			<td></td>
+			<td>numérique</td>
+			<td>m</td>
+			<td>Distance entre le véhicule et le site 1</td>
+		</tr>
+		<tr>
+			<td rowspan="2">présence &lt;nom_site_1&gt;</td>
+			<td rowspan="2">presence_site1</td>
+			<td rowspan="2"></td>
+			<td rowspan="2">binaire</td>
+			<td>0</td>
+			<td>Le véhicule n'est pas sur le site 1</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Le véhicule est sur le site 1</td>
+		</tr>
+		<tr>
+			<td>distance &lt;nom_site_2&gt;</td>
+			<td>distance_site2</td>
+			<td></td>
+			<td>numérique</td>
+			<td>m</td>
+			<td>Distance entre le véhicule et le site 1</td>
+		</tr>
+		<tr>
+			<td rowspan="2">présence &lt;nom_site_2&gt;</td>
+			<td rowspan="2">presence_site2</td>
+			<td rowspan="2"></td>
+			<td rowspan="2">binaire</td>
+			<td>0</td>
+			<td>Le véhicule n'est pas sur le site 2</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Le véhicule est sur le site 2</td>
 		</tr>
 	
 		<!-- -------- -->
@@ -305,12 +397,24 @@ En préparation...
 			<td>Quantité de carburant restant</td>
 		</tr>
 		<tr>
-			<td>autonomie themique</td>
+			<td>autonomie thermique</td>
 			<td>fuelAutonomy</td>
 			<td>statistics</td>
 			<td>numérique</td>
 			<td>Km</td>
 			<td>Autonomie avec le carburant restant</td>
+		</tr>
+		<tr>
+			<td rowspan="2">Autonomie fuel faible</td>
+			<td rowspan="2">al_fuelAutonomy</td>
+			<td rowspan="2"/>
+			<td rowspan="2">binaire</td>
+			<td>0</td>
+			<td>Autonomie fuel suffisante</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Autonomie fuel faible</td>
 		</tr>
 	
 		<!-- HUILE -->
@@ -404,6 +508,18 @@ En préparation...
 			<td>Autonomie avec la charge restante</td>
 		</tr>
 		<tr>
+			<td rowspan="2">Autonomie électrique faible</td>
+			<td rowspan="2">al_electricAutonomy</td>
+			<td rowspan="2"/>
+			<td rowspan="2">binaire</td>
+			<td>0</td>
+			<td>Autonomie électrique suffisante</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Autonomie électrique faible</td>
+		</tr>
+		<tr>
 			<td>niveau charge batterie</td>
 			<td>batteryLevel</td>
 			<td>recharge_status</td>
@@ -447,6 +563,14 @@ En préparation...
 			<td>numérique</td>
 			<td>minutes</td>
 			<td>Temps estimé avant fin de recharge</td>
+		</tr>
+		<tr>
+			<td>Heure fin de charge</td>
+			<td>chargingEndTime</td>
+			<td></td>
+			<td>texte</td>
+			<td>jj HH:MM</td>
+			<td>Heure de fin de charge prévue</td>
 		</tr>
 		<tr>
 			<td rowspan="5">Etat de la prise</td>
@@ -677,6 +801,21 @@ En préparation...
 			<tr>
 				<td>1</td>
 				<td>Défaut (voir les commandes de feux pour plus de détails)</td>
+			</tr>
+
+			<!-- ------ -->
+			<!-- PLUGIN -->
+			<!-- ------ -->
+			<tr>
+				<td class="subtitle" colspan="6">PLUGIN</td>
+			</tr>
+			<tr>
+				<td>messages pour wigget</td>
+				<td>msg2wigget</td>
+				<td></td>
+				<td>texte</td>
+				<td>json</td>
+				<td>Messages pour le fonctionnement du widget du panel</td>
 			</tr>
 	</tbody>
 </table>
