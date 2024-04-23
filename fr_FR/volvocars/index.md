@@ -7,6 +7,60 @@ title : volvocars
 
 En préparation...
 
+Le plugin **volvocars** permet à Jeedom d'interagir avec votre véhicule Volvo en utilisant les API volvocars.
+
+# Principe
+{: .num}
+
+Ce plugin interagit avec les API Volvocars au travers le cloud, Par conséquent, ce plugin nécessite un connection internet.
+Il faut aussi que votre véhicule soit accessible dans l'app Volvo Cars.
+
+La documentation des API indique qu'elles sont disponnibles pour tous les modèles entre de 2015 à 2022. Mais il semble que cette
+documentation n'est pas à jour et que les modèles post 2022 sont aussi disponibles via ces API. Le plugin a été dévoloppé en utilisant
+un XC40 électrique de 2023.
+
+# Modèles compatibles
+{: .num}
+
++ ***Modèles confirmés compatibles avec le plugin:***
+    + XC40 électrique (2023)
++ ***Modèles confirmés partiellement compatibles avec le plugin:***
++ ***Modèles confirmés incompatibles avec le plugin:***
+
+# Installation et configuration du plugin
+{: .num}
+
+![Configuration du plugin](/images/volvocars/configuration_plugin.png)
+
+## Installation du plugin
+{: .num}
+Le plugin s’installe de manière standard depuis le market de Jeedom.
+
+## Configuration du plugin
+{: .num}
+
++ ***Commandes à créer pour les ouvrants***
+: Les API volvocars retournent une information de type text pour l'état des ouvrants. Ce texte est enregistré dans une commande \*_state de l'équipement. Si l'option **Ouvert** ou **Fermé** est sélectionnée, des commandes de type *binaire* **\*_open** resp. **\*_closed** seront créées lors de la (re)création des commandes de l'équipement.
+: Les commandes **\*_open** ou **\*_closed** existantes ne sont pas supprimées lorsque l'option correspondante est désactivée.
+
+Une fois le plugin installé, il faut créer un account.
+
+# Les accounts
+{: .num}
+![Pas d'account](/images/volvocars/no_account.png)
+
+Cliquer sur *Ajouter*
+
+![nom account](/images/volvocars/nom_account.png)
+
+Saisir le nom du compte puis cliquer sur *OK*
+
+![Edit account](/images/volvocars/edit_account.png)
+
+Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
+
+![No car](/images/volvocars/no_car.png)
+
 # Les commandes
 {: .num}
 
@@ -90,8 +144,8 @@ En préparation...
 		<tr>
 			<td rowspan="12">service</td>
 			<td rowspan="12">service</td>
+			<td rowspan="12">diagnostics</td>
 			<td rowspan="12">texte</td>
-			<td rowspan="12"></td>
 			<td>"NO_WARNING"</td>
 			<td>Pas de service à effectuer</td>
 		</tr>
@@ -139,6 +193,55 @@ En préparation...
 			<td>"UNSPECIFIED"</td>
 			<td>indéterminé</td>
 		</tr>
+		<tr>
+			<td rowspan="5">Raison du service</td>
+			<td rowspan="5">serviceTrigger</td>
+			<td rowspan="5">diagnostics</td>
+			<td rowspan="5">texte</td>
+			<td>CALENDAR_TIME</td>
+			<td>Délai depuis dernier service écoulé</td>
+		</tr>
+		<tr>
+			<td>"DISTANCE"</td>
+			<td>Distance parcourue depuis dernier service</td>
+		</tr>
+		<tr>
+			<td>"ENGIME_HOURS"</td>
+			<td>Temps de fonctionnement du moteur</td>
+		</tr>
+		<tr>
+			<td>"UNSPECIFIED"</td>
+			<td>Non spécifié</td>
+		</tr>
+		<tr>
+			<td>"UNKNOWN"</td>
+			<td>Inconnu</td>
+		</tr>
+		<tr>
+			<td>Heures moteur avant service</td>
+			<td>engineHoursToService</td>
+			<td>diagnostics</td>
+			<td>numérique</td>
+			<td>Heures</td>
+			<td>Temps de fonctionnement du moteur avant le prochain service</td>
+		</tr>
+		<tr>
+			<td>Distance avant service</td>
+			<td>distanceToService</td>
+			<td>diagnostics</td>
+			<td>numérique</td>
+			<td>Kilomètres</td>
+			<td>Distance avant le prochain service</td>
+		</tr>
+			<td>Jours avant service</td>
+			<td>timeToService</td>
+			<td>diagnostics</td>
+			<td>numérique</td>
+			<td>Jours</td>
+			<td>Nombre de jours avec le service.<br>L'API volvocars retourne soit un nombre de jours soit un nombre de mois.
+				Le plugin convertit le nombre de mois en nombre de jour. Il peut donc y avoir une erreur de 30 jours.</td>
+		<tr>
+		</tr>
 	
 		<!-- ------------ -->
 		<!-- LOCALISATION -->
@@ -159,7 +262,7 @@ En préparation...
 			<td>distance_site1</td>
 			<td></td>
 			<td>numérique</td>
-			<td>m</td>
+			<td>mètre</td>
 			<td>Distance entre le véhicule et le site 1</td>
 		</tr>
 		<tr>
@@ -179,7 +282,7 @@ En préparation...
 			<td>distance_site2</td>
 			<td></td>
 			<td>numérique</td>
-			<td>m</td>
+			<td>mètre</td>
 			<td>Distance entre le véhicule et le site 1</td>
 		</tr>
 		<tr>
@@ -372,6 +475,18 @@ En préparation...
 			<td class="subtitle" colspan="6">MOTEUR THERMIQUE</td>
 		</tr>
 	
+		<tr>
+			<td rowspan="2">moteur en service</td>
+			<td rowspan="2">engineON</td>
+			<td rowspan="2">engine_status</td>
+			<td rowspan="2">binaire</td>
+			<td>0</td>
+			<td>moteur à l'arrêt</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>moteur en marche</td>
+		</tr>
 		<tr>
 			<td>consommation carburant</td>
 			<td>conso_fuel</td>
