@@ -11,6 +11,9 @@ Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que 
 ### A venir
 * Informations sur la charge en court / dernière charge
  
+### 24.07.24
++ Configuration d'un heartbeat lors de l'activation du plugin
+
 ### 1/7/2023
 + Changement d'url pour les APIs Easee
 
