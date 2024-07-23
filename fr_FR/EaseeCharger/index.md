@@ -34,6 +34,15 @@ Le plugin s'installe de manière standard depuis le market de Jeedom. Après l'a
     + ***Log non sécurisé***
     : Les données sensibles (password, token, etc...) sont remplacées dans les logs par des `********`. L'option "**Log non sécurisé**" désactive le remplacement et laisse les données sensibles en clair dans les logs.
 
+## Configuration du heartbeat
+{: .num}
+
+Il arrive que le flux de données en provenance du cloud Easse soit interrompu sans que la connection ne soit interrompue. Le deamon ne 
+ne détecte pas ce genre de situation qu'il ne peut donc pas gérer.
+
+Pour contourner ce problème, un heartbeat est automatiquement configuré lors de l'activation du plugin. Le deamon est redémarrer
+automatiquement par le heartbeat lorsque le deamon n'a pas remonté de données dans Jeedom depuis plus de 15 minutes.
+
 # Les comptes
 {: .num}
 
