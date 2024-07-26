@@ -11,6 +11,10 @@ Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que 
 ### A venir
 * Informations sur la charge en court / dernière charge
  
+### 26.07.26 (Beta)
++ Correction de widgets
++ Refonte de la page des commandes
+
 ### 24.07.24
 + Configuration d'un heartbeat lors de l'activation du plugin
 
