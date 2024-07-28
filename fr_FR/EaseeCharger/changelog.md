@@ -11,6 +11,10 @@ Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que 
 ### A venir
 * Informations sur la charge en court / dernière charge
  
+### 28.07024
++ Passage en stable des betas précédentes
++ Mise à jour des commandes lors de la mise à jour du plugin
+
 ### 28.07.24 (Beta)
 + Refonte de la création et de la mise à jour des commandes.   
   Il est conseillé de mettre les commandes à jour via le bouton `Mettre à jour les commandes` sur la page des
