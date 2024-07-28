@@ -11,6 +11,11 @@ Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que 
 ### A venir
 * Informations sur la charge en court / dernière charge
  
+### 28.07.24 (Beta)
++ Refonte de la création et de la mise à jour des commandes.   
+  Il est conseillé de mettre les commandes à jour via le bouton `Mettre à jour les commandes` sur la page des
+  commandes de chaque Chargeur 
+
 ### 26.07.26 (Beta)
 + Correction de widgets
 + Refonte de la page des commandes
