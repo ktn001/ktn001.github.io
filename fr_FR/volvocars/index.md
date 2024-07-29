@@ -259,7 +259,7 @@ Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 		</tr>
 		<tr>
 			<td>distance &lt;nom_site_1&gt;</td>
-			<td>distance_site1</td>
+			<td>distanceSite1</td>
 			<td></td>
 			<td>numérique</td>
 			<td>mètre</td>
@@ -267,7 +267,7 @@ Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 		</tr>
 		<tr>
 			<td rowspan="2">présence &lt;nom_site_1&gt;</td>
-			<td rowspan="2">presence_site1</td>
+			<td rowspan="2">presenceSite1</td>
 			<td rowspan="2"></td>
 			<td rowspan="2">binaire</td>
 			<td>0</td>
@@ -279,7 +279,7 @@ Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 		</tr>
 		<tr>
 			<td>distance &lt;nom_site_2&gt;</td>
-			<td>distance_site2</td>
+			<td>distanceSite2</td>
 			<td></td>
 			<td>numérique</td>
 			<td>mètre</td>
@@ -287,7 +287,7 @@ Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 		</tr>
 		<tr>
 			<td rowspan="2">présence &lt;nom_site_2&gt;</td>
-			<td rowspan="2">presence_site2</td>
+			<td rowspan="2">presenceSite2</td>
 			<td rowspan="2"></td>
 			<td rowspan="2">binaire</td>
 			<td>0</td>
@@ -331,13 +331,13 @@ Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 				état trappe<br>
 			</td>
 			<td rowspan="8">
-				door_fl_state<br>
-				door_fr_state<br>
-				door_rl_state<br>
-				door_rr_state<br>
-				hood_state<br>
-				tail_state<br>
-				tank_state<br>
+				doorFlState<br>
+				doorFrState<br>
+				doorRlState<br>
+				doorRrState<br>
+				hoodState<br>
+				tailState<br>
+				tankState<br>
 			</td>
 			<td rowspan="8">
 				doors
@@ -375,11 +375,11 @@ Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 				état toit<br>
 			</td>
 			<td rowspan="4">
-				win_fl_state<br>
-				win_fr_state<br>
-				win_rl_state<br>
-				win_rr_state<br>
-				roof_state<br>
+				winFlState<br>
+				winFrState<br>
+				winRlState<br>
+				winRrState<br>
+				roofState<br>
 			</td>
 			<td rowspan="4">windows</td>
 		</tr>
@@ -407,18 +407,18 @@ Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 				trappe ouverte<br>
 			</td>
 			<td rowspan="2">
-				door_fl_open<br>
-				door_fr_open<br>
-				door_rl_open<br>
-				door_rr_open<br>
-				win_fl_open<br>
-				win_fr_open<br>
-				win_rl_open<br>
-				win_rr_open<br>
-				hood_open<br>
-				roof_open<br>
-				tail_open<br>
-				tank_open<br>
+				doorFlOpen<br>
+				doorFrOpen<br>
+				doorRlOpen<br>
+				doorRrOpen<br>
+				winFlOpen<br>
+				winFrOpen<br>
+				winRlOpen<br>
+				winRrOpen<br>
+				hoodOpen<br>
+				roofOpen<br>
+				tailOpen<br>
+				tankOpen<br>
 			</td>
 			<td rowspan="2"></td>
 			<td rowspan="2">binaire</td>
@@ -445,18 +445,18 @@ Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 				trappe fermée<br>
 			</td>
 			<td rowspan="2">
-				door_fl_closed<br>
-				door_fr_closed<br>
-				door_rl_closed<br>
-				door_rr_closed<br>
-				win_fl_closed<br>
-				win_fr_closed<br>
-				win_rl_closed<br>
-				win_rr_closed<br>
-				hood_closed<br>
-				roof_closed<br>
-				tail_closed<br>
-				tank_closed<br>
+				doorFlClosed<br>
+				doorFrClosed<br>
+				doorRlClosed<br>
+				doorRrClosed<br>
+				winFlClosed<br>
+				winFrClosed<br>
+				winRlClosed<br>
+				winRrClosed<br>
+				hoodClosed<br>
+				roofClosed<br>
+				tailClosed<br>
+				tankClosed<br>
 			</td>
 			<td rowspan="2"></td>
 			<td rowspan="2">binaire</td>
@@ -489,7 +489,7 @@ Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 		</tr>
 		<tr>
 			<td>consommation carburant</td>
-			<td>conso_fuel</td>
+			<td>consoFuel</td>
 			<td>statistics</td>
 			<td>numérique</td>
 			<td>l/100Km</td>
@@ -497,7 +497,7 @@ Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 		</tr>
 		<tr>
 			<td>consommation carburant (trajet)</td>
-			<td>conso_fuel_trip</td>
+			<td>consoFuelTrip</td>
 			<td>statistics</td>
 			<td>numérique</td>
 			<td>l/100Km</td>
@@ -505,7 +505,7 @@ Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 		</tr>
 		<tr>
 			<td>carburant</td>
-			<td>fuel_amount</td>
+			<td>fuelAmount</td>
 			<td>fuel</td>
 			<td>numérique</td>
 			<td>l</td>
@@ -535,7 +535,7 @@ Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 		<!-- HUILE -->
 		<tr>
 			<td rowspan="5">niveau d'huile</td>
-			<td rowspan="5">oil_level</td>
+			<td rowspan="5">oilLevel</td>
 			<td rowspan="5">engine_dignostics</td>
 			<td rowspan="5">texte</td>
 			<td>"UNSPECIFIED"</td>
@@ -573,7 +573,7 @@ Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 		<!-- COOLANT -->
 		<tr>
 			<td rowspan="3">niveau liquide de refroidissement</td>
-			<td rowspan="3">coolant_level</td>
+			<td rowspan="3">coolantLevel</td>
 			<td rowspan="3">engine_dignostics</td>
 			<td rowspan="3">texte</td>
 			<td>"UNSPECIFIED"</td>
@@ -608,7 +608,7 @@ Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 		</tr>
 		<tr>
 			<td>consommation électrique</td>
-			<td>conso_electric</td>
+			<td>consoElectric</td>
 			<td>statistics</td>
 			<td>numérique</td>
 			<td>kW/100Km</td>
@@ -721,7 +721,7 @@ Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 		<tbody>
 			<tr>
 				<td rowspan="3">Niveau lave-vitres</td>
-				<td rowspan="3">washer_fluid_level</td>
+				<td rowspan="3">washerFluidLevel</td>
 				<td rowspan="3">diagnostics</td>
 				<td rowspan="3">texte</td>
 				<td>"UNSPECIFIED"</td>
@@ -737,7 +737,7 @@ Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 			</tr>
 			<tr>
 				<td rowspan='2'>alerte lave-vitres</td>
-				<td rowspan='2'>al_washer_fluid</td>
+				<td rowspan='2'>al_washerFluid</td>
 				<td rowspan='2'>binaire</td>
 				<td>0</td>
 				<td>Le niveau est normal</td>
@@ -756,7 +756,7 @@ Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 			</tbody>
 			<tr>
 				<td rowspan="3">Niveau liquide de frein</td>
-				<td rowspan="3">brake_fluid_level</td>
+				<td rowspan="3">brakeFluidLevel</td>
 				<td rowspan="3">brakes</td>
 				<td rowspan="3">texte</td>
 				<td>"UNSPECIFIED"</td>
@@ -796,10 +796,10 @@ Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 					pneu arrière droit
 				</td>
 				<td rowspan="5">
-					tyre_fl<br>
-					tyre_fr<br>
-					tyre_rl<br>
-					tyre_rr
+					tyreFl<br>
+					tyreFr<br>
+					tyreRl<br>
+					tyreRr
 				</td>
 				<td rowspan="5">tyre</td>
 				<td rowspan="5">texte</td>
@@ -868,29 +868,29 @@ Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 					clignotant arrière droit
 				</td>
 				<td rowspan="3">
-					al_brakeLight_l<br>
-					al_brakeLight_r<br>
-					al_brakeLight_c<br>
-					al_daytimeRunningLight_l<br>
-					al_daytimeRunningLight_r<br>
-					al_fogLight_f<br>
-					al_fogLight_r<br>
+					al_brakeLightL<br>
+					al_brakeLightR<br>
+					al_brakeLightC<br>
+					al_daytimeRunningLightL<br>
+					al_daytimeRunningLightR<br>
+					al_fogLightF<br>
+					al_fogLightR<br>
 					al_hazardLights<br>
-					al_highBeam_l<br>
-					al_highBeam_r<br>
-					al_lowBeam_l<br>
-					al_lowBeam_r<br>
-					al_positionLight_fl<br>
-					al_positionLight_fr<br>
-					al_positionLight_rl<br>
-					al_positionLight_rr<br>
+					al_highBeamL<br>
+					al_highBeamR<br>
+					al_lowBeamL<br>
+					al_lowBeamR<br>
+					al_positionLightFl<br>
+					al_positionLightFr<br>
+					al_positionLightRl<br>
+					al_positionLightRr<br>
 					al_registrationPlateLight<br>
 					al_reverseLights<br>
 					al_sideMarkLights<br>
-					al_turnIndication_fl<br>
-					al_turnIndication_fr<br>
-					al_turnIndication_rl<br>
-					al_turnIndication_rr
+					al_turnIndicationFl<br>
+					al_turnIndicationFr<br>
+					al_turnIndicationRl<br>
+					al_turnIndicationRr
 				</td>
 				<td rowspan="3">warnings</td>
 				<td rowspan="3">texte</td>
