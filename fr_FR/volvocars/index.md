@@ -40,7 +40,9 @@ Le plugin s’installe de manière standard depuis le market de Jeedom.
 {: .num}
 
 + ***Commandes à créer pour les ouvrants***
-: Les API volvocars retournent une information de type text pour l'état des ouvrants. Ce texte est enregistré dans une commande \*_state de l'équipement. Si l'option **Ouvert** ou **Fermé** est sélectionnée, des commandes de type *binaire* **\*_open** resp. **\*_closed** seront créées lors de la (re)création des commandes de l'équipement.
+: Les API volvocars retournent une information de type text pour l'état des ouvrants. Ce texte est enregistré dans une
+commande \*_state de l'équipement. Si l'option **Ouvert** ou **Fermé** est sélectionnée, des commandes de type *binaire* **\*_open**
+resp. **\*_closed** seront créées lors de la (re)création des commandes de l'équipement.
 : Les commandes **\*_open** ou **\*_closed** existantes ne sont pas supprimées lorsque l'option correspondante est désactivée.
 
 Une fois le plugin installé, il faut créer un account.
@@ -935,31 +937,144 @@ Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 	</tbody>
 </table>
 
-## TITRE 2
+# Les endpoints des API volvocars
 {: .num}
 
-<style>
-table.commandes {
-	font-size: 10px;
-}
-</style>
+Ce plugin utilise trois APIs volvocars. Chacune de ces API donne accès à des endpoints qui fournissent chacun un ensemble
+d'informations. Le tableaui des actions et des infos ci-dessus indiquent quel endpoint fourni l'information iassociée chacune dess
+commandes info ou action du plugin.
 
+Volvo limite le nombre d'accès quotidien aux APIs à 10'000. Pour respecter cette limite tout en ayant des infos actualisées sans trop
+de délai, le plugin n'accède pas à tous les endpoints à la même fréquence. La position du vhéhicule est, par exemple, mise à jour chaque
+minute pour permettre une certaine réactivité lorsque le véhicule arrive au domicile alors que le niveau du liquide de frein ne l'est
+que toutes les 60 minutes.
 
+  > :bulb: Je ne sais pas si la limite est de 10'000 appels par account, véhicule ou API. Tout retour d'expérience est le bienvenu.
 
+## Les endpoints
+{: .num}
 
+<table class="endpoint">
+	<thead>
+		<tr>
+			<th rowspan=2>API</th>
+			<th rowspan=2>endpoint</th>
+			<th rowspan=2>fréquence</th>
+			<th colspan=3 style="text-align:center">Nombre d'appels quotidien</th>
+		</tr>
+			<th>tout véhicule</th>
+			<th>moteur thermique</th>
+			<th>moteur électrique</th>
+		<tr>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td rowspan=15>Connected-vehicle</td>
+			<td>brakes</td>
+			<td>60 min.</td>
+			<td>24</td>
+		</tr>
+		<tr>
+			<td>command-accessibility</td>
+			<td>5 min.</td>
+			<td>288</td>
+		</tr>
+		<tr>
+			<td>commands<sup>1</sup></td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>details<sup>1</sup></td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>diagnostics</td>
+			<td>10 min.</td>
+			<td>144</td>
+		</tr>
+		<tr>
+			<td>doors</td>
+			<td>2 min.</td>
+			<td>720</td>
+		</tr>
+		<tr>
+			<td>engine</td>
+			<td>15 min.</td>
+			<td></td>
+			<td>96</td>
+		</tr>
+		<tr>
+			<td>engine-status</td>
+			<td>5 min.</td>
+			<td></td>
+			<td>288</td>
+		</tr>
+		<tr>
+			<td>fuel</td>
+			<td>30 min.</td>
+			<td></td>
+			<td>48</td>
+		</tr>
+		<tr>
+			<td>odometer</td>
+			<td>15 min.</td>
+			<td>96</td>
+		</tr>
+		<tr>
+			<td>statistics</td>
+			<td>10 min.</td>
+			<td>144</td>
+		</tr>
+		<tr>
+			<td>tyres</td>
+			<td>30 min.</td>
+			<td>48</td>
+		</tr>
+		<tr>
+			<td>vehicles<sup>1</sup></td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>warnings</td>
+			<td>30 min.</td>
+			<td>48</td>
+		</tr>
+		<tr>
+			<td>windows</td>
+			<td>2 min.</td>
+			<td>720</td>
+		</tr>
+		<tr>
+			<td>Location</td>
+			<td>location</td>
+			<td>1 min.</td>
+			<td>1'440</td>
+		</tr>
+		<tr>
+			<td>Energy</td>
+			<td>recharge-status</td>
+			<td>5 min.</td>
+			<td></td>
+			<td></td>
+			<td>288</td>
+		</tr>
+		<tr>
+			<th>Total</th>
+			<th></th>
+			<th></th>
+			<th>3672</th>
+			<th>432</th>
+			<th>288</th>
+		</tr>
+	</tbody>
+</table>
+<sup>1</sup> Endpoint appelé lors de la synchronisation d'un account.
 
+Il y a donc:
++ 4104 appels par jour pour un véhicule thermique.
++ 3960 appels par jour pour un véhicule électrique.
++ 4392 appels par jour pour un véhicule hybride.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+A ceci, s'ajoutent les appels lors de l'envoi d'une commande, d'un refresh ou d'une synchronisation des véhicules associés à un compte.
 
