@@ -12,6 +12,11 @@ docs:
       pages:
         doc: index.html
         changeLog: changelog.html
+    devolo_cpl:
+      icon: devolo_cpl_icon.png
+      pages:
+        doc: index.html
+        changelog: changelog.html
     EaseeCharger:
       icon: EaseeCharger_icon.png
       pages:
@@ -22,11 +27,6 @@ docs:
       pages:
         doc: index.html
         changeLog: changelog.html
-    devolo_cpl:
-      icon: devolo_cpl_icon.png
-      pages:
-        doc: index.html
-        changelog: changelog.html
     #EVcharger:
     #  icon : EVcharger_icon.png
     #  pages:
@@ -34,6 +34,11 @@ docs:
     #    changeLog: changelog.html
     #    Ajout d'un modèle: ajoutModel.html
     #    Cmd des chargeurs: cmdCharger.html
+    SmartMeterUSB:
+      icon  : SmartMeterUSB_icon.png
+      pages :
+        doc : index.html
+        changeLog: changelog.html
     swassist:
       icon : swassist_icon.png
       pages:
