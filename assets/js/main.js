@@ -45,6 +45,18 @@ $(function(){
     $(this).addClass('scrollspy');
   });
   $('.scrollspy').scrollSpy();
+
+  setTimeout (function() {
+    images = document.getElementById('div_content').getElementsByTagName('img')
+    for (let i = 0; i < images.length; i++) {
+      if (images[i].naturalWidth == 0 ) {
+        src = images[i].getAttribute('src')
+        console.warn ("L'image '" + src + "' est introuvable")
+        src = src.replace(page_lang,'fr_FR')
+        images[i].setAttribute('src',src)
+      }
+    }
+  },200)
 })
 
 $('blockquote').css({"padding-bottom":"1px"});

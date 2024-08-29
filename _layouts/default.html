@@ -1,4 +1,8 @@
 <!doctype html>
+<script>
+  let page_lang = '{{ page.lang | default: "fr_FR" }}'
+  let imagesPath = '/images/{{ page.lang }}/{{ page.plugin | default: page.title }}'
+ </script>
 <html lang="{{ site.lang | default: "fr_FR" }}">
   <head>
 
