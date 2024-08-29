@@ -80,13 +80,48 @@ commandes seront ainsi créés automatiquement.
 
 ![Configuration]({{ imagesPath }}/configuration_plugin.png)
 
-Les configurations sous **Plages horraire** permettent de définir les valeurs
-que prendra la commande **Tarif** selon la plage horraire active. 
+Les configurations sous **Plages horaire** permettent de définir les valeurs
+que prendra la commande **Tarif** selon la plage horaire active. 
 
 # Configuration des convertisseurs USB
 {: .num}
 
-# Création des équipements **Compteurs** et de leurs commandes
+## Déterminer le nom du device 
+{: .num}
+
+La principale difficulté est de déterminer le device qui est associé au convertisseur
+USB.
+
+Pour ceci, je vous propose les étapes suivantes:
+1 Connecter le convertisseur sur un port USB du serveur Jeedom
+1. Redémarrer l'OS du serveur Jeedom
+1. Après de reboot, il est possible que les clés UBS (clé zigbee par exemple) aie
+   changé de device. Il faut donc vérifier si les plugins qui utilisent un device UBS
+   fonctionnent encore et, le cas échéant, modifier leurs configurations.
+1. Voir la liste des device USB
+   + Se connecter en ssh
+   + Lancer la commande `ls /dev/ttyUSB*`
+   + Noter la liste des devices trouvés
+1. Déconnecter le convertisseur
+1. Voir le device qui a été supprimé
+   + Se connecter en ssh
+   + Lancer la commande `ls /dev/ttyUSB*`
+   + Noter le nom du device qui a disparu
+1. Reconnecter le convertisseur sur le même port USB
+
+## Configuration d'un convertisseur
+{: .num}
+
+Cliquer sur le bouton `Ajouter un convertisseur`
+
+![Configuration convertisseur]({{ imagesPath }}/configuration_convertisseur.png)
+
++ Sélectionner le type de compteur
++ Saisir le device USB
++ ...
++ (Re)lancer le démon
+
+# Création des équipements *Compteurs* et de leurs commandes
 {: .num}
 
 Si l'option *Création auto des compteur* du plugin est désactivée, les compteurs
