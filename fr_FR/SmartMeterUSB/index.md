@@ -116,19 +116,21 @@ Cliquer sur le bouton `Ajouter un convertisseur`
 
 ![Configuration convertisseur]({{ imagesPath }}/configuration_convertisseur.png)
 
-+ Sélectionner le type de compteur
-+ Saisir le device USB
-+ ...
-+ (Re)lancer le démon
++ Sélectionner le type de compteur.
++ Saisir le device USB.
++ Laisser *baurate* vide pour que le démon utilise sa valeur par défaut.
++ Saisir la clé d'encriptage si votre founisseur a configuré l'encription des informations.
+  (vous devez demander à votre fournisseur de vous communiquer cette clé).
++ (Re)lancer le démon.
 
 # Création des équipements *Compteurs* et de leurs commandes
 {: .num}
 
-Si l'option *Création auto des compteur* du plugin est désactivée, les compteurs
+Si l'option *Création auto des compteurs* du plugin est désactivée, les compteurs
 devront être créés manuellement. Cette création manuel est réservée au experts.
 
 Un compteur est créé automatiquement lorsque le brocker MQTT transmet une mesure
-avec un n° de compteur pour lequel il n'a a pas d'équipement Jeedom.
+avec un n° de compteur pour lequel il n'y a pas d'équipement Jeedom.
 
 Une fois le compteur créé, vous pouvez:
 + Modifier son nom et tout les paramètres standard des équipements Jeedom
@@ -138,5 +140,5 @@ Une fois le compteur créé, vous pouvez:
 > :warning: Ne pas modifier le Numéro du compteur. Ce numéro permet d'identifier l'équipement
   lors de la réception de mesure.
 
-Une fois l'équipement activé, les commande seront créées au rythme des messages reçus du
+Une fois l'équipement activé, les commandes seront créées au rythme des messages reçus du
 brocker MQTT.
