@@ -8,6 +8,8 @@ title : devolo_cpl
 ### 2024/09/24 beta
 + Le plugin n'intègre plus des version modifiées du module python devolo_plc_api. Le module non modifié est maintenant installé
   avec les dépendances dans un environement virtuel phyton.
++ Les dépendances doivent être réinstallées après mise à jour du plugin
++ Cette version est compatible avec Debian 12
 
 ### 2023/10/05 beta
 + Ajout d'un traitement d'exception dans le daemon.    
