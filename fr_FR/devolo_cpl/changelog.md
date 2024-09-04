@@ -5,6 +5,14 @@ title : devolo_cpl
 
 # Release notes
 
+### 2024/09/24 beta (bis)
++ Traduction du plugin dans les langues suivantes:
+  + de_DE
+  + en_US
+  + es_ES
+  + it_IT
+  + pt_PT
+
 ### 2024/09/24 beta
 + Le plugin n'intègre plus des version modifiées du module python devolo_plc_api. Le module non modifié est maintenant installé
   avec les dépendances dans un environement virtuel phyton.
