@@ -121,6 +121,8 @@ Cliquer sur le bouton `Ajouter un convertisseur`
 + Laisser *baurate* vide pour que le démon utilise sa valeur par défaut.
 + Saisir la clé d'encriptage si votre founisseur a configuré l'encription des informations.
   (vous devez demander à votre fournisseur de vous communiquer cette clé).
++ Activer le convertisseur.
++ Sauvegarer la configuration
 + (Re)lancer le démon.
 
 # Création des équipements *Compteurs* et de leurs commandes

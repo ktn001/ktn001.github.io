@@ -122,6 +122,8 @@ Click on `Add a converter` button
 + Leave *baurate* empty so that the daemon uses its default value.
 + Enter the encript key if your supplier has configured encript information.
   (You'll need to ask your supplier for this key).
++ enable the converter.
++ Save configuration.
 + (Re)launch the daemon.
 
 # Creation of *Counters* devices and their commands
