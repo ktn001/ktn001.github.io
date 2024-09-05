@@ -1,7 +1,10 @@
 ---
 layout : default
 title : defauts
+plugin: defauts
+lang : fr_FR
 ---
+
 # Release notes
 
 **IMPORTANT**

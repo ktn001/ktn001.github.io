@@ -1,6 +1,7 @@
 ---
 layout : default
 title : emulStore
+lang: fr_FR
 ---
 
 # Plugin "emulStore" pour Jeedom

@@ -1,6 +1,7 @@
 ---
 layout: default
 title : devolo_cpl
+lang: fr_FR
 ---
 
 # Release notes

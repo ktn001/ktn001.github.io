@@ -1,6 +1,7 @@
 ---
 layout : default
 title : swassist
+lang: fr_FR
 ---
 
 # Plugin "Switch Assistant" pour Jeedom

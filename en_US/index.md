@@ -1,7 +1,7 @@
 ---
 layout: default
-lang: fr_FR
+lang: en_US
 ---
 # Description
 
-Docu de plugins JEEDOM
+plugins JEEDOM

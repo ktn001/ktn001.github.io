@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EVcharger
+lang: fr_FR
 ---
 # Release notes
 

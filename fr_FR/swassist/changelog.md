@@ -1,6 +1,7 @@
 ---
 layout : default
 title : swassist
+lang: fr_FR
 ---
 
 # Release notes

@@ -1,5 +1,6 @@
 ---
 layout: default
+lang: fr_FR
 ---
 # Documentation de "*traduitjdm*"
 

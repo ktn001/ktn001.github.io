@@ -1,5 +1,6 @@
-plugins:
-  - jemoji
+langs:
+  fr_FR : Français
+  en_US : English
 sass:
   sass_dir: _sass
 

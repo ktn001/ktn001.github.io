@@ -1,6 +1,7 @@
 ---
 layout: default
 title : velux
+lang: fr_FR
 ---
 
 # Release notes

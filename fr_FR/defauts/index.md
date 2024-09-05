@@ -1,6 +1,7 @@
 ---
 layout : default
 title : defauts
+lang: fr_FR
 ---
 
 # Plugin "Défauts" pour Jeedom

@@ -1,6 +1,7 @@
 ---
 layout : default
 title : volvocars
+lang: fr_FR
 ---
 
 # PLugin "volvocars" pour Jeedom

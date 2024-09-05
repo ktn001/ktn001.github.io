@@ -1,6 +1,7 @@
 ---
 layout : default
 title : EaseeCharger
+lang: fr_FR
 ---
 # Release notes
 
