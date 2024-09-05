@@ -348,7 +348,7 @@ gestion des adresses mac des équipements qui se sont connectés au réseaux Wif
 ![Config MAC](/images/devolo_cpl/config_mac.png)
 
 Les noms associés ici aux adresses mac seront utilisés en lieu et place des adresse mac
-les graphiques.i9
+les graphiques.
 
 # Le panel
 {: .num}
