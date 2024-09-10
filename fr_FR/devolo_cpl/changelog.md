@@ -6,7 +6,10 @@ lang: fr_FR
 
 # Release notes
 
-### 2024/09/24 beta (bis)
+### **2024/09/10 stable**
++ **2024/09/4 beta** passée en stable
+
+### 2024/09/4 beta (bis)
 + Traduction du plugin dans les langues suivantes:
   + de_DE
   + en_US
@@ -14,7 +17,7 @@ lang: fr_FR
   + it_IT
   + pt_PT
 
-### 2024/09/24 beta
+### 2024/09/4 beta
 + Le plugin n'intègre plus des version modifiées du module python devolo_plc_api. Le module non modifié est maintenant installé
   avec les dépendances dans un environement virtuel phyton.
 + Les dépendances doivent être réinstallées après mise à jour du plugin
