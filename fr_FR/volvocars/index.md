@@ -8,17 +8,20 @@ lang: fr_FR
 
 En préparation...
 
-Le plugin **volvocars** permet à Jeedom d'interagir avec votre véhicule Volvo en utilisant les API volvocars.
+Le plugin **volvocars** permet à Jeedom d'interagir avec votre véhicule Volvo en utilisants
+ les API volvocars.
 
 # Principe
 {: .num}
 
-Ce plugin interagit avec les API Volvocars au travers le cloud, Par conséquent, ce plugin nécessite un connection internet.
-Il faut aussi que votre véhicule soit accessible dans l'app Volvo Cars.
+Ce plugin interagit avec les API Volvocars au travers le cloud, Par conséquent, ce plugins
+nécessite un connection internet.  Il faut aussi que votre véhicule soit accessible dans
+l'app Volvo Cars.
 
-La documentation des API indique qu'elles sont disponnibles pour tous les modèles entre de 2015 à 2022. Mais il semble que cette
-documentation n'est pas à jour et que les modèles post 2022 sont aussi disponibles via ces API. Le plugin a été dévoloppé en utilisant
-un XC40 électrique de 2023.
+La documentation des API indique qu'elles sont disponnibles pour tous les modèles entre de
+2015 à 2022. Mais il semble que cette documentation n'est pas à jour et que les modèles post
+2022 sont aussi disponibles via ces API. Le plugin a été dévoloppé en utilisant un XC40
+électrique de 2023.
 
 # Modèles compatibles
 {: .num}
@@ -41,10 +44,12 @@ Le plugin s’installe de manière standard depuis le market de Jeedom.
 {: .num}
 
 + ***Commandes à créer pour les ouvrants***
-: Les API volvocars retournent une information de type text pour l'état des ouvrants. Ce texte est enregistré dans une
-commande \*_state de l'équipement. Si l'option **Ouvert** ou **Fermé** est sélectionnée, des commandes de type *binaire* **\*_open**
-resp. **\*_closed** seront créées lors de la (re)création des commandes de l'équipement.
-: Les commandes **\*_open** ou **\*_closed** existantes ne sont pas supprimées lorsque l'option correspondante est désactivée.
+: Les API volvocars retournent une information de type text pour l'état des ouvrants.
+Ce texte est enregistré dans une commande **\*_state** de l'équipement.  
+Des commandes binaires **\*_open** et **\*_closed** seront également créées si l'option **Ouvert**
+ou **Fermé** est activée.
+: Les commandes **\*_open** ou **\*_closed** existantes ne sont pas supprimées lorsque
+l'option correspondante est désactivée.
 
 Une fois le plugin installé, il faut créer un account.
 
@@ -63,6 +68,30 @@ Saisir le nom du compte puis cliquer sur *OK*
 Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 
 ![No car](/images/volvocars/no_car.png)
+
+# Les véhicules
+{: .num}
+
+Les équipements jeedom pour les véhicules associés à un account sont automatiquement créés (ou mis
+à jour) lors de la synchronisation de l'account
+
+## Synchronisation d'un account (création des véhicules)
+{: .num}
+
++ Cliquer sure le bouton **Synchronisation**
++ Sélectionner l'account à synchroniser
++ Le nouveau véhicule est ajouté à la liste des véhicules
+
+  > :bulb: Dans certains cas, le site fournisseur d'image peut bloquer les accès effectués par un script.
+     Dans ce cas, le logo Volvo sera affiché à la place de l'image du véhicule. L'image du véhicuke devra
+     être chargée manuellement depuis la page de configuration du véhicule.
+
+![With car](/images/volvocars/with_car.png)
+
+## Configuration du véhicule
+{: .num}
+
+Cliquer sur 
 
 # Les commandes
 {: .num}
