@@ -91,8 +91,35 @@ Les équipements jeedom pour les véhicules associés à un account sont automat
 ## Configuration du véhicule
 {: .num}
 
-Cliquer sur 
+![configuration véhicule](/images/volvocars/configuration_vehicle.png)
 
++ **Paramètres généraux**
+
+    Ces paramètres sont les paramètres standards des équipements Jeedom. Ils ne seront pas détaillés ici.
+
++ **Paramètres du véhicule**
+
+   Ces paramètres sont renseignés automatiquement lors de la synchronisation de l'account. D'édition des ces paramètres est désactivée par défaut car ils ne devraient pas être modifiés par l'utilisateurs.
+
+   En cas de nécessité, il est possible de débloquer l'édition de ces paramèetres en cliquant sur le bouton `Editer`
+
++ **Paramètres d'alertes**
+
+   + *Automomie électriques*   
+     La valeur de la commande `al_electricAutonomy` passe à **1** lorsque l'autonomie électrique est inférieur
+     à cette limite.
+
+   + *Automomie thermique*   
+     La valeur de la commande `al_fuelAutonomy` passe à **1** lorsque l'autonomie du moteur themique est inférieur
+     à cette limite.
+
++ **Paramètres de localisation**
+
+  Les coordonnées GPS de deux site peuvent être configurée. Deux commandes seront créées pour chacun de ces sites:
+  + `distanceSite#` : Distance entre la site et la véhicule
+  + `presenceSite#` : binaire qui indique est sur le site
+
+  
 # Les commandes
 {: .num}
 
