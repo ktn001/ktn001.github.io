@@ -1,10 +1,10 @@
 ---
-layout : default
+layout: default
 title : SmartMeterUSB
-plugin : SmartMeterUSB
-lang : en_US
+lang: en_US
 ---
 
-This documentation is not yet available in English.
+# Release notes
 
-Please consult the page in French.
+### **2024/09/10**
++ First *stable* version
