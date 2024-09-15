@@ -1,9 +1,10 @@
 ---
 layout : default
 title : volvocars
+plugin : volvocars
 lang: fr_FR
 ---
-
+{% capture imagesPath %}/images/{{ page.lang }}/{{ page.plugin }}{% endcapture %}
 # PLugin "volvocars" pour Jeedom
 
 En préparation...
@@ -34,7 +35,7 @@ La documentation des API indique qu'elles sont disponnibles pour tous les modèl
 # Installation et configuration du plugin
 {: .num}
 
-![Configuration du plugin](/images/volvocars/configuration_plugin.png)
+![Configuration du plugin]({{ imagesPath }}/configuration_plugin.png)
 
 ## Installation du plugin
 {: .num}
@@ -55,19 +56,19 @@ Une fois le plugin installé, il faut créer un account.
 
 # Les accounts
 {: .num}
-![Pas d'account](/images/volvocars/no_account.png)
+![Pas d'account]({{ imagesPath }}/no_account.png)
 
 Cliquer sur *Ajouter*
 
-![nom account](/images/volvocars/nom_account.png)
+![nom account]({{ imagesPath }}/nom_account.png)
 
 Saisir le nom du compte puis cliquer sur *OK*
 
-![Edit account](/images/volvocars/edit_account.png)
+![Edit account]({{ imagesPath }}/edit_account.png)
 
 Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
 
-![No car](/images/volvocars/no_car.png)
+![No car]({{ imagesPath }}/no_car.png)
 
 # Les véhicules
 {: .num}
@@ -86,12 +87,12 @@ Les équipements jeedom pour les véhicules associés à un account sont automat
      Dans ce cas, le logo Volvo sera affiché à la place de l'image du véhicule. L'image du véhicuke devra
      être chargée manuellement depuis la page de configuration du véhicule.
 
-![With car](/images/volvocars/with_car.png)
+![With car]({{ imagesPath }}/with_car.png)
 
 ## Configuration du véhicule
 {: .num}
 
-![configuration véhicule](/images/volvocars/configuration_vehicle.png)
+![configuration véhicule]({{ imagesPath }}/configuration_vehicle.png)
 
 + **Paramètres généraux**
 
@@ -119,9 +120,80 @@ Les équipements jeedom pour les véhicules associés à un account sont automat
   + `distanceSite#` : Distance entre la site et la véhicule
   + `presenceSite#` : binaire qui indique est sur le site
 
+  Les paramètres:
+  + *Nom*   
+    Si l'on renomme un site les deux commandes associées seront aussi renommée si leurs noms contiennent l'ancien
+    nom du site
+  + *Coordonées GPS*   
+    Les coordonnées GPS du site
+  + *Distance max (en m)*   
+    Distance maximum (en mètres) entre le véhicule et le site pour que le véhicule soit indiqué présent sur le site.
+  + *Récupérer coordonnées GPS*   
+    Deux boutons permettant de renseigner automatiquement les coordonnées GPS du site:
+       + `Jeedom` : Récupèere les coordonnées GPS de Jeedom qui ont été renseignées dans la config de Jeedom.
+       + `Véhicule` : Récupère la position actuelle du véhicule 
   
++ **Description**
+
+   Info libre
+
++ **Image**
+
+   Image du véhicule qui sera utilisée dans le panel. Si l'image du véhicule n'a pas pu être récupérée lors
+   de la synchronisation de l'account, elle sera remplacée par un logo Volvo et un bouton `Récupérer une image
+   du véhicule` (voir plus bas pour la procédure de récupération manuelle de l'image).
+
++ **Données brute**
+
+   Ce bouton ouvre un popup avec les données tels qu'elle sont fournies par les API. Ces infomations peuvent
+   être utiles pour analyse en cas de problème.
+
+# Récupération manuelle de l'image
+{: .num}
+
++ Le plugin n'a pas d'image, le logo Volvo et le bouton `Récupérer une image du véhicule` sont affichés:
+
+   ![no image]({{ imagesPath }}/no_image.png)
+
++ Cliquer sur le bouton `Récupérer une image du véhicule`   
+   + Le logo est remplacé par une image du véhicule
+   + Le bouton `Récupérer une image du véhicule` n'est plus affiché:   
+   + Une zone est marquée pour y copier l'image du véhicule
+
+   ![image_ready]({{ imagesPath }}/image_ready.png)
+
++ Utiliser le menu contextuel (PAS DE RECOURCI CLAVIER!) pour copier l'image.
+
+   ![copy_image]({{ imagesPath }}/copy_image.png)
+
++ Utiliser le menu contextuel (PAS DE RECOURCI CLAVIER!) pour coller l'image dans
+  la zone prévue à cet effet.
+
+   ![paste_image]({{ imagesPath }}/paste_image.png)
+
++ L'image est envoyée au plugin
++ La zone prévue pour la réception d'une copie de l'image n'est pla affichée.
+
+   ![image_uploaded]({{ imagesPath }}/image_uploaded.png)
+
 # Les commandes
 {: .num}
+
+Le plugin peut envoyer au véhicule les commandes suivantes
+
++ **unlock**   
+  Déverrouillage du véhicule
++ **lock**   
+  Verrouillage du véhicule
++ **lockReduced**   
+  Verrouillage avec le mode alarme réduit
++ **climStart**   
+  Démarrage de la climatisation
++ **climStop**   
+  Arrêt de la climatisation
+
+Les commandes effectivement activées dans le plugin pour un véhicule dépendent
+des fonctionnalités du véhicule remontées par les API.
 
 ## Les actions
 {: .num}
@@ -998,7 +1070,7 @@ Les équipements jeedom pour les véhicules associés à un account sont automat
 {: .num}
 
 Ce plugin utilise trois APIs volvocars. Chacune de ces API donne accès à des endpoints qui fournissent chacun un ensemble
-d'informations. Le tableaui des actions et des infos ci-dessus indiquent quel endpoint fourni l'information iassociée chacune dess
+d'informations. Le tableau des actions et des infos ci-dessus indiquent quel endpoint fourni l'information iassociée chacune dess
 commandes info ou action du plugin.
 
 Volvo limite le nombre d'accès quotidien aux APIs à 10'000. Pour respecter cette limite tout en ayant des infos actualisées sans trop
