@@ -84,7 +84,7 @@ Les équipements jeedom pour les véhicules associés à un account sont automat
 + Le nouveau véhicule est ajouté à la liste des véhicules
 
   > :bulb: Dans certains cas, le site fournisseur d'image peut bloquer les accès effectués par un script.
-     Dans ce cas, le logo Volvo sera affiché à la place de l'image du véhicule. L'image du véhicuke devra
+     Dans ce cas, le logo Volvo sera affiché à la place de l'image du véhicule. L'image du véhicule devra
      être chargée manuellement depuis la page de configuration du véhicule.
 
 ![With car]({{ imagesPath }}/with_car.png)
@@ -143,15 +143,15 @@ Les équipements jeedom pour les véhicules associés à un account sont automat
    de la synchronisation de l'account, elle sera remplacée par un logo Volvo et un bouton `Récupérer une image
    du véhicule` (voir plus bas pour la procédure de récupération manuelle de l'image).
 
-+ **Données brute**
++ **Données brutes**
 
-   Ce bouton ouvre un popup avec les données tels qu'elle sont fournies par les API. Ces infomations peuvent
+   Ce bouton ouvre un popup avec les données tels qu'elles sont fournies par les API. Ces infomations peuvent
    être utiles pour analyse en cas de problème.
 
 # Récupération manuelle de l'image
 {: .num}
 
-+ Le plugin n'a pas d'image, le logo Volvo et le bouton `Récupérer une image du véhicule` sont affichés:
++ Si l'image du véhicule n'a pas pu être chargée, le logo Volvo et le bouton `Récupérer une image du véhicule` sont affichés:
 
    ![no image]({{ imagesPath }}/no_image.png)
 
@@ -162,11 +162,11 @@ Les équipements jeedom pour les véhicules associés à un account sont automat
 
    ![image_ready]({{ imagesPath }}/image_ready.png)
 
-+ Utiliser le menu contextuel (PAS DE RECOURCI CLAVIER!) pour copier l'image.
++ Utiliser le menu contextuel (PAS DE RACCOURCI CLAVIER!) pour copier l'image.
 
    ![copy_image]({{ imagesPath }}/copy_image.png)
 
-+ Utiliser le menu contextuel (PAS DE RECOURCI CLAVIER!) pour coller l'image dans
++ Utiliser le menu contextuel (PAS DE RACCOURCI CLAVIER!) pour coller l'image dans
   la zone prévue à cet effet.
 
    ![paste_image]({{ imagesPath }}/paste_image.png)
@@ -177,6 +177,9 @@ Les équipements jeedom pour les véhicules associés à un account sont automat
    ![image_uploaded]({{ imagesPath }}/image_uploaded.png)
 
 # Les commandes
+{: .num}
+
+## Les actions
 {: .num}
 
 Le plugin peut envoyer au véhicule les commandes suivantes
@@ -193,13 +196,13 @@ Le plugin peut envoyer au véhicule les commandes suivantes
   Arrêt de la climatisation
 
 Les commandes effectivement activées dans le plugin pour un véhicule dépendent
-des fonctionnalités du véhicule remontées par les API.
-
-## Les actions
-{: .num}
+des fonctionnalités du véhicule qui sont remontées par les API (endpoint *commands*).
 
 ## Les infos
 {: .num}
+
+  > :bulb: Les commandes de type *info* ne sont pas créée lors de la création du véhicule. Elles sont créées
+    dynamiquement après l'activation du véhicule en fonction de données reçues des API.
 
 <table class="commandes">
 	<thead>
@@ -1070,7 +1073,7 @@ des fonctionnalités du véhicule remontées par les API.
 {: .num}
 
 Ce plugin utilise trois APIs volvocars. Chacune de ces API donne accès à des endpoints qui fournissent chacun un ensemble
-d'informations. Le tableau des actions et des infos ci-dessus indiquent quel endpoint fourni l'information iassociée chacune dess
+d'informations. Les tableaux des actions et des infos ci-dessus indiquent quel endpoint fourni l'information associée chacune des
 commandes info ou action du plugin.
 
 Volvo limite le nombre d'accès quotidien aux APIs à 10'000. Pour respecter cette limite tout en ayant des infos actualisées sans trop
