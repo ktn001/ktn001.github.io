@@ -194,6 +194,12 @@ Le plugin peut envoyer au véhicule les commandes suivantes
   Démarrage de la climatisation
 + **climStop**   
   Arrêt de la climatisation
++ **honk**   
+  Klaxonne
++ **flash**   
+  Les clignotants du véhicule clignotent.
++ **honk_flash**   
+  Exécution simultanée des commandes *honk* et *flash*
 
 Les commandes effectivement activées dans le plugin pour un véhicule dépendent
 des fonctionnalités du véhicule qui sont remontées par les API (endpoint *commands*).
