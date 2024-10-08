@@ -6,4 +6,5 @@ lang: fr_FR
 
 # Release notes
 
-En préparation...
+### 2024/10/08 beta
++ Première version beta officielle
