@@ -6,5 +6,10 @@ lang: fr_FR
 
 # Release notes
 
+### 2024/10/09 beta
++ Les commandes directement liée à un endpoint ne peuvent pas être supprimées. Elle seraient recréées
+  automatiquement à la réception d'une info remontée via un endpoint.
++ Correction d'un bug dans le tri des commandes
+
 ### 2024/10/08 beta
 + Première version beta officielle
