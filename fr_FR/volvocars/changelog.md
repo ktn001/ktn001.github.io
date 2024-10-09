@@ -6,6 +6,9 @@ lang: fr_FR
 
 # Release notes
 
+### 2024/10/09 beta (bis)
++ Ajout d'une option **visible sur le panel** dans la configuration des véhicules
+
 ### 2024/10/09 beta
 + Les commandes directement liée à un endpoint ne peuvent pas être supprimées. Elle seraient recréées
   automatiquement à la réception d'une info remontée via un endpoint.
