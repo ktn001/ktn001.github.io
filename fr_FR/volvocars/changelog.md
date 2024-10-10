@@ -5,6 +5,8 @@ lang: fr_FR
 ---
 
 # Release notes
+### **2024/10/10**
++ Passage en stable de la version beta du 2024/10/09
 
 ### 2024/10/09 beta (bis)
 + Ajout d'une option **visible sur le panel** dans la configuration des véhicules
