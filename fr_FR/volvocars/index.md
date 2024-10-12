@@ -7,10 +7,10 @@ lang: fr_FR
 {% capture imagesPath %}/images/{{ page.lang }}/{{ page.plugin }}{% endcapture %}
 # PLugin "volvocars" pour Jeedom
 
-En préparation...
-
 Le plugin **volvocars** permet à Jeedom d'interagir avec votre véhicule Volvo en utilisants
  les API volvocars.
+
+Merci à @Xav-74, Je me suis beaucoup inspiré de son plugin **My BMW** pour le widwet et le panel.
 
 # Principe
 {: .num}
@@ -606,6 +606,30 @@ des fonctionnalités du véhicule qui sont remontées par les API (endpoint *com
 		<tr>
 			<td>1</td>
 			<td>ouvert</td>
+		</tr>
+		<tr>
+			<td rowspan="2">Portes fermées</td>
+			<td rowspan="2">allDoorsClosed</td>§
+			<td rowspan="2"></td>
+			<td rowspan="2">binaire</td>
+			<td>0</td>
+			<td>une porte, le capot ou le coffre n'est pas fermé</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Toutes les portes ainsi que le capot et le coffre sont fermés</td>
+		</tr>
+		<tr>
+			<td rowspan="2">Fenêtres fermées</td>
+			<td rowspan="2">allWinsClosed</td>§
+			<td rowspan="2"></td>
+			<td rowspan="2">binaire</td>
+			<td>0</td>
+			<td>Une fenêtre ou le toit n'est pas fermé</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Toutes les fenêtres ainsi que le toit sont fermés</td>
 		</tr>
 	
 		<!-- ---------------- -->

@@ -4,13 +4,13 @@ title : volvocars
 lang: fr_FR
 ---
 
+# Release notes
 
 ### 2024/??/??
 + Corrections de bugs
 + Création des commandes **allDoorsClosed** et **allWinsClosed**.
-   + Ces deux commandes automatiquement sont ajoutées aux véhicules existants lors de la mise à jour du plugin.
+   + Ces deux commandes sont automatiquement ajoutées aux véhicules existants lors de la mise à jour du plugin.
 
-# Release notes
 ### **2024/10/10**
 + Passage en stable de la version beta du 2024/10/09
 
