@@ -6,10 +6,13 @@ lang: fr_FR
 
 # Release notes
 
-### 2024/??/??
+### 2024/??/?? (En préparation)
 + Corrections de bugs
 + Création des commandes **allDoorsClosed** et **allWinsClosed**.
    + Ces deux commandes sont automatiquement ajoutées aux véhicules existants lors de la mise à jour du plugin.
+
+### **2024/10/15**
++ Correction d'un bug sur le panel qui concernait les véhicules avec un moteur thermique.
 
 ### **2024/10/10**
 + Passage en stable de la version beta du 2024/10/09
