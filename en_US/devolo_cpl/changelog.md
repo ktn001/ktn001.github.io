@@ -7,7 +7,10 @@ lang : en_US
 
 # Release notes
 
-### **2024/09/10 stable**
+### **2024/10/23 stable**
++ removing file "plugin_info/packages.json"
+
+### **2024/10/23 stable**
 + **2024/09/4 beta** changed to stable
 
 ### 2024/09/04 beta (bis)

@@ -6,7 +6,10 @@ lang: fr_FR
 
 # Release notes
 
-### **2024/09/10 stable**
+### **2024/10/24 stable**
++ Suppression du fichier plugin_info/packages.json
+
+### **2024/10/23 stable**
 + **2024/09/4 beta** passée en stable
 
 ### 2024/09/04 beta (bis)
