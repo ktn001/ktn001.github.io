@@ -13,6 +13,8 @@ lang: fr_FR
 
 ### 2024/11/04 beta
 + Implémentation de l'authentification 2 phases des comptes Volvocars
+  **ATTENTION:**
+  Il est nécessaire d'éditer puis de sauvegarder les accounts pour lancer l'authentification 2 phase.
 
 ### **2024/10/15**
 + Correction d'un bug sur le panel qui concernait les véhicules avec un moteur thermique.
