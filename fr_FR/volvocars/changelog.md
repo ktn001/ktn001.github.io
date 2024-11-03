@@ -11,6 +11,9 @@ lang: fr_FR
 + Création des commandes **allDoorsClosed** et **allWinsClosed**.
    + Ces deux commandes sont automatiquement ajoutées aux véhicules existants lors de la mise à jour du plugin.
 
+### 2024/11/04 beta
++ Implémentation de l'authentification 2 phases des comptes Volvocars
+
 ### **2024/10/15**
 + Correction d'un bug sur le panel qui concernait les véhicules avec un moteur thermique.
 

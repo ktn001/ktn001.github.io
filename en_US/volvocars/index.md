@@ -1,8 +1,8 @@
 ---
 layout : default
-title : SmartMeterUSB
-plugin : SmartMeterUSB
-lang : en_US
+title : volvocars
+plugin : volvocars
+lang: en_US
 ---
 
 This documentation is not yet available in English.
