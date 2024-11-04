@@ -12,6 +12,9 @@ lang : en_US
 + Creation of **allDoorsClosed** and **allWinsClosed** commands.
    + These two commands are automatically added to existing vehicles when the plugin is updated.
 
+### **2024/11/04**
++ Beta version of 2024/11/04 now stable.
+
 ### 2024/11/04 beta
 + Implementation of 2-phase authentication for Volvocars accounts.     
   **WARNING:**
