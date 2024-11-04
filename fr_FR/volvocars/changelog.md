@@ -12,7 +12,7 @@ lang: fr_FR
    + Ces deux commandes sont automatiquement ajoutées aux véhicules existants lors de la mise à jour du plugin.
 
 ### 2024/11/04 beta
-+ Implémentation de l'authentification 2 phases des comptes Volvocars
++ Implémentation de l'authentification 2 phases des comptes Volvocars    
   **ATTENTION:**
   Il est nécessaire d'éditer puis de sauvegarder les accounts pour lancer l'authentification 2 phase.
 

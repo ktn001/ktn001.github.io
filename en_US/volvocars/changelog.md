@@ -13,7 +13,7 @@ lang : en_US
    + These two commands are automatically added to existing vehicles when the plugin is updated.
 
 ### 2024/11/04 beta
-+ Implementation of 2-phase authentication for Volvocars accounts.
++ Implementation of 2-phase authentication for Volvocars accounts.     
   **WARNING:**
   Accounts must be edited and saved to launch 2-phase authentication.
 
