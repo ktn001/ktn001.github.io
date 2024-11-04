@@ -66,7 +66,25 @@ Saisir le nom du compte puis cliquer sur *OK*
 
 ![Edit account]({{ imagesPath }}/edit_account.png)
 
-Saisir le login et le password du compte VolvoId puis cliquer sur *Valider*
+Saisir le login et le password du compte VolvoId puis cliquer sur *OK*
+
+![Edit OTP]({{ imagesPath }}/edit_otp.png)
+
+Saisir le code que Volvo vous a envoyé par email puis cliquer sur *OK*.
+
+La saisie du code est nécessaire pour l'obtention d'un token qui sera utilisé par le plugin pour
+authentifier ses accès aux API Volvocars. Ce token sera automatiquement renouvelé avant son expiration.
+
+Le token pourra être perdu si
+   + Les véhicules associés à l'account sont tous désactivés durant une certaine période.
+   + Le plugin est désactivé durant plus d'un certain temps.
+   + Jeedom est arrêté durant plus d'un certain temps.
+   + Une sauvegarde de Jeedom est restaurée.
+
+Dans ces cas, il faut ouvrir l'édition de l'account et le sauvegarder. Ceci relancera la procédure
+pour saisir un nouveau code envoyé par email puis obtenir un nouveau token.
+
+Selon la documentation des APIs, un token expiré peut être renouvelé automatiquement jusqu'à 7 jours après sont expiration. Mais je n'ai pas pu le vérifier. Vu que les tokens ont un validité de 30 minutes et sont renouvelés 15 minutes avant leur expiration, un arrêt de moins de 15 minute ne devrait as avoir de conséquence.
 
 ![No car]({{ imagesPath }}/no_car.png)
 
