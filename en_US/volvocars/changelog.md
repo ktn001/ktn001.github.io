@@ -12,6 +12,9 @@ lang : en_US
 + Creation of **allDoorsClosed** and **allWinsClosed** commands.
    + These two commands are automatically added to existing vehicles when the plugin is updated.
 
+### **2024/11/05**
++ Fixed a bug that blocked registration of the first account's token
+
 ### **2024/11/04**
 + Beta version of 2024/11/04 now stable.
 

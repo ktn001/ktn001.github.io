@@ -11,6 +11,9 @@ lang: fr_FR
 + Création des commandes **allDoorsClosed** et **allWinsClosed**.
    + Ces deux commandes sont automatiquement ajoutées aux véhicules existants lors de la mise à jour du plugin.
 
+### **2024/11/05** 
+* Correction d'un bug qui bloquait l'enregistrement du token du premier account
+
 ### **2024/11/04** 
 + Passage en stable de la version beta du 2024/11/04
 
