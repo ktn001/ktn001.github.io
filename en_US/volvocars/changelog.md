@@ -12,6 +12,12 @@ lang : en_US
 + Creation of **allDoorsClosed** and **allWinsClosed** commands.
    + These two commands are automatically added to existing vehicles when the plugin is updated.
 
+### **2024/11/06**
++ Add a plugin configuration parameter for the personal volvocars API access key.
+  **WARNING** A key must be generated on developers.volvocars. As the procedure is not yet described in the plugin documentation,
+  I leave you to consult this [Cummunity topic](https://community.jeedom.com/t/le-plugin-volvo-ne-fonctionnera-quune-partie-de-la-journee/133401/2?u=ktn)
+  to create your own key.
+
 ### **2024/11/05**
 + Fixed a bug that blocked registration of the first account's token
 

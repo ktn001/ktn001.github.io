@@ -11,6 +11,12 @@ lang: fr_FR
 + Création des commandes **allDoorsClosed** et **allWinsClosed**.
    + Ces deux commandes sont automatiquement ajoutées aux véhicules existants lors de la mise à jour du plugin.
 
+### **2024/11/06**
++ Ajout d'un paramètre de configuration du plugin pour la clè personnelle d'accès aux API volvocars.
+  **ATTENTION** Une clé doit être générée sur le site developers.volvocars. La procédure n'étant pas encore décrite dans la documentation
+  du plugin, je vous laisse consulter ce [sujet sur la Cummunity](https://community.jeedom.com/t/le-plugin-volvo-ne-fonctionnera-quune-partie-de-la-journee/133401/2?u=ktn)
+  pour créer votre propre clé.
+
 ### **2024/11/05** 
 * Correction d'un bug qui bloquait l'enregistrement du token du premier account
 
