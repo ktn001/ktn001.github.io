@@ -6,10 +6,11 @@ lang: fr_FR
 
 # Release notes
 
-### 2024/??/?? (En préparation)
+### 2024/11/13 beta
 + Corrections de bugs
 + Création des commandes **allDoorsClosed** et **allWinsClosed**.
    + Ces deux commandes sont automatiquement ajoutées aux véhicules existants lors de la mise à jour du plugin.
++ Widget pour les dashboard
 
 ### **2024/11/06**
 + Ajout d'un paramètre de configuration du plugin pour la clè personnelle d'accès aux API volvocars.

@@ -16,11 +16,11 @@ Merci à @Xav-74, Je me suis beaucoup inspiré de son plugin **My BMW** pour le 
 {: .num}
 
 Ce plugin interagit avec les API Volvocars au travers le cloud, Par conséquent, ce plugins
-nécessite un connection internet.  Il faut aussi que votre véhicule soit accessible dans
+nécessite une connection internet. Il faut aussi que votre véhicule soit accessible dans
 l'app Volvo Cars.
 
-La documentation des API indique qu'elles sont disponnibles pour tous les modèles entre de
-2015 à 2022. Mais il semble que cette documentation n'est pas à jour et que les modèles post
+La documentation des APIs indique qu'elles sont disponnibles pour tous les modèles entre de
+2015 à 2022. Mais il semble que cette documentation ne soit pas à jour et que les modèles post
 2022 sont aussi disponibles via ces API. Le plugin a été dévoloppé en utilisant un XC40
 électrique de 2023.
 
@@ -32,6 +32,32 @@ La documentation des API indique qu'elles sont disponnibles pour tous les modèl
 + ***Modèles confirmés partiellement compatibles avec le plugin:***
 + ***Modèles confirmés incompatibles avec le plugin:***
 
+# Les clés API vcc
+{: .num}
+Outre le compte Volvo ID que vous utilisez dnas l'app volvocars, vous aurez besoin d'une clé API vcc
+personnelle.
+
+Vous devez générer une Clé API vcc (VCC API Key) sur le site
+[https://developer.volvocars.com/](https://developer.volvocars.com/){:target="_blank"} en suivant
+cette procédure:
+
+1. Cliquez sur **Sign up**:   
+    ![sign up]({{ imagesPath }}/sign_up_volvodev.png)
+1. Selectionnez le compte qui sera associé à votre nouveau compte developper.volvocars:   
+    ![select_login_asoc]({{ imagesPath }}/select_login_asoc.png)   
+1. Saisissez votre login/password pour le site sélectionné au point précédent   
+    ![sign_in]({{ imagesPath }}/sign_in_volvodev.png)
+1. Cliquez sur votre nom de login puis sur **Your API applications**   
+    ![open_api_app]({{ imagesPath }}/open_api_applications.png)
+1. Saisissez un nom pour l'application que vous allez créer puis cliquez sur **Create**. Si vous avez
+    plusieurs instances Jeedom, il est conseillé de créer une application pour chaque instance dans
+    laquelle le plugon sera
+   installé:   
+    ![create_application]({{ imagesPath }}/create_application.png)
+1. Votre nouvelle application est créée avec un couple de VCC API Keys. Vous pourrez toujours revenir
+   sur cette page pour récupérer votre clé.   
+    ![cles_vcc]({{ imagesPath }}/vcc_keys.png)
+
 # Installation et configuration du plugin
 {: .num}
 
@@ -41,8 +67,21 @@ La documentation des API indique qu'elles sont disponnibles pour tous les modèl
 {: .num}
 Le plugin s’installe de manière standard depuis le market de Jeedom.
 
+Si l'installation des dépendances n'a pas été lancée automatiquement après l'installation du plugin,
+lancez là manuellement. Une fois les dépendances installées, assurez-vous que le daemon est démarré.
+
 ## Configuration du plugin
 {: .num}
+
++ ***Clé VCC API***
+: Saisissez la clé VCC-API-key que vous avez généré sur le site developer.volvocars.com.
+
++ ***Utiliser le widget du plugin***
+: Sélectionnez cette option pour utiliser le widget du plugin dans les dashboards.
+
+![widget_Electrique]({{ imagesPath }}/widget_electrique.png)
+![widget_Hybrid]({{ imagesPath }}/widget_hybrid.png)
+![widget_Thermique]({{ imagesPath }}/widget_thermique.png)
 
 + ***Commandes à créer pour les ouvrants***
 : Les API volvocars retournent une information de type text pour l'état des ouvrants.
@@ -1120,16 +1159,14 @@ des fonctionnalités du véhicule qui sont remontées par les API (endpoint *com
 # Les endpoints des API volvocars
 {: .num}
 
-Ce plugin utilise trois APIs volvocars. Chacune de ces API donne accès à des endpoints qui fournissent chacun un ensemble
-d'informations. Les tableaux des actions et des infos ci-dessus indiquent quel endpoint fourni l'information associée chacune des
-commandes info ou action du plugin.
+Ce plugin utilise trois APIs volvocars. Chacune de ces API donne accès à des endpoints qui fournissent chacun uni
+ensemble d'informations. Les tableaux des actions et des infos ci-dessus indiquent quel endpoint fourni
+l'information associée chacune des commandes info ou action du plugin.
 
-Volvo limite le nombre d'accès quotidien aux APIs à 10'000. Pour respecter cette limite tout en ayant des infos actualisées sans trop
-de délai, le plugin n'accède pas à tous les endpoints à la même fréquence. La position du vhéhicule est, par exemple, mise à jour chaque
-minute pour permettre une certaine réactivité lorsque le véhicule arrive au domicile alors que le niveau du liquide de frein ne l'est
-que toutes les 60 minutes.
-
-  > :bulb: Je ne sais pas si la limite est de 10'000 appels par account, véhicule ou API. Tout retour d'expérience est le bienvenu.
+Volvo limite le nombre d'accès quotidien aux APIs à 10'000 par clé VCC-API. Pour respecter cette limite tout en
+ayant des infos actualisées sans trop de délai, le plugin n'accède pas à tous les endpoints à la même fréquence.
+La position du vhéhicule est, par exemple, mise à jour chaque minute pour permettre une certaine réactivité lorsque
+le véhicule arrive au domicile alors que le niveau du liquide de frein ne l'est que toutes les 60 minutes.
 
 ## Les endpoints
 {: .num}
