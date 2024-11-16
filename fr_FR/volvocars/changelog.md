@@ -6,6 +6,9 @@ lang: fr_FR
 
 # Release notes
 
+### **2024/11/16** 
++ Passage en stable de la version beta du 2024/11/13
+
 ### 2024/11/13 beta
 + Corrections de bugs
 + Création des commandes **allDoorsClosed** et **allWinsClosed**.
