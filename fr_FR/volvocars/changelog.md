@@ -6,6 +6,11 @@ lang: fr_FR
 
 # Release notes
 
+### 2024/11/26
++ Correction pour les véhicules sans toit ouvrant:
+  + Les commandes `roofState`, `roofOpen` et `roofClosed` d'un véhicule seront supprimées lors de la mise à jour du plugin si
+    la valeur de la commande `roofState` n'est pas **CLOSED**, **OPEN** ou **AJAR**.
+
 ### **2024/11/16** 
 + Passage en stable de la version beta du 2024/11/13
 
