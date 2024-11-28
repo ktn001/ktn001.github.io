@@ -29,6 +29,7 @@ La documentation des APIs indique qu'elles sont disponnibles pour tous les modè
 
 + ***Modèles confirmés compatibles avec le plugin:***
     + XC40 électrique (2023)
+    + XC60 hybrid (2022)
 + ***Modèles confirmés partiellement compatibles avec le plugin:***
 + ***Modèles confirmés incompatibles avec le plugin:***
 
