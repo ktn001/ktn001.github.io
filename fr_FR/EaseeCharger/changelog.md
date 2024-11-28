@@ -12,6 +12,9 @@ Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que 
 ### A venir
 * Informations sur la charge en court / dernière charge
  
+### ??/??/????
++ Core version 4.4.9 ou supérieure requise
+
 ### 11/11/2024
 + Correction de bug dans l'installation des dépendances
 
