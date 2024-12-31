@@ -9,11 +9,12 @@ lang: fr_FR
 
 Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
 
-### A venir
-* Informations sur la charge en court / dernière charge
  
-### ??/??/????
+### 31/12/2024 (Beta)
++ Réécriture d'une bonne partie du code
 + Core version 4.4.9 ou supérieure requise
++ Compatible Debian 12
++ N'utilise plus function Jquery
 
 ### 11/11/2024
 + Correction de bug dans l'installation des dépendances
