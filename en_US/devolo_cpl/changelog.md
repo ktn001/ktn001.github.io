@@ -7,6 +7,9 @@ lang : en_US
 
 # Release notes
 
+### ""2025/01/02 stable**
+Bugfix for error message in logs
+
 ### **2024/10/23 stable**
 + removing file "plugin_info/packages.json"
 

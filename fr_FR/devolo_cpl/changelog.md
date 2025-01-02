@@ -6,6 +6,9 @@ lang: fr_FR
 
 # Release notes
 
+### **2025/01/02 stable**
++ Correction d'un bug pour un message d'erreur dans les logs
+
 ### **2024/10/24 stable**
 + Suppression du fichier plugin_info/packages.json
 
