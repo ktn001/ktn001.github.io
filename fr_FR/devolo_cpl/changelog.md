@@ -1,10 +1,14 @@
 ---
 layout: default
 title : devolo_cpl
+plugin : devolo_cpl
 lang: fr_FR
 ---
 
 # Release notes
+
+### **2025/01/04 stable**
++ Fichier de log de la synchronisation renommé pour qu'il apparaisse dans la page de config du plugin
 
 ### **2025/01/02 stable**
 + Correction d'un bug pour un message d'erreur dans les logs
