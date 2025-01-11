@@ -9,6 +9,8 @@ lang: fr_FR
 
 Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
 
+### 12/01/2025 (Beta)
++ Correction de bug
  
 ### 31/12/2024 (Beta)
 + Réécriture d'une bonne partie du code
