@@ -10,6 +10,10 @@ lang : en_US
 As a reminder, if there is no information on the update, it's because it only concerns documentation, translation or text updates.
 
 ### 12/01/2025 (Beta)
++ Improved deamon => jeedom communication
++ Cached token registration corrected
+
+### 12/01/2025 (Beta)
 + Bugfix
 
 ### 12/31/2024 (Beta)
