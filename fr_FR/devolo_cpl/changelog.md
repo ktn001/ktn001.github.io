@@ -7,6 +7,9 @@ lang: fr_FR
 
 # Release notes
 
+### ????/??/??
++ Ajout d'une option au plugin pour occulter les passwords et autres données sensible dans les logs
+
 ### **2025/01/04 stable**
 + Fichier de log de la synchronisation renommé pour qu'il apparaisse dans la page de config du plugin
 
