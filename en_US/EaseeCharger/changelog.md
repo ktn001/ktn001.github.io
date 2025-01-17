@@ -9,6 +9,9 @@ lang : en_US
 
 As a reminder, if there is no information on the update, it's because it only concerns documentation, translation or text updates.
 
+### 17/01/2025
++ Transition of the beta from 01/12/2025 to stable
+
 ### 12/01/2025 (Beta)
 + Improved deamon => jeedom communication
 + Cached token registration corrected
