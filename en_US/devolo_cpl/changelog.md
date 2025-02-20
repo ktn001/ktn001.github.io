@@ -7,7 +7,7 @@ lang : en_US
 
 # Release notes
 
-### ????/??/??
+### 2025/02/20 beta
 + Add an option to the plugin to hide passwords and other sensitive data in logs.
 
 ### ""2025/01/04 stable**

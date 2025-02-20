@@ -7,7 +7,7 @@ lang: fr_FR
 
 # Release notes
 
-### ????/??/??
+### 2025/02/20 beta
 + Ajout d'une option au plugin pour occulter les passwords et autres données sensible dans les logs
 
 ### **2025/01/04 stable**
