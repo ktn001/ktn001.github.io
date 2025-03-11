@@ -23,7 +23,7 @@ La documentation de ce module précise qu'il est compatible avec les appareils s
 + Magic 2 WiFi next
 + Magic 2 WiFi 2-1
 + Magic 2 LAN triple
-+ Magic 2 DinRail
++ Magic 2 LAN DINrail
 + Magic 2 LAN 1-1
 + Magic 1 WiFi mini
 + Magic 1 WiFi 2-1

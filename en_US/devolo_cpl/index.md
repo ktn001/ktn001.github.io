@@ -22,7 +22,7 @@ The documentation for this module states that it is compatible with the followin
 + Magic 2 WiFi next
 + Magic 2 WiFi 2-1
 + Magic 2 LAN triple
-+ Magic 2 DinRail
++ Magic 2 LAN DINrail
 + Magic 2 LAN 1-1
 + Magic 1 WiFi mini
 + Magic 1 WiFi 2-1
