@@ -7,6 +7,15 @@ lang : en_US
 
 # Release notes
 
+### **2025/03/12 stable**
++ **2025/03/10 beta** changed to stable
+
+### 2025/03/10 beta
++ Translation update
+
+### 2025/03/10 beta
++ BugFix (Magic 2 LAN DINrail)
+
 ### 2025/02/20 beta
 + Add an option to the plugin to hide passwords and other sensitive data in logs.
 
