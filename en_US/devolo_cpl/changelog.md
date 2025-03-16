@@ -7,6 +7,9 @@ lang : en_US
 
 # Release notes
 
+### **2025/03/1r62 stable**
++ Logs cleaning
+
 ### **2025/03/12 stable**
 + **2025/03/10 beta** changed to stable
 

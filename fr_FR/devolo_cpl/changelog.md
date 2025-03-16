@@ -7,6 +7,9 @@ lang: fr_FR
 
 # Release notes
 
+### **2025/03/16 stable**
++ Nettoyage des logs
+
 ### **2025/03/11 stable**
 + **2025/03/10 beta** passée en stable
 
