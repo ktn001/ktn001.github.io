@@ -5,12 +5,35 @@ plugin : SmartMeterUSB
 lang : en_US
 ---
 
-# Release notes
+# Release note
 
-### 2024/??/?? (In preparation)
+### 2025/03/25
++ Three commands to start/stop the fuel engine.
+  + *engineStart* to start.
+  + *engineStop* to stop.
+  + *timeToRun* to define the run time (from 1 to 15 minutes).
+
++ These commands are only created if endpoint *commands* find **ENGINE_START** and **ENGINE_STOP**.
++ **A synchronization must be launched after plugin update to create these commands**.
+
+**My Volvo is 100% electric. So I haven't had a chance to test these controls. I look forward to hearing from you.**
+
+### **2024/11/28**
++ Beta version of 2024/11/26 now stable.
+
+### 2024/11/26
++ Correction for vehicles without sunroof:
+  + A vehicle's `roofState`, `roofOpen` and `roofClosed` commands will be removed when the plugin is updated if
+    the value of the `roofState` command is not **CLOSED**, **OPEN** or **AJAR**.
+
+### **2024/11/16**
++ Beta version of 2024/11/13 now stable.
+
+### 2024/11/13 
 + Bug fixes
 + Creation of **allDoorsClosed** and **allWinsClosed** commands.
    + These two commands are automatically added to existing vehicles when the plugin is updated.
++ Widget for Dashboard 
 
 ### **2024/11/06**
 + Add a plugin configuration parameter for the personal volvocars API access key.
