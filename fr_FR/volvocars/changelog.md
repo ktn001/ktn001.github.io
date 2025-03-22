@@ -6,7 +6,7 @@ lang: fr_FR
 
 # Release notes
 
-### 2025/03/25
+### 2025/03/22
 + Ajout de trois commandes pour démarrer/arrêter le moteur thermique. 
   + *engineStart* pour démmarer.
   + *engineStop* pour arrêter.
