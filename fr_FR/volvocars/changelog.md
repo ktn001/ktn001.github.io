@@ -6,6 +6,9 @@ lang: fr_FR
 
 # Release notes
 
+### 2025/03/24
+- Correction de configuration et création de la commande 'timeToRun'
+
 ### 2025/03/23
 + Tentative de correction d'un bug au démarrage du du moteur thermique.
 

@@ -8,6 +8,9 @@ lang : en_US
 # Release note
 
 ### 2025/03/23
++ Configuration correction and creation of the 'timeToRun' command
+
+### 2025/03/23
 + Attempt to correct a bug during engine start-up.
 
 ### 2025/03/22
