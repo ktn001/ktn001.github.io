@@ -6,6 +6,9 @@ lang: fr_FR
 
 # Release notes
 
+### 2025/03/23
++ Tentative de correction d'un bug au démarrage du du moteur thermique.
+
 ### 2025/03/22
 + Ajout de trois commandes pour démarrer/arrêter le moteur thermique. 
   + *engineStart* pour démmarer.

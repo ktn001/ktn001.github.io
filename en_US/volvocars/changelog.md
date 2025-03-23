@@ -7,6 +7,9 @@ lang : en_US
 
 # Release note
 
+### 2025/03/23
++ Attempt to correct a bug during engine start-up.
+
 ### 2025/03/22
 + Three commands to start/stop the fuel engine.
   + *engineStart* to start.
