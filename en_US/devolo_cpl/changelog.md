@@ -25,10 +25,10 @@ lang : en_US
 ### 2025/02/20 beta
 + Add an option to the plugin to hide passwords and other sensitive data in logs.
 
-### ""2025/01/04 stable**
+### **2025/01/04 stable**
 + Synchronization log file renamed to appear in plugin config page
 
-### ""2025/01/02 stable**
+### **2025/01/02 stable**
 + Bugfix for error message in logs
 
 ### **2024/10/23 stable**
