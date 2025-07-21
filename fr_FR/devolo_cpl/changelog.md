@@ -7,6 +7,9 @@ lang: fr_FR
 
 # Release notes
 
+### **2025/07/25 stable**
++ Forçage de la version 1.4.1 du module devolo_plc_api (le plugin doit être adapté et testé pour la version 1.5.1)
+
 ### **2025/03/16 stable**
 + Nettoyage des logs
 
