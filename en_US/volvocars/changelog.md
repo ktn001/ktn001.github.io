@@ -7,6 +7,9 @@ lang : en_US
 
 # Release note
 
+### 2026/03/10
++ "Energy" API v1 to v2
+
 ### 2025/03/23
 + Configuration correction and creation of the 'timeToRun' command
 
