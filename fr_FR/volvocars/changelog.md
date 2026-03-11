@@ -6,7 +6,7 @@ lang: fr_FR
 
 # Release notes
 
-### 2026/03/11 
+### 2026/03/11 beta
 + Affichage de CollectDate et valueDate au passage de la souris sur les commandes "info" du widget pour le dashboard
 
 ### **2026/03/10**
