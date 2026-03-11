@@ -7,7 +7,10 @@ lang : en_US
 
 # Release note
 
-### 2026/03/10
+### 2026/03/11
++ Displaying CollectDate and valueDate when hovering over the widget's “info” commands for the dashboard
+
+### **2026/03/10**
 + "Energy" API v1 to v2
 
 ### 2025/03/23

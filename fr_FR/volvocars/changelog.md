@@ -6,7 +6,10 @@ lang: fr_FR
 
 # Release notes
 
-### 2026/03/10
+### 2026/03/11 
++ Affichage de CollectDate et valueDate au passage de la souris sur les commandes "info" du widget pour le dashboard
+
+### **2026/03/10**
 +  Passage de l'API "energy" V1 à V2
 
 ### 2025/03/24
