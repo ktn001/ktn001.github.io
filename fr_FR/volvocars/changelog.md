@@ -24,7 +24,7 @@ lang: fr_FR
   + *engineStop* pour arrêter.
   + *timeToRun* pour définir la durée de fnctionnement (de 1 à 15 minutes).
 
-+ Ces commande ne sont créées que si le endpoint *commands* retroune **ENGINE_START** et **ENGINE_STOP**
++ Ces commande ne sont créées que si le endpoint *commands* retourne **ENGINE_START** et **ENGINE_STOP**
 + **Une synchronisation doit être lancée après la mise à jour du plugin pour créer ces commandes**
 
 **Ma Volvo est 100% électrique. Je n'ai donc pas eu la possibilité des tester ces commandes. J'attends vos retours.**
