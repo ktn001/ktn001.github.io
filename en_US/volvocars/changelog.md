@@ -7,6 +7,9 @@ lang : en_US
 
 # Release note
 
+### **2026/03/19**
++ Beta version of 2026/03/11 now stable.
+
 ### 2026/03/11 beta
 + Displaying CollectDate and valueDate when hovering over the widget's “info” commands for the dashboard
 

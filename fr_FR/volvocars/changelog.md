@@ -6,6 +6,9 @@ lang: fr_FR
 
 # Release notes
 
+### **2026/03/19**
++ Passage en stable de la version beta du 2026/03/11
+
 ### 2026/03/11 beta
 + Affichage de CollectDate et valueDate au passage de la souris sur les commandes "info" du widget pour le dashboard
 
@@ -22,7 +25,7 @@ lang: fr_FR
 + Ajout de trois commandes pour démarrer/arrêter le moteur thermique. 
   + *engineStart* pour démmarer.
   + *engineStop* pour arrêter.
-  + *timeToRun* pour définir la durée de fnctionnement (de 1 à 15 minutes).
+  + *timeToRun* pour définir la durée de fonctionnement (de 1 à 15 minutes).
 
 + Ces commande ne sont créées que si le endpoint *commands* retourne **ENGINE_START** et **ENGINE_STOP**
 + **Une synchronisation doit être lancée après la mise à jour du plugin pour créer ces commandes**
