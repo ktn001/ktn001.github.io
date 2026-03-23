@@ -7,6 +7,9 @@ lang : en_US
 
 # Release note
 
+### **2026/03/23**
++ Change to the connection API flow following a change at Volvo
+
 ### **2026/03/19**
 + Beta version of 2026/03/11 now stable.
 
