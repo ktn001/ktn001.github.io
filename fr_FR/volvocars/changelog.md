@@ -7,7 +7,7 @@ lang: fr_FR
 # Release notes
 
 ### **2026/03/23**
-+ Modification du flux des API de connection suite à u changement chez Volvo
++ Modification du flux des API de connection suite à un changement chez Volvo
 
 ### **2026/03/19**
 + Passage en stable de la version beta du 2026/03/11
