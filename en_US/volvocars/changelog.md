@@ -7,6 +7,9 @@ lang : en_US
 
 # Release note
 
+### 2026/03/24
++ Displaying CollectDate and valueDate when hovering over the widget's “info” commands for the panel
+
 ### **2026/03/23**
 + Change to the connection API flow following a change at Volvo
 
