@@ -7,6 +7,9 @@ lang : en_US
 
 # Release notes
 
+###2026/04/12 beta
++ Removal of jQuery dependencies. However, the Jeedom core still requires jQuery to function on mobile devices.
+
 ### **2025/07/25 stable**
 + Forcing version 1.4.1 of the devolo_plc_api module (the plugin must be adapted and tested for version 1.5.1)
 
