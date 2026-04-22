@@ -7,6 +7,9 @@ lang : en_US
 
 # Release notes
 
+### **2026/04/18 stable**
++ **2026/04/12 beta** changed to stable
+
 ###2026/04/12 beta
 + Removal of jQuery dependencies. However, the Jeedom core still requires jQuery to function on mobile devices.
 
