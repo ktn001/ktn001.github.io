@@ -6,6 +6,9 @@ sass:
 
 monNom : ktn
 
+plugins:
+  - jemoji
+
 docs:
   Plugins:
     defauts:
