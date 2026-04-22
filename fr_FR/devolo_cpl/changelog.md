@@ -7,6 +7,9 @@ lang: fr_FR
 
 # Release notes
 
+### 2026/04/21 beta
++ Nouvelles commandes pour les info de débit entre les équipement CPL
+
 ### **2026/04/18 stable**
 + **2026/04/12 beta** passée en stable
 

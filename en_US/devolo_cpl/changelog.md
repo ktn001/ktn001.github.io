@@ -7,6 +7,9 @@ lang : en_US
 
 # Release notes
 
+###2026/04/21 beta
++ New commands for data transfer rates between PLC devices
+
 ### **2026/04/18 stable**
 + **2026/04/12 beta** changed to stable
 
