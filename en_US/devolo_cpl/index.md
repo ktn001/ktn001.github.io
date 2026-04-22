@@ -1,10 +1,10 @@
 ---
 layout : default
-title : SmartMeterUSB
-plugin : SmartMeterUSB
+title : devolo_cpl
+plugin : devolo_cpl
 lang : en_US
 ---
-
+{% capture imagesPath %}/images/{{ page.lang }}/{{ page.plugin }}{% endcapture %}
 The plugin integrates Devolo PLC equipment into Jeedom
 
 > :bulb: Be careful, if you share log files, the device passwords
@@ -60,7 +60,7 @@ Templates are provided in the plugin for the following models:
 
 # Installing and configuring the plugin
 {: .num}
-Plugin configuration](/images/devolo_cpl/configuration_plugin.png)
+![Plugin configuration]({{ imagesPath }}/configuration_plugin.png)
 
 ## Plugin installation
 {: .num}
@@ -70,8 +70,8 @@ then launch the installation of dependencies
 
 ## Plugin configuration
 {: .num}
-**Plugin**
-Global plugin configuration:
++ **Plugin**
+: Global plugin configuration:
     + ***Country***
     The country in which the Devolo equipment is located. This parameter is used
       to select images of devices with the correct plug type.
@@ -80,23 +80,37 @@ Global plugin configuration:
       and graphics will not be displayed as `[<object>][<equipment>]`but as `<equipment>`.
       `<equipment>`.
 
-**Database**
-Configuration of data management:
++ **Database**
+: Configuration of data management:
     + ***Retention***
     Duration for which PLC flow information is stored in the database.
       database.
 
-**Demon**
-Demon configuration:
++ **Daemon**
+: Daemon configuration:
     + ***Port***
     TCP port number used for communication between Jeedom and the daemon.
       The default port is 34741. Another port can be defined in case of
       conflict with another plugin or software that uses the same port.
 
-    + ***Version devolo_plc_api***
-    Version of python module to be used for device communication.
-      Unless otherwise indicated, please use the latest version.
-      Please open a topic on the Jeedom forum if you need to switch to an older version.
++ **Logs**
+: Logs configuration
+    + ***Discreet***
+    : Sensitive data (passwords, etc.) is redacted from the logs.
+    > :warning: Sensitive data has not (yet) been redacted from the daemon's logs!
+    + ***Complete debugging***
+    : The daemon's Python module logs are not set to debug mode unless this option is
+      enabled. Enabling this option can make the daemon's logs very verbose if the
+      plugin is set to “debug” mode.
+
++ **Data rates**
+: 
+    + ***Upward flow***
+    : Indicates whether commands should be created to debit the upstream PLC data streams
+      (to other devices).
+    + ***Downstream flow***
+    : Indicates whether commands should be created to debit the downstream PLC traffic (from
+      other devices).
 
 ## Start daemon
 {: .num}
@@ -116,7 +130,7 @@ devices.
 
 On the plugin management page, click on the `synchronization` icon:
 
-![Synchronization icon](/images/devolo_cpl/icones_gestion_plugin.png)
+![Synchronization icon]({{ imagesPath }}/icones_gestion_plugin.png)
 
 A Jeedom device is automatically created for each detected device.
 
@@ -135,12 +149,12 @@ A Jeedom device is automatically created for each detected device.
 
 On the plugin management page, click on the `Add` icon:
 
-![Add icon](/images/devolo_cpl/icones_gestion_plugin.png)
+![Add icon]({{ imagesPath }}/icones_gestion_plugin.png)
 
 Enter the name of the new device before accessing the device configuration page.
 configuration page.
 
-![equipment not configured](/images/devolo_cpl/equipement_non_configure.png)
+![equipment not configured]({{ imagesPath }}/equipement_non_configure.png)
 
 You must then
 + Select the equipment type. The list of specific parameters will be
@@ -154,10 +168,10 @@ You must then
 > :bulb: The serial number must be unique, but for the moment, the plugin doesn't check this.
 
 ##### Manageable equipment:
-![manageable_equipment_configured](/images/devolo_cpl/manageable_equipment_configure.png)
+![manageable_equipment_configured]({{ imagesPath }}/manageable_equipment_configure.png)
 
 ##### Non-manageable equipment:
-![unmanageable_equipment_configured](/images/devolo_cpl/equipement_non_manageable_configure.png)
+![unmanageable_equipment_configured]({{ imagesPath }}/equipement_non_manageable_configure.png)
 
 ## Finalize configuration
 {: .num}
@@ -248,10 +262,10 @@ when the device responds to the deamon request.
   `<days> <hours>:<minutes>` (`<hours>:<minutes>` if days = 0)
 
   ##### Widget and popup dashboard:
-  ![widget dashboard](/images/devolo_cpl/widget_dashboard.png) ![popup dashboard](/images/devolo_cpl/popup_j_h_m_dashboard.png)
+  ![widget dashboard]({{ imagesPath }}/widget_dashboard.png) ![popup dashboard]({{ imagesPath }}/popup_j_h_m_dashboard.png)
 
   ##### Widget and mobile popup:
-  ![widget dashboard](/images/devolo_cpl/widget_mobile.png) ![popup dashboard](/images/devolo_cpl/popup_j_h_m_mobile.png)
+  ![widget dashboard]({{ imagesPath }}/widget_mobile.png) ![popup dashboard]({{ imagesPath }}/popup_j_h_m_mobile.png)
 + The info command `guest_remaining` indicates the time remaining before WiFi guest
   WiFi guest. This time is recorded in minutes.
 
@@ -270,11 +284,11 @@ PLC data rates are reported by devices every 5 minutes. The values are
 stored in the database and are retained for the retention period
 configured on the plugin configuration page.
 
-PLC network icon](/images/devolo_cpl/icones_gestion_plugin.png)
+PLC network icon]({{ imagesPath }}/icones_gestion_plugin.png)
 
 Clicking on the "PLC networks" icon opens a modal displaying PLC rates.
 
-![modal CPL rates](/images/devolo_cpl/modal_CPL_rates.png)
+![modal CPL rates]({{ imagesPath }}/modal_CPL_rates.png)
 
 ## Networks
 {: .num}
@@ -339,12 +353,12 @@ accesses per day is respected.
 ## Naming mac addresses
 {: .num}
 
-![Address icon](/images/devolo_cpl/icones_gestion_plugin.png)
+![Address icon]({{ imagesPath }}/icones_gestion_plugin.png)
 
 The `Mac addresses` button on the plugin management page opens a modal for
 managing the MAC addresses of devices connected to the Wifi network.
 
-Config MAC](/images/devolo_cpl/config_mac.png)
+Config MAC]({{ imagesPath }}/config_mac.png)
 
 The names associated with mac addresses here will be used instead of mac addresses in
 graphics.
@@ -354,7 +368,7 @@ graphics.
 
 The panel is accessible via the **Home** menu
 
-![Home menu](/images/devolo_cpl/menu_accueil.png)
+![Home menu]({{ imagesPath }}/menu_accueil.png)
 
 The panel contains only two *tabs*:
 * one called `PLC data rates` for historical data rates between PLC devices
@@ -366,7 +380,7 @@ The panel contains only two *tabs*:
 When the tab is opened, it displays a graph of historical data rates between
 two devices.
 
-![panel PLC data rates](/images/devolo_cpl/panel_debits_CPL.png)
+![panel PLC data rates]({{ imagesPath }}/panel_debits_CPL.png)
 
 You can:
 + add a graph via the `Add a graph` button
@@ -380,9 +394,9 @@ I'll leave you to discover the other functions of the graphic.
 
 This tab displays the history of WiFi connections to an access point (AP):
 
-![panel WiFi AP](/images/devolo_cpl/panel_wifi_AP.png)
+![panel WiFi AP]({{ imagesPath }}/panel_wifi_AP.png)
 
 This tab also displays the WiFi connection history of a WiFi device (client):
 
-![panel WiFi client](/images/devolo_cpl/panel_wifi_client.png)
+![panel WiFi client]({{ imagesPath }}/panel_wifi_client.png)
 

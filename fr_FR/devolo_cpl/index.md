@@ -1,9 +1,10 @@
 ---
 layout : default
 title : devolo_cpl
+plugin : devolo_cpl
 lang: fr_FR
 ---
-
+{% capture imagesPath %}/images/{{ page.lang }}/{{ page.plugin }}{% endcapture %}
 # PLugin "devolo_cpl" pour Jeedom
 
 Le plugin permet d'intégrer les équipements CPL de Devolo dans Jeedom
@@ -61,7 +62,8 @@ Des templates sont prévus dans le plugin pour les modèles suivants:
 
 # Installation et configuration du plugin
 {: .num}
-![Configuration du plugin](/images/devolo_cpl/configuration_plugin.png)
+
+![Configuration du plugin]({{ imagesPath }}/configuration_plugin.png)
 
 ## Installation du plugin
 {: .num}
@@ -71,7 +73,7 @@ installé, il faut l'activer puis lancer l'installation des dépendances
 
 ## Configuration du plugin
 {: .num}
-**Plugin**
++ **Plugin**
 : Configuration globale du plugin:
     + ***Pays***
     : Le pays dans lequel de trouvent les équipement Devolo. Ce paramètre sert
@@ -81,23 +83,37 @@ installé, il faut l'activer puis lancer l'installation des dépendances
       et graphiques ne seront pas affichés sous la forme `[<objet>][<équipement>]`mais
       `<équipement>`.
 
-**Base de données**
++ **Base de données**
 : Configuration de la gestion des données:
     + ***Rétention***
     : Durée pendant laquelle les informations des débits CPL sont conservées en base
       de données.
 
-**Démon**
++ **Démon**
 : Configuration du démon:
     + ***Port***
     : Numéro du port TCP utilisé pour la communication entre Jeedom et le démon.
       Le port 34741 est configuré par défaut. Un autre port peut être défini en
       cas de conflit avec un autre plugin ou logiciel qui utilise le même port.
 
-    + ***Version devolo_plc_api***
-    : Version du module python à utiliser pour la communication avec les appareils.   
-      Sauf en cas de contre-indication, veuillez utiliser la dernière version.  
-      Merci d'ouvrir un sujet sur le forum Jeedom si un passage sur une ancienne version est nécessaire.
++ **Logs**
+: Configuration des logs
+    + ***Discret***
+    : Les données sensibles (password, ...) sont expurgées des logs.
+> :warning: Les données sensibles ne sont pas (encore) expurgées des logs du démon!Les données sensibles (password, ...) sont expurgées des logs.
+    + ***Debug complet***
+    : Les logs des modules Python du démon ne sont pas mis en mode debug si cette option n'est pas
+      activée. L'activation de cette option peux rendre les log du démon très verbeux si le plugin
+      est mis en mode "debug".
+
++ **Infos de débits**
+: 
+    + ***Flux montant***
+    : Indique si des commandes doivent être créés pour les débit les flux CPL montants (vers les
+      autres équipements).
+    + ***Flux Descendants***
+    : Indique si des commandes doivent être créés pour les débit les flux CPL descendants
+      (provenants des autres équipements).
 
 ## Lancement du démon
 {: .num}
@@ -117,7 +133,7 @@ non manageables.
 
 Sur la page de gestion du plugin, cliquer sur l'icône `synchronisation`: 
 
-![Icone de synchronisation](/images/devolo_cpl/icones_gestion_plugin.png)
+![Icone de synchronisation]({{ imagesPath}}/icones_gestion_plugin.png)
 
 Un équipement Jeedom est automatiquement créé pour chaque appareil détecté.
 
@@ -136,12 +152,12 @@ Un équipement Jeedom est automatiquement créé pour chaque appareil détecté.
 
 Sur la page de gestion du plugin, cliquer sur l'icône `Ajouter`: 
 
-![Icone Ajouter](/images/devolo_cpl/icones_gestion_plugin.png)
+![Icone Ajouter]({{ imagesPath}}/icones_gestion_plugin.png)
 
 Il faut saisir le nom du nouvel équipement avant d'accéder à la page de
 configuration de l'équipement.
 
-![équipement non configuré](/images/devolo_cpl/equipement_non_configure.png)
+![équipement non configuré]({{ imagesPath}}/equipement_non_configure.png)
 
 Il faut alors
 + Sélectionner le type d'équipement. La liste des paramètres spécifiques sera
@@ -155,10 +171,10 @@ Il faut alors
 > :bulb: Le n° de série doit être unique mais, pour le moment, le plugin ne le vérifie pas.
 
 ##### Equipement manageable:
-![équipement manageable_configuré](/images/devolo_cpl/equipement_manageable_configure.png)
+![équipement manageable_configuré]({{ imagesPath}}/equipement_manageable_configure.png)
 
 ##### Equipement non manageable:
-![équipement non manageable_configuré](/images/devolo_cpl/equipement_non_manageable_configure.png)
+![équipement non manageable_configuré]({{ imagesPath}}/equipement_non_manageable_configure.png)
 
 ## Finalisation de la configuration
 {: .num}
@@ -249,10 +265,10 @@ lorsque l'appareil répond à la demande du deamon.
   `<jours> <heures>:<minute>` (`<heures>:<minutes>` si jours = 0)
 
   ##### Widget et popup dashboard:
-  ![widget dashboard](/images/devolo_cpl/widget_dashboard.png) ![popup dashboard](/images/devolo_cpl/popup_j_h_m_dashboard.png)
+  ![widget dashboard]({{ imagesPath}}/widget_dashboard.png) ![popup dashboard]({{ imagesPath}}/popup_j_h_m_dashboard.png)
 
   ##### Widget et popup mobile:
-  ![widget dashboard](/images/devolo_cpl/widget_mobile.png) ![popup dashboard](/images/devolo_cpl/popup_j_h_m_mobile.png)
+  ![widget dashboard]({{ imagesPath}}/widget_mobile.png) ![popup dashboard]({{ imagesPath}}/popup_j_h_m_mobile.png)
 + La commande info `guest_remaining` indique le temps restant avant la désactivation
   du WiFi guest. Cette durée en enregistrée en minutes.
 
@@ -271,11 +287,11 @@ Les débit CPL sont remontés des appareils toutes le 5 minutes. Le valeurs sont
 enregistrées dans la base de données et sont conservées durant la période le rétention
 configurée sur la page de configuration du plugin.
 
-![Icone réseaux CPL](/images/devolo_cpl/icones_gestion_plugin.png)
+![Icone réseaux CPL]({{ imagesPath}}/icones_gestion_plugin.png)
 
 Un click sur l'icône `Réseaux CPL` ouvre un modal de présentation des débits CPL.
 
-![modal CPL rates](/images/devolo_cpl/modal_CPL_rates.png)
+![modal CPL rates]({{ imagesPath}}/modal_CPL_rates.png)
 
 ## Les réseaux
 {: .num}
@@ -340,12 +356,12 @@ accès par jour est respectée.
 ## Association de noms aux adresses mac
 {: .num}
 
-![Icone adress](/images/devolo_cpl/icones_gestion_plugin.png)
+![Icone adress]({{ imagesPath}}/icones_gestion_plugin.png)
 
 Le bouton `Adresses mac` de la page de gestion du plugin ouvre un modal pour
 gestion des adresses mac des équipements qui se sont connectés au réseaux Wifi.
 
-![Config MAC](/images/devolo_cpl/config_mac.png)
+![Config MAC]({{ imagesPath}}/config_mac.png)
 
 Les noms associés ici aux adresses mac seront utilisés en lieu et place des adresse mac
 les graphiques.
@@ -355,7 +371,7 @@ les graphiques.
 
 Le panel est accessible via le menu **Accueil**
 
-![Menu accueil](/images/devolo_cpl/menu_accueil.png)
+![Menu accueil]({{ imagesPath}}/menu_accueil.png)
 
 Le panel ne contient deux *tabs*:
 * Un nommé `Débits CPL` pour l'historique des débits entre les équipements CPL
@@ -367,7 +383,7 @@ Le panel ne contient deux *tabs*:
 A son ouverture, le tab présente un graphique de l'historique des débits entre
 deux appareils.
 
-![panel Débits CPL](/images/devolo_cpl/panel_debits_CPL.png)
+![panel Débits CPL]({{ imagesPath}}/panel_debits_CPL.png)
 
 Il est possible:
 + D'ajouter u graphique via le bouton `Ajouter un graphique`
@@ -381,9 +397,9 @@ Je vous laiss découvrir les autres fonctionalités du graphique.
 
 Ce tab permet de visualiser l'historique des connections WiFi à un point d'accès (AP):
 
-![panel WiFi AP](/images/devolo_cpl/panel_wifi_AP.png)
+![panel WiFi AP]({{ imagesPath}}/panel_wifi_AP.png)
 
 Ce tab permet également de visualiser l'historique des connections WiFi d'une équipement Wifi (client):
 
-![panel WiFi client](/images/devolo_cpl/panel_wifi_client.png)
+![panel WiFi client]({{ imagesPath}}/panel_wifi_client.png)
 
