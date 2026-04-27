@@ -7,6 +7,9 @@ lang : en_US
 
 # Release notes
 
+###2026/04/27 beta
++ A few minor, mostly cosmetic improvements to the widgets.
+
 ###2026/04/21 beta
 + New commands for data transfer rates between PLC devices
 

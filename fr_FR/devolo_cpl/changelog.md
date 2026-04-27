@@ -7,6 +7,9 @@ lang: fr_FR
 
 # Release notes
 
+### 2026/04/27 beta
++ Quelques améliorations mineures essentiellement cosmétiques poour les widgets.
+
 ### 2026/04/21 beta
 + Nouvelles commandes pour les info de débit entre les équipements CPL
 
