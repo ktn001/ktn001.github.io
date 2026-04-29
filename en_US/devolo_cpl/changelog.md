@@ -7,6 +7,9 @@ lang : en_US
 
 # Release notes
 
+###2026/04/29 beta
++ Fixed a JavaScript bug in the macInfos modal
+
 ###2026/04/27 beta
 + A few minor, mostly cosmetic improvements to the widgets.
 
