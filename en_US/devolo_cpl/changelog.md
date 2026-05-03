@@ -7,19 +7,25 @@ lang : en_US
 
 # Release notes
 
-###2026/04/29 beta
+### **2026/05/04 stable**
++ **2026/05/04 beta** changed to stable
+ 
+### 2026/05/04 beta
++ A few minor, mostly cosmetic improvements.
+
+### 2026/04/29 beta
 + Fixed a JavaScript bug in the macInfos modal
 
-###2026/04/27 beta
+### 2026/04/27 beta
 + A few minor, mostly cosmetic improvements to the widgets.
 
-###2026/04/21 beta
+### 2026/04/21 beta
 + New commands for data transfer rates between PLC devices
 
 ### **2026/04/18 stable**
 + **2026/04/12 beta** changed to stable
 
-###2026/04/12 beta
+### 2026/04/12 beta
 + Removal of jQuery dependencies. However, the Jeedom core still requires jQuery to function on mobile devices.
 
 ### **2025/07/25 stable**

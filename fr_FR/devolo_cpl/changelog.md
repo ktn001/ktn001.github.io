@@ -7,11 +7,17 @@ lang: fr_FR
 
 # Release notes
 
+### **2026/04/04 stable**
++ **2026/05/04 beta** passée en stable
+
+### 2026/04/04 beta
++ Quelques améliorations mineures essentiellement cosmétiques.
+
 ### 2026/04/29 beta
 + Correction d'un bug JS dans le modal macInfos
 
 ### 2026/04/27 beta
-+ Quelques améliorations mineures essentiellement cosmétiques poour les widgets.
++ Quelques améliorations mineures essentiellement cosmétiques pour les widgets.
 
 ### 2026/04/21 beta
 + Nouvelles commandes pour les info de débit entre les équipements CPL
