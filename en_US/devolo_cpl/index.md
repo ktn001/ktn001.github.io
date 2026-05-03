@@ -5,7 +5,7 @@ plugin : devolo_cpl
 lang : en_US
 ---
 {% capture imagesPath %}/images/{{ page.lang }}/{{ page.plugin }}{% endcapture %}
-The plugin integrates Devolo PLC equipment into Jeedom
+# The plugin integrates Devolo PLC equipment into Jeedom
 
 > :bulb: Be careful, if you share log files, the device passwords
 may appear in plain text!
@@ -159,8 +159,8 @@ configuration page.
 You must then
 + Select the equipment type. The list of specific parameters will be
   depending on the type of equipment selected.
-+ Enter the device serial number. *(If you don't know the serial
-  (If you don't know the serial number, you can enter any text you like.)
++ Enter the device serial number. *(If you don't know the serial number, you can
+  enter any text you like.)*
 + Enter device mac address.
 + Enter device IP address. *(For manageable devices only)* + Select device type.
 + Select device type. *(For manageable devices only)* + Select device type.
@@ -168,7 +168,7 @@ You must then
 > :bulb: The serial number must be unique, but for the moment, the plugin doesn't check this.
 
 ##### Manageable equipment:
-![manageable_equipment_configured]({{ imagesPath }}/manageable_equipment_configure.png)
+![manageable_equipment_configured]({{ imagesPath }}/equipement_manageable_configure.png)
 
 ##### Non-manageable equipment:
 ![unmanageable_equipment_configured]({{ imagesPath }}/equipement_non_manageable_configure.png)
@@ -187,9 +187,9 @@ After creating a device automatically or manually, you must
 # Commands
 {: .num}
 
-Equipment commands are created or deleted automatically when the
-the equipment model is modified. Commands are created for manageable
-manageable models and deleted for non-manageable models.
+Commands other than equipment flow commands are automatically created or deleted
+when the equipment model is modified. Commands are created for manageable models
+and deleted for non-manageable models.
 
 Devices do not report their status changes in real time. The
 info commands (with the exception of the locate command) are updated
@@ -197,14 +197,14 @@ every minute via a cron. Device info is also updated
 updated when a command is sent to the device via the deamon or when the
 the refresh command is activated.
 
-### Refresh
+## Refresh
 {: .num}
 
 The refresh command sends a message to the deamon asking the device
 about its status. Info commands are updated asynchronously
 when the device responds to the deamon request.
 
-### Leds
+## Leds
 {: .num}
 
 + Action commands with logicalId `leds_on` and `leds_off` are used to
@@ -212,7 +212,7 @@ when the device responds to the deamon request.
 + The command with logicalId `leds` indicates whether the leds are activated or not.
   This info is updated with information from the device.
 
-### Locate
+## Locate
 {: .num}
 
 + The `locate_on` action command activates device localization by flashing
@@ -229,7 +229,7 @@ when the device responds to the deamon request.
       deactivated by software other than the plugin (e.g. Devolo cockpit).
       for example).
 
-### Firmware versions
+## Firmware versions
 {: .num}
 
 + The `firmware` command indicates the firmware version installed in the
@@ -244,7 +244,7 @@ when the device responds to the deamon request.
   via the [forum](https://community.jeedom.com) (don't forget the tag
   `plugin-devolo_cpl`) will be most welcome.
 
-### WiFi guest activation/deactivation
+## WiFi guest activation/deactivation
 {: .num}
 
 + The `guest_on` and `guest_off` action commands enable and disable
@@ -272,10 +272,14 @@ when the device responds to the deamon request.
   The **Devolo_cpl/J_h_m** widget displays this value in the format
   `<days> <hours>:<minutes>` (`<hours>:<minutes>` if days = 0)
 
-### Online
+## Online
 {: .num}
 
 + The `online` command is a binary info that indicates whether the equipment is online or not.
+
+## Data Rates
+{: .num}
++ You can configure commands for the data transfer rate between PLC devices. See the information below.
 
 # PLC data rates
 {: .num}
@@ -284,9 +288,9 @@ PLC data rates are reported by devices every 5 minutes. The values are
 stored in the database and are retained for the retention period
 configured on the plugin configuration page.
 
-PLC network icon]({{ imagesPath }}/icones_gestion_plugin.png)
+![PLC network icon]({{ imagesPath }}/icones_gestion_plugin.png)
 
-Clicking on the "PLC networks" icon opens a modal displaying PLC rates.
+Clicking on the `PLC networks` icon opens a modal displaying PLC rates.
 
 ![modal CPL rates]({{ imagesPath }}/modal_CPL_rates.png)
 
@@ -304,11 +308,55 @@ another for Magic equipment.
 The rows of the table represent the source devices and the columns the
 destinations.
 
-In the image above, for example, we have an 833 Mbps flow from *cplphil* to *cplbureau*.
-*and 850 Mbps in the opposite direction.
+In the image above, for example, we have an 833 Mbps flow from *cplphil* to *cplbureau*
+and 850 Mbps in the opposite direction.
 
 Data rates are recorded every 5 minutes. The time displayed on the bottom right
 of the modal indicates the time at which the data rates displayed were taken.
+
+## Flow rate commands
+{: .num}
+
+### Commands creation
+{: .num}
+
+If the corresponding option has been enabled in the plugin settings, buttons for creating
+flow orders for upstream and downstream flows are displayed on the equipment order
+management page.
+
+![boutons débit]({{ imagesPath }}/btn_cmd_debit.png)
+
+Clicking these buttons adds a command to the device's command list. The logicalId of the new
+command is `rate_upload` (outgoing data rate) or `rate_download` (incoming data rate).
+
+![nouvelles commandes]({{ imagesPath }}/nouvelles_commandes.png)
+
+You must then enter a name for the command and verify that the suggested target device
+(**Flow to:** or **Flow from:**) is correct before saving the device.
+
+### Checking the Consistency of Orders
+{: .num}
+
+The `Flow Commands` button opens a popup with a list of inconsistencies in the
+flow command configurations.
+
+![Add Icon]({{ imagesPath }}/icones_gestion_plugin.png)
+
+![Flow Command Check Report]({{ imagesPath }}/check_debitCmds.png)
+
+### Notes
+{: .num}
+
++ **Redundancy:**  
+  A traffic command for traffic from A to B will be redundant with the traffic command flowing
+  from A to B.
+
++ **Traffic between unmanaged devices**
+  This traffic cannot be measured.
+
++ **Traffic between a manageable device and a non-manageable device**
+  The traffic commands for the non-manageable device are populated with the values reported by
+  the manageable device
 
 # WiFi connections
 {: .num}
@@ -319,23 +367,18 @@ Jeedom plugin, which keeps a history of these connections.
 ## Random mac addresses
 {: .num}
 
-> :bulb: A Mac address whose second character is `2`, `6`, `A` or `E` is a random address.
+> :bulb: A Mac address whose second character is **2**, **6**, **A** or **E** is a random address.
 
 Some devices use a random mac address rather than their physical mac address.
 address. Since the random mac address changes with each connection, it's impossible to
-connection history of these devices. **These addresses are
-These addresses are therefore ignored by the plugin, which records no data about them.
+connection history of these devices. **These addresses are therefore ignored by the plugin, which
+records no data about them.**
 
 Some of these devices can be configured to use a fixed address
 when connecting to certain WiFi networks. You can therefore
 devices to always use the same mac address when connecting to one of your
 to one of your Devolo access points, while retaining the advantages of using a
 using a random mac address when connecting to other networks.
-networks.
-
-This [page](https://support.plume.com/hc/fr/articles/360052070714-Comment-d%C3%A9sactiver-les-adresses-MAC-al%C3%A9atoires-sur-Android-10-)
-explains how to configure an Android device to use its fixed address when
-connects to your network.
 
 ## Vendor search for MAC address
 {: .num}
@@ -347,8 +390,8 @@ The plugin accesses this site's API to find the manufacturer of devices that hav
 connected to the Wifi interfaces of Devolo equipment.
 
 The API is accessed with a minimum delay of one second between two calls, in order to
-the two-second limit for free access. However, the plugin does not check the number of accesses per day to ensure that the limit of 1000
-accesses per day is respected.
+the two-second limit for free access. However, the plugin does not check the number of accesses
+per day to ensure that the limit of 1000 accesses per day is respected.
 
 ## Naming mac addresses
 {: .num}
@@ -358,7 +401,7 @@ accesses per day is respected.
 The `Mac addresses` button on the plugin management page opens a modal for
 managing the MAC addresses of devices connected to the Wifi network.
 
-Config MAC]({{ imagesPath }}/config_mac.png)
+![Config MAC]({{ imagesPath }}/config_mac.png)
 
 The names associated with mac addresses here will be used instead of mac addresses in
 graphics.

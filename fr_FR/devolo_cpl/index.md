@@ -133,7 +133,7 @@ non manageables.
 
 Sur la page de gestion du plugin, cliquer sur l'icône `synchronisation`: 
 
-![Icone de synchronisation]({{ imagesPath}}/icones_gestion_plugin.png)
+![Icone de synchronisation]({{ imagesPath }}/icones_gestion_plugin.png)
 
 Un équipement Jeedom est automatiquement créé pour chaque appareil détecté.
 
@@ -152,16 +152,16 @@ Un équipement Jeedom est automatiquement créé pour chaque appareil détecté.
 
 Sur la page de gestion du plugin, cliquer sur l'icône `Ajouter`: 
 
-![Icone Ajouter]({{ imagesPath}}/icones_gestion_plugin.png)
+![Icone Ajouter]({{ imagesPath }}/icones_gestion_plugin.png)
 
 Il faut saisir le nom du nouvel équipement avant d'accéder à la page de
 configuration de l'équipement.
 
-![équipement non configuré]({{ imagesPath}}/equipement_non_configure.png)
+![équipement non configuré]({{ imagesPath }}/equipement_non_configure.png)
 
 Il faut alors
 + Sélectionner le type d'équipement. La liste des paramètres spécifiques sera
-  adaptée en function du type déquipement sélectionné.
+  adaptée en fonction du type d'équipement sélectionné.
 + Saisir le numéro de série de l'appareil. *(Si vous ne connaissez pas de n°
   de série, vous pouvez saisir un texte quelquonque.)*
 + Saisir l'adresse mac de l'appareil.
@@ -171,10 +171,10 @@ Il faut alors
 > :bulb: Le n° de série doit être unique mais, pour le moment, le plugin ne le vérifie pas.
 
 ##### Equipement manageable:
-![équipement manageable_configuré]({{ imagesPath}}/equipement_manageable_configure.png)
+![équipement manageable_configuré]({{ imagesPath }}/equipement_manageable_configure.png)
 
 ##### Equipement non manageable:
-![équipement non manageable_configuré]({{ imagesPath}}/equipement_non_manageable_configure.png)
+![équipement non manageable_configuré]({{ imagesPath }}/equipement_non_manageable_configure.png)
 
 ## Finalisation de la configuration
 {: .num}
@@ -187,27 +187,27 @@ Après avoir créé un équipement automatiquement ou manuellement, il faut
 + Sélectionner `Surveillance Offline` si l'on veux avoir un message d'erreur lorsque
   l'équipement n'est pas atteignable (en veille par exemple).
 
-## Les commandes
+# Les commandes
 {: .num}
 
-Les commandes des équipements sont créées ou supprimées automatiquement lorsque
-le modèle de l'équipement est modifié. Les commandes sont créées pour les
-modèles manageables et supprimées pour les modèles non manageables.
+Les commandes autres que les commandes de débits sont créées ou supprimées automatiquement
+lorsque le modèle de l'équipement est modifié. Les commandes sont créées pour les modèles
+manageables et supprimées pour les modèles non manageables.
 
-Les appareils ne remontent pas leurs changement d'état en temps réel. Les
+Les appareils ne remontent pas leurs changements d'état en temps réel. Les
 commandes de type info (à l'exceptions de la commande locate) sont mise à jour
 toutes les minutes via un cron. Les infos pour un appareil sont égalements
 actualisées lorsqu'une commande est envoyée à l'appareil via le deamon ou lorsque
 la commande refresh est activée.
 
-### Refresh
+## Refresh
 {: .num}
 
 La commande refresh envois un message au deamon pour qu'il interroge l'appareil
 sur sont état. Les commandes de type infos sont mise à jour de manière asynchrone
 lorsque l'appareil répond à la demande du deamon.
 
-### Leds
+## Leds
 {: .num}
 
 + Les commandes action avec le logicalId `leds_on` et `leds_off` permettent
@@ -215,7 +215,7 @@ lorsque l'appareil répond à la demande du deamon.
 + La commande avec le logicalId `leds` indique si les leds sont activée ou non.
   Cette info est mise à jour avec les information remontées de l'appareil.
 
-### Locate
+## Locate
 {: .num}
 
 + La commande action `locate_on` active la localisation de l'appareil en faisant
@@ -232,7 +232,7 @@ lorsque l'appareil répond à la demande du deamon.
       désactivée par un autre logiciel que le plugin (par Devolo cockpit par
       exemple).
 
-### Les versions de firmware
+## Les versions de firmware
 {: .num}
 
 + La commande info `firmware` indique la version du firmware installé dans
@@ -247,12 +247,12 @@ lorsque l'appareil répond à la demande du deamon.
   via le [forum](https://community.jeedom.com) (ne pas oublier l'étiquette
   `plugin-devolo_cpl`) sera le bienvenu.
 
-### Activation/désactivation du WiFi guest
+## Activation/désactivation du WiFi guest
 {: .num}
 
 + Les commandes action `guest_on` et `guest_off` permettent d'activer et de désactiver
   le Wifi Guest des appareils Devolo. Dans le cas des Wifi mesh, l'actication ou la 
-  désactivation du Wifi Guest d'un appareil est répercuté sur les autres appareils
+  désactivation du Wifi Guest d'un appareil est répercutée sur les autres appareils
   du réseau mesh.
 + La commande action `guest_duration` permet de configurer la durée durant laquelle
   le WiFi guest doit être activé. Une fois cette durée écoulée, l'appareil Devolo
@@ -265,20 +265,25 @@ lorsque l'appareil répond à la demande du deamon.
   `<jours> <heures>:<minute>` (`<heures>:<minutes>` si jours = 0)
 
   ##### Widget et popup dashboard:
-  ![widget dashboard]({{ imagesPath}}/widget_dashboard.png) ![popup dashboard]({{ imagesPath}}/popup_j_h_m_dashboard.png)
+  ![widget dashboard]({{ imagesPath }}/widget_dashboard.png) ![popup dashboard]({{ imagesPath }}/popup_j_h_m_dashboard.png)
 
   ##### Widget et popup mobile:
-  ![widget dashboard]({{ imagesPath}}/widget_mobile.png) ![popup dashboard]({{ imagesPath}}/popup_j_h_m_mobile.png)
+  ![widget dashboard]({{ imagesPath }}/widget_mobile.png) ![popup dashboard]({{ imagesPath }}/popup_j_h_m_mobile.png)
 + La commande info `guest_remaining` indique le temps restant avant la désactivation
   du WiFi guest. Cette durée en enregistrée en minutes.
 
   Le widget **Devolo_cpl/J_h_m** affiche cette valeur au format
   `<jours> <heures>:<minute>` (`<heures>:<minutes>` si jours = 0)
 
-### Online
+## Online
 {: .num}
 
 + La commande `online` est une info binaire qui indique si l'équipement est online ou non.
+
+## Les débits
+{: .num}
+
++ Des commandes pour les débit des flux entre les équipement CPL peuvent être créées. Voir infos plus bas.
 
 # Les débits CPL
 {: .num}
@@ -287,11 +292,11 @@ Les débit CPL sont remontés des appareils toutes le 5 minutes. Le valeurs sont
 enregistrées dans la base de données et sont conservées durant la période le rétention
 configurée sur la page de configuration du plugin.
 
-![Icone réseaux CPL]({{ imagesPath}}/icones_gestion_plugin.png)
+![Icone réseaux CPL]({{ imagesPath }}/icones_gestion_plugin.png)
 
 Un click sur l'icône `Réseaux CPL` ouvre un modal de présentation des débits CPL.
 
-![modal CPL rates]({{ imagesPath}}/modal_CPL_rates.png)
+![modal CPL rates]({{ imagesPath }}/modal_CPL_rates.png)
 
 ## Les réseaux
 {: .num}
@@ -307,11 +312,56 @@ un autre pour les équipements Magic.
 Les lignes du tableau représenteint les appareils source et les colonnes, les
 destinations.
 
-Dans l'image ci-dessus, nous avons donc un flux 833 Mbps de *cplphil* verss
+Dans l'image ci-dessus, nous avons donc un flux 833 Mbps de *cplphil* vers
 *cplbureau* et de 850 Mbps dans le senrsc inverse.
 
 Les débits sont relevés toutes les 5 minutes. L'heure affichée en bas à droites
 du modal indique l'heure à laquelle les débits affichés ont été relevés.
+
+## Les commandes de débits
+{: .num}
+
+### Création des commandes
+{: .num}
+
+Si l'option correspondante a été activée dans la configuration du plugin, des boutons pour
+la création commandes de débit pour les flux ascendants et descendants sont affichés sur
+la page de gestion des commandes d'un équipement.
+
+![boutons débit]({{ imagesPath }}/btn_cmd_debit.png)
+
+Un click sur ces bouton ajoute une commande à la liste des commandes de l'équipement.
+Le logicalId de la nouvelle commande est `rate_upload` (débits sortants) ou 
+`rate_download` (débit entrant).
+
+![nouvelles commandes]({{ imagesPath }}/nouvelles_commandes.png)
+
+Vous devez alors saisir un nom pour la commande et vérifier si l'équipement cible 
+(**Flux vers:** ou **Flux depuis:**) proposé est correct avant de sauvegarder l'équipement.
+
+### Vérification de la cohérence des commandes
+{: .num}
+
+Le bouton `Commandes de débit` ouvre un popup avec une listes des incohérences dans les
+configurations des commandes de débit.
+
+![Icone Ajouter]({{ imagesPath }}/icones_gestion_plugin.png)
+
+![rapport check débits]({{ imagesPath }}/check_debitCmds.png)
+
+### Remarques
+{: .num}
+
++ **Redondance:**   
+  Une commande de débit pour le montant de A vers B sera redondante avec la commande de débit
+  descendant vers B depuis A.
+
++ **Flux entre équipements non manageable**   
+  Ces flux ne peuvent pas être mesurés.
+
++ **Flux entre un équipement manageable et un non manageable**   
+  Les commandes de débit de l'équipement non manageable sont renseignées avec les valeurs
+  remontées depuis l'appareil manageable
 
 # Les connections WiFi
 {: .num}
@@ -322,7 +372,7 @@ remontées dans le plugin Jeedom qui conserve un historique de ces connections.
 ## Les adresses mac aléatoires
 {: .num}
 
-> :bulb: Une adresse mac dont le deuxième caractère est `2`, `6`, `A` ou `E` est une adresse aléatoire.
+> :bulb: Une adresse mac dont le deuxième caractère est **2**, **6**, **A** ou **E** est une adresse aléatoire.
 
 Certains appareils utilisent une adresse mac aléatoire plutôt que leur adresse mac
 physique. Vu que l'adresse mac aléatoire change lors de chaque connection, il est
@@ -336,9 +386,6 @@ connectent à un de vos pointis d'accès Devolo tout en conservant les avantages
 l'utilisation d'une adresse mac aléatoire lorsque vous vous connectez à d'autres
 réseaux.
 
-Cette [page](https://support.plume.com/hc/fr/articles/360052070714-Comment-d%C3%A9sactiver-les-adresses-MAC-al%C3%A9atoires-sur-Android-10-)
-exlique comment configurer un Android pour qu'il utilise son adresse fixe lorsqu'il
-ce connecte sur votre réseau.
 
 ## Recherche du vendeur pour une adresse MAC
 {: .num}
@@ -350,18 +397,19 @@ Le plugin accède à l'API de ce site pour trouver le fabricant des appareils qu
 connectés aux interfaces Wifi des équipement Devolo.
 
 L'accès à l'API se fait en respectant un délai minimum d'une seconde entre deux appels pour
-respecter la limite de deux accès secondes pour les accès libres. Par contre, le plugin ne vérifie pas le nombre d'accès durant une journée pour s'assurer que que limite de 1000
-accès par jour est respectée.
+respecter la limite de deux accès secondes pour les accès libres. Par contre, le plugin ne vérifie
+pas le nombre d'accès durant une journée pour s'assurer que la limite de 1000 accès par jour est
+respectée.
 
 ## Association de noms aux adresses mac
 {: .num}
 
-![Icone adress]({{ imagesPath}}/icones_gestion_plugin.png)
+![Icone adress]({{ imagesPath }}/icones_gestion_plugin.png)
 
 Le bouton `Adresses mac` de la page de gestion du plugin ouvre un modal pour
 gestion des adresses mac des équipements qui se sont connectés au réseaux Wifi.
 
-![Config MAC]({{ imagesPath}}/config_mac.png)
+![Config MAC]({{ imagesPath }}/config_mac.png)
 
 Les noms associés ici aux adresses mac seront utilisés en lieu et place des adresse mac
 les graphiques.
@@ -371,7 +419,7 @@ les graphiques.
 
 Le panel est accessible via le menu **Accueil**
 
-![Menu accueil]({{ imagesPath}}/menu_accueil.png)
+![Menu accueil]({{ imagesPath }}/menu_accueil.png)
 
 Le panel ne contient deux *tabs*:
 * Un nommé `Débits CPL` pour l'historique des débits entre les équipements CPL
@@ -383,7 +431,7 @@ Le panel ne contient deux *tabs*:
 A son ouverture, le tab présente un graphique de l'historique des débits entre
 deux appareils.
 
-![panel Débits CPL]({{ imagesPath}}/panel_debits_CPL.png)
+![panel Débits CPL]({{ imagesPath }}/panel_debits_CPL.png)
 
 Il est possible:
 + D'ajouter u graphique via le bouton `Ajouter un graphique`
@@ -397,9 +445,9 @@ Je vous laiss découvrir les autres fonctionalités du graphique.
 
 Ce tab permet de visualiser l'historique des connections WiFi à un point d'accès (AP):
 
-![panel WiFi AP]({{ imagesPath}}/panel_wifi_AP.png)
+![panel WiFi AP]({{ imagesPath }}/panel_wifi_AP.png)
 
 Ce tab permet également de visualiser l'historique des connections WiFi d'une équipement Wifi (client):
 
-![panel WiFi client]({{ imagesPath}}/panel_wifi_client.png)
+![panel WiFi client]({{ imagesPath }}/panel_wifi_client.png)
 
