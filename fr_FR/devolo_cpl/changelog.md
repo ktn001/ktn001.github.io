@@ -7,6 +7,9 @@ lang: fr_FR
 
 # Release notes
 
+### **2026/05/11 stable**
++ **2026/05/05 beta** passée en stable
+
 ### 2026/05/05 beta
 + Module python devolo_plc_api: passage de version 1.4.1 à 1.5.1
   Cette nouvelle version inclue un traitement des timeout lors des connection aux appareils.
