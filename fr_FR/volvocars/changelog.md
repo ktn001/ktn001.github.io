@@ -6,6 +6,9 @@ lang: fr_FR
 
 # Release notes
 
+### **2026/06/12**
++ Elimination d'un warning PHP 8. Merci @bernard-dandrea
+
 ### **2026/03/26**
 + Passage en stable de la version beta du 2026/03/24
 

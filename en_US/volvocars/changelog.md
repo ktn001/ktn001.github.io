@@ -7,6 +7,9 @@ lang : en_US
 
 # Release note
 
+### **2026/06/12**
++ Fixing a PHP 8 warning. Thanks @bernard-dandrea
+
 ### **2026/03/26**
 + Beta version of 2026/03/24 now stable.
 
