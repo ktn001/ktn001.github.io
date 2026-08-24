@@ -13,16 +13,16 @@ on:
     paths:
       - 'defauts/fr_FR'
 
-  permissions:
-    contents: write
-    pull-requests: write
+permissions:
+  contents: write
+  pull-requests: write
 
-  jobs:
-    translate:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: Mips2648/docs-translations@v3
-          with:
-            deepl_api_key: ${{ secrets.DEEPL_API_KEY }}
-            document_roots: "defauts"
-            memory_path: .translation_memory
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Mips2648/docs-translations@v3
+        with:
+          deepl_api_key: ${{ secrets.DEEPL_API_KEY }}
+          document_roots: "defauts"
+          memory_path: .translation_memory
