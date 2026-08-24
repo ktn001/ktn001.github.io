@@ -3,7 +3,8 @@ name: Translate documentation
 on:
   workflow_dispatch:
     inputs:
-      target_languages: "Comma-separated target languages"
+      target_languages:
+        description:  "Comma-separated target languages"
         required: false
         default: "en_US"
   push:
