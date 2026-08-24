@@ -25,4 +25,4 @@ jobs:
         with:
           deepl_api_key: ${{ secrets.DEEPL_API_KEY }}
           documents_roots: "defauts"
-          memory_path: .translation_memory
+          memory_path: /.translation_memory
