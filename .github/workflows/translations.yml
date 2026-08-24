@@ -1,0 +1,27 @@
+name: Translate documentation
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_languages: "Comma-separated target languages"
+        required: false
+        default: "en_US"
+  push:
+    branches:
+      - main
+    paths:
+      - 'defauts/fr_FR'
+
+  permissions:
+    contents: write
+    pull-requests: write
+
+  jobs:
+    translate:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: Mips2648/docs-translations@v3
+          with:
+            deepl_api_key: ${{ secrets.DEEPL_API_KEY }}
+            document_roots: "defauts"
+            memory_path: .translation_memory
