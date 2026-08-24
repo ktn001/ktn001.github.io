@@ -24,5 +24,6 @@ jobs:
       - uses: Mips2648/docs-translations@v3
         with:
           deepl_api_key: ${{ secrets.DEEPL_API_KEY }}
+          target_languages: "en_US"
           documents_roots: "defauts"
           memory_path: ${{ github.workspace }}/.translation_memory
