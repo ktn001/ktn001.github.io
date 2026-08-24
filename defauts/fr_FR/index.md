@@ -4,6 +4,7 @@ title : defauts
 lang: fr_FR
 ---
 
+
 # Plugin "Défauts" pour Jeedom
 
 Le plugin **Défauts** permet de détecter des défauts en vérifiant la cohérence entre un état et une mesure.
