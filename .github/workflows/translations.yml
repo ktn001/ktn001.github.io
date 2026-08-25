@@ -11,7 +11,8 @@ on:
     branches:
       - main
     paths:
-      - 'defauts/fr_FR'
+      - '/plugins/*/fr_FR/**'
+      - '/index/fr_FR/**'
 
 permissions:
   contents: write
