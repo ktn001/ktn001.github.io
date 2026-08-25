@@ -25,5 +25,5 @@ jobs:
         with:
           deepl_api_key: ${{ secrets.DEEPL_API_KEY }}
           target_languages: "en_US"
-          documents_roots: "defauts"
+          documents_roots: "plugins"
           memory_path: ${{ github.workspace }}/.translation_memory
