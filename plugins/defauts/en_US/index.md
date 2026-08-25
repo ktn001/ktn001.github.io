@@ -4,7 +4,6 @@ title : defects
 lang: en_US
 ---
 
-
 # "Faults" Plugin for Jeedom
 
 The **Faults** plugin detects faults by verifying consistency between a state and a measurement.
