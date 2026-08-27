@@ -1,12 +1,12 @@
 ---
 layout : default
-title : defects
+title : Defects
 lang: en_US
 ---
 
-# "Faults" Plugin for Jeedom
+# "{{page.title}}" plugin for Jeedom
 
-The **Faults** plugin detects faults by verifying consistency between a state and a measurement.
+The **{{page.title}}** plugin detects faults by verifying the consistency between a status and a measurement.
 
 # Some examples:
 {: .num}
@@ -25,7 +25,7 @@ The plugin requires no configuration; you just need to activate it.
 
 # Equipment
 {: .num}
-A **Faults** device allows you to monitor the consistency of multiple combinations of states and values. An info
+A **{{page.title}}** device allows you to monitor the consistency of multiple combinations of states and values. Information
 indicates for each of these monitoring tasks whether the current status is consistent or not.
 
 In addition, a **default** alert is triggered when a monitoring system detects an inconsistency. This alert remains active
@@ -33,7 +33,7 @@ until it is cleared, even if the inconsistency disappears.
 
 ## Design
 {: .num}
-**Faults** are created on the plugin page, which can be accessed via the `plugins` ==> `Monitoring` ==> `Faults` menu.
+The **{{page.title}}** devices are created on the plugin page, which can be accessed via the `plugins` ==> `Monitoring` ==> `{{page.title}}` menu.
 The device is configured with three commands:
 + A **default** command, of the "info" type, that indicates whether an inconsistency is or has been detected by one of the equipment's monitoring systems.
 + An **Acknowledgment** command, of the action type, used to acknowledge detected faults.
