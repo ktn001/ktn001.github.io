@@ -17,16 +17,19 @@ docs:
         doc: index.html
         changeLog: changelog.html
     devolo_cpl:
+      legacy: true
       icon: devolo_cpl_icon.png
       pages:
         doc: index.html
         changelog: changelog.html
     EaseeCharger:
+      legacy: true
       icon: EaseeCharger_icon.png
       pages:
         doc: index.html
         changeLog: changelog.html
     emulStore:
+      legacy: true
       icon: emulStore_icon.png
       pages:
         doc: index.html
@@ -39,21 +42,25 @@ docs:
     #    Ajout d'un modèle: ajoutModel.html
     #    Cmd des chargeurs: cmdCharger.html
     SmartMeterUSB:
+      legacy: true
       icon  : SmartMeterUSB_icon.png
       pages :
         doc : index.html
         changeLog: changelog.html
     swassist:
+      legacy: true
       icon : swassist_icon.png
       pages:
         doc: index.html
         changeLog: changelog.html
     velux:
+      legacy: true
       icon : velux_icon.png
       pages:
         doc: index.html
         changeLog: changelog.html
     volvocars:
+      legacy: true
       icon : volvocars_icon.png
       pages:
         doc: index.html
@@ -61,6 +68,7 @@ docs:
 
   Utilitaires:
     traduitjdm: 
+      legacy: true
       pages:
         doc: index.html
         changeLog: release_notes.html

@@ -1,12 +1,12 @@
 ---
 layout : default
-title : defauts
+title : Défauts
 lang: fr_FR
 ---
 
-# Plugin "Défauts" pour Jeedom
+# Plugin "{{page.title}}" pour Jeedom
 
-Le plugin **Défauts** permet de détecter des défauts en vérifiant la cohérence entre un état et une mesure.
+Le plugin **{{page.title}}** permet de détecter des défauts en vérifiant la cohérence entre un état et une mesure.
 
 # Quelques exemples:
 {: .num}
@@ -25,7 +25,7 @@ Le plugin ne nécessite aucune configuration, il faut juste l’activer.
 
 # Les équipements
 {: .num}
-Un équipement **Défauts** permet de surveiller la cohérence de plusieurs combinaisons d'état et de valeur. Une info
+Un équipement **{{page.title}}** permet de surveiller la cohérence de plusieurs combinaisons d'état et de valeur. Une info
 indique pour chacune de ces surveillances si la situation actuelle est cohérente ou non.
 
 De plus, une info **défaut** est activée lorsqu'une surveillance détecte une incohérence. Cette info reste activée
@@ -33,7 +33,7 @@ jusqu'à ce qu'elle soit acquittée même si l'incohérence disparaît.
 
 ## Création
 {: .num}
-Les équipements **Défauts** sont créés sur la page du plugin qui est atteignable via le menu `plugins`==> `Monitoring` ==> `Défauts`.
+Les équipements **{{page.title}}** sont créés sur la page du plugin qui est atteignable via le menu `plugins`==> `Monitoring` ==> `{{page.title}}`.
 L'équipement est créé avec trois commandes:
 + Une commande **defaut**, de type info, qui indique si une incohérence est ou a été détectée par une des surveillances de l'équipement.
 + Une commande **Acquittement**, de type action, pour acquitter les défauts détectés.
