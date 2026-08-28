@@ -62,7 +62,7 @@
     "Outre les configurations habituelles, l'équipement a deux paramêtres permettant de définir le fonctionnement de l'**Auto acquittement**:": "In addition to the standard settings, the device has two parameters that allow you to configure how **Auto Acknowledgment** works:",
     "Page de configuration du plugin": "Plugin Configuration Page",
     "Par défaut, La commande `defaut` n'est pas visible (la configuration des commandes existantes est modifiée lors de la mise à jour du plugin).": "By default, the `default` command is not visible (the configuration of existing commands is modified when the plugin is updated).",
-    "Plugin \"{{page.plugin}}\" pour Jeedom": "\"{{page.plugin}}\" plugin for Jeedom",
+    "Plugin \"{{page.plugin}}\" pour Jeedom.": "\"{{page.plugin}}\" plugin for Jeedom.",
     "Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.": "As a reminder, if there is no information about the update, it means that the update only involves documentation, translations, or text changes.",
     "Première Publication": "First Publication",
     "Première version stable": "First stable release",
