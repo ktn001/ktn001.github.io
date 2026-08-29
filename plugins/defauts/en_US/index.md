@@ -4,7 +4,6 @@ pluginId : defauts
 plugin : Défauts
 lang: en_US
 ---
-
 # "{{page.plugin}}" plugin for Jeedom.
 The **{{page.plugin}}** plugin detects faults by verifying the consistency between a status and a measurement.
 

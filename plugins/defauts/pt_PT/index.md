@@ -4,7 +4,6 @@ pluginId : defauts
 plugin : Défauts
 lang: pt_PT
 ---
-
 # Plugin «{{page.plugin}}» para o Jeedom.
 O plugin **{{page.plugin}}** permite detetar falhas, verificando a coerência entre um estado e uma medição.
 
