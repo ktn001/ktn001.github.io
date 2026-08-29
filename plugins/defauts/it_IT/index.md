@@ -10,7 +10,7 @@ Il plugin **{{page.plugin}}** consente di rilevare i guasti verificando la coere
 # Alcuni esempi:
 {: .num}
 
-- una lampada accesa ma nessun consumo (lampadina difettosa o segnale di ritorno errato).
+- Una lampada è accesa ma non consuma energia (lampadina difettosa o segnale di ritorno errato).
 - Una lampada spenta ma con un consumo superiore a 1 watt (errore di feedback).
 - La pompa è in funzione ma non c'è flusso.
 

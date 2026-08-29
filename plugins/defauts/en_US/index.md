@@ -10,7 +10,7 @@ The **{{page.plugin}}** plugin detects faults by verifying the consistency betwe
 # Some examples:
 {: .num}
 
-- A light is on but no power is being consumed (defective bulb or faulty feedback signal).
+- A light is on but no power is being consumed (defective bulb or incorrect feedback signal).
 - A light is off but is consuming more than 1 watt (faulty feedback).
 - The pump is running but there is no flow.
 
