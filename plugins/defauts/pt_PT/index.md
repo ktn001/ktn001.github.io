@@ -1,11 +1,11 @@
 ---
 layout : default
+pluginId : defauts
 plugin : Défauts
 lang: pt_PT
 ---
 
 # Plugin «{{page.plugin}}» para o Jeedom.
-
 O plugin **{{page.plugin}}** permite detetar falhas, verificando a coerência entre um estado e uma medição.
 
 # Alguns exemplos:
@@ -19,12 +19,14 @@ O plugin também pode comunicar falhas quando o valor de uma medição se desvia
 
 # Configuração do plugin
 {: .num}
+
 O plugin não requer qualquer configuração, basta ativá-lo.
 
-![Página de configuração do plugin](/images/defauts/config_plugin.png)
+{% include image.html img="config_plugin.png" %}
 
 # Os equipamentos
 {: .num}
+
 Um equipamento **{{page.plugin}}** permite monitorizar a coerência de várias combinações de estado e valor. Uma informação
 indica, para cada uma destas monitorizações, se a situação atual é coerente ou não.
 
@@ -33,6 +35,7 @@ até que seja absolvida, mesmo que a incoerência desapareça.
 
 ## Criação
 {: .num}
+
 Os equipamentos **{{page.plugin}}** são criados na página do plugin, acessível através do menu `plugins` ==> `Monitorização` ==> `{{page.plugin}}`.
 O equipamento foi concebido com três comandos:
 + Um comando **padrão**, do tipo «info», que indica se foi ou está a ser detetada uma inconsistência por um dos sistemas de monitorização do equipamento.
@@ -41,8 +44,10 @@ O equipamento foi concebido com três comandos:
 
 ## Configuração
 {: .num}
+
 ### Equipamento
 {: .num}
+
 Para além das configurações habituais, o equipamento dispõe de dois parâmetros que permitem definir o funcionamento da **confirmação automática**:
 * **Autoconfirmação**
 indica se as falhas devem ser confirmadas automaticamente ou não.
@@ -51,11 +56,13 @@ Os prazos de espera
    
 ### Verificações de coerência
 {: .num}
+
 O painel «Monitorizações» permite gerir as monitorizações do equipamento. O botão «Adicionar uma monitorização» adiciona uma monitorização de coerência ao equipamento.
 
 #### As verificações de coerência têm vários parâmetros:
 {: .num}
-![configuração de uma monitorização de consistência](/images/defauts/config_surveillance.png)
+
+{% include image.html img="config_surveillance.png" %}
 * ***Nome:*** Nome da monitorização.
 * ***Estado:*** Informação binária a monitorizar.
 * ***Medida:*** Informação digital a monitorizar.
@@ -70,7 +77,8 @@ O painel «Monitorizações» permite gerir as monitorizações do equipamento. 
 
 ### Monitorização de valores de referência
 {: .num}
-![configuração de uma monitorização de valores de referência](/images/defauts/config_consigne.png)
+
+{% include image.html img="config_consigne.png" %}
 * ***Nome:*** Nome da monitorização.
 * ***Estado:*** Informação binária utilizada para controlar o funcionamento da vigilância.
 * ***Medição:*** Informação digital; será sinalizada uma falha se o valor desta medição estiver demasiado distante do valor de referência.
@@ -83,7 +91,8 @@ O painel «Monitorizações» permite gerir as monitorizações do equipamento. 
 
 ### Um pouco de história
 {: .num}
-![histórico](/images/defauts/historique.png)
+
+{% include image.html img="historique.png" %}
 
 O comando *histórico* e o respetivo widget permitem visualizar as últimas cinco falhas ocorridas. O número de eventos listados é configurável.
 
@@ -92,7 +101,7 @@ O comando *histórico* e o respetivo widget permitem visualizar as últimas cinc
 #### O histórico tem vários parâmetros:
 {: .num}
 
-![configuração do histórico](/images/defauts/config_histo.png)
+{% include image.html img="config_histo.png" %}
 
 * ***Nome:*** Nome do histórico.
 * ***Tamanho:***  Número de registos do histórico apresentados no widget (máximo de 5)
