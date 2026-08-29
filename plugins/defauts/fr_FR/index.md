@@ -23,7 +23,6 @@ Le plugin peut aussi remonter des défaut lorsque la valeur d'une mesure s'écar
 Le plugin ne nécessite aucune configuration, il faut juste l’activer.
 
 {% include image.html img="config_plugin.png" %}
-![Page de configuration du plugin](/images/defauts/config_plugin.png)
 
 # Les équipements
 {: .num}
@@ -57,7 +56,7 @@ Le panneau `surveillances` permet de géger les surveillances de l'équipement. 
 
 #### Les surveillances de cohérence ont plusieurs paramètres:
 {: .num}
-![configuration d'une surveillance de cohérence]({{imgDir}}/config_surveillance.png)
+{% include image.html img="config_surveillance.png" %}
 * ***Nom :*** Nom de la surveillance.
 * ***Etat :*** Info binaire à surveiller.
 * ***Mesure :*** Info numérique à surveiller.
@@ -72,7 +71,7 @@ Le panneau `surveillances` permet de géger les surveillances de l'équipement. 
 
 ### Des surveillances de consigne
 {: .num}
-![configuration d'une surveillance de consigne](/images/defauts/config_consigne.png)
+{% include image.html img="config_consigne.png" %}
 * ***Nom :*** Nom de la surveillance.
 * ***Etat :*** Info binaire utilisée pour controler le fonctonnement de lasurveillance.
 * ***Mesure :*** Info numérique, un defaut sera signalé si la valeur de cette mesure est trop distante de la valeur de la consigne.
@@ -85,7 +84,7 @@ Le panneau `surveillances` permet de géger les surveillances de l'équipement. 
 
 ### De l'historique
 {: .num}
-![historique](/images/defauts/historique.png)
+{% include image.html img="historique.png" %}
 
 La commande *historique* et son widget permettent de voir les cinq derniers défauts qui se sont produits. Le nombre d'événements listés est configurable.
 
@@ -94,7 +93,7 @@ Une durée de rétention des events listés peut-être configurée. Les events q
 #### L'historique a plusieurs paramètres:
 {: .num}
 
-![configuration de l'historique](/images/defauts/config_histo.png)
+{% include image.html img="config_histo.png" %}
 
 * ***Nom :*** Nom de lĥistorique.
 * ***Taille :***  Nombre d'entrées de l'historique affichées dans le widget (5 au maximum)

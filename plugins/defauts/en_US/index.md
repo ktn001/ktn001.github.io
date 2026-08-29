@@ -1,5 +1,6 @@
 ---
 layout : default
+pluginId : defauts
 plugin : Défauts
 lang: en_US
 ---
@@ -20,6 +21,8 @@ The plugin can also report faults when a measured value deviates too far from a 
 # Plugin Configuration
 {: .num}
 The plugin requires no configuration; you just need to activate it.
+
+{% include image.html img="config_plugin.png" %}
 
 ![Plugin Configuration Page](/images/defauts/config_plugin.png)
 

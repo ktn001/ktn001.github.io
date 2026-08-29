@@ -1,5 +1,5 @@
-<!--
-<img src="{{ include.src }}" 
-     alt="{{ include.alt | default: 'Image' }}" 
-     onerror="this.onerror=null; this.src='{{ include.fallback }}';">
--->
+{%- capture img %}/plugins/{{page.pluginId}}/{{page.lang}}/images/{{include.img}}{% endcapture -%}
+{%- capture altImg %}/plugins/{{page.pluginId}}/fr_FR/images/{{include.img}}{% endcapture -%}
+<img src="{{img}}"
+     alt="{{ include.alt | default: 'Image <%s> introuvable' | replace: "%s", include.img }}" 
+     onerror="this.onerror=null; this.src='{{ altImg }}';">

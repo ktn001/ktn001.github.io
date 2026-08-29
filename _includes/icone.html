@@ -1,12 +1,12 @@
 {%- assign icon = site.docs.Plugins[include.pluginId].icon -%}
 {%- if icon -%}
-	{%- capture imgDir %}/plugins/{{include.pluginId}}/{{page.lang}}/images{% endcapture -%}
-	{%- capture altImgDir %}/plugins/{{include.pluginId}}/fr_FR/images{% endcapture -%}
-	{%- if site.docs.Plugins[include.pluginId].legacy -%}
-		{%- capture imgDir %}/images/{{include.pluginId}}/{% endcapture -%}
-		{%- capture altImgDir %}/images/{{include.pluginId}}/{% endcapture -%}
-	{%- endif -%}
-	<img src="{{ imgDir }}/{{icon}}" 
-		alt="{{ include.alt | default: 'Image' }}" 
-		onerror="this.onerror=null; this.src='{{ altImgDir }}/{{icon}}';">
+    {%- capture imgDir %}/plugins/{{include.pluginId}}/{{page.lang}}/images{% endcapture -%}
+    {%- capture altImgDir %}/plugins/{{include.pluginId}}/fr_FR/images{% endcapture -%}
+    {%- if site.docs.Plugins[include.pluginId].legacy -%}
+        {%- capture imgDir %}/images/{{include.pluginId}}/{% endcapture -%}
+        {%- capture altImgDir %}/images/{{include.pluginId}}/{% endcapture -%}
+    {%- endif -%}
+    <img src="{{ imgDir }}/{{icon}}" 
+        alt="{{ include.alt | default: 'icone %s introuvable' | replace: "%s", icon}}" 
+        onerror="this.onerror=null; this.src='{{ altImgDir }}/{{icon}}';">
 {%- endif -%}
