@@ -1,7 +1,7 @@
 name: Translate documentation
 
 on:
- workflow_dispatch:
+  workflow_dispatch:
     inputs:
       target_languages:
         description: "Comma-separated target languages"
