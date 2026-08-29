@@ -10,7 +10,7 @@ El complemento **{{page.plugin}}** permite detectar fallos comprobando la cohere
 # Algunos ejemplos:
 {: .num}
 
-- una lámpara encendida pero sin consumo (bombilla defectuosa o señal de retorno errónea).
+- Una lámpara está encendida pero no consume energía (bombilla defectuosa o señal de retorno errónea).
 - Una lámpara apagada, pero con un consumo superior a 1 vatio (fallo en la señal de retorno).
 - La bomba está encendida, pero no sale agua.
 

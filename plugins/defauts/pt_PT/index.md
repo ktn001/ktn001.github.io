@@ -10,7 +10,7 @@ O plugin **{{page.plugin}}** permite detetar falhas, verificando a coerência en
 # Alguns exemplos:
 {: .num}
 
-- uma lâmpada acesa, mas sem consumo (lâmpada avariada ou sinal de retorno incorreto).
+- A lâmpada está acesa, mas não há consumo (lâmpada avariada ou sinal de retorno incorreto).
 - Uma lâmpada apagada, mas com um consumo superior a 1 watt (falha no circuito de retorno).
 - A bomba está ligada, mas não há caudal.
 

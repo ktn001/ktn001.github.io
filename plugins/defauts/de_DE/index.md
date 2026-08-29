@@ -10,7 +10,7 @@ Das Plugin **{{page.plugin}}** ermöglicht die Erkennung von Fehlern, indem es d
 # Einige Beispiele:
 {: .num}
 
-- Eine Lampe leuchtet, aber es wird kein Strom verbraucht (defekte Glühbirne oder fehlerhaftes Rückmeldesignal).
+- Die Lampe leuchtet, verbraucht aber keinen Strom (defekte Glühbirne oder fehlerhaftes Rückmeldesignal).
 - Eine Lampe ist ausgeschaltet, verbraucht aber mehr als 1 Watt (fehlerhafter Rückmeldungszustand).
 - Die Pumpe ist eingeschaltet, es fließt jedoch kein Wasser.
 
