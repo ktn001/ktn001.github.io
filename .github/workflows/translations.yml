@@ -6,7 +6,7 @@ on:
       target_languages:
         description: "Comma-separated target languages"
         required: false
-        default: "en_US,es_ES,pt_PT"
+        default: "en_US, de_DE, it_IT, es_ES, pt_PT"
   push:
     branches:
       - main
@@ -25,6 +25,6 @@ jobs:
       - uses: Mips2648/docs-translations@v3
         with:
           deepl_api_key: ${{ secrets.DEEPL_API_KEY }}
-          target_languages: "en_US,pt_PT,es_ES"
+          target_languages: "en_US, de_DE, it_IT, es_ES, pt_PT"
           documents_roots: "plugins"
           memory_path: ${{ github.workspace }}/.translation_memory
