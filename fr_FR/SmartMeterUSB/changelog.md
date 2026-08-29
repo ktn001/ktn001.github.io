@@ -1,6 +1,7 @@
 ---
 layout: default
 title : SmartMeterUSB
+plugin : SmartMeterUSB
 lang: fr_FR
 ---
 

@@ -1,0 +1,6 @@
+{%- capture imgDir %}plugins/{{page.pluginId}}/{{page.lang}}/images{% endcapture -%}
+{%- capture altImgDir %}plugins/{{page.pluginId}}/fr_FR/images{% endcapture -%}
+{%- if site.docs.Plugins[page.pluginId].legacy -%}
+  {%- capture imgDir %}images/{{page.pluginId}}/{% endcapture -%}
+  {%- capture altImgDir %}images/{{page.pluginId}}/{% endcapture -%}
+{%- endif -%}

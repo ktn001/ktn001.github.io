@@ -1,6 +1,7 @@
 ---
 layout: default
 title : volvocars
+plugin : volvocars
 lang: fr_FR
 ---
 

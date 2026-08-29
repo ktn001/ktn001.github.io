@@ -1,6 +1,7 @@
 ---
 layout : default
 title : emulStore
+plugin : emulStore
 lang: fr_FR
 ---
 
