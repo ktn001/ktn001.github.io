@@ -1,12 +1,6 @@
 name: Translate documentation
 
 on:
-  workflow_dispatch:
-    inputs:
-      target_languages:
-        description:  "Comma-separated target languages"
-        required: false
-        default: "en_US"
   push:
     branches:
       - main
@@ -25,6 +19,6 @@ jobs:
       - uses: Mips2648/docs-translations@v3
         with:
           deepl_api_key: ${{ secrets.DEEPL_API_KEY }}
-          target_languages: ${{ github.event.inputs.target_languages}} || "en_US,pt_PT"
+          target_languages: "en_US,pt_PT"
           documents_roots: "plugins"
           memory_path: ${{ github.workspace }}/.translation_memory

@@ -6,7 +6,6 @@ lang: fr_FR
 ---
 
 # Plugin "{{page.plugin}}" pour Jeedom.
-
 Le plugin **{{page.plugin}}** permet de détecter des défauts en vérifiant la cohérence entre un état et une mesure.
 
 # Quelques exemples:
