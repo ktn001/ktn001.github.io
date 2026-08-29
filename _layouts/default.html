@@ -1,11 +1,6 @@
 <!doctype html>
 <script>
 	let page_lang = '{{ page.lang | default: "fr_FR" }}'
-	{%- capture imgDir %}plugins/{{page.plugin}}/{{page.lang}}/images{% endcapture -%}
-  {%- if site.docs.Plugins[page.plugin].legacy -%}
-		{%- capture imgDir %}images/{{page.plugin}}/{% endcapture -%}
-	{%- endif -%}
-	let imagesPath = '{{imgDir}}'
 </script>
 <html lang="{{ site.lang | default: "fr_FR" }}">
 	<head>
@@ -17,6 +12,7 @@
 
 	</head>
 	<body>
+	  {% include imgPath.html %}
 		<div class="navbar-fixed hide-on-print">
 			<nav>
 				<div class="nav-wrapper">
@@ -55,7 +51,6 @@
 						</div> 
 					</div> 
 				{% endif %}
-	  		XXX {{imgDir}} XX
 				<ul id='ul_menu' class='collapsible expandable'>
 					{% for type in site.docs %}
 						<li class="active">
@@ -66,9 +61,7 @@
 										<li>
 											<div class="collapsible-header">
 												{% capture plName %}{{entry[0]}}{% endcapture %}
-												{% if site.docs.Plugins[plName].icon %}
-													<img src="/images/{{entry[0]}}/{{site.docs.Plugins[plName].icon}}"></img>
-												{% endif %}
+												{%- include icone.html pluginId=plName -%}
 												{{entry[0]}}
 											</div>
 											<div class="collapsible-body">

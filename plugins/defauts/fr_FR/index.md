@@ -1,5 +1,6 @@
 ---
 layout : default
+pluginId : defauts
 plugin : Défauts
 lang: fr_FR
 ---
@@ -21,10 +22,7 @@ Le plugin peut aussi remonter des défaut lorsque la valeur d'une mesure s'écar
 {: .num}
 Le plugin ne nécessite aucune configuration, il faut juste l’activer.
 
-{% include image.html 
-   src="chemin/principal/image.jpg" 
-   fallback="chemin/secours/image.jpg" 
-   alt="Description de mon image" %}
+{% include image.html img="config_plugin.png" %}
 ![Page de configuration du plugin](/images/defauts/config_plugin.png)
 
 # Les équipements
