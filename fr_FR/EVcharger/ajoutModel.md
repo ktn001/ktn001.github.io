@@ -1,6 +1,7 @@
 ---
 layout: default
 title: EVcharger
+plugin: EVcharger
 ---
 # Introduction
 {: .num}

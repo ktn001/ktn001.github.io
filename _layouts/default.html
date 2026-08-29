@@ -1,7 +1,11 @@
 <!doctype html>
 <script>
 	let page_lang = '{{ page.lang | default: "fr_FR" }}'
-	let imagesPath = '/images/{{ page.lang }}/{{ page.plugin | default: page.title }}'
+	{%- capture imgDir %}plugins/{{page.plugin}}/{{page.lang}}/images{% endcapture -%}
+  {%- if site.docs.Plugins[page.plugin].legacy -%}
+		{%- capture imgDir %}images/{{page.plugin}}/{% endcapture -%}
+	{%- endif -%}
+	let imagesPath = '{{imgDir}}'
 </script>
 <html lang="{{ site.lang | default: "fr_FR" }}">
 	<head>
@@ -51,6 +55,7 @@
 						</div> 
 					</div> 
 				{% endif %}
+	  		XXX {{imgDir}} XX
 				<ul id='ul_menu' class='collapsible expandable'>
 					{% for type in site.docs %}
 						<li class="active">

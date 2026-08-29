@@ -1,6 +1,7 @@
 ---
 layout: default
 title : velux
+plugin : velux
 lang: fr_FR
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout : default
 title : swassist
+plugin : swassist
 lang: fr_FR
 ---
 

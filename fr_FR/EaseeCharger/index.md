@@ -1,6 +1,6 @@
 ---
 layout : default
-title : EaseeCharger
+plugin : EaseeCharger
 lang: fr_FR
 ---
 

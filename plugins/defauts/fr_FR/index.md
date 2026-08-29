@@ -21,6 +21,10 @@ Le plugin peut aussi remonter des défaut lorsque la valeur d'une mesure s'écar
 {: .num}
 Le plugin ne nécessite aucune configuration, il faut juste l’activer.
 
+{% include image.html 
+   src="chemin/principal/image.jpg" 
+   fallback="chemin/secours/image.jpg" 
+   alt="Description de mon image" %}
 ![Page de configuration du plugin](/images/defauts/config_plugin.png)
 
 # Les équipements
@@ -55,7 +59,7 @@ Le panneau `surveillances` permet de géger les surveillances de l'équipement. 
 
 #### Les surveillances de cohérence ont plusieurs paramètres:
 {: .num}
-![configuration d'une surveillance de cohérence](/images/defauts/config_surveillance.png)
+![configuration d'une surveillance de cohérence]({{imgDir}}/config_surveillance.png)
 * ***Nom :*** Nom de la surveillance.
 * ***Etat :*** Info binaire à surveiller.
 * ***Mesure :*** Info numérique à surveiller.

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: EVcharger
+plugin: EVcharger
 ---
 
 # Description des commandes
