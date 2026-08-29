@@ -10,7 +10,7 @@ Le plugin **{{page.plugin}}** permet de détecter des défauts en vérifiant la 
 # Quelques exemples:
 {: .num}
 
-- une lampe allumée mais pas de consommation (ampoule défectueuse ou mauvais signal de retour).
+- Une lampe allumée mais pas de consommation (ampoule défectueuse ou mauvais signal de retour).
 - Une lampe éteinte mais consomation de plus de 1 watt (mauvais état de retour).
 - Une pompe enclenchée mais pas de débit.
 

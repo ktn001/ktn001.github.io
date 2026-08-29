@@ -1,6 +1,6 @@
 ---
 layout : default
-title : devolo_cpl
+pluginId : devolo_cpl
 plugin : devolo_cpl
 lang: fr_FR
 ---

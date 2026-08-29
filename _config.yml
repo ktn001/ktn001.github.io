@@ -17,7 +17,6 @@ docs:
         doc: index.html
         changeLog: changelog.html
     devolo_cpl:
-      legacy: true
       icon: devolo_cpl_icon.png
       pages:
         doc: index.html
