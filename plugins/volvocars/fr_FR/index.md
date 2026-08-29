@@ -1,7 +1,7 @@
 ---
 layout : default
-title : volvocars
-plugin : volvocars
+pluginId : volvocars
+plugin : Volvo
 lang: fr_FR
 ---
 {% capture imagesPath %}/images/{{ page.lang }}/{{ page.plugin }}{% endcapture %}
@@ -43,26 +43,24 @@ Vous devez générer une Clé API vcc (VCC API Key) sur le site
 cette procédure:
 
 1. Cliquez sur **Sign up**:   
-    ![sign up]({{ imagesPath }}/sign_up_volvodev.png)
+    {% include image.html img="sign_up_volvodev.png" %}
 1. Selectionnez le compte qui sera associé à votre nouveau compte developper.volvocars:   
-    ![select_login_asoc]({{ imagesPath }}/select_login_asoc.png)   
+    {% include image.html img="select_login_asoc.png" %}
 1. Saisissez votre login/password pour le site sélectionné au point précédent   
-    ![sign_in]({{ imagesPath }}/sign_in_volvodev.png)
+    {% include image.html img="sign_in_volvodev.png" %}
 1. Cliquez sur votre nom de login puis sur **Your API applications**   
-    ![open_api_app]({{ imagesPath }}/open_api_applications.png)
+    {% include image.html img="open_api_applications.png" %}
 1. Saisissez un nom pour l'application que vous allez créer puis cliquez sur **Create**. Si vous avez
     plusieurs instances Jeedom, il est conseillé de créer une application pour chaque instance dans
     laquelle le plugon sera
    installé:   
-    ![create_application]({{ imagesPath }}/create_application.png)
+    {% include image.html img="create_application.png" %}
 1. Votre nouvelle application est créée avec un couple de VCC API Keys. Vous pourrez toujours revenir
    sur cette page pour récupérer votre clé.   
-    ![cles_vcc]({{ imagesPath }}/vcc_keys.png)
+    {% include image.html img="vcc_keys.png" %}
 
 # Installation et configuration du plugin
 {: .num}
-
-![Configuration du plugin]({{ imagesPath }}/configuration_plugin.png)
 
 ## Installation du plugin
 {: .num}
@@ -74,15 +72,15 @@ lancez là manuellement. Une fois les dépendances installées, assurez-vous que
 ## Configuration du plugin
 {: .num}
 
+{% include image.html img="configuration_plugin.png" %}
 + ***Clé VCC API***
 : Saisissez la clé VCC-API-key que vous avez généré sur le site developer.volvocars.com.
 
 + ***Utiliser le widget du plugin***
 : Sélectionnez cette option pour utiliser le widget du plugin dans les dashboards.
-
-![widget_Electrique]({{ imagesPath }}/widget_electrique.png)
-![widget_Hybrid]({{ imagesPath }}/widget_hybrid.png)
-![widget_Thermique]({{ imagesPath }}/widget_thermique.png)
+   {% include image.html img="widget_electrique.png" -%}
+   {% include image.html img="widget_hybrid.png" -%}
+   {% include image.html img="widget_thermique.png" %}
 
 + ***Commandes à créer pour les ouvrants***
 : Les API volvocars retournent une information de type text pour l'état des ouvrants.
@@ -96,19 +94,19 @@ Une fois le plugin installé, il faut créer un account.
 
 # Les accounts
 {: .num}
-![Pas d'account]({{ imagesPath }}/no_account.png)
+{% include image.html img="no_account.png" %}
 
 Cliquer sur *Ajouter*
 
-![nom account]({{ imagesPath }}/nom_account.png)
+{% include image.html img="nom_account.png" %}
 
 Saisir le nom du compte puis cliquer sur *OK*
 
-![Edit account]({{ imagesPath }}/edit_account.png)
+{% include image.html img="edit_account.png" %}
 
 Saisir le login et le password du compte VolvoId puis cliquer sur *OK*
 
-![Edit OTP]({{ imagesPath }}/edit_otp.png)
+{% include image.html img="edit_otp.png" %}
 
 Saisir le code que Volvo vous a envoyé par email puis cliquer sur *OK*.
 
@@ -126,7 +124,7 @@ pour saisir un nouveau code envoyé par email puis obtenir un nouveau token.
 
 Selon la documentation des APIs, un token expiré peut être renouvelé automatiquement jusqu'à 7 jours après sont expiration. Mais je n'ai pas pu le vérifier. Vu que les tokens ont un validité de 30 minutes et sont renouvelés 15 minutes avant leur expiration, un arrêt de moins de 15 minute ne devrait as avoir de conséquence.
 
-![No car]({{ imagesPath }}/no_car.png)
+{% include image.html img="no_car.png" %}
 
 # Les véhicules
 {: .num}
@@ -145,12 +143,12 @@ Les équipements jeedom pour les véhicules associés à un account sont automat
      Dans ce cas, le logo Volvo sera affiché à la place de l'image du véhicule. L'image du véhicule devra
      être chargée manuellement depuis la page de configuration du véhicule.
 
-![With car]({{ imagesPath }}/with_car.png)
+{% include image.html img="with_car.png" %}
 
 ## Configuration du véhicule
 {: .num}
 
-![configuration véhicule]({{ imagesPath }}/configuration_vehicle.png)
+{% include image.html img="configuration_vehicle.png" %}
 
 + **Paramètres généraux**
 
@@ -211,28 +209,28 @@ Les équipements jeedom pour les véhicules associés à un account sont automat
 
 + Si l'image du véhicule n'a pas pu être chargée, le logo Volvo et le bouton `Récupérer une image du véhicule` sont affichés:
 
-   ![no image]({{ imagesPath }}/no_image.png)
+   {% include image.html img="no_image.png" %}
 
 + Cliquer sur le bouton `Récupérer une image du véhicule`   
    + Le logo est remplacé par une image du véhicule
    + Le bouton `Récupérer une image du véhicule` n'est plus affiché:   
    + Une zone est marquée pour y copier l'image du véhicule
 
-   ![image_ready]({{ imagesPath }}/image_ready.png)
+   {% include image.html img="image_ready.png" %}
 
 + Utiliser le menu contextuel (PAS DE RACCOURCI CLAVIER!) pour copier l'image.
 
-   ![copy_image]({{ imagesPath }}/copy_image.png)
+   {% include image.html img="copy_image.png" %}
 
 + Utiliser le menu contextuel (PAS DE RACCOURCI CLAVIER!) pour coller l'image dans
   la zone prévue à cet effet.
 
-   ![paste_image]({{ imagesPath }}/paste_image.png)
+   {% include image.html img="paste_image.png" %}
 
 + L'image est envoyée au plugin
-+ La zone prévue pour la réception d'une copie de l'image n'est pla affichée.
++ La zone prévue pour la réception d'une copie de l'image n'est plus affichée.
 
-   ![image_uploaded]({{ imagesPath }}/image_uploaded.png)
+   {% include image.html img="image_uploaded.png" %}
 
 # Les commandes
 {: .num}

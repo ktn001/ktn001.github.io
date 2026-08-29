@@ -60,7 +60,6 @@ docs:
         doc: index.html
         changeLog: changelog.html
     volvocars:
-      legacy: true
       icon : volvocars_icon.png
       pages:
         doc: index.html
