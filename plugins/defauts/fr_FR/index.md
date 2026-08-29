@@ -20,12 +20,14 @@ Le plugin peut aussi remonter des défaut lorsque la valeur d'une mesure s'écar
 
 # Configuration du plugin
 {: .num}
+
 Le plugin ne nécessite aucune configuration, il faut juste l’activer.
 
 {% include image.html img="config_plugin.png" %}
 
 # Les équipements
 {: .num}
+
 Un équipement **{{page.plugin}}** permet de surveiller la cohérence de plusieurs combinaisons d'état et de valeur. Une info
 indique pour chacune de ces surveillances si la situation actuelle est cohérente ou non.
 
@@ -34,6 +36,7 @@ jusqu'à ce qu'elle soit acquittée même si l'incohérence disparaît.
 
 ## Création
 {: .num}
+
 Les équipements **{{page.plugin}}** sont créés sur la page du plugin qui est atteignable via le menu `plugins`==> `Monitoring` ==> `{{page.plugin}}`.
 L'équipement est créé avec trois commandes:
 + Une commande **defaut**, de type info, qui indique si une incohérence est ou a été détectée par une des surveillances de l'équipement.
@@ -42,8 +45,10 @@ L'équipement est créé avec trois commandes:
 
 ## Configuration
 {: .num}
+
 ### De l'équipement
 {: .num}
+
 Outre les configurations habituelles, l'équipement a deux paramêtres permettant de définir le fonctionnement de l'**Auto acquittement**:
 * **Auto Acquittement**   
    indique si les défauts doivent être acquittés automatiqeuement ou non.
@@ -52,10 +57,12 @@ Outre les configurations habituelles, l'équipement a deux paramêtres permettan
    
 ### Des surveillances de cohérence
 {: .num}
+
 Le panneau `surveillances` permet de géger les surveillances de l'équipement. Le bouton `Ajouter une surveillance` ajoute une surveillance de cohérence à l'équipement.
 
 #### Les surveillances de cohérence ont plusieurs paramètres:
 {: .num}
+
 {% include image.html img="config_surveillance.png" %}
 * ***Nom :*** Nom de la surveillance.
 * ***Etat :*** Info binaire à surveiller.
@@ -71,6 +78,7 @@ Le panneau `surveillances` permet de géger les surveillances de l'équipement. 
 
 ### Des surveillances de consigne
 {: .num}
+
 {% include image.html img="config_consigne.png" %}
 * ***Nom :*** Nom de la surveillance.
 * ***Etat :*** Info binaire utilisée pour controler le fonctonnement de lasurveillance.
@@ -84,6 +92,7 @@ Le panneau `surveillances` permet de géger les surveillances de l'équipement. 
 
 ### De l'historique
 {: .num}
+
 {% include image.html img="historique.png" %}
 
 La commande *historique* et son widget permettent de voir les cinq derniers défauts qui se sont produits. Le nombre d'événements listés est configurable.
