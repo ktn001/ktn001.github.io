@@ -6,7 +6,6 @@ lang: en_US
 ---
 
 # "{{page.plugin}}" plugin for Jeedom.
-
 The **{{page.plugin}}** plugin detects faults by verifying the consistency between a status and a measurement.
 
 # Some examples:
@@ -20,14 +19,14 @@ The plugin can also report faults when a measured value deviates too far from a 
 
 # Plugin Configuration
 {: .num}
+
 The plugin requires no configuration; you just need to activate it.
 
 {% include image.html img="config_plugin.png" %}
 
-![Plugin Configuration Page](/images/defauts/config_plugin.png)
-
 # Equipment
 {: .num}
+
 A **{{page.plugin}}** device allows you to monitor the consistency of multiple combinations of states and values. Information
 indicates for each of these monitoring tasks whether the current status is consistent or not.
 
@@ -36,6 +35,7 @@ until it is cleared, even if the inconsistency disappears.
 
 ## Design
 {: .num}
+
 **{{page.plugin}}** devices are created on the plugin page, which can be accessed via the `plugins` ==> `Monitoring` ==> `{{page.plugin}}` menu.
 The device is configured with three commands:
 + A **default** command, of the "info" type, that indicates whether an inconsistency is or has been detected by one of the equipment's monitoring systems.
@@ -44,8 +44,10 @@ The device is configured with three commands:
 
 ## Setup
 {: .num}
+
 ### Equipment
 {: .num}
+
 In addition to the standard settings, the device has two parameters that allow you to configure how **Auto Acknowledgment** works:
 * **Auto Acknowledgment**
 Specifies whether faults should be automatically acknowledged or not.
@@ -54,11 +56,13 @@ Waiting times
    
 ### Consistency checks
 {: .num}
+
 The `Monitoring` panel allows you to manage equipment monitoring. The `Add Monitoring` button adds a consistency check to the equipment.
 
 #### Consistency checks have several parameters:
 {: .num}
-![Configuring consistency monitoring](/images/defauts/config_surveillance.png)
+
+{% include image.html img="config_surveillance.png" %}
 * ***Name:*** Name of the monitoring system.
 * ***Status:*** Binary data to monitor.
 * ***Measurement:*** Digital data to monitor.
@@ -73,7 +77,8 @@ The `Monitoring` panel allows you to manage equipment monitoring. The `Add Monit
 
 ### Setpoint monitoring
 {: .num}
-![Configuring Setpoint Monitoring](/images/defauts/config_consigne.png)
+
+{% include image.html img="config_consigne.png" %}
 * ***Name:*** Name of the monitoring system.
 * ***Status:*** Binary information used to control the operation of the monitoring system.
 * ***Measurement:*** Digital data; a fault will be reported if the value of this measurement deviates too far from the setpoint value.
@@ -86,7 +91,8 @@ The `Monitoring` panel allows you to manage equipment monitoring. The `Add Monit
 
 ### A Brief History
 {: .num}
-![history](/images/defauts/historique.png)
+
+{% include image.html img="history.png" %}
 
 The *history* command and its widget allow you to view the last five faults that occurred. The number of events listed is configurable.
 
@@ -95,7 +101,7 @@ A retention period for the listed events can be configured. Events that occurred
 #### The history has several parameters:
 {: .num}
 
-![history settings](/images/defauts/config_histo.png)
+{% include image.html img="config_histo.png" %}
 
 * ***Name:*** History name.
 * ***Size:***  Number of history entries displayed in the widget (up to 5)
