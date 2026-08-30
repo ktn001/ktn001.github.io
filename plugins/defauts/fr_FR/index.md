@@ -3,7 +3,21 @@ layout : default
 pluginId : defauts
 plugin : Défauts
 lang: fr_FR
+img01: 01_config_plugin.png
+img02: 02_config_surveillance.png
 img03: 03_config_consigne.png
+img04: 04_historique.png
+img05: 05_config_histo.png
+img06: 06_defauts_initial.png
+img07: 07_defauts_initial_bw.png
+img08: 08_defauts_premier_defaut.png
+img09: 09_defauts_premier_defaut_bw.png
+img10: 10_defauts_acquitte.png
+img11: 11_defauts_acquitte_bw.png
+img12: 12_defauts_deuxieme_defaut.png
+img13: 13_defauts_deuxieme_defaut_bw.png
+img14: 14_defauts_plus_de_defaut_pas_acquitte.png
+img15: 15_defauts_plus_de_defaut_pas_acquitte_bw.png
 ---
 # Plugin "{{page.plugin}}" pour Jeedom.
 Le plugin **{{page.plugin}}** permet de détecter des défauts en vérifiant la cohérence entre un état et une mesure.
@@ -22,7 +36,7 @@ Le plugin peut aussi remonter des défaut lorsque la valeur d'une mesure s'écar
 
 Le plugin ne nécessite aucune configuration, il faut juste l’activer.
 
-{% include image.html img="01_config_plugin.png" %}
+{% include image.html img=page.img01 %}
 
 # Les équipements
 {: .num}
@@ -62,7 +76,7 @@ Le panneau `surveillances` permet de géger les surveillances de l'équipement. 
 #### Les surveillances de cohérence ont plusieurs paramètres:
 {: .num}
 
-{% include image.html img="02_config_surveillance.png" %}
+{% include image.html img=page.img02 %}
 * ***Nom :*** Nom de la surveillance.
 * ***Etat :*** Info binaire à surveiller.
 * ***Mesure :*** Info numérique à surveiller.
@@ -92,7 +106,7 @@ Le panneau `surveillances` permet de géger les surveillances de l'équipement. 
 ### De l'historique
 {: .num}
 
-{% include image.html img="04_historique.png" %}
+{% include image.html img=page.img04 %}
 
 La commande *historique* et son widget permettent de voir les cinq derniers défauts qui se sont produits. Le nombre d'événements listés est configurable.
 
@@ -101,7 +115,7 @@ Une durée de rétention des events listés peut-être configurée. Les events q
 #### L'historique a plusieurs paramètres:
 {: .num}
 
-{% include image.html img="config_histo.png" %}
+{% include image.html img=page.img05 %}
 
 * ***Nom :*** Nom de l'historique.
 * ***Taille :***  Nombre d'entrées de l'historique affichées dans le widget (5 au maximum)
@@ -121,11 +135,51 @@ Les formats suivants sont possibles (Faites une demande via le forum de Jeedom p
 # Exemples
 {: .num}
 
-| Etape | Widget de l'équipement (couleur) | Widget de l'équipement (noir/blanc) | Observations |
-| :---- | :----:  | :----: | :---- |
-| Situation de départ: | ![](/images/defauts/defauts_initial.png "Etat initial") | ![](/images/defauts/defauts_initial_bw.png "Etat initial") | Pas de défaut, Les surveillances sont en état normal. |
-| 1<sup>ière</sup> surveillance en en état anormal | ![](/images/defauts/defauts_premier_defaut.png) | ![](/images/defauts/defauts_premier_defaut_bw.png) | L'icône de défaut indique qu'il y a eu une anomalie qui n'a pas été acquittée. |
-| Acquittement du défaut | ![](/images/defauts/defauts_acquitte.png) | ![](/images/defauts/defauts_acquitte_bw.png) | Le défaut a été acquitté pas un clic sur l'icône (ou par l'auto-acquittement). L'Icône de défaut indique que l'anomalie est toujours présente. |
-| 2<sup>ième</sup> anomalie |![](/images/defauts/defauts_deuxieme_defaut.png) | ![](/images/defauts/defauts_deuxieme_defaut_bw.png) | L'icône de défaut indique qu'il y a une nonvelle anomalie. |
-| Disparition des anomalies |![](/images/defauts/defauts_plus_de_defaut_pas_acquitte.png) | ![](/images/defauts/defauts_plus_de_defaut_pas_acquitte_bw.png) | L'icône de défaut indique qu'il y a eu au moins une anomalie qui n'a pas été acquittée. |
-| Retour à la normale: | ![](/images/defauts/defauts_initial.png "Etat initial") | ![](/images/defauts/defauts_initial_bw.png "Etat initial") | Les anomalies ont été aquittées et ont disparues. |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Etape</th>
+      <th style="text-align: center">Widget de l’équipement (couleur)</th>
+      <th style="text-align: center">Widget de l’équipement (noir/blanc)</th>
+      <th style="text-align: left">Observations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Situation de départ:</td>
+      <td style="text-align:center;">{% include image.html img=page.img06 %}</td>
+      <td style="text-align:center;">{% include image.html img=page.img07 %}</td>
+      <td>Pas de défaut, Les surveillances sont en état normal.</td>
+    </tr>
+    <tr>
+      <td>1<sup>ière</sup>surveillance en en état anormal</td>
+      <td style="text-align:center;">{% include image.html img=page.img08 %}</td>
+      <td style="text-align:center;">{% include image.html img=page.img09 %}</td>
+      <td>L'icône de défaut indique qu'il y a eu une anomalie qui n'a pas été acquittée.</td>
+    </tr>
+    <tr>
+      <td>1<sup>ière</sup>Acquittement du défaut</td>
+      <td style="text-align:center;">{% include image.html img=page.img10 %}</td>
+      <td style="text-align:center;">{% include image.html img=page.img11 %}</td>
+      <td>Le défaut a été acquitté pas un clic sur l'icône (ou par l'auto-acquittement). L'Icône de défaut indique que l'anomalie est toujours présente.</td>
+    </tr>
+    <tr>
+      <td>2<sup>ième</sup> anomalie</td>
+      <td style="text-align:center;">{% include image.html img=page.img12 %}</td>
+      <td style="text-align:center;">{% include image.html img=page.img13 %}</td>
+      <td>L'icône de défaut indique qu'il y a une nonvelle anomalie</td>
+    </tr>
+    <tr>
+      <td>Disparition des anomalies</td>
+      <td style="text-align:center;">{% include image.html img=page.img14 %}</td>
+      <td style="text-align:center;">{% include image.html img=page.img15 %}</td>
+      <td>L'icône de défaut indique qu'il y a eu au moins une anomalie qui n'a pas été acquittée.</td>
+    </tr>
+    <tr>
+      <td>Disparition des anomalies</td>
+      <td style="text-align:center;">{% include image.html img=page.img06 %}</td>
+      <td style="text-align:center;">{% include image.html img=page.img07 %}</td>
+      <td>L'icône de défaut indique qu'il y a eu au moins une anomalie qui n'a pas été acquittée.</td>
+    </tr>
+  </tbody>
+</table>
