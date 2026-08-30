@@ -3,6 +3,7 @@ layout : default
 pluginId : defauts
 plugin : Défauts
 lang: fr_FR
+img03: 03_config_consigne.png
 ---
 # Plugin "{{page.plugin}}" pour Jeedom.
 Le plugin **{{page.plugin}}** permet de détecter des défauts en vérifiant la cohérence entre un état et une mesure.
@@ -77,7 +78,7 @@ Le panneau `surveillances` permet de géger les surveillances de l'équipement. 
 ### Des surveillances de consigne
 {: .num}
 
-{% include image.html img="03_config_consigne.png" %}
+{% include image.html img=page.img03 %}
 * ***Nom :*** Nom de la surveillance.
 * ***Etat :*** Info binaire utilisée pour controler le fonctonnement de lasurveillance.
 * ***Mesure :*** Info numérique, un defaut sera signalé si la valeur de cette mesure est trop distante de la valeur de la consigne.
