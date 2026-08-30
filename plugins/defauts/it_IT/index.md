@@ -21,7 +21,7 @@ Il plugin può anche segnalare un guasto quando il valore di una misurazione si 
 
 Il plugin non richiede alcuna configurazione, basta semplicemente attivarlo.
 
-{% include image.html img="config_plugin.png" %}
+{% include image.html img="01_config_plugin.png" %}
 
 # Le apparecchiature
 {: .num}
@@ -61,7 +61,7 @@ Il pannello "Monitoraggi" consente di gestire i monitoraggi dell'apparecchiatura
 #### I controlli di coerenza hanno diversi parametri:
 {: .num}
 
-{% include image.html img="config_surveillance.png" %}
+{% include image.html img="02_config_surveillance.png" %}
 * ***Nome:*** Nome del sistema di sorveglianza.
 * ***Stato:*** Informazioni binarie da monitorare.
 * ***Misura:*** Dati digitali da monitorare.
@@ -77,7 +77,7 @@ Il pannello "Monitoraggi" consente di gestire i monitoraggi dell'apparecchiatura
 ### Monitoraggio dei valori di setpoint
 {: .num}
 
-{% include image.html img="config_consigne.png" %}
+{% include image.html img="03_config_consigne.png" %}
 * ***Nome:*** Nome del sistema di sorveglianza.
 * ***Stato:*** Informazione binaria utilizzata per controllare il funzionamento del sistema di sorveglianza.
 * ***Misura:*** Informazioni digitali; verrà segnalato un guasto se il valore di questa misura si discosta eccessivamente dal valore di riferimento.
@@ -91,7 +91,7 @@ Il pannello "Monitoraggi" consente di gestire i monitoraggi dell'apparecchiatura
 ### Cronologia
 {: .num}
 
-{% include image.html img="historique.png" %}
+{% include image.html img="04_historique.png" %}
 
 Il comando *cronologia* e il relativo widget consentono di visualizzare gli ultimi cinque guasti verificatisi. Il numero di eventi elencati è configurabile.
 

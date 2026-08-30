@@ -21,7 +21,7 @@ El complemento también puede notificar fallos cuando el valor de una medición 
 
 El complemento no requiere ninguna configuración, solo hay que activarlo.
 
-{% include image.html img="config_plugin.png" %}
+{% include image.html img="01_config_plugin.png" %}
 
 # Los equipos
 {: .num}
@@ -61,7 +61,7 @@ El panel «Supervisiones» permite gestionar las supervisiones del equipo. El bo
 #### Las comprobaciones de coherencia tienen varios parámetros:
 {: .num}
 
-{% include image.html img="config_surveillance.png" %}
+{% include image.html img="02_config_surveillance.png" %}
 * ***Nombre:*** Nombre de la supervisión.
 * ***Estado:*** Información binaria que hay que vigilar.
 * ***Medida:*** Información digital que hay que vigilar.
@@ -77,7 +77,7 @@ El panel «Supervisiones» permite gestionar las supervisiones del equipo. El bo
 ### Supervisión de valores de consigna
 {: .num}
 
-{% include image.html img="config_consigna.png" %}
+{% include image.html img="03_config_consigna.png" %}
 * ***Nombre:*** Nombre de la supervisión.
 * ***Estado:*** Información binaria utilizada para controlar el funcionamiento de la vigilancia.
 * ***Medida:*** Información digital; se señalará un fallo si el valor de esta medida se aleja demasiado del valor de consigna.
@@ -91,7 +91,7 @@ El panel «Supervisiones» permite gestionar las supervisiones del equipo. El bo
 ### Un poco de historia
 {: .num}
 
-{% include image.html img="historique.png" %}
+{% include image.html img="04_historique.png" %}
 
 El comando *histórico* y su widget permiten ver los cinco últimos fallos que se han producido. El número de eventos que aparecen en la lista se puede configurar.
 
