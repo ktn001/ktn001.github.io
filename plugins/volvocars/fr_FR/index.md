@@ -42,21 +42,21 @@ Vous devez générer une Clé API vcc (VCC API Key) sur le site
 [https://developer.volvocars.com/](https://developer.volvocars.com/){:target="_blank"} en suivant
 cette procédure:
 
-1. Cliquez sur **Sign up**:   
+1. Cliquez sur **Sign up**:\
     {% include image.html img="sign_up_volvodev.png" %}
-1. Selectionnez le compte qui sera associé à votre nouveau compte developper.volvocars:   
+1. Selectionnez le compte qui sera associé à votre nouveau compte developper.volvocars:\
     {% include image.html img="select_login_asoc.png" %}
-1. Saisissez votre login/password pour le site sélectionné au point précédent   
+1. Saisissez votre login/password pour le site sélectionné au point précédent\
     {% include image.html img="sign_in_volvodev.png" %}
-1. Cliquez sur votre nom de login puis sur **Your API applications**   
+1. Cliquez sur votre nom de login puis sur **Your API applications**\
     {% include image.html img="open_api_applications.png" %}
 1. Saisissez un nom pour l'application que vous allez créer puis cliquez sur **Create**. Si vous avez
     plusieurs instances Jeedom, il est conseillé de créer une application pour chaque instance dans
     laquelle le plugon sera
-   installé:   
+   installé:\
     {% include image.html img="create_application.png" %}
 1. Votre nouvelle application est créée avec un couple de VCC API Keys. Vous pourrez toujours revenir
-   sur cette page pour récupérer votre clé.   
+   sur cette page pour récupérer votre clé.\
     {% include image.html img="vcc_keys.png" %}
 
 # Installation et configuration du plugin
@@ -84,7 +84,7 @@ lancez là manuellement. Une fois les dépendances installées, assurez-vous que
 
 + ***Commandes à créer pour les ouvrants***
 : Les API volvocars retournent une information de type text pour l'état des ouvrants.
-Ce texte est enregistré dans une commande **\*_state** de l'équipement.  
+Ce texte est enregistré dans une commande **\*_state** de l'équipement.\
 Des commandes binaires **\*_open** et **\*_closed** seront également créées si l'option **Ouvert**
 ou **Fermé** est activée.
 : Les commandes **\*_open** ou **\*_closed** existantes ne sont pas supprimées lorsque
@@ -162,11 +162,11 @@ Les équipements jeedom pour les véhicules associés à un account sont automat
 
 + **Paramètres d'alertes**
 
-   + *Automomie électriques*   
+   + *Automomie électriques*\
      La valeur de la commande `al_electricAutonomy` passe à **1** lorsque l'autonomie électrique est inférieur
      à cette limite.
 
-   + *Automomie thermique*   
+   + *Automomie thermique*\
      La valeur de la commande `al_fuelAutonomy` passe à **1** lorsque l'autonomie du moteur themique est inférieur
      à cette limite.
 
@@ -177,18 +177,18 @@ Les équipements jeedom pour les véhicules associés à un account sont automat
   + `presenceSite#` : binaire qui indique est sur le site
 
   Les paramètres:
-  + *Nom*   
+  + *Nom*\
     Si l'on renomme un site les deux commandes associées seront aussi renommée si leurs noms contiennent l'ancien
     nom du site
-  + *Coordonées GPS*   
+  + *Coordonées GPS*\
     Les coordonnées GPS du site
-  + *Distance max (en m)*   
+  + *Distance max (en m)*\
     Distance maximum (en mètres) entre le véhicule et le site pour que le véhicule soit indiqué présent sur le site.
-  + *Récupérer coordonnées GPS*   
+  + *Récupérer coordonnées GPS*\
     Deux boutons permettant de renseigner automatiquement les coordonnées GPS du site:
        + `Jeedom` : Récupèere les coordonnées GPS de Jeedom qui ont été renseignées dans la config de Jeedom.
-       + `Véhicule` : Récupère la position actuelle du véhicule 
-  
+       + `Véhicule` : Récupère la position actuelle du véhicule
+
 + **Description**
 
    Info libre
@@ -211,9 +211,9 @@ Les équipements jeedom pour les véhicules associés à un account sont automat
 
    {% include image.html img="no_image.png" %}
 
-+ Cliquer sur le bouton `Récupérer une image du véhicule`   
++ Cliquer sur le bouton `Récupérer une image du véhicule`\
    + Le logo est remplacé par une image du véhicule
-   + Le bouton `Récupérer une image du véhicule` n'est plus affiché:   
+   + Le bouton `Récupérer une image du véhicule` n'est plus affiché:\
    + Une zone est marquée pour y copier l'image du véhicule
 
    {% include image.html img="image_ready.png" %}
@@ -240,21 +240,21 @@ Les équipements jeedom pour les véhicules associés à un account sont automat
 
 Le plugin peut envoyer au véhicule les commandes suivantes
 
-+ **unlock**   
++ **unlock**\
   Déverrouillage du véhicule
-+ **lock**   
++ **lock**\
   Verrouillage du véhicule
-+ **lockReduced**   
++ **lockReduced**\
   Verrouillage avec le mode alarme réduit
-+ **climStart**   
++ **climStart**\
   Démarrage de la climatisation
-+ **climStop**   
++ **climStop**\
   Arrêt de la climatisation
-+ **honk**   
++ **honk**\
   Klaxonne
-+ **flash**   
++ **flash**\
   Les clignotants du véhicule clignotent.
-+ **honk_flash**   
++ **honk_flash**\
   Exécution simultanée des commandes *honk* et *flash*
 
 Les commandes effectivement activées dans le plugin pour un véhicule dépendent

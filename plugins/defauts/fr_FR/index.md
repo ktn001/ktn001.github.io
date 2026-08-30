@@ -48,11 +48,11 @@ L'équipement est créé avec trois commandes:
 {: .num}
 
 Outre les configurations habituelles, l'équipement a deux paramêtres permettant de définir le fonctionnement de l'**Auto acquittement**:
-* **Auto Acquittement**   
+* **Auto Acquittement**\
    indique si les défauts doivent être acquittés automatiqeuement ou non.
-* **Délais** *(visible uniquement si l'auto acquittement est activé)*  
+* **Délais** *(visible uniquement si l'auto acquittement est activé)*\
    Le délais d'attente
-   
+
 ### Des surveillances de cohérence
 {: .num}
 
@@ -102,11 +102,11 @@ Une durée de rétention des events listés peut-être configurée. Les events q
 
 {% include image.html img="config_histo.png" %}
 
-* ***Nom :*** Nom de lĥistorique.
+* ***Nom :*** Nom de l'historique.
 * ***Taille :***  Nombre d'entrées de l'historique affichées dans le widget (5 au maximum)
 * ***Rétention :*** Durée de rétention d'une entrée dans l'historique. Cette durée peut être exprimée en minutes, heures ou jours
-* ***Format date :*** Format de la date dans l'historique.    
-     les formats suivants sont possibles (Faites une demande via le forum de Jeedom pour l'ajout d'autres formats):
+* ***Format date :*** Format de la date dans l'historique.\
+Les formats suivants sont possibles (Faites une demande via le forum de Jeedom pour l'ajout d'autres formats):
 
     | format | exemple |
     | ------ | ------- |

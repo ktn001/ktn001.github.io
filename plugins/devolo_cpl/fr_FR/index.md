@@ -108,7 +108,6 @@ installé, il faut l'activer puis lancer l'installation des dépendances
       est mis en mode "debug".
 
 + **Infos de débits**
-: 
     + ***Flux montant***
     : Indique si des commandes doivent être créés pour les débit les flux CPL montants (vers les
       autres équipements).
@@ -132,7 +131,7 @@ non manageables.
 ## La méthode automatique
 {: .num}
 
-Sur la page de gestion du plugin, cliquer sur l'icône `synchronisation`: 
+Sur la page de gestion du plugin, cliquer sur l'icône `synchronisation`:
 
 {% include image.html img="icones_gestion_plugin.png" %}
 
@@ -151,7 +150,7 @@ Un équipement Jeedom est automatiquement créé pour chaque appareil détecté.
 ## La méthode manuelle
 {: .num}
 
-Sur la page de gestion du plugin, cliquer sur l'icône `Ajouter`: 
+Sur la page de gestion du plugin, cliquer sur l'icône `Ajouter`:
 
 {% include image.html img="icones_gestion_plugin.png" %}
 
@@ -252,13 +251,13 @@ lorsque l'appareil répond à la demande du deamon.
 {: .num}
 
 + Les commandes action `guest_on` et `guest_off` permettent d'activer et de désactiver
-  le Wifi Guest des appareils Devolo. Dans le cas des Wifi mesh, l'actication ou la 
+  le Wifi Guest des appareils Devolo. Dans le cas des Wifi mesh, l'actication ou la
   désactivation du Wifi Guest d'un appareil est répercutée sur les autres appareils
   du réseau mesh.
 + La commande action `guest_duration` permet de configurer la durée durant laquelle
   le WiFi guest doit être activé. Une fois cette durée écoulée, l'appareil Devolo
   désactivera le Wifi guest. Si la valeur de cette commande est 0, le Wifi guest ne
-  sera pas désctivé automatiquement.   
+  sera pas désactivé automatiquement.
 
   La durée durant laquelle le WiFi guest doit être activé est exprimée en minute.
 
@@ -332,12 +331,12 @@ la page de gestion des commandes d'un équipement.
 {% include image.html img="btn_cmd_debit.png" %}
 
 Un click sur ces bouton ajoute une commande à la liste des commandes de l'équipement.
-Le logicalId de la nouvelle commande est `rate_upload` (débits sortants) ou 
+Le logicalId de la nouvelle commande est `rate_upload` (débits sortants) ou
 `rate_download` (débit entrant).
 
 {% include image.html img="nouvelles_commandes.png" %}
 
-Vous devez alors saisir un nom pour la commande et vérifier si l'équipement cible 
+Vous devez alors saisir un nom pour la commande et vérifier si l'équipement cible
 (**Flux vers:** ou **Flux depuis:**) proposé est correct avant de sauvegarder l'équipement.
 
 ### Vérification de la cohérence des commandes
@@ -353,14 +352,14 @@ configurations des commandes de débit.
 ### Remarques
 {: .num}
 
-+ **Redondance:**   
++ **Redondance:**\
   Une commande de débit pour le montant de A vers B sera redondante avec la commande de débit
   descendant vers B depuis A.
 
-+ **Flux entre équipements non manageable**   
++ **Flux entre équipements non manageable**\
   Ces flux ne peuvent pas être mesurés.
 
-+ **Flux entre un équipement manageable et un non manageable**   
++ **Flux entre un équipement manageable et un non manageable**\
   Les commandes de débit de l'équipement non manageable sont renseignées avec les valeurs
   remontées depuis l'appareil manageable
 
