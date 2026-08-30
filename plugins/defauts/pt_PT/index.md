@@ -48,11 +48,11 @@ O equipamento foi concebido com três comandos:
 {: .num}
 
 Para além das configurações habituais, o equipamento dispõe de dois parâmetros que permitem definir o funcionamento da **confirmação automática**:
-* **Autoconfirmação**
+* **Autoresposta**\
 indica se as falhas devem ser confirmadas automaticamente ou não.
-* **Prazos** *(visíveis apenas se a confirmação automática estiver ativada)*
+* **Prazos** *(visíveis apenas se a confirmação automática estiver ativada)*\
 Os prazos de espera
-   
+
 ### Verificações de coerência
 {: .num}
 
@@ -105,7 +105,7 @@ O comando *histórico* e o respetivo widget permitem visualizar as últimas cinc
 * ***Nome:*** Nome do histórico.
 * ***Tamanho:***  Número de registos do histórico apresentados no widget (máximo de 5)
 * ***Retenção:*** Período de retenção de um registo no histórico. Este período pode ser expresso em minutos, horas ou dias
-* ***Formato da data:*** Formato da data no histórico.
+* ***Formato da data:*** Formato da data no histórico.\
 Estão disponíveis os seguintes formatos (enviem um pedido através do fórum do Jeedom para a adição de outros formatos):
 
 | formato | exemplo |

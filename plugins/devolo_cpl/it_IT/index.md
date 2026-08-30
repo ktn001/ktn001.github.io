@@ -108,7 +108,6 @@ attivata. L'attivazione di questa opzione può rendere i log del demone molto de
 è impostato in modalità "debug".
 
 + **Informazioni sulla velocità di trasmissione**
-: 
     + ***Flusso ascendente***
 : Indica se devono essere creati dei comandi per la trasmissione dei flussi PLC in uscita (verso i
 altre apparecchiature).
@@ -353,14 +352,14 @@ configurazioni dei comandi di portata.
 ### Note
 {: .num}
 
-+ **Ridondanza:**
++ **Ridondanza:**\
 Un comando di addebito per l'importo da A a B sarà ridondante rispetto al comando di addebito
 scendendo da A verso B.
 
-+ **Flusso tra dispositivi non gestibile**
++ **Flusso tra dispositivi non gestibile**\
 Questi flussi non possono essere misurati.
 
-+ **Flusso tra un dispositivo gestibile e uno non gestibile**
++ **Flusso tra un dispositivo gestibile e uno non gestibile**\
 I comandi di portata delle apparecchiature non gestibili vengono impostati con i valori
 dati inviati dal dispositivo gestibile
 

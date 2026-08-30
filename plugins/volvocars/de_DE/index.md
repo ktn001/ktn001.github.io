@@ -42,21 +42,21 @@ Sie müssen auf der Website einen VCC-API-Schlüssel (VCC API Key) generieren
 [https://developer.volvocars.com/](https://developer.volvocars.com/){:target="_blank"} weiterlesen
 dieses Verfahren:
 
-1. Klicken Sie auf **„Sign up“**:
+1. Klicken Sie auf **„Sign up“**:\
 {% include image.html img="sign_up_volvodev.png" %}
-1. Wählen Sie das Konto aus, das mit Ihrem neuen Konto „developper.volvocars“ verknüpft werden soll:
+1. Wählen Sie das Konto aus, das mit Ihrem neuen Konto „developper.volvocars“ verknüpft werden soll:\
 {% include image.html img="select_login_asoc.png" %}
-1. Geben Sie Ihren Benutzernamen und Ihr Passwort für die im vorherigen Schritt ausgewählte Website ein
+1. Geben Sie Ihren Benutzernamen und Ihr Passwort für die im vorherigen Schritt ausgewählte Website ein\
 {% include image.html img="sign_in_volvodev.png" %}
-1. Klicken Sie auf Ihren Benutzernamen und anschließend auf **Ihre API-Anwendungen**
+1. Klicken Sie auf Ihren Benutzernamen und anschließend auf **Ihre API-Anwendungen**\
 {% include image.html img="open_api_applications.png" %}
 1. Geben Sie einen Namen für die Anwendung ein, die Sie erstellen möchten, und klicken Sie dann auf **Create**. Wenn Sie
 Bei mehreren Jeedom-Instanzen empfiehlt es sich, für jede Instanz eine eigene App in
 in der das Plugin
-installiert:
+installiert:\
 {% include image.html img="create_application.png" %}
 1. Ihre neue App wird mit einem Paar VCC-API-Schlüsseln erstellt. Sie können jederzeit zurückkehren.
-auf dieser Seite, um Ihren Schlüssel abzurufen.
+auf dieser Seite, um Ihren Schlüssel abzurufen.\
 {% include image.html img="vcc_keys.png" %}
 
 # Installation und Konfiguration des Plugins
@@ -84,7 +84,7 @@ Starten Sie ihn manuell. Sobald die Abhängigkeiten installiert sind, stellen Si
 
 + ***Zu erstellende Befehle für die Flügel***
 : Die Volvocars-APIs geben den Status der Fenster und Türen als Textinformation zurück.
-Dieser Text wird in einem **\*_state**-Befehl des Geräts gespeichert.
+Dieser Text wird in einem **\*_state**-Befehl des Geräts gespeichert.\
 Es werden außerdem die binären Befehle **\*_open** und **\*_closed** erstellt, wenn die Option **Offen**
 oder **Geschlossen** ist aktiviert.
 : Die vorhandenen Befehle **\*_open** oder **\*_closed** werden nicht gelöscht, wenn
@@ -162,11 +162,11 @@ Bei Bedarf können Sie die Bearbeitung dieser Einstellungen freischalten, indem 
 
 + **Alarmeinstellungen**
 
-   + *Elektrische Autonomie*
+   + *Elektrische Autonomie*\
 Der Wert des Befehls `al_electricAutonomy` wechselt auf **1**, wenn die elektrische Reichweite geringer ist
 an dieser Grenze.
 
-   + *Wärmeautarkie*
+   + *Wärmeautarkie*\
 Der Wert des Befehls `al_fuelAutonomy` wechselt zu **1**, wenn die Reichweite des Verbrennungsmotors geringer ist
 an dieser Grenze.
 
@@ -177,18 +177,18 @@ Die GPS-Koordinaten von zwei Standorten können konfiguriert werden. Für jeden 
   + `presenceSite#`: Binärwert, der angibt, ob sich das Gerät am Standort befindet
 
 Die Einstellungen:
-  + *Name*
+  + *Name*\
 Wenn eine Website umbenannt wird, werden auch die beiden zugehörigen Befehle umbenannt, sofern ihre Namen den alten Namen enthalten.
 Name der Website
-  + *GPS-Koordinaten*
+  + *GPS-Koordinaten*\
 Die GPS-Koordinaten des Standorts
-  + *Max. Reichweite (in m)*
+  + *Max. Entfernung (in m)*\
 Maximale Entfernung (in Metern) zwischen dem Fahrzeug und dem Standort, damit das Fahrzeug als am Standort anwesend angezeigt wird.
-  + *GPS-Koordinaten abrufen*
+  + *GPS-Koordinaten abrufen*\
 Zwei Schaltflächen, mit denen die GPS-Koordinaten des Standorts automatisch eingegeben werden können:
        + `Jeedom`: Ruft die GPS-Koordinaten von Jeedom ab, die in der Jeedom-Konfiguration eingegeben wurden.
        + `Fahrzeug`: Ruft die aktuelle Position des Fahrzeugs ab
-  
+
 + **Beschreibung**
 
 Freie Informationen
@@ -211,9 +211,9 @@ können bei der Analyse im Falle eines Problems hilfreich sein.
 
 {% include image.html img="no_image.png" %}
 
-+ Klicken Sie auf die Schaltfläche „Fahrzeugbild abrufen“
++ Klicken Sie auf die Schaltfläche „Fahrzeugbild abrufen“\
    + Das Logo wird durch ein Bild des Fahrzeugs ersetzt
-   + Die Schaltfläche „Fahrzeugbild abrufen“ wird nicht mehr angezeigt:
+   + Die Schaltfläche „Fahrzeugbild abrufen“ wird nicht mehr angezeigt:\
    + Ein Bereich ist markiert, in den das Bild des Fahrzeugs kopiert werden soll
 
 {% include image.html img="image_ready.png" %}
@@ -240,21 +240,21 @@ das dafür vorgesehene Feld.
 
 Das Plugin kann folgende Befehle an das Fahrzeug senden
 
-+ **Entsperren**
++ **Entsperren**\
 Entriegelung des Fahrzeugs
-+ **Schloss**
++ **Schloss**\
 Fahrzeugverriegelung
-+ **lockReduced**
++ **lockReduced**\
 Sperren im reduzierten Alarmmodus
-+ **climStart**
++ **climStart**\
 Einschalten der Klimaanlage
-+ **climStop**
++ **climStop**\
 Abschaltung der Klimaanlage
-+ **Hup**
++ **Hup**\
 Klaxonne
-+ **Flash**
++ **flash**\
 Die Blinker des Fahrzeugs blinken.
-+ **honk_flash**
++ **honk_flash**\
 Gleichzeitige Ausführung der Befehle *honk* und *flash*
 
 Welche Befehle im Plugin für ein Fahrzeug tatsächlich aktiviert sind, hängt ab von

@@ -42,21 +42,21 @@ Debes generar una clave API VCC (VCC API Key) en la página web
 [https://developer.volvocars.com/](https://developer.volvocars.com/){:target="_blank"} siguiendo
 este procedimiento:
 
-1. Haz clic en **Registrarse**:
+1. Haz clic en **Registrarse**:\
 {% include image.html img="sign_up_volvodev.png" %}
-1. Selecciona la cuenta que se asociará a tu nueva cuenta developper.volvocars:
+1. Selecciona la cuenta que se asociará a tu nueva cuenta developper.volvocars:\
 {% include image.html img="select_login_asoc.png" %}
-1. Introduce tu nombre de usuario y contraseña para el sitio web seleccionado en el punto anterior
+1. Introduce tu nombre de usuario y contraseña para el sitio web seleccionado en el punto anterior\
 {% include image.html img="sign_in_volvodev.png" %}
-1. Haz clic en tu nombre de usuario y, a continuación, en **Tus aplicaciones API**
+1. Haz clic en tu nombre de usuario y, a continuación, en **Tus aplicaciones API**\
 {% include image.html img="open_api_applications.png" %}
 1. Introduce un nombre para la aplicación que vas a crear y, a continuación, haz clic en **Crear**. Si tienes
 Si se tienen varias instancias de Jeedom, se recomienda crear una aplicación para cada instancia en
 en la que se instalará el complemento
-instalado:
+instalado:\
 {% include image.html img="create_application.png" %}
 1. Tu nueva aplicación se crea con un par de claves API de VCC. Siempre podrás volver
-en esta página para recuperar tu clave.
+en esta página para obtener tu clave.\
 {% include image.html img="vcc_keys.png" %}
 
 # Instalación y configuración del complemento
@@ -84,7 +84,7 @@ Ejecútalo manualmente. Una vez instaladas las dependencias, asegúrate de que e
 
 + ***Comandos que hay que crear para las ventanas***
 : Las API de Volvocars devuelven información de tipo texto sobre el estado de las ventanas.
-Este texto se guarda en un comando **\*_state** del equipo.
+Este texto se guarda en un comando **\*_state** del equipo.\
 También se crearán los comandos binarios **\*_open** y **\*_closed** si se selecciona la opción **Abierto**
 o **Cerrado** está activada.
 : Los comandos **\*_open** o **\*_closed** existentes no se eliminan cuando
@@ -162,11 +162,11 @@ Si es necesario, se puede habilitar la edición de estos parámetros haciendo cl
 
 + **Configuración de alertas**
 
-   + *Autonomía eléctrica*
+   + *Autonomía eléctrica*\
 El valor del comando `al_electricAutonomy` pasa a **1** cuando la autonomía eléctrica es inferior a
 hasta ese límite.
 
-   + *Autosuficiencia térmica*
+   + *Autosuficiencia térmica*\
 El valor de la orden `al_fuelAutonomy` pasa a **1** cuando la autonomía del motor térmico es inferior a
 hasta ese límite.
 
@@ -177,18 +177,18 @@ Se pueden configurar las coordenadas GPS de dos ubicaciones. Se crearán dos com
   + `presenceSite#`: valor binario que indica si hay alguien en las instalaciones
 
 Los parámetros:
-  + *Nombre*
+  + *Nombre*\
 Si se cambia el nombre de un sitio, los dos comandos asociados también cambiarán de nombre si sus nombres contienen el antiguo.
 nombre del sitio web
-  + *Coordenadas GPS*
+  + *Coordenadas GPS*\
 Las coordenadas GPS del emplazamiento
-  + *Distancia máxima (en m)*
+  + *Distancia máxima (en m)*\
 Distancia máxima (en metros) entre el vehículo y el recinto para que el vehículo aparezca como presente en el recinto.
-  + *Obtener coordenadas GPS*
+  + *Obtener coordenadas GPS*\
 Dos botones que permiten introducir automáticamente las coordenadas GPS del lugar:
        + `Jeedom`: Recupera las coordenadas GPS de Jeedom que se han introducido en la configuración de Jeedom.
        + `Vehículo`: Obtiene la posición actual del vehículo
-  
+
 + **Descripción**
 
 Información libre
@@ -211,9 +211,9 @@ que pueden resultar útiles para el análisis en caso de que surja algún proble
 
 {% include image.html img="no_image.png" %}
 
-+ Haz clic en el botón «Obtener una imagen del vehículo»
++ Haz clic en el botón «Obtener una imagen del vehículo»\
    + El logotipo se sustituye por una imagen del vehículo
-   + El botón «Recuperar una imagen del vehículo» ya no aparece:
+   + El botón «Recuperar una imagen del vehículo» ya no aparece:\
    + Se ha marcado un área para pegar allí la imagen del vehículo
 
 {% include image.html img="image_ready.png" %}
@@ -240,21 +240,21 @@ la zona prevista para ello.
 
 El complemento puede enviar al vehículo los siguientes comandos
 
-+ **desbloquear**
++ **desbloquear**\
 Desbloqueo del vehículo
-+ **cerradura**
++ **cerradura**\
 Bloqueo del vehículo
-+ **lockReduced**
++ **lockReduced**\
 Bloqueo en modo de alarma reducida
-+ **climStart**
++ **climStart**\
 Puesta en marcha del aire acondicionado
-+ **climStop**
++ **climStop**\
 Apagado del aire acondicionado
-+ **bip**
++ **bip**\
 Klaxonne
-+ **flash**
++ **flash**\
 Las luces de intermitencia del vehículo parpadean.
-+ **honk_flash**
++ **honk_flash**\
 Ejecución simultánea de los comandos *honk* y *flash*
 
 Los controles que se activan realmente en el complemento para un vehículo dependen de

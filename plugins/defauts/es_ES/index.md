@@ -48,11 +48,11 @@ El equipo se configura mediante tres mandos:
 {: .num}
 
 Además de las configuraciones habituales, el equipo dispone de dos parámetros que permiten definir el funcionamiento de la **confirmación automática**:
-* **Autocompensación**
+* **Autocompensación**\
 indica si los fallos deben confirmarse automáticamente o no.
-* **Plazos** *(solo se muestra si la confirmación automática está activada)*
+* **Plazos** *(visible solo si la confirmación automática está activada)*\
 Los plazos de espera
-   
+
 ### Comprobaciones de coherencia
 {: .num}
 
@@ -105,7 +105,7 @@ Se puede configurar el periodo de retención de los eventos que aparecen en la l
 * ***Nombre:*** Nombre del historial.
 * ***Tamaño:***  Número de entradas del historial que se muestran en el widget (5 como máximo)
 * ***Retención:*** Tiempo durante el cual se conserva una entrada en el historial. Este tiempo puede expresarse en minutos, horas o días.
-* ***Formato de fecha:*** Formato de la fecha en el historial.
+* ***Formato de fecha:*** Formato de la fecha en el historial.\
 Son compatibles los siguientes formatos (solicita la incorporación de otros formatos a través del foro de Jeedom):
 
 | formato | ejemplo |

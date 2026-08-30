@@ -48,11 +48,11 @@ Das Gerät verfügt über drei Bedienelemente:
 {: .num}
 
 Neben den üblichen Einstellungen verfügt das Gerät über zwei Parameter, mit denen die Funktionsweise der **automatischen Quittierung** festgelegt werden kann:
-* **Automatische Quittierung**
+* **Automatische Quittierung**\
 Gibt an, ob Fehler automatisch quittiert werden sollen oder nicht.
-* **Fristen** *(nur sichtbar, wenn die automatische Quittierung aktiviert ist)*
+* **Fristen** *(nur sichtbar, wenn die automatische Quittierung aktiviert ist)*\
 Wartezeiten
-   
+
 ### Konsistenzprüfungen
 {: .num}
 
@@ -105,8 +105,8 @@ Die Aufbewahrungsdauer der aufgelisteten Ereignisse kann konfiguriert werden. Er
 * ***Name:*** Name des Verlaufs.
 * ***Größe:***  Anzahl der im Widget angezeigten Protokolleinträge (maximal 5)
 * ***Aufbewahrungsdauer:*** Dauer, für die ein Eintrag im Verlauf gespeichert bleibt. Diese Dauer kann in Minuten, Stunden oder Tagen angegeben werden
-* ***Datumsformat:*** Format der Datumsangabe im Verlauf.
-Folgende Formate sind möglich (Bitte stellen Sie im Jeedom-Forum einen Antrag auf Hinzufügung weiterer Formate):
+* ***Datumsformat:*** Format der Datumsangabe im Verlauf.\
+Die folgenden Formate sind möglich (Bitte stellen Sie im Jeedom-Forum eine Anfrage, falls Sie weitere Formate hinzufügen möchten):
 
 | Format | Beispiel |
     | ------ | ------- |

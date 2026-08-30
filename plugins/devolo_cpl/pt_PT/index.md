@@ -108,7 +108,6 @@ ativada. A ativação desta opção pode tornar os registos do daemon muito deta
 é colocado no modo «debug».
 
 + **Informações sobre velocidades**
-: 
     + ***Fluxo ascendente***
 : Indica se devem ser criados comandos para os fluxos de saída da rede PLC (para os
 (outros equipamentos).
@@ -258,7 +257,7 @@ da rede mesh.
 + O comando `guest_duration` permite configurar o período de tempo durante o qual
 O Wi-Fi para convidados deve estar ativado. Passado esse período, o dispositivo Devolo
 desativará o Wi-Fi para convidados. Se o valor deste comando for 0, o Wi-Fi para convidados não
-não será desativada automaticamente.
+não será desativado automaticamente.
 
 O período durante o qual o Wi-Fi para convidados deve permanecer ativado é expresso em minutos.
 
@@ -353,14 +352,14 @@ configurações dos controlos de caudal.
 ### Observações
 {: .num}
 
-+ **Redundância:**
++ **Redundância:**\
 Uma ordem de débito no valor de A para B será redundante em relação à ordem de débito
 descer de A para B.
 
-+ **Fluxo entre equipamentos não controlável**
++ **Fluxo entre equipamentos não controlável**\
 Estes fluxos não podem ser medidos.
 
-+ **Fluxo entre um equipamento gerenciável e um não gerenciável**
++ **Fluxo entre um equipamento gerenciável e um não gerenciável**\
 Os comandos de caudal do equipamento não gerenciável são preenchidos com os valores
 informações enviadas a partir do dispositivo controlável
 
