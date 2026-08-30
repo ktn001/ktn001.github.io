@@ -21,7 +21,7 @@ Le plugin peut aussi remonter des défaut lorsque la valeur d'une mesure s'écar
 
 Le plugin ne nécessite aucune configuration, il faut juste l’activer.
 
-{% include image.html img="config_plugin.png" %}
+{% include image.html img="01_config_plugin.png" %}
 
 # Les équipements
 {: .num}
@@ -61,7 +61,7 @@ Le panneau `surveillances` permet de géger les surveillances de l'équipement. 
 #### Les surveillances de cohérence ont plusieurs paramètres:
 {: .num}
 
-{% include image.html img="config_surveillance.png" %}
+{% include image.html img="02_config_surveillance.png" %}
 * ***Nom :*** Nom de la surveillance.
 * ***Etat :*** Info binaire à surveiller.
 * ***Mesure :*** Info numérique à surveiller.
@@ -77,7 +77,7 @@ Le panneau `surveillances` permet de géger les surveillances de l'équipement. 
 ### Des surveillances de consigne
 {: .num}
 
-{% include image.html img="config_consigne.png" %}
+{% include image.html img="03_config_consigne.png" %}
 * ***Nom :*** Nom de la surveillance.
 * ***Etat :*** Info binaire utilisée pour controler le fonctonnement de lasurveillance.
 * ***Mesure :*** Info numérique, un defaut sera signalé si la valeur de cette mesure est trop distante de la valeur de la consigne.
@@ -91,7 +91,7 @@ Le panneau `surveillances` permet de géger les surveillances de l'équipement. 
 ### De l'historique
 {: .num}
 
-{% include image.html img="historique.png" %}
+{% include image.html img="04_historique.png" %}
 
 La commande *historique* et son widget permettent de voir les cinq derniers défauts qui se sont produits. Le nombre d'événements listés est configurable.
 
