@@ -3,6 +3,7 @@ layout : default
 pluginId : defauts
 plugin : Défauts
 lang: en_US
+img03: 03_config_consigne.png
 ---
 # "{{page.plugin}}" plugin for Jeedom.
 The **{{page.plugin}}** plugin detects faults by verifying the consistency between a status and a measurement.
@@ -77,7 +78,7 @@ The `Monitoring` panel allows you to manage equipment monitoring. The `Add Monit
 ### Setpoint monitoring
 {: .num}
 
-{% include image.html img="03_config_setpoint.png" %}
+{% include image.html img=page.img03 %}
 * ***Name:*** Name of the monitoring system.
 * ***Status:*** Binary information used to control the operation of the monitoring system.
 * ***Measurement:*** Digital data; a fault will be reported if the value of this measurement deviates too far from the setpoint value.
