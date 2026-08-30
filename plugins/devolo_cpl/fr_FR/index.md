@@ -3,6 +3,24 @@ layout : default
 pluginId : devolo_cpl
 plugin : devolo_cpl
 lang: fr_FR
+img01: 01_configuration_plugin.png
+img02: 02_icones_gestion_plugin.png
+img03: 03_equipement_non_configure.png
+img04: 04_equipement_manageable_configure.png
+img05: 05_equipement_non_manageable_configure.png
+img06: 06_widget_dashboard.png
+img07: 07_widget_mobile.png
+img08: 08_popup_j_h_m_dashboard.png
+img09: 09_popup_j_h_m_mobile.png
+img10: 10_modal_CPL_rates.png
+img11: 11_btn_cmd_debit.png
+img12: 12_nouvelles_commandes.png
+img13: 13_check_debitCmds.png
+img14: 14_config_mac.png
+img15: 15_menu_accueil.png
+img16: 16_panel_debits_CPL.png
+img17: 17_panel_wifi_AP.png
+img18: 18_panel_wifi_client.png
 ---
 # PLugin "devolo_cpl" pour Jeedom
 
@@ -72,7 +90,7 @@ installé, il faut l'activer puis lancer l'installation des dépendances
 ## Configuration du plugin
 {: .num}
 
-{% include image.html img="configuration_plugin.png" %}
+{% include image.html img=img01 %}
 
 + **Plugin**
 : Configuration globale du plugin:
@@ -133,7 +151,7 @@ non manageables.
 
 Sur la page de gestion du plugin, cliquer sur l'icône `synchronisation`:
 
-{% include image.html img="icones_gestion_plugin.png" %}
+{% include image.html img=img02 %}
 
 Un équipement Jeedom est automatiquement créé pour chaque appareil détecté.
 
@@ -152,12 +170,12 @@ Un équipement Jeedom est automatiquement créé pour chaque appareil détecté.
 
 Sur la page de gestion du plugin, cliquer sur l'icône `Ajouter`:
 
-{% include image.html img="icones_gestion_plugin.png" %}
+{% include image.html img=img02 %}
 
 Il faut saisir le nom du nouvel équipement avant d'accéder à la page de
 configuration de l'équipement.
 
-{% include image.html img="equipement_non_configure.png" %}
+{% include image.html img=img03 %}
 
 Il faut alors
 + Sélectionner le type d'équipement. La liste des paramètres spécifiques sera
@@ -171,10 +189,10 @@ Il faut alors
 > :bulb: Le n° de série doit être unique mais, pour le moment, le plugin ne le vérifie pas.
 
 ##### Equipement manageable:
-{% include image.html img="equipement_manageable_configure.png" %}
+{% include image.html img=img04 %}
 
 ##### Equipement non manageable:
-{% include image.html img="equipement_non_manageable_configure.png" %}
+{% include image.html img=img05 %}
 
 ## Finalisation de la configuration
 {: .num}
@@ -265,10 +283,10 @@ lorsque l'appareil répond à la demande du deamon.
   `<jours> <heures>:<minute>` (`<heures>:<minutes>` si jours = 0)
 
   ##### Widget et popup dashboard:
-  {% include image.html img="widget_dashboard.png" %} {% include image.html img="popup_j_h_m_dashboard.png" %}
+  {% include image.html img=img06 %} {% include image.html img=img08 %}
 
   ##### Widget et popup mobile:
-  {% include image.html img="widget_mobile.png" %} {% include image.html img="popup_j_h_m_mobile.png" %}
+  {% include image.html img=img07 %} {% include image.html img=img09 %}
 + La commande info `guest_remaining` indique le temps restant avant la désactivation
   du WiFi guest. Cette durée en enregistrée en minutes.
 
@@ -292,11 +310,11 @@ Les débit CPL sont remontés des appareils toutes le 5 minutes. Le valeurs sont
 enregistrées dans la base de données et sont conservées durant la période le rétention
 configurée sur la page de configuration du plugin.
 
-{% include image.html img="icones_gestion_plugin.png" %}
+{% include image.html img=img02 %}
 
 Un click sur l'icône `Réseaux CPL` ouvre un modal de présentation des débits CPL.
 
-{% include image.html img="modal_CPL_rates.png" %}
+{% include image.html img=img10 %}
 
 ## Les réseaux
 {: .num}
@@ -328,13 +346,13 @@ Si l'option correspondante a été activée dans la configuration du plugin, des
 la création commandes de débit pour les flux ascendants et descendants sont affichés sur
 la page de gestion des commandes d'un équipement.
 
-{% include image.html img="btn_cmd_debit.png" %}
+{% include image.html img=img11 %}
 
 Un click sur ces bouton ajoute une commande à la liste des commandes de l'équipement.
 Le logicalId de la nouvelle commande est `rate_upload` (débits sortants) ou
 `rate_download` (débit entrant).
 
-{% include image.html img="nouvelles_commandes.png" %}
+{% include image.html img=img12 %}
 
 Vous devez alors saisir un nom pour la commande et vérifier si l'équipement cible
 (**Flux vers:** ou **Flux depuis:**) proposé est correct avant de sauvegarder l'équipement.
@@ -345,9 +363,9 @@ Vous devez alors saisir un nom pour la commande et vérifier si l'équipement ci
 Le bouton `Commandes de débit` ouvre un popup avec une listes des incohérences dans les
 configurations des commandes de débit.
 
-{% include image.html img="icones_gestion_plugin.png" %}
+{% include image.html img=img02 %}
 
-{% include image.html img="check_debitCmds.png" %}
+{% include image.html img=img13 %}
 
 ### Remarques
 {: .num}
@@ -404,12 +422,12 @@ respectée.
 ## Association de noms aux adresses mac
 {: .num}
 
-{% include image.html img="icones_gestion_plugin.png" %}
+{% include image.html img=img02 %}
 
 Le bouton `Adresses mac` de la page de gestion du plugin ouvre un modal pour
 gestion des adresses mac des équipements qui se sont connectés au réseaux Wifi.
 
-{% include image.html img="config_mac.png" %}
+{% include image.html img=img14 %}
 
 Les noms associés ici aux adresses mac seront utilisés en lieu et place des adresse mac
 les graphiques.
@@ -419,7 +437,7 @@ les graphiques.
 
 Le panel est accessible via le menu **Accueil**
 
-{% include image.html img="menu_accueil.png" %}
+{% include image.html img=img15 %}
 
 Le panel ne contient deux *tabs*:
 * Un nommé `Débits CPL` pour l'historique des débits entre les équipements CPL
@@ -431,7 +449,7 @@ Le panel ne contient deux *tabs*:
 A son ouverture, le tab présente un graphique de l'historique des débits entre
 deux appareils.
 
-{% include image.html img="panel_debits_CPL.png" %}
+{% include image.html img=img16 %}
 
 Il est possible:
 + D'ajouter u graphique via le bouton `Ajouter un graphique`
@@ -445,9 +463,9 @@ Je vous laiss découvrir les autres fonctionalités du graphique.
 
 Ce tab permet de visualiser l'historique des connections WiFi à un point d'accès (AP):
 
-{% include image.html img="panel_wifi_AP.png" %}
+{% include image.html img=img17 %}
 
 Ce tab permet également de visualiser l'historique des connections WiFi d'une équipement Wifi (client):
 
-{% include image.html img="panel_wifi_client.png" %}
+{% include image.html img=img18 %}
 
