@@ -3,6 +3,24 @@ layout : default
 pluginId : devolo_cpl
 plugin : devolo_cpl
 lang: en_US
+img01: 01_configuration_plugin.png
+img02: 02_icones_gestion_plugin.png
+img03: 03_equipement_non_configure.png
+img04: 04_equipement_manageable_configure.png
+img05: 05_equipement_non_manageable_configure.png
+img06: 06_widget_dashboard.png
+img07: 07_widget_mobile.png
+img08: 08_popup_j_h_m_dashboard.png
+img09: 09_popup_j_h_m_mobile.png
+img10: 10_modal_CPL_rates.png
+img11: 11_btn_cmd_debit.png
+img12: 12_nouvelles_commandes.png
+img13: 13_check_debitCmds.png
+img14: 14_config_mac.png
+img15: 15_menu_accueil.png
+img16: 16_panel_debits_CPL.png
+img17: 17_panel_wifi_AP.png
+img18: 18_panel_wifi_client.png
 ---
 # "devolo_cpl" plugin for Jeedom
 
@@ -72,7 +90,7 @@ Once installed, you need to activate it and then run the installation of the dep
 ## Plugin Configuration
 {: .num}
 
-{% include image.html img="configuration_plugin.png" %}
+{% include image.html img=img01 %}
 
 + **Plugin**
 : General plugin settings:
@@ -133,7 +151,7 @@ unmanageable.
 
 On the plugin's settings page, click the `synchronization` icon:
 
-{% include image.html img="icones_gestion_plugin.png" %}
+{% include image.html img=img02 %}
 
 A Jeedom device is automatically created for each detected device.
 
@@ -152,12 +170,12 @@ The equipment is selected based on the country configured for the plugin.
 
 On the plugin management page, click the `Add` icon:
 
-{% include image.html img="icones_gestion_plugin.png" %}
+{% include image.html img=img02 %}
 
 You must enter the name of the new device before accessing the page
 equipment setup.
 
-{% include image.html img="equipment_not_configured.png" %}
+{% include image.html img=img03 %}
 
 You must then
 + Select the type of equipment. The list of specific settings will be
@@ -171,10 +189,10 @@ tailored to the type of equipment selected.
 > :bulb: The serial number must be unique, but for now, the plugin doesn't check for it.
 
 ##### Manageable devices:
-{% include image.html img="equipment_manageable_configure.png" %}
+{% include image.html img=img04 %}
 
 ##### Unmanageable equipment:
-{% include image.html img="equipment_non_manageable_configure.png" %}
+{% include image.html img=img05 %}
 
 ## Finalizing the configuration
 {: .num}
@@ -265,10 +283,10 @@ The **Devolo_cpl/J_h_m** widget displays this value in the format
 `<days> <hours>:<minutes>` (`<hours>:<minutes>` if days = 0)
 
 ##### Dashboard widgets and pop-ups:
-{% include image.html img="widget_dashboard.png" %} {% include image.html img="popup_j_h_m_dashboard.png" %}
+{% include image.html img=img06 %} {% include image.html img=img08 %}
 
 ##### Mobile widgets and pop-ups:
-{% include image.html img="widget_mobile.png" %} {% include image.html img="popup_j_h_m_mobile.png" %}
+{% include image.html img=img07 %} {% include image.html img=img09 %}
 + The `guest_remaining` info command shows the time remaining before deactivation
 for the guest Wi-Fi. This duration is recorded in minutes.
 
@@ -292,11 +310,11 @@ Powerline communication (PLC) data is retrieved from the devices every 5 minutes
 stored in the database and retained for the retention period
 configured on the plugin's settings page.
 
-{% include image.html img="icones_gestion_plugin.png" %}
+{% include image.html img=img02 %}
 
 Clicking the `Powerline Networks` icon opens a modal window displaying powerline speeds.
 
-{% include image.html img="modal_CPL_rates.png" %}
+{% include image.html img=img10 %}
 
 ## Networks
 {: .num}
@@ -328,13 +346,13 @@ If the corresponding option has been enabled in the plugin's settings, buttons f
 The creation of flow rate commands for upstream and downstream flows is displayed on
 the equipment command management page.
 
-{% include image.html img="btn_cmd_debit.png" %}
+{% include image.html img=img11 %}
 
 Clicking these buttons adds a command to the device's list of commands.
 The logicalId of the new command is `rate_upload` (outgoing data rates) or
 `rate_download` (download speed).
 
-{% include image.html img="new_commands.png" %}
+{% include image.html img=img12 %}
 
 You must then enter a name for the command and verify that the target device
 (**Flow to:** or **Flow from:**) is correct before saving the device.
@@ -345,9 +363,9 @@ You must then enter a name for the command and verify that the target device
 The `Flow Commands` button opens a popup with a list of inconsistencies in the
 flow control commands.
 
-{% include image.html img="icones_gestion_plugin.png" %}
+{% include image.html img=img02 %}
 
-{% include image.html img="check_debitCmds.png" %}
+{% include image.html img=img13 %}
 
 ### Notes
 {: .num}
@@ -404,12 +422,12 @@ complied with.
 ## Mapping Names to MAC Addresses
 {: .num}
 
-{% include image.html img="icones_gestion_plugin.png" %}
+{% include image.html img=img02 %}
 
 The `MAC Addresses` button on the plugin's management page opens a modal to
 Management of MAC addresses for devices that have connected to the Wi-Fi network.
 
-{% include image.html img="config_mac.png" %}
+{% include image.html img=img14 %}
 
 The names associated here with the MAC addresses will be used in place of the MAC addresses
 graphs.
@@ -419,7 +437,7 @@ graphs.
 
 The panel can be accessed via the **Home** menu
 
-{% include image.html img="menu_accueil.png" %}
+{% include image.html img=img15 %}
 
 The panel contains two *tabs*:
 * A feature called `Powerline Speeds` for viewing the history of data transfer rates between powerline devices
@@ -431,7 +449,7 @@ The panel contains two *tabs*:
 When opened, the tab displays a graph showing the flow rate history between
 two devices.
 
-{% include image.html img="panel_debits_CPL.png" %}
+{% include image.html img=img16 %}
 
 It is possible to:
 + To add a chart using the `Add a Chart` button
@@ -445,9 +463,9 @@ I'll let you explore the other features of the graph.
 
 This tab lets you view the history of Wi-Fi connections to an access point (AP):
 
-{% include image.html img="panel_wifi_AP.png" %}
+{% include image.html img=img17 %}
 
 This tab also allows you to view the Wi-Fi connection history for a Wi-Fi device (client):
 
-{% include image.html img="panel_wifi_client.png" %}
+{% include image.html img=img18 %}
 

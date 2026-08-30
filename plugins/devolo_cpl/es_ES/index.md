@@ -3,6 +3,24 @@ layout : default
 pluginId : devolo_cpl
 plugin : devolo_cpl
 lang: es_ES
+img01: 01_configuration_plugin.png
+img02: 02_icones_gestion_plugin.png
+img03: 03_equipement_non_configure.png
+img04: 04_equipement_manageable_configure.png
+img05: 05_equipement_non_manageable_configure.png
+img06: 06_widget_dashboard.png
+img07: 07_widget_mobile.png
+img08: 08_popup_j_h_m_dashboard.png
+img09: 09_popup_j_h_m_mobile.png
+img10: 10_modal_CPL_rates.png
+img11: 11_btn_cmd_debit.png
+img12: 12_nouvelles_commandes.png
+img13: 13_check_debitCmds.png
+img14: 14_config_mac.png
+img15: 15_menu_accueil.png
+img16: 16_panel_debits_CPL.png
+img17: 17_panel_wifi_AP.png
+img18: 18_panel_wifi_client.png
 ---
 # Complemento «devolo_cpl» para Jeedom
 
@@ -72,7 +90,7 @@ Una vez instalado, hay que activarlo y, a continuación, iniciar la instalación
 ## Configuración del complemento
 {: .num}
 
-{% include image.html img="configuration_plugin.png" %}
+{% include image.html img=img01 %}
 
 + **Complemento**
 : Configuración general del complemento:
@@ -133,7 +151,7 @@ no gestionables.
 
 En la página de configuración del complemento, haz clic en el icono «sincronización»:
 
-{% include image.html img="icones_gestion_plugin.png" %}
+{% include image.html img=img02 %}
 
 Se crea automáticamente un equipo Jeedom para cada dispositivo detectado.
 
@@ -152,12 +170,12 @@ El equipo se selecciona teniendo en cuenta el país configurado para el compleme
 
 En la página de gestión del complemento, haz clic en el icono «Añadir»:
 
-{% include image.html img="icones_gestion_plugin.png" %}
+{% include image.html img=img02 %}
 
 Hay que introducir el nombre del nuevo dispositivo antes de acceder a la página de
 configuración del equipo.
 
-{% include image.html img="equipement_non_configure.png" %}
+{% include image.html img=img03 %}
 
 Entonces hay que
 + Selecciona el tipo de equipo. La lista de parámetros específicos será
@@ -171,10 +189,10 @@ de serie, puedes introducir cualquier texto.)*
 > :bulb: El número de serie debe ser único, pero, por el momento, el complemento no lo comprueba.
 
 ##### Equipos gestionables:
-{% include image.html img="equipement_manageable_configure.png" %}
+{% include image.html img=img04 %}
 
 ##### Equipos no gestionables:
-{% include image.html img="equipement_non_manageable_configure.png" %}
+{% include image.html img=img05 %}
 
 ## Finalización de la configuración
 {: .num}
@@ -265,10 +283,10 @@ El widget **Devolo_cpl/J_h_m** muestra este valor en el formato
 `<días> <horas>:<minutos>` (`<horas>:<minutos>` si días = 0)
 
 ##### Widget y ventana emergente del panel de control:
-{% include image.html img="widget_dashboard.png" %} {% include image.html img="popup_j_h_m_dashboard.png" %}
+{% include image.html img=img06 %} {% include image.html img=img08 %}
 
 ##### Widget y ventana emergente para móviles:
-{% include image.html img="widget_mobile.png" %} {% include image.html img="popup_j_h_m_mobile.png" %}
+{% include image.html img=img07 %} {% include image.html img=img09 %}
 + El comando de información `guest_remaining` indica el tiempo que queda antes de la desactivación
 de la red WiFi para invitados. Esta duración se registra en minutos.
 
@@ -292,11 +310,11 @@ Los datos de velocidad de la red PLC se recogen de los dispositivos cada 5 minut
 se almacenan en la base de datos y se conservan durante el periodo de retención
 configurada en la página de configuración del complemento.
 
-{% include image.html img="icones_gestion_plugin.png" %}
+{% include image.html img=img02 %}
 
 Al hacer clic en el icono «Redes PLC», se abre una ventana emergente con información sobre las velocidades de la red PLC.
 
-{% include image.html img="modal_CPL_rates.png" %}
+{% include image.html img=img10 %}
 
 ## Las redes
 {: .num}
@@ -328,13 +346,13 @@ Si se ha activado la opción correspondiente en la configuración del complement
 La creación de órdenes de débito para los flujos ascendentes y descendentes se muestra en
 la página de gestión de comandos de un equipo.
 
-{% include image.html img="btn_cmd_debit.png" %}
+{% include image.html img=img11 %}
 
 Al hacer clic en estos botones, se añade un comando a la lista de comandos del equipo.
 El logicalId del nuevo comando es `rate_upload` (velocidades de salida) o
 `rate_download` (velocidad de descarga).
 
-{% include image.html img="nouvelles_commandes.png" %}
+{% include image.html img=img12 %}
 
 A continuación, debes introducir un nombre para el comando y comprobar si el dispositivo de destino
 (**Flujo hacia:** o **Flujo desde:**) propuesto es correcto antes de guardar el equipo.
@@ -345,9 +363,9 @@ A continuación, debes introducir un nombre para el comando y comprobar si el di
 El botón «Controles de caudal» abre una ventana emergente con una lista de las inconsistencias en los
 configuraciones de los controles de caudal.
 
-{% include image.html img="icones_gestion_plugin.png" %}
+{% include image.html img=img02 %}
 
-{% include image.html img="check_debitCmds.png" %}
+{% include image.html img=img13 %}
 
 ### Observaciones
 {: .num}
@@ -404,12 +422,12 @@ se ha respetado.
 ## Asignación de nombres a direcciones MAC
 {: .num}
 
-{% include image.html img="icones_gestion_plugin.png" %}
+{% include image.html img=img02 %}
 
 El botón «Direcciones MAC» de la página de gestión del complemento abre una ventana modal para
 gestión de las direcciones MAC de los dispositivos que se han conectado a la red wifi.
 
-{% include image.html img="config_mac.png" %}
+{% include image.html img=img14 %}
 
 Los nombres asociados aquí a las direcciones MAC se utilizarán en lugar de las direcciones MAC.
 los gráficos.
@@ -419,7 +437,7 @@ los gráficos.
 
 Se puede acceder al panel a través del menú **Inicio**
 
-{% include image.html img="menu_accueil.png" %}
+{% include image.html img=img15 %}
 
 El panel contiene dos *pestañas*:
 * Una entrada llamada «Velocidades PLC» para el historial de velocidades entre los dispositivos PLC
@@ -431,7 +449,7 @@ El panel contiene dos *pestañas*:
 Al abrirla, la pestaña muestra un gráfico con el historial de caudales entre
 dos dispositivos.
 
-{% include image.html img="panel_debits_CPL.png" %}
+{% include image.html img=img16 %}
 
 Es posible:
 + Añadir un gráfico mediante el botón «Añadir un gráfico»
@@ -445,9 +463,9 @@ Os dejo que descubráis el resto de funciones del gráfico.
 
 Esta pestaña permite visualizar el historial de conexiones Wi-Fi a un punto de acceso (AP):
 
-{% include image.html img="panel_wifi_AP.png" %}
+{% include image.html img=img17 %}
 
 Esta pestaña también permite visualizar el historial de conexiones Wi-Fi de un dispositivo Wi-Fi (cliente):
 
-{% include image.html img="panel_wifi_client.png" %}
+{% include image.html img=img18 %}
 
