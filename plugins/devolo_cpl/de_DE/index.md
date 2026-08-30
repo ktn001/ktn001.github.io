@@ -3,6 +3,24 @@ layout : default
 pluginId : devolo_cpl
 plugin : devolo_cpl
 lang: de_DE
+img01: 01_configuration_plugin.png
+img02: 02_icones_gestion_plugin.png
+img03: 03_equipement_non_configure.png
+img04: 04_equipement_manageable_configure.png
+img05: 05_equipement_non_manageable_configure.png
+img06: 06_widget_dashboard.png
+img07: 07_widget_mobile.png
+img08: 08_popup_j_h_m_dashboard.png
+img09: 09_popup_j_h_m_mobile.png
+img10: 10_modal_CPL_rates.png
+img11: 11_btn_cmd_debit.png
+img12: 12_nouvelles_commandes.png
+img13: 13_check_debitCmds.png
+img14: 14_config_mac.png
+img15: 15_menu_accueil.png
+img16: 16_panel_debits_CPL.png
+img17: 17_panel_wifi_AP.png
+img18: 18_panel_wifi_client.png
 ---
 # Plugin „devolo_cpl“ für Jeedom
 
@@ -72,7 +90,7 @@ Nach der Installation muss es aktiviert und anschließend die Installation der A
 ## Einrichtung des Plugins
 {: .num}
 
-{% include image.html img="configuration_plugin.png" %}
+{% include image.html img=img01 %}
 
 + **Plugin**
 : Allgemeine Konfiguration des Plugins:
@@ -133,7 +151,7 @@ nicht verwaltbar.
 
 Klicken Sie auf der Verwaltungsseite des Plugins auf das Symbol „Synchronisierung“:
 
-{% include image.html img="icones_gestion_plugin.png" %}
+{% include image.html img=img02 %}
 
 Für jedes erkannte Gerät wird automatisch ein Jeedom-Gerät angelegt.
 
@@ -152,12 +170,12 @@ Die Auswahl der Geräte erfolgt unter Berücksichtigung des für das Plugin konf
 
 Klicken Sie auf der Verwaltungsseite des Plugins auf das Symbol „Hinzufügen“:
 
-{% include image.html img="icones_gestion_plugin.png" %}
+{% include image.html img=img02 %}
 
 Geben Sie den Namen des neuen Geräts ein, bevor Sie die Seite
 Konfiguration der Geräte.
 
-{% include image.html img="equipement_non_configure.png" %}
+{% include image.html img=img03 %}
 
 Dann muss man
 + Wählen Sie den Gerätetyp aus. Die Liste der spezifischen Parameter wird
@@ -171,10 +189,10 @@ angepasst an die Art der ausgewählten Geräte.
 > :bulb: Die Seriennummer muss eindeutig sein, wird vom Plugin derzeit jedoch nicht überprüft.
 
 ##### Verwaltbare Geräte:
-{% include image.html img="equipement_manageable_configure.png" %}
+{% include image.html img=img04 %}
 
 ##### Nicht verwaltbare Geräte:
-{% include image.html img="equipement_non_manageable_configure.png" %}
+{% include image.html img=img05 %}
 
 ## Abschluss der Konfiguration
 {: .num}
@@ -265,10 +283,10 @@ Das Widget **Devolo_cpl/J_h_m** zeigt diesen Wert im Format
 `<Tage> <Stunden>:<Minuten>` (`<Stunden>:<Minuten>`, wenn Tage = 0)
 
 ##### Widget und Popup im Dashboard:
-{% include image.html img="widget_dashboard.png" %} {% include image.html img="popup_j_h_m_dashboard.png" %}
+{% include image.html img=img06 %} {% include image.html img=img08 %}
 
 ##### Widget und Popup für Mobilgeräte:
-{% include image.html img="widget_mobile.png" %} {% include image.html img="popup_j_h_m_mobile.png" %}
+{% include image.html img=img07 %} {% include image.html img=img09 %}
 + Der Befehl „info guest_remaining“ zeigt die verbleibende Zeit bis zur Deaktivierung an
 des Gäste-WLANs. Diese Dauer wird in Minuten erfasst.
 
@@ -292,11 +310,11 @@ Die PLC-Daten werden alle 5 Minuten von den Geräten übermittelt. Die Werte lau
 werden in der Datenbank gespeichert und während der Aufbewahrungsfrist aufbewahrt
 auf der Konfigurationsseite des Plugins eingerichtet.
 
-{% include image.html img="icones_gestion_plugin.png" %}
+{% include image.html img=img02 %}
 
 Ein Klick auf das Symbol „Powerline-Netzwerke“ öffnet ein Modalfenster mit einer Übersicht über die Powerline-Übertragungsraten.
 
-{% include image.html img="modal_CPL_rates.png" %}
+{% include image.html img=img10 %}
 
 ## Netzwerke
 {: .num}
@@ -328,13 +346,13 @@ Wenn die entsprechende Option in der Plugin-Konfiguration aktiviert wurde, werde
 Die Erstellung von Durchflussbefehlen für Aufwärts- und Abwärtsströme wird angezeigt unter
 die Seite zur Verwaltung der Aufträge eines Geräts.
 
-{% include image.html img="btn_cmd_debit.png" %}
+{% include image.html img=img11 %}
 
 Ein Klick auf diese Schaltfläche fügt einen Befehl zur Befehlsliste des Geräts hinzu.
 Die logicalId des neuen Befehls lautet `rate_upload` (Ausgangsdatenraten) oder
 `rate_download` (Eingangsbandbreite).
 
-{% include image.html img="nouvelles_commandes.png" %}
+{% include image.html img=img12 %}
 
 Sie müssen dann einen Namen für den Befehl eingeben und überprüfen, ob das Zielgerät
 (**Datenstrom zu:** oder **Datenstrom von:**) ist korrekt, bevor Sie das Gerät speichern.
@@ -345,9 +363,9 @@ Sie müssen dann einen Namen für den Befehl eingeben und überprüfen, ob das Z
 Die Schaltfläche „Durchflusssteuerung“ öffnet ein Popup-Fenster mit einer Liste der Unstimmigkeiten in den
 Einstellungen für die Durchflussregelung.
 
-{% include image.html img="icones_gestion_plugin.png" %}
+{% include image.html img=img02 %}
 
-{% include image.html img="check_debitCmds.png" %}
+{% include image.html img=img13 %}
 
 ### Anmerkungen
 {: .num}
@@ -404,12 +422,12 @@ eingehalten.
 ## Zuordnung von Namen zu MAC-Adressen
 {: .num}
 
-{% include image.html img="icones_gestion_plugin.png" %}
+{% include image.html img=img02 %}
 
 Die Schaltfläche „MAC-Adressen“ auf der Verwaltungsseite des Plugins öffnet ein Modalfenster, um
 Verwaltung der MAC-Adressen der Geräte, die sich mit dem WLAN-Netzwerk verbunden haben.
 
-{% include image.html img="config_mac.png" %}
+{% include image.html img=img14 %}
 
 Die hier den MAC-Adressen zugeordneten Namen werden anstelle der MAC-Adressen verwendet.
 die Grafiken.
@@ -419,7 +437,7 @@ die Grafiken.
 
 Das Panel ist über das Menü **Startseite** zugänglich.
 
-{% include image.html img="menu_accueil.png" %}
+{% include image.html img=img15 %}
 
 Das Panel enthält zwei *Registerkarten*:
 * Ein Eintrag namens „Powerline-Übertragungsraten“ für den Verlauf der Übertragungsraten zwischen den Powerline-Geräten
@@ -431,7 +449,7 @@ Das Panel enthält zwei *Registerkarten*:
 Beim Öffnen zeigt die Registerkarte ein Diagramm des Durchflussverlaufs zwischen
 zwei Geräte.
 
-{% include image.html img="panel_debits_CPL.png" %}
+{% include image.html img=img16 %}
 
 Folgendes ist möglich:
 + Fügen Sie über die Schaltfläche „Grafik hinzufügen“ eine Grafik hinzu
@@ -445,9 +463,9 @@ Entdecken Sie selbst die weiteren Funktionen der Grafik.
 
 Auf dieser Registerkarte können Sie den Verlauf der WLAN-Verbindungen zu einem Zugangspunkt (AP) anzeigen:
 
-{% include image.html img="panel_wifi_AP.png" %}
+{% include image.html img=img17 %}
 
 Auf dieser Registerkarte können Sie außerdem den Verlauf der WLAN-Verbindungen eines WLAN-Geräts (Clients) einsehen:
 
-{% include image.html img="panel_wifi_client.png" %}
+{% include image.html img=img18 %}
 
