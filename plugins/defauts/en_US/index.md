@@ -48,11 +48,11 @@ The device is configured with three commands:
 {: .num}
 
 In addition to the standard settings, the device has two parameters that allow you to configure how **Auto Acknowledgment** works:
-* **Auto Acknowledgment**
+* **Auto Acknowledgment**\
 Specifies whether faults should be automatically acknowledged or not.
-* **Timelines** *(visible only if auto-acknowledgment is enabled)*
+* **Timeframes** *(visible only if auto-acknowledgment is enabled)*\
 Waiting times
-   
+
 ### Consistency checks
 {: .num}
 
@@ -102,10 +102,10 @@ A retention period for the listed events can be configured. Events that occurred
 
 {% include image.html img="config_histo.png" %}
 
-* ***Name:*** History name.
+* ***Name:*** Name of the history.
 * ***Size:***  Number of history entries displayed in the widget (up to 5)
 * ***Retention:*** The length of time an entry is retained in the history. This duration can be expressed in minutes, hours, or days
-* ***Date format:*** Date format in the history.
+* ***Date format:*** Date format in the history.\
 The following formats are supported (Please submit a request via the Jeedom forum to add other formats):
 
 | format | example |

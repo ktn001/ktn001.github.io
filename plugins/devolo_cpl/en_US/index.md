@@ -108,7 +108,6 @@ enabled. Enabling this option may cause the daemon's logs to become very verbose
 is set to "debug" mode.
 
 + **Speed Information**
-: 
     + ***Upstream flow***
 : Indicates whether commands should be created to limit the upstream PLC power (toward the
 other equipment).
@@ -258,7 +257,7 @@ mesh network.
 + The `guest_duration` action command allows you to configure the duration during which
 Guest Wi-Fi must be enabled. Once this time has elapsed, the Devolo device
 will disable guest Wi-Fi. If the value of this command is 0, guest Wi-Fi will not
-will not be disabled automatically.
+will not be automatically disabled.
 
 The duration for which the guest Wi-Fi should be enabled is expressed in minutes.
 
@@ -353,14 +352,14 @@ flow control commands.
 ### Notes
 {: .num}
 
-+ **Redundancy:**
++ **Redundancy:**\
 A debit command for the amount from A to B will be redundant with the debit command
 going down from A to B.
 
-+ **Unmanaged data flow between devices**
++ **Unmanaged data flow between devices**\
 These flows cannot be measured.
 
-+ **Data flow between a manageable device and a non-manageable device**
++ **Data flow between a manageable device and a non-manageable device**\
 The flow rate commands for unmanageable equipment are set to the values
 data retrieved from the manageable device
 

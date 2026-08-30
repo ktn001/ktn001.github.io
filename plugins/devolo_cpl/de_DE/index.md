@@ -108,7 +108,6 @@ aktiviert. Die Aktivierung dieser Option kann dazu führen, dass die Protokolle 
 wird in den „Debug“-Modus versetzt.
 
 + **Informationen zur Datenübertragungsrate**
-: 
     + ***Aufwärtsströmung***
 : Gibt an, ob Befehle für den abgehenden Powerline-Datenfluss (zu den
 sonstige Geräte).
@@ -353,14 +352,14 @@ Einstellungen für die Durchflussregelung.
 ### Anmerkungen
 {: .num}
 
-+ **Redundanz:**
++ **Redundanz:**\
 Ein Lastschriftauftrag über den Betrag von A an B würde sich mit dem Lastschriftauftrag überschneiden
 von A nach B hinab.
 
-+ **Nicht steuerbare Stromflüsse zwischen Geräten**
++ **Nicht steuerbare Stromflüsse zwischen Geräten**\
 Diese Ströme lassen sich nicht messen.
 
-+ **Datenfluss zwischen einem verwaltbaren und einem nicht verwaltbaren Gerät**
++ **Datenfluss zwischen einem verwaltbaren und einem nicht verwaltbaren Gerät**\
 Die Durchflusssteuerungen der nicht verwaltbaren Geräte werden mit den folgenden Werten belegt
 Meldungen vom steuerbaren Gerät
 

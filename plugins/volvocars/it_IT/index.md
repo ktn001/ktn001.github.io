@@ -42,21 +42,21 @@ personale.
 [https://developer.volvocars.com/](https://developer.volvocars.com/){:target="_blank"} seguendo
 questa procedura:
 
-1. Clicca su **Registrati**:
+1. Clicca su **Registrati**:\
 {% include image.html img="sign_up_volvodev.png" %}
-1. Selezionare l'account da associare al nuovo account developper.volvocars:
+1. Selezionare l'account da associare al nuovo account developper.volvocars:\
 {% include image.html img="select_login_asoc.png" %}
-1. Inserisci nome utente e password per il sito selezionato al punto precedente
+1. Inserisci il tuo nome utente e la password per il sito selezionato al punto precedente\
 {% include image.html img="sign_in_volvodev.png" %}
-1. Clicca sul tuo nome utente e poi su **Le tue applicazioni API**
+1. Clicca sul tuo nome utente e poi su **Le tue applicazioni API**\
 {% include image.html img="open_api_applications.png" %}
 1. Inserisci un nome per l'applicazione che stai per creare, quindi fai clic su **Crea**. Se hai
 In presenza di più istanze Jeedom, si consiglia di creare un'applicazione per ciascuna istanza in
 in cui il plug-in sarà
-installato:
+installato:\
 {% include image.html img="create_application.png" %}
 1. La tua nuova app è stata creata con un paio di chiavi API VCC. Potrai sempre tornare indietro
-in questa pagina per recuperare la tua chiave.
+in questa pagina per recuperare la tua chiave.\
 {% include image.html img="vcc_keys.png" %}
 
 # Installazione e configurazione del plugin
@@ -84,7 +84,7 @@ Avviatelo manualmente. Una volta installate le dipendenze, assicuratevi che il d
 
 + ***Comandi da creare per gli elementi apribili***
 : Le API di Volvocars restituiscono informazioni di tipo testo relative allo stato delle aperture.
-Questo testo è memorizzato in un comando **\*_state** dell'apparecchio.
+Questo testo è memorizzato in un comando **\*_state** dell'apparecchio.\
 Verranno inoltre creati i comandi binari **\*_open** e **\*_closed** se l'opzione **Aperto**
 o **Chiuso** è attivata.
 : I comandi **\*_open** o **\*_closed** esistenti non vengono eliminati quando
@@ -162,11 +162,11 @@ Se necessario, è possibile sbloccare la modifica di questi parametri cliccando 
 
 + **Impostazioni degli avvisi**
 
-   + *Autonomia elettrica*
+   + *Autonomia elettrica*\
 Il valore del comando `al_electricAutonomy` diventa **1** quando l'autonomia elettrica è inferiore
 a questo limite.
 
-   + *Autonomia termica*
+   + *Autonomia termica*\
 Il valore del comando `al_fuelAutonomy` passa a **1** quando l'autonomia del motore termico è inferiore
 a questo limite.
 
@@ -177,18 +177,18 @@ a questo limite.
   + `presenceSite#`: valore binario che indica se l'utente è presente sul sito
 
 Le impostazioni:
-  + *Nome*
+  + *Nome*\
 Se si rinomina un sito, anche i due comandi associati verranno rinominati se i loro nomi contengono il nome precedente
 nome del sito
-  + *Coordinate GPS*
+  + *Coordinate GPS*\
 Le coordinate GPS del sito
-  + *Distanza massima (in m)*
+  + *Distanza massima (in m)*\
 Distanza massima (in metri) tra il veicolo e il sito affinché il veicolo risulti presente sul sito.
-  + *Recupera coordinate GPS*
+  + *Recupera coordinate GPS*\
 Due pulsanti che consentono di inserire automaticamente le coordinate GPS del sito:
        + `Jeedom`: Recupera le coordinate GPS di Jeedom che sono state inserite nella configurazione di Jeedom.
        + `Veicolo`: Recupera la posizione attuale del veicolo
-  
+
 + **Descrizione**
 
 Informazioni libere
@@ -211,9 +211,9 @@ possono essere utili per l'analisi in caso di problemi.
 
 {% include image.html img="no_image.png" %}
 
-+ Fare clic sul pulsante "Recupera un'immagine del veicolo"
++ Fare clic sul pulsante `Recupera un'immagine del veicolo`\
    + Il logo viene sostituito da un'immagine del veicolo
-   + Il pulsante "Recupera un'immagine del veicolo" non viene più visualizzato:
+   + Il pulsante `Recupera un'immagine del veicolo` non viene più visualizzato:\
    + È contrassegnata un'area in cui incollare l'immagine del veicolo
 
 {% include image.html img="image_ready.png" %}
@@ -240,21 +240,21 @@ l'area prevista a tale scopo.
 
 Il plugin può inviare al veicolo i seguenti comandi
 
-+ **sblocca**
++ **sblocca**\
 Sblocco del veicolo
-+ **serratura**
++ **lock**\
 Blocco del veicolo
-+ **lockReduced**
++ **lockReduced**\
 Blocco con modalità di allarme ridotto
-+ **climStart**
++ **climStart**\
 Avvio del climatizzatore
-+ **climStop**
++ **climStop**\
 Spegnimento del climatizzatore
-+ **bip**
++ **honk**\
 Klaxonne
-+ **flash**
++ **flash**\
 Le luci di posizione del veicolo lampeggiano.
-+ **honk_flash**
++ **honk_flash**\
 Esecuzione simultanea dei comandi *honk* e *flash*
 
 I comandi effettivamente attivati nel plugin per un veicolo dipendono

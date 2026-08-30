@@ -48,11 +48,11 @@ Il sistema è dotato di tre comandi:
 {: .num}
 
 Oltre alle configurazioni standard, l'apparecchiatura dispone di due parametri che consentono di definire il funzionamento della funzione **Auto conferma**:
-* **Autoconferma**
+* **Autoreset**\
 indica se i guasti devono essere azzerati automaticamente o meno.
-* **Tempi** *(visibili solo se è attivata la conferma automatica)*
+* **Tempi** *(visibili solo se è attivata la conferma automatica)*\
 I tempi di attesa
-   
+
 ### Controlli di coerenza
 {: .num}
 
@@ -105,7 +105,7 @@ Il comando *cronologia* e il relativo widget consentono di visualizzare gli ulti
 * ***Nome:*** Nome della cronologia.
 * ***Dimensioni:***  Numero di voci della cronologia visualizzate nel widget (massimo 5)
 * ***Periodo di conservazione:*** Durata di conservazione di una voce nella cronologia. Tale durata può essere espressa in minuti, ore o giorni
-* ***Formato data:*** Formato della data nella cronologia.
+* ***Formato data:*** Formato della data nella cronologia.\
 Sono disponibili i seguenti formati (per richiedere l'aggiunta di altri formati, invia una richiesta tramite il forum di Jeedom):
 
 | formato | esempio |

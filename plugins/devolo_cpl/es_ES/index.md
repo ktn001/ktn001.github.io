@@ -108,7 +108,6 @@ activada. Al activar esta opción, los registros del demonio pueden volverse muy
 se pone en modo «depuración».
 
 + **Información sobre velocidades**
-: 
     + ***Flujo ascendente***
 : Indica si se deben crear comandos para los flujos de salida de la red PLC ascendente (hacia los
 otros equipos).
@@ -353,14 +352,14 @@ configuraciones de los controles de caudal.
 ### Observaciones
 {: .num}
 
-+ **Redundancia:**
++ **Redundancia:**\
 Una orden de transferencia por el importe de A a B será redundante con la orden de transferencia
 descendiendo hacia B desde A.
 
-+ **Flujo entre equipos no gestionable**
++ **Flujo entre equipos no gestionable**\
 Estos flujos no se pueden medir.
 
-+ **Flujo entre un equipo gestionable y uno no gestionable**
++ **Flujo entre un equipo gestionable y uno no gestionable**\
 Los controles de caudal de los equipos no gestionables se completan con los valores
 informes enviados desde el dispositivo gestionable
 

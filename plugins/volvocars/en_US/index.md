@@ -42,21 +42,21 @@ You must generate a VCC API key on the website
 [https://developer.volvocars.com/](https://developer.volvocars.com/){:target="_blank"} by following
 this procedure:
 
-1. Click **Sign up**:
+1. Click **Sign up**:\
 {% include image.html img="sign_up_volvodev.png" %}
-1. Select the account that will be linked to your new developper.volvocars account:
+1. Select the account that will be associated with your new developper.volvocars account:\
 {% include image.html img="select_login_asoc.png" %}
-1. Enter your username and password for the site selected in the previous step
+1. Enter your username and password for the site selected in the previous step\
 {% include image.html img="sign_in_volvodev.png" %}
-1. Click on your login name, then click **Your API applications**
+1. Click on your login name, then click **Your API applications**\
 {% include image.html img="open_api_applications.png" %}
 1. Enter a name for the app you're about to create, then click **Create**. If you have
 If you have multiple Jeedom instances, it is recommended that you create an app for each instance in
 in which the plugin will be
-Installed:
+Installed:\
 {% include image.html img="create_application.png" %}
 1. Your new app is created using a pair of VCC API keys. You can always come back
-on this page to retrieve your key.
+on this page to retrieve your key.\
 {% include image.html img="vcc_keys.png" %}
 
 # Installing and configuring the plugin
@@ -84,7 +84,7 @@ Start it manually. Once the dependencies are installed, make sure the daemon is 
 
 + ***Commands to create for the windows***
 : The Volvocars APIs return information of the text type regarding the status of the doors and windows.
-This text is stored in a **\*_state** command for the device.
+This text is stored in a **\*_state** command for the device.\
 Binary commands **\*_open** and **\*_closed** will also be created if the **Open** option
 or **Closed** is enabled.
 : Existing **\*_open** or **\*_closed** commands are not removed when
@@ -162,11 +162,11 @@ If necessary, you can enable editing of these settings by clicking the `Edit` bu
 
 + **Alert Settings**
 
-   + *Electrical self-sufficiency*
+   + *Electrical self-sufficiency*\
 The value of the `al_electricAutonomy` command changes to **1** when the electric range is less than
 at this limit.
 
-   + *Thermal Self-Sufficiency*
+   + *Thermal self-sufficiency*\
 The value of the `al_fuelAutonomy` command changes to **1** when the thermal engine's range is less than
 at this limit.
 
@@ -177,18 +177,18 @@ The GPS coordinates for two locations can be configured. Two commands will be cr
   + `presenceSite#`: a binary value indicating whether someone is on site
 
 Settings:
-  + *Name*
+  + *Name*\
 If a site is renamed, the two associated commands will also be renamed if their names contain the old name
 website name
-  + *GPS coordinates*
+  + *GPS coordinates*\
 The site's GPS coordinates
-  + *Maximum distance (in meters)*
+  + *Maximum distance (in m)*\
 Maximum distance (in meters) between the vehicle and the location for the vehicle to be marked as present at the location.
-  + *Retrieve GPS coordinates*
+  + *Get GPS coordinates*\
 Two buttons that automatically enter the site's GPS coordinates:
        + `Jeedom`: Retrieves the GPS coordinates from Jeedom that were entered in the Jeedom configuration.
        + `Vehicle`: Retrieves the vehicle's current location
-  
+
 + **Description**
 
 Open-source information
@@ -211,9 +211,9 @@ be useful for analysis in the event of a problem.
 
 {% include image.html img="no_image.png" %}
 
-+ Click the `Get a picture of the vehicle` button
++ Click the `Get a picture of the vehicle` button\
    + The logo is replaced by an image of the vehicle
-   + The `Get a Vehicle Image` button is no longer displayed:
+   + The `Retrieve a Vehicle Image` button is no longer displayed:\
    + An area is marked for pasting the image of the vehicle
 
 {% include image.html img="image_ready.png" %}
@@ -240,21 +240,21 @@ the designated area.
 
 The plugin can send the following commands to the vehicle
 
-+ **unlock**
++ **unlock**\
 Unlocking the vehicle
-+ **lock**
++ **lock**\
 Vehicle Locking
-+ **lockReduced**
++ **lockReduced**\
 Locking with reduced alarm mode
-+ **climStart**
++ **climStart**\
 Starting the air conditioning
-+ **climStop**
++ **climStop**\
 Air conditioning shut-off
-+ **honk**
++ **honk**\
 Klaxonne
-+ **flash**
++ **flash**\
 The vehicle's turn signals are flashing.
-+ **honk_flash**
++ **honk_flash**\
 Simultaneous execution of the *honk* and *flash* commands
 
 The commands that are actually enabled in the plugin for a vehicle depend on
