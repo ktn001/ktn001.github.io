@@ -21,7 +21,7 @@ Das Plugin kann auch Fehler melden, wenn der Messwert zu stark von einem Sollwer
 
 Das Plugin erfordert keine Konfiguration, es muss lediglich aktiviert werden.
 
-{% include image.html img="config_plugin.png" %}
+{% include image.html img="01_config_plugin.png" %}
 
 # Die Geräte
 {: .num}
@@ -61,7 +61,7 @@ Wartezeiten
 #### Die Konsistenzüberprüfungen umfassen mehrere Parameter:
 {: .num}
 
-{% include image.html img="config_surveillance.png" %}
+{% include image.html img="02_config_surveillance.png" %}
 * ***Name:*** Name der Überwachung.
 * ***Status:*** Binäre Information, die überwacht werden muss.
 * ***Maßnahme:*** Digitale Daten im Blick behalten.
@@ -77,7 +77,7 @@ Wartezeiten
 ### Überwachung der Sollwerte
 {: .num}
 
-{% include image.html img="config_consigne.png" %}
+{% include image.html img="03_config_consigne.png" %}
 * ***Name:*** Name der Überwachung.
 * ***Status:*** Binäre Information, die zur Steuerung des Überwachungsbetriebs verwendet wird.
 * ***Messwert:*** Digitale Anzeige; ein Fehler wird gemeldet, wenn der Messwert zu stark vom Sollwert abweicht.
@@ -91,7 +91,7 @@ Wartezeiten
 ### Ein Blick in die Geschichte
 {: .num}
 
-{% include image.html img="historique.png" %}
+{% include image.html img="04_historique.png" %}
 
 Mit dem Befehl *Verlauf* und dem dazugehörigen Widget können die fünf zuletzt aufgetretenen Störungen angezeigt werden. Die Anzahl der aufgelisteten Ereignisse ist konfigurierbar.
 

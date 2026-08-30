@@ -21,7 +21,7 @@ O plugin também pode comunicar falhas quando o valor de uma medição se desvia
 
 O plugin não requer qualquer configuração, basta ativá-lo.
 
-{% include image.html img="config_plugin.png" %}
+{% include image.html img="01_config_plugin.png" %}
 
 # Os equipamentos
 {: .num}
@@ -61,7 +61,7 @@ O painel «Monitorizações» permite gerir as monitorizações do equipamento. 
 #### As verificações de coerência têm vários parâmetros:
 {: .num}
 
-{% include image.html img="config_surveillance.png" %}
+{% include image.html img="02_config_surveillance.png" %}
 * ***Nome:*** Nome da monitorização.
 * ***Estado:*** Informação binária a monitorizar.
 * ***Medida:*** Informação digital a monitorizar.
@@ -77,7 +77,7 @@ O painel «Monitorizações» permite gerir as monitorizações do equipamento. 
 ### Monitorização de valores de referência
 {: .num}
 
-{% include image.html img="config_consigne.png" %}
+{% include image.html img="03_config_consigne.png" %}
 * ***Nome:*** Nome da monitorização.
 * ***Estado:*** Informação binária utilizada para controlar o funcionamento da vigilância.
 * ***Medição:*** Informação digital; será sinalizada uma falha se o valor desta medição estiver demasiado distante do valor de referência.
@@ -91,7 +91,7 @@ O painel «Monitorizações» permite gerir as monitorizações do equipamento. 
 ### Um pouco de história
 {: .num}
 
-{% include image.html img="historique.png" %}
+{% include image.html img="04_historique.png" %}
 
 O comando *histórico* e o respetivo widget permitem visualizar as últimas cinco falhas ocorridas. O número de eventos listados é configurável.
 

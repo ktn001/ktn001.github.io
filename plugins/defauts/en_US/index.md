@@ -21,7 +21,7 @@ The plugin can also report faults when a measured value deviates too far from a 
 
 The plugin requires no configuration; you just need to activate it.
 
-{% include image.html img="config_plugin.png" %}
+{% include image.html img="01_config_plugin.png" %}
 
 # Equipment
 {: .num}
@@ -61,7 +61,7 @@ The `Monitoring` panel allows you to manage equipment monitoring. The `Add Monit
 #### Consistency checks have several parameters:
 {: .num}
 
-{% include image.html img="config_surveillance.png" %}
+{% include image.html img="02_config_surveillance.png" %}
 * ***Name:*** Name of the monitoring system.
 * ***Status:*** Binary data to monitor.
 * ***Measurement:*** Digital data to monitor.
@@ -77,7 +77,7 @@ The `Monitoring` panel allows you to manage equipment monitoring. The `Add Monit
 ### Setpoint monitoring
 {: .num}
 
-{% include image.html img="config_consigne.png" %}
+{% include image.html img="03_config_setpoint.png" %}
 * ***Name:*** Name of the monitoring system.
 * ***Status:*** Binary information used to control the operation of the monitoring system.
 * ***Measurement:*** Digital data; a fault will be reported if the value of this measurement deviates too far from the setpoint value.
@@ -91,7 +91,7 @@ The `Monitoring` panel allows you to manage equipment monitoring. The `Add Monit
 ### A Brief History
 {: .num}
 
-{% include image.html img="history.png" %}
+{% include image.html img="04_history.png" %}
 
 The *history* command and its widget allow you to view the last five faults that occurred. The number of events listed is configurable.
 
