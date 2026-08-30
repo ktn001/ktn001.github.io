@@ -3,7 +3,21 @@ layout : default
 pluginId : defauts
 plugin : Défauts
 lang: de_DE
+img01: 01_config_plugin.png
+img02: 02_config_surveillance.png
 img03: 03_config_consigne.png
+img04: 04_historique.png
+img05: 05_config_histo.png
+img06: 06_defauts_initial.png
+img07: 07_defauts_initial_bw.png
+img08: 08_defauts_premier_defaut.png
+img09: 09_defauts_premier_defaut_bw.png
+img10: 10_defauts_acquitte.png
+img11: 11_defauts_acquitte_bw.png
+img12: 12_defauts_deuxieme_defaut.png
+img13: 13_defauts_deuxieme_defaut_bw.png
+img14: 14_defauts_plus_de_defaut_pas_acquitte.png
+img15: 15_defauts_plus_de_defaut_pas_acquitte_bw.png
 ---
 # Plugin „{{page.plugin}}“ für Jeedom.
 Das Plugin **{{page.plugin}}** ermöglicht die Erkennung von Fehlern, indem es die Übereinstimmung zwischen einem Status und einem Messwert überprüft.
@@ -22,7 +36,7 @@ Das Plugin kann auch Fehler melden, wenn der Messwert zu stark von einem Sollwer
 
 Das Plugin erfordert keine Konfiguration, es muss lediglich aktiviert werden.
 
-{% include image.html img="01_config_plugin.png" %}
+{% include image.html img=page.img01 %}
 
 # Die Geräte
 {: .num}
@@ -62,7 +76,7 @@ Wartezeiten
 #### Die Konsistenzüberprüfungen umfassen mehrere Parameter:
 {: .num}
 
-{% include image.html img="02_config_surveillance.png" %}
+{% include image.html img=page.img02 %}
 * ***Name:*** Name der Überwachung.
 * ***Status:*** Binäre Information, die überwacht werden muss.
 * ***Maßnahme:*** Digitale Daten im Blick behalten.
@@ -92,7 +106,7 @@ Wartezeiten
 ### Ein Blick in die Geschichte
 {: .num}
 
-{% include image.html img="04_historique.png" %}
+{% include image.html img=page.img04 %}
 
 Mit dem Befehl *Verlauf* und dem dazugehörigen Widget können die fünf zuletzt aufgetretenen Störungen angezeigt werden. Die Anzahl der aufgelisteten Ereignisse ist konfigurierbar.
 
@@ -101,7 +115,7 @@ Die Aufbewahrungsdauer der aufgelisteten Ereignisse kann konfiguriert werden. Er
 #### Der Verlauf verfügt über mehrere Einstellungen:
 {: .num}
 
-{% include image.html img="config_histo.png" %}
+{% include image.html img=page.img05 %}
 
 * ***Name:*** Name des Verlaufs.
 * ***Größe:***  Anzahl der im Widget angezeigten Protokolleinträge (maximal 5)
@@ -121,11 +135,51 @@ Die folgenden Formate sind möglich (Bitte stellen Sie im Jeedom-Forum eine Anfr
 # Beispiele
 {: .num}
 
-| Stufe | Geräte-Widget (farbig) | Geräte-Widget (schwarz/weiß) | Anmerkungen |
-| :---- | :----:  | :----: | :---- |
-| Ausgangssituation: | ![](/images/defauts/defauts_initial.png „Ausgangszustand“) | ![](/images/defauts/defauts_initial_bw.png „Ausgangszustand“) | Keine Störung, die Überwachungsfunktionen befinden sich im Normalzustand. |
-| 1<sup>Erste</sup> Überwachung bei abnormalem Zustand | ![](/images/defauts/defauts_premier_defaut.png) | ![](/images/defauts/defauts_premier_defaut_bw.png) | Das Fehlersymbol zeigt an, dass eine Störung aufgetreten ist, die noch nicht quittiert wurde. |
-| Quittierung des Fehlers | ![](/images/defauts/defauts_acquitte.png) | ![](/images/defauts/defauts_acquitte_bw.png) | Der Fehler wurde durch einen Klick auf das Symbol (oder durch automatische Quittierung) quittiert. Das Fehlersymbol zeigt an, dass die Störung weiterhin besteht. |
-| 2<sup>. </sup> Fehler |![](/images/defauts/defauts_deuxieme_defaut.png) | ![](/images/defauts/defauts_deuxieme_defaut_bw.png) | Das Fehlersymbol zeigt an, dass ein neuer Fehler vorliegt. |
-| Behebung von Störungen |![](/images/defauts/defauts_plus_de_defaut_pas_acquitte.png) | ![](/images/defauts/defauts_plus_de_defaut_pas_acquitte_bw.png) | Das Fehler-Symbol zeigt an, dass mindestens eine Störung aufgetreten ist, die noch nicht quittiert wurde. |
-| Zurück zum Normalzustand: | ![](/images/defauts/defauts_initial.png „Ausgangszustand“) | ![](/images/defauts/defauts_initial_bw.png „Ausgangszustand“) | Die Störungen wurden quittiert und sind behoben. |
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Schritt</th>
+<th style="text-align: center">Geräte-Widget (Farbe)</th>
+<th style="text-align: center">Geräte-Widget (schwarz/weiß)</th>
+<th style="text-align: left">Anmerkungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ausgangssituation:</td>
+<td style="text-align:center;">{% include image.html img=page.img06 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img07 %}</td>
+<td>Keine Störung, die Überwachungssysteme sind im Normalzustand.</td>
+</tr>
+<tr>
+<td>1<sup>Überwachung</sup>bei Störzuständen</td>
+<td style="text-align:center;">{% include image.html img=page.img08 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img09 %}</td>
+<td>Das Fehlersymbol zeigt an, dass eine Störung aufgetreten ist, die noch nicht quittiert wurde.</td>
+</tr>
+<tr>
+<td>1<sup>Stufe</sup>Fehlerquittierung</td>
+<td style="text-align:center;">{% include image.html img=page.img10 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img11 %}</td>
+<td>Der Fehler wurde durch einen Klick auf das Symbol (oder durch automatische Quittierung) quittiert. Das Fehlersymbol zeigt an, dass die Störung weiterhin besteht.</td>
+</tr>
+<tr>
+<td>2<sup>.</sup> Störung</td>
+<td style="text-align:center;">{% include image.html img=page.img12 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img13 %}</td>
+<td>Das Fehlersymbol zeigt an, dass eine neue Störung vorliegt</td>
+</tr>
+<tr>
+<td>Behebung der Fehler</td>
+<td style="text-align:center;">{% include image.html img=page.img14 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img15 %}</td>
+<td>Das Fehler-Symbol zeigt an, dass mindestens eine Störung aufgetreten ist, die noch nicht quittiert wurde.</td>
+</tr>
+<tr>
+<td>Behebung der Fehler</td>
+<td style="text-align:center;">{% include image.html img=page.img06 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img07 %}</td>
+<td>Das Fehler-Symbol zeigt an, dass mindestens eine Störung aufgetreten ist, die noch nicht quittiert wurde.</td>
+</tr>
+</tbody>
+</table>

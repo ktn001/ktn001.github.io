@@ -3,7 +3,21 @@ layout : default
 pluginId : defauts
 plugin : Défauts
 lang: pt_PT
+img01: 01_config_plugin.png
+img02: 02_config_surveillance.png
 img03: 03_config_consigne.png
+img04: 04_historique.png
+img05: 05_config_histo.png
+img06: 06_defauts_initial.png
+img07: 07_defauts_initial_bw.png
+img08: 08_defauts_premier_defaut.png
+img09: 09_defauts_premier_defaut_bw.png
+img10: 10_defauts_acquitte.png
+img11: 11_defauts_acquitte_bw.png
+img12: 12_defauts_deuxieme_defaut.png
+img13: 13_defauts_deuxieme_defaut_bw.png
+img14: 14_defauts_plus_de_defaut_pas_acquitte.png
+img15: 15_defauts_plus_de_defaut_pas_acquitte_bw.png
 ---
 # Plugin «{{page.plugin}}» para o Jeedom.
 O plugin **{{page.plugin}}** permite detetar falhas, verificando a coerência entre um estado e uma medição.
@@ -22,7 +36,7 @@ O plugin também pode comunicar falhas quando o valor de uma medição se desvia
 
 O plugin não requer qualquer configuração, basta ativá-lo.
 
-{% include image.html img="01_config_plugin.png" %}
+{% include image.html img=page.img01 %}
 
 # Os equipamentos
 {: .num}
@@ -62,7 +76,7 @@ O painel «Monitorizações» permite gerir as monitorizações do equipamento. 
 #### As verificações de coerência têm vários parâmetros:
 {: .num}
 
-{% include image.html img="02_config_surveillance.png" %}
+{% include image.html img=page.img02 %}
 * ***Nome:*** Nome da monitorização.
 * ***Estado:*** Informação binária a monitorizar.
 * ***Medida:*** Informação digital a monitorizar.
@@ -92,7 +106,7 @@ O painel «Monitorizações» permite gerir as monitorizações do equipamento. 
 ### Um pouco de história
 {: .num}
 
-{% include image.html img="04_historique.png" %}
+{% include image.html img=page.img04 %}
 
 O comando *histórico* e o respetivo widget permitem visualizar as últimas cinco falhas ocorridas. O número de eventos listados é configurável.
 
@@ -101,7 +115,7 @@ O comando *histórico* e o respetivo widget permitem visualizar as últimas cinc
 #### O histórico tem vários parâmetros:
 {: .num}
 
-{% include image.html img="config_histo.png" %}
+{% include image.html img=page.img05 %}
 
 * ***Nome:*** Nome do histórico.
 * ***Tamanho:***  Número de registos do histórico apresentados no widget (máximo de 5)
@@ -121,11 +135,51 @@ Estão disponíveis os seguintes formatos (enviem um pedido através do fórum d
 # Exemplos
 {: .num}
 
-| Etapa | Widget do equipamento (a cores) | Widget do equipamento (preto/branco) | Observações |
-| :---- | :----:  | :----: | :---- |
-| Situação inicial: | ![](/images/defauts/defauts_initial.png «Estado inicial») | ![](/images/defauts/defauts_initial_bw.png «Estado inicial») | Sem falhas, os sistemas de monitorização estão em estado normal. |
-| 1<sup>primeira</sup> monitorização em estado anormal | ![](/images/defauts/defauts_premier_defaut.png) | ![](/images/defauts/defauts_premier_defaut_bw.png) | O ícone de falha indica que ocorreu uma anomalia que não foi confirmada. |
-| Confirmação da resolução da avaria | ![](/images/defauts/defauts_acquitte.png) | ![](/images/defauts/defauts_acquitte_bw.png) | A avaria foi confirmada como resolvida através de um clique no ícone (ou por confirmação automática). O ícone de avaria indica que a anomalia ainda está presente. |
-| 2<sup>ª</sup> anomalia |![](/images/defauts/defauts_deuxieme_defaut.png) | ![](/images/defauts/defauts_deuxieme_defaut_bw.png) | O ícone de anomalia indica que existe uma nova anomalia. |
-| Eliminação de anomalias |![](/images/defauts/defauts_plus_de_defaut_pas_acquitte.png) | ![](/images/defauts/defauts_plus_de_defaut_pas_acquitte_bw.png) | O ícone de falha indica que ocorreu pelo menos uma anomalia que não foi confirmada. |
-| Regresso ao normal: | ![](/images/defauts/defauts_initial.png "Estado inicial") | ![](/images/defauts/defauts_initial_bw.png "Estado inicial") | As anomalias foram resolvidas e desapareceram. |
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Etapa</th>
+<th style="text-align: center">Widget do equipamento (cor)</th>
+<th style="text-align: center">Widget do equipamento (preto/branco)</th>
+<th style="text-align: left">Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Situação inicial:</td>
+<td style="text-align:center;">{% include image.html img=page.img06 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img07 %}</td>
+<td>Não há avarias. Os sistemas de monitorização estão em estado normal.</td>
+</tr>
+<tr>
+<td>1<sup>a</sup>monitorização em caso de anomalia</td>
+<td style="text-align:center;">{% include image.html img=page.img08 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img09 %}</td>
+<td>O ícone de falha indica que ocorreu uma anomalia que não foi resolvida.</td>
+</tr>
+<tr>
+<td>1<sup>ª</sup>Resolução do defeito</td>
+<td style="text-align:center;">{% include image.html img=page.img10 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img11 %}</td>
+<td>A falha foi confirmada com um clique no ícone (ou através da confirmação automática). O ícone de falha indica que a anomalia continua presente.</td>
+</tr>
+<tr>
+<td>2<sup>.ª</sup> anomalia</td>
+<td style="text-align:center;">{% include image.html img=page.img12 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img13 %}</td>
+<td>O ícone de avaria indica que existe uma nova anomalia</td>
+</tr>
+<tr>
+<td>Eliminação de anomalias</td>
+<td style="text-align:center;">{% include image.html img=page.img14 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img15 %}</td>
+<td>O ícone de falha indica que ocorreu pelo menos uma anomalia que não foi resolvida.</td>
+</tr>
+<tr>
+<td>Eliminação de anomalias</td>
+<td style="text-align:center;">{% include image.html img=page.img06 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img07 %}</td>
+<td>O ícone de falha indica que ocorreu pelo menos uma anomalia que não foi resolvida.</td>
+</tr>
+</tbody>
+</table>

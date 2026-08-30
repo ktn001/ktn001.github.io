@@ -3,7 +3,21 @@ layout : default
 pluginId : defauts
 plugin : Défauts
 lang: en_US
+img01: 01_config_plugin.png
+img02: 02_config_surveillance.png
 img03: 03_config_consigne.png
+img04: 04_historique.png
+img05: 05_config_histo.png
+img06: 06_defauts_initial.png
+img07: 07_defauts_initial_bw.png
+img08: 08_defauts_premier_defaut.png
+img09: 09_defauts_premier_defaut_bw.png
+img10: 10_defauts_acquitte.png
+img11: 11_defauts_acquitte_bw.png
+img12: 12_defauts_deuxieme_defaut.png
+img13: 13_defauts_deuxieme_defaut_bw.png
+img14: 14_defauts_plus_de_defaut_pas_acquitte.png
+img15: 15_defauts_plus_de_defaut_pas_acquitte_bw.png
 ---
 # "{{page.plugin}}" plugin for Jeedom.
 The **{{page.plugin}}** plugin detects faults by verifying the consistency between a status and a measurement.
@@ -22,7 +36,7 @@ The plugin can also report faults when a measured value deviates too far from a 
 
 The plugin requires no configuration; you just need to activate it.
 
-{% include image.html img="01_config_plugin.png" %}
+{% include image.html img=page.img01 %}
 
 # Equipment
 {: .num}
@@ -62,7 +76,7 @@ The `Monitoring` panel allows you to manage equipment monitoring. The `Add Monit
 #### Consistency checks have several parameters:
 {: .num}
 
-{% include image.html img="02_config_surveillance.png" %}
+{% include image.html img=page.img02 %}
 * ***Name:*** Name of the monitoring system.
 * ***Status:*** Binary data to monitor.
 * ***Measurement:*** Digital data to monitor.
@@ -92,7 +106,7 @@ The `Monitoring` panel allows you to manage equipment monitoring. The `Add Monit
 ### A Brief History
 {: .num}
 
-{% include image.html img="04_history.png" %}
+{% include image.html img=page.img04 %}
 
 The *history* command and its widget allow you to view the last five faults that occurred. The number of events listed is configurable.
 
@@ -101,7 +115,7 @@ A retention period for the listed events can be configured. Events that occurred
 #### The history has several parameters:
 {: .num}
 
-{% include image.html img="config_histo.png" %}
+{% include image.html img=page.img05 %}
 
 * ***Name:*** Name of the history.
 * ***Size:***  Number of history entries displayed in the widget (up to 5)
@@ -121,11 +135,51 @@ The following formats are supported (Please submit a request via the Jeedom foru
 # Examples
 {: .num}
 
-| Step | Device widget (color) | Device widget (black/white) | Notes |
-| :---- | :----:  | :----: | :---- |
-| Initial Status: | ![](/images/defaults/initial_default.png "Initial State") | ![](/images/defaults/initial_default_bw.png "Initial State") | No faults; all monitoring systems are in normal condition. |
-| 1<sup>First</sup> monitoring of abnormal conditions | ![](/images/defauts/defauts_premier_defaut.png) | ![](/images/defauts/defauts_premier_defaut_bw.png) | The fault icon indicates that an anomaly has occurred that has not been acknowledged. |
-| Clearing a Fault | ![](/images/faults/faults_cleared.png) | ![](/images/faults/faults_cleared_bw.png) | The fault was cleared by clicking the icon (or through auto-clearance). The fault icon indicates that the fault is still present. |
-| 2<sup>nd</sup> error |![](/images/errors/second_error.png) | ![](/images/errors/second_error_bw.png) | The error icon indicates that there is a new error. |
-| Cleared Alarms |![](/images/alarms/alarms_unresolved_alarms.png) | ![](/images/alarms/alarms_unresolved_alarms_bw.png) | The alarm icon indicates that there has been at least one alarm that has not been acknowledged. |
-| Back to normal: | ![](/images/defaults/initial_state.png "Initial state") | ![](/images/defaults/initial_state_bw.png "Initial state") | The anomalies have been acknowledged and have disappeared. |
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Step</th>
+<th style="text-align: center">Device widget (color)</th>
+<th style="text-align: center">Device widget (black/white)</th>
+<th style="text-align: left">Observations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Starting point:</td>
+<td style="text-align:center;">{% include image.html img=page.img06 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img07 %}</td>
+<td>No faults; monitoring systems are operating normally.</td>
+</tr>
+<tr>
+<td>1<sup></sup>monitoring for abnormal conditions</td>
+<td style="text-align:center;">{% include image.html img=page.img08 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img09 %}</td>
+<td>The fault icon indicates that a fault has occurred that has not been acknowledged.</td>
+</tr>
+<tr>
+<td>1<sup>Home</sup>Acknowledging the error</td>
+<td style="text-align:center;">{% include image.html img=page.img10 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img11 %}</td>
+<td>The fault was acknowledged by clicking on the icon (or through auto-acknowledgment). The fault icon indicates that the fault is still present.</td>
+</tr>
+<tr>
+<td>2<sup>nd</sup> anomaly</td>
+<td style="text-align:center;">{% include image.html img=page.img12 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img13 %}</td>
+<td>The error icon indicates that there is a new issue</td>
+</tr>
+<tr>
+<td>Resolution of Issues</td>
+<td style="text-align:center;">{% include image.html img=page.img14 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img15 %}</td>
+<td>The fault icon indicates that there has been at least one fault that has not been acknowledged.</td>
+</tr>
+<tr>
+<td>Resolution of Issues</td>
+<td style="text-align:center;">{% include image.html img=page.img06 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img07 %}</td>
+<td>The fault icon indicates that there has been at least one fault that has not been acknowledged.</td>
+</tr>
+</tbody>
+</table>

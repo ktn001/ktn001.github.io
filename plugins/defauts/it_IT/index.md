@@ -3,7 +3,21 @@ layout : default
 pluginId : defauts
 plugin : Défauts
 lang: it_IT
+img01: 01_config_plugin.png
+img02: 02_config_surveillance.png
 img03: 03_config_consigne.png
+img04: 04_historique.png
+img05: 05_config_histo.png
+img06: 06_defauts_initial.png
+img07: 07_defauts_initial_bw.png
+img08: 08_defauts_premier_defaut.png
+img09: 09_defauts_premier_defaut_bw.png
+img10: 10_defauts_acquitte.png
+img11: 11_defauts_acquitte_bw.png
+img12: 12_defauts_deuxieme_defaut.png
+img13: 13_defauts_deuxieme_defaut_bw.png
+img14: 14_defauts_plus_de_defaut_pas_acquitte.png
+img15: 15_defauts_plus_de_defaut_pas_acquitte_bw.png
 ---
 # Plugin "{{page.plugin}}" per Jeedom.
 Il plugin **{{page.plugin}}** consente di rilevare i guasti verificando la coerenza tra uno stato e una misurazione.
@@ -22,7 +36,7 @@ Il plugin può anche segnalare un guasto quando il valore di una misurazione si 
 
 Il plugin non richiede alcuna configurazione, basta semplicemente attivarlo.
 
-{% include image.html img="01_config_plugin.png" %}
+{% include image.html img=page.img01 %}
 
 # Le apparecchiature
 {: .num}
@@ -62,7 +76,7 @@ Il pannello "Monitoraggi" consente di gestire i monitoraggi dell'apparecchiatura
 #### I controlli di coerenza hanno diversi parametri:
 {: .num}
 
-{% include image.html img="02_config_surveillance.png" %}
+{% include image.html img=page.img02 %}
 * ***Nome:*** Nome del sistema di sorveglianza.
 * ***Stato:*** Informazioni binarie da monitorare.
 * ***Misura:*** Dati digitali da monitorare.
@@ -92,7 +106,7 @@ Il pannello "Monitoraggi" consente di gestire i monitoraggi dell'apparecchiatura
 ### Cronologia
 {: .num}
 
-{% include image.html img="04_historique.png" %}
+{% include image.html img=page.img04 %}
 
 Il comando *cronologia* e il relativo widget consentono di visualizzare gli ultimi cinque guasti verificatisi. Il numero di eventi elencati è configurabile.
 
@@ -101,7 +115,7 @@ Il comando *cronologia* e il relativo widget consentono di visualizzare gli ulti
 #### La cronologia presenta diversi parametri:
 {: .num}
 
-{% include image.html img="config_histo.png" %}
+{% include image.html img=page.img05 %}
 
 * ***Nome:*** Nome della cronologia.
 * ***Dimensioni:***  Numero di voci della cronologia visualizzate nel widget (massimo 5)
@@ -121,11 +135,51 @@ Sono disponibili i seguenti formati (per richiedere l'aggiunta di altri formati,
 # Esempi
 {: .num}
 
-| Fase | Widget dell'apparecchiatura (colore) | Widget dell'apparecchiatura (bianco/nero) | Osservazioni |
-| :---- | :----:  | :----: | :---- |
-| Situazione iniziale: | ![](/images/defauts/defauts_initial.png "Stato iniziale") | ![](/images/defauts/defauts_initial_bw.png "Stato iniziale") | Nessun guasto, i sistemi di monitoraggio sono in condizioni normali. |
-| 1<sup> primo</sup> monitoraggio in caso di stato anomalo | ![](/images/defauts/defauts_premier_defaut.png) | ![](/images/defauts/defauts_premier_defaut_bw.png) | L'icona di errore indica che si è verificata un'anomalia che non è stata risolta. |
-| Conferma di risoluzione del guasto | ![](/images/defauts/defauts_acquitte.png) | ![](/images/defauts/defauts_acquitte_bw.png) | Il guasto è stato confermato risolto cliccando sull'icona (o tramite la conferma automatica). L'icona del guasto indica che l'anomalia è ancora presente. |
-| 2<sup>°</sup> errore |![](/images/errori/errore_secondo_errore.png) | ![](/images/errori/errore_secondo_errore_bw.png) | L'icona di errore indica che si è verificato un nuovo errore. |
-| Risoluzione degli errori |![](/images/errori/errori_errori_non_risolti.png) | ![](/images/errori/errori_errori_non_risolti_bw.png) | L'icona di errore indica che si è verificato almeno un errore che non è stato risolto. |
-| Ritorno alla normalità: | ![](/images/defauts/defauts_initial.png "Stato iniziale") | ![](/images/defauts/defauts_initial_bw.png "Stato iniziale") | Gli errori sono stati risolti e sono scomparsi. |
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Fase</th>
+<th style="text-align: center">Widget dell'apparecchio (colore)</th>
+<th style="text-align: center">Widget dell'apparecchiatura (nero/bianco)</th>
+<th style="text-align: left">Osservazioni</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Situazione iniziale:</td>
+<td style="text-align:center;">{% include image.html img=page.img06 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img07 %}</td>
+<td>Nessun guasto, i sistemi di monitoraggio sono in condizioni normali.</td>
+</tr>
+<tr>
+<td>1<sup>a</sup>monitoraggio in caso di condizioni anomale</td>
+<td style="text-align:center;">{% include image.html img=page.img08 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img09 %}</td>
+<td>L'icona di errore indica che si è verificata un'anomalia che non è stata risolta.</td>
+</tr>
+<tr>
+<td>1<sup>iera</sup>Conferma di risoluzione del guasto</td>
+<td style="text-align:center;">{% include image.html img=page.img10 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img11 %}</td>
+<td>L'errore è stato azzerato cliccando sull'icona (o tramite azzeramento automatico). L'icona di errore indica che l'anomalia è ancora presente.</td>
+</tr>
+<tr>
+<td>2<sup>°</sup> anomalia</td>
+<td style="text-align:center;">{% include image.html img=page.img12 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img13 %}</td>
+<td>L'icona di errore indica che si è verificata una nuova anomalia</td>
+</tr>
+<tr>
+<td>Risoluzione degli anomali</td>
+<td style="text-align:center;">{% include image.html img=page.img14 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img15 %}</td>
+<td>L'icona di errore indica che si è verificata almeno un'anomalia che non è stata risolta.</td>
+</tr>
+<tr>
+<td>Risoluzione degli anomali</td>
+<td style="text-align:center;">{% include image.html img=page.img06 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img07 %}</td>
+<td>L'icona di errore indica che si è verificata almeno un'anomalia che non è stata risolta.</td>
+</tr>
+</tbody>
+</table>
