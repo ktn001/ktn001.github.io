@@ -3,7 +3,21 @@ layout : default
 pluginId : defauts
 plugin : Défauts
 lang: es_ES
+img01: 01_config_plugin.png
+img02: 02_config_surveillance.png
 img03: 03_config_consigne.png
+img04: 04_historique.png
+img05: 05_config_histo.png
+img06: 06_defauts_initial.png
+img07: 07_defauts_initial_bw.png
+img08: 08_defauts_premier_defaut.png
+img09: 09_defauts_premier_defaut_bw.png
+img10: 10_defauts_acquitte.png
+img11: 11_defauts_acquitte_bw.png
+img12: 12_defauts_deuxieme_defaut.png
+img13: 13_defauts_deuxieme_defaut_bw.png
+img14: 14_defauts_plus_de_defaut_pas_acquitte.png
+img15: 15_defauts_plus_de_defaut_pas_acquitte_bw.png
 ---
 # Complemento «{{page.plugin}}» para Jeedom.
 El complemento **{{page.plugin}}** permite detectar fallos comprobando la coherencia entre un estado y una lectura.
@@ -22,7 +36,7 @@ El complemento también puede notificar fallos cuando el valor de una medición 
 
 El complemento no requiere ninguna configuración, solo hay que activarlo.
 
-{% include image.html img="01_config_plugin.png" %}
+{% include image.html img=page.img01 %}
 
 # Los equipos
 {: .num}
@@ -62,7 +76,7 @@ El panel «Supervisiones» permite gestionar las supervisiones del equipo. El bo
 #### Las comprobaciones de coherencia tienen varios parámetros:
 {: .num}
 
-{% include image.html img="02_config_surveillance.png" %}
+{% include image.html img=page.img02 %}
 * ***Nombre:*** Nombre de la supervisión.
 * ***Estado:*** Información binaria que hay que vigilar.
 * ***Medida:*** Información digital que hay que vigilar.
@@ -92,7 +106,7 @@ El panel «Supervisiones» permite gestionar las supervisiones del equipo. El bo
 ### Un poco de historia
 {: .num}
 
-{% include image.html img="04_historique.png" %}
+{% include image.html img=page.img04 %}
 
 El comando *histórico* y su widget permiten ver los cinco últimos fallos que se han producido. El número de eventos que aparecen en la lista se puede configurar.
 
@@ -101,7 +115,7 @@ Se puede configurar el periodo de retención de los eventos que aparecen en la l
 #### El historial tiene varios parámetros:
 {: .num}
 
-{% include image.html img="config_histo.png" %}
+{% include image.html img=page.img05 %}
 
 * ***Nombre:*** Nombre del historial.
 * ***Tamaño:***  Número de entradas del historial que se muestran en el widget (5 como máximo)
@@ -121,11 +135,51 @@ Son compatibles los siguientes formatos (solicita la incorporación de otros for
 # Ejemplos
 {: .num}
 
-| Etapa | Widget del equipo (color) | Widget del equipo (blanco/negro) | Observaciones |
-| :---- | :----:  | :----: | :---- |
-| Situación inicial: | ![](/images/defauts/defauts_initial.png «Estado inicial») | ![](/images/defauts/defauts_initial_bw.png «Estado inicial») | No hay fallos, los sistemas de supervisión se encuentran en estado normal. |
-| 1<sup>era</sup> de vigilancia en estado anómalo | ![](/images/defauts/defauts_premier_defaut.png) | ![](/images/defauts/defauts_premier_defaut_bw.png) | El icono de fallo indica que se ha producido una anomalía que no ha sido confirmada. |
-| Confirmación de fallo | ![](/images/defauts/defauts_acquitte.png) | ![](/images/defauts/defauts_acquitte_bw.png) | El fallo se ha confirmado haciendo clic en el icono (o mediante la confirmación automática). El icono de fallo indica que la anomalía sigue presente. |
-| 2<sup>.ª</sup> anomalía |![](/images/defauts/defauts_deuxieme_defaut.png) | ![](/images/defauts/defauts_deuxieme_defaut_bw.png) | El icono de fallo indica que hay una nueva anomalía. |
-| Desaparición de las anomalías |![](/images/defauts/defauts_plus_de_defaut_pas_acquitte.png) | ![](/images/defauts/defauts_plus_de_defaut_pas_acquitte_bw.png) | El icono de fallo indica que se ha producido al menos una anomalía que no se ha resuelto. |
-| Vuelta a la normalidad: | ![](/images/defauts/defauts_initial.png «Estado inicial») | ![](/images/defauts/defauts_initial_bw.png «Estado inicial») | Las anomalías se han resuelto y han desaparecido. |
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Paso</th>
+<th style="text-align: center">Widget del equipo (color)</th>
+<th style="text-align: center">Widget del equipo (negro/blanco)</th>
+<th style="text-align: left">Observaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Situación inicial:</td>
+<td style="text-align:center;">{% include image.html img=page.img06 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img07 %}</td>
+<td>No hay fallos, los sistemas de vigilancia funcionan con normalidad.</td>
+</tr>
+<tr>
+<td>1<sup>era</sup>vigilancia en caso de anomalías</td>
+<td style="text-align:center;">{% include image.html img=page.img08 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img09 %}</td>
+<td>El icono de fallo indica que se ha producido una anomalía que no se ha resuelto.</td>
+</tr>
+<tr>
+<td>1<sup>era</sup>Confirmación del fallo</td>
+<td style="text-align:center;">{% include image.html img=page.img10 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img11 %}</td>
+<td>El fallo se ha resuelto haciendo clic en el icono (o mediante la resolución automática). El icono de fallo indica que la anomalía sigue presente.</td>
+</tr>
+<tr>
+<td>2<sup>ª</sup> anomalía</td>
+<td style="text-align:center;">{% include image.html img=page.img12 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img13 %}</td>
+<td>El icono de fallo indica que hay una nueva anomalía</td>
+</tr>
+<tr>
+<td>Desaparición de las anomalías</td>
+<td style="text-align:center;">{% include image.html img=page.img14 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img15 %}</td>
+<td>El icono de fallo indica que se ha producido al menos una anomalía que no se ha resuelto.</td>
+</tr>
+<tr>
+<td>Desaparición de las anomalías</td>
+<td style="text-align:center;">{% include image.html img=page.img06 %}</td>
+<td style="text-align:center;">{% include image.html img=page.img07 %}</td>
+<td>El icono de fallo indica que se ha producido al menos una anomalía que no se ha resuelto.</td>
+</tr>
+</tbody>
+</table>
