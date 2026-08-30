@@ -3,6 +3,7 @@ layout : default
 pluginId : defauts
 plugin : Défauts
 lang: it_IT
+img03: 03_config_consigne.png
 ---
 # Plugin "{{page.plugin}}" per Jeedom.
 Il plugin **{{page.plugin}}** consente di rilevare i guasti verificando la coerenza tra uno stato e una misurazione.
@@ -77,7 +78,7 @@ Il pannello "Monitoraggi" consente di gestire i monitoraggi dell'apparecchiatura
 ### Monitoraggio dei valori di setpoint
 {: .num}
 
-{% include image.html img="03_config_consigne.png" %}
+{% include image.html img=page.img03 %}
 * ***Nome:*** Nome del sistema di sorveglianza.
 * ***Stato:*** Informazione binaria utilizzata per controllare il funzionamento del sistema di sorveglianza.
 * ***Misura:*** Informazioni digitali; verrà segnalato un guasto se il valore di questa misura si discosta eccessivamente dal valore di riferimento.

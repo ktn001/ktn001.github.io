@@ -3,6 +3,7 @@ layout : default
 pluginId : defauts
 plugin : Défauts
 lang: pt_PT
+img03: 03_config_consigne.png
 ---
 # Plugin «{{page.plugin}}» para o Jeedom.
 O plugin **{{page.plugin}}** permite detetar falhas, verificando a coerência entre um estado e uma medição.
@@ -77,7 +78,7 @@ O painel «Monitorizações» permite gerir as monitorizações do equipamento. 
 ### Monitorização de valores de referência
 {: .num}
 
-{% include image.html img="03_config_consigne.png" %}
+{% include image.html img=page.img03 %}
 * ***Nome:*** Nome da monitorização.
 * ***Estado:*** Informação binária utilizada para controlar o funcionamento da vigilância.
 * ***Medição:*** Informação digital; será sinalizada uma falha se o valor desta medição estiver demasiado distante do valor de referência.

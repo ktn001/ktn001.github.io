@@ -3,6 +3,7 @@ layout : default
 pluginId : defauts
 plugin : Défauts
 lang: es_ES
+img03: 03_config_consigne.png
 ---
 # Complemento «{{page.plugin}}» para Jeedom.
 El complemento **{{page.plugin}}** permite detectar fallos comprobando la coherencia entre un estado y una lectura.
@@ -77,7 +78,7 @@ El panel «Supervisiones» permite gestionar las supervisiones del equipo. El bo
 ### Supervisión de valores de consigna
 {: .num}
 
-{% include image.html img="03_config_consigna.png" %}
+{% include image.html img=page.img03 %}
 * ***Nombre:*** Nombre de la supervisión.
 * ***Estado:*** Información binaria utilizada para controlar el funcionamiento de la vigilancia.
 * ***Medida:*** Información digital; se señalará un fallo si el valor de esta medida se aleja demasiado del valor de consigna.

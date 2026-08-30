@@ -3,6 +3,7 @@ layout : default
 pluginId : defauts
 plugin : Défauts
 lang: de_DE
+img03: 03_config_consigne.png
 ---
 # Plugin „{{page.plugin}}“ für Jeedom.
 Das Plugin **{{page.plugin}}** ermöglicht die Erkennung von Fehlern, indem es die Übereinstimmung zwischen einem Status und einem Messwert überprüft.
@@ -77,7 +78,7 @@ Wartezeiten
 ### Überwachung der Sollwerte
 {: .num}
 
-{% include image.html img="03_config_consigne.png" %}
+{% include image.html img=page.img03 %}
 * ***Name:*** Name der Überwachung.
 * ***Status:*** Binäre Information, die zur Steuerung des Überwachungsbetriebs verwendet wird.
 * ***Messwert:*** Digitale Anzeige; ein Fehler wird gemeldet, wenn der Messwert zu stark vom Sollwert abweicht.
