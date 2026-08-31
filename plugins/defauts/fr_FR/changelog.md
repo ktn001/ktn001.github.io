@@ -11,6 +11,9 @@ lang : fr_FR
 
 Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
 
+### 31/08/26
+Traduction et mise à jour des liens de doc
+
 ### 21/10/22
 Correction de bug mineur dans la présentation des commandes
 Bouton pour la présentation des équipements en mode "tableau"
