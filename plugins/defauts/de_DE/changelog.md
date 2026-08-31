@@ -11,6 +11,9 @@ lang : de_DE
 
 Zur Erinnerung: Wenn keine Informationen zum Update vorhanden sind, bedeutet dies, dass es sich ausschließlich um eine Aktualisierung der Dokumentation, der Übersetzung oder des Textes handelt.
 
+### 31/08/26
+Übersetzung und Aktualisierung der Links in der Dokumentation
+
 ### 21/10/22
 Behebung eines kleinen Fehlers bei der Darstellung der Befehle
 Schaltfläche zur Anzeige der Geräte im „Tabellenmodus“
