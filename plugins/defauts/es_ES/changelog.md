@@ -11,6 +11,9 @@ lang : es_ES
 
 Recuerda que, si no hay información sobre la actualización, es porque esta se refiere únicamente a la actualización de la documentación, la traducción o el texto.
 
+### 31/08/26
+Traducción y actualización de los enlaces de la documentación
+
 ### 21/10/22
 Se ha corregido un error menor en la presentación de los comandos
 Botón para mostrar los dispositivos en modo «tabla»
