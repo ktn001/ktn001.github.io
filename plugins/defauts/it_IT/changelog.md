@@ -11,6 +11,9 @@ lang : it_IT
 
 Si ricorda che, se non sono disponibili informazioni sull'aggiornamento, significa che quest'ultimo riguarda esclusivamente la documentazione, la traduzione o il testo.
 
+### 31/08/26
+Traduzione e aggiornamento dei link alla documentazione
+
 ### 21/10/22
 Correzione di un bug minore nella visualizzazione dei comandi
 Pulsante per la visualizzazione delle apparecchiature in modalità "tabella"

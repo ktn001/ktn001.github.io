@@ -11,6 +11,9 @@ lang : pt_PT
 
 Recorde-se que, caso não haja informações sobre a atualização, isso significa que esta diz respeito apenas à atualização da documentação, da tradução ou do texto.
 
+### 31/08/26
+Tradução e atualização dos links da documentação
+
 ### 21/10/22
 Correção de um pequeno erro na apresentação dos comandos
 Botão para apresentar os equipamentos no modo «tabela»

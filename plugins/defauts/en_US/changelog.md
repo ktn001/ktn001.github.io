@@ -11,6 +11,9 @@ lang : en_US
 
 As a reminder, if there is no information about the update, it means that the update only involves documentation, translations, or text changes.
 
+### 31/08/26
+Translation and updating of documentation links
+
 ### 21/10/22
 Fixed a minor bug in the display of commands
 Button to display devices in "table" mode
