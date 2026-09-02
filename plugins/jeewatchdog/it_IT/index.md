@@ -14,6 +14,8 @@ img08: 08_set_passord.png
 ---
 # Plugin {{page.plugin}} ({{page.pluginId}}) per Jeedom
 
+> :warning: Il plugin è in fase di sviluppo e quindi non è ancora disponibile sul market
+
 Il plugin {{page.plugin}} gestisce un dispositivo esterno che deve ricevere regolarmente un segnale di funzionamento
 di Jeedom. Se per un certo periodo non viene rilevato alcun segnale di attività, l'apparecchiatura esterna si spegne
 spegnere Jeedom per alcuni secondi per forzare un riavvio.

@@ -14,6 +14,8 @@ img08: 08_set_passord.png
 ---
 # Plugin {{page.plugin}} ({{page.pluginId}}) für Jeedom
 
+> :warning: Das Plugin befindet sich derzeit in der Entwicklung und ist daher noch nicht im Market verfügbar
+
 Das Plugin {{page.plugin}} verwaltet ein externes Gerät, das regelmäßig ein Lebenszeichen empfangen muss
 von Jeedom. Wenn über einen bestimmten Zeitraum kein Lebenszeichen empfangen wird, schaltet sich das externe Gerät ab
 die Stromversorgung von Jeedom für einige Sekunden unterbrechen, um einen Neustart zu erzwingen.
