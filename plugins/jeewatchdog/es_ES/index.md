@@ -14,6 +14,8 @@ img08: 08_set_passord.png
 ---
 # Complemento {{page.plugin}} ({{page.pluginId}}) para Jeedom
 
+> :warning: El complemento está en fase de desarrollo y, por lo tanto, aún no está disponible en el Market
+
 El complemento {{page.plugin}} gestiona un dispositivo externo que debe recibir periódicamente una señal de funcionamiento
 de Jeedom. Si no se recibe ninguna señal de actividad durante un tiempo determinado, el equipo externo se apaga
 desconectar la alimentación de Jeedom durante unos segundos para forzar un reinicio.

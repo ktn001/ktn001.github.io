@@ -14,6 +14,8 @@ img08: 08_set_passord.png
 ---
 # Plugin {{page.plugin}} ({{page.pluginId}}) for Jeedom
 
+> :warning: The plugin is currently in development and is therefore not yet available on the market
+
 The {{page.plugin}} plugin manages an external device that must receive a status check periodically
 from Jeedom. If no signal is received for a certain period of time, the external device shuts down
 Cut the power to Jeedom for a few seconds to force a restart.

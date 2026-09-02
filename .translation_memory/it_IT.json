@@ -176,6 +176,7 @@
     ":bulb: Mes appareils étant tous à jour, je n'ai pas encore pu tester correctement": ":bulb: Dato che i miei dispositivi sono tutti aggiornati, non ho ancora potuto testarli correttamente",
     ":bulb: Ne pas alimenter Jeedom via cet équipement avant d'avoir terminé la configuration de": ":bulb: Non alimentare Jeedom tramite questo dispositivo prima di aver completato la configurazione di",
     ":bulb: Une adresse mac dont le deuxième caractère est **2**, **6**, **A** ou **E** est une adresse aléatoire.": ":bulb: Un indirizzo MAC il cui secondo carattere è **2**, **6**, **A** o **E** è un indirizzo casuale.",
+    ":warning: Le plugin est en cours de préparation et donc pas encore disponible sur le market": ":warning: Il plugin è in fase di sviluppo e quindi non è ancora disponibile sul market",
     ":warning: Les données sensibles ne sont pas (encore) expurgées des logs du démon!Les données sensibles (password, ...) sont expurgées des logs.": ":warning: I dati sensibili non sono (ancora) stati rimossi dai log del demone! I dati sensibili (password, ...) vengono rimossi dai log.",
     "<!-- BRAKE -->": "<!-- BRAKE -->",
     "<!-- COOLANT -->": "<!-- LIQUIDO DI RAFFREDDAMENTO -->",
