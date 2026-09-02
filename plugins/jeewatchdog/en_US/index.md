@@ -7,6 +7,10 @@ img01: 01_shema_shelly_usb.png
 img02: 02_shema_shelly_220.png
 img03: 03_boitier_ouvert.png
 img04: 04_boitier_ferme.png
+img05: 05_configure_Wifi.png
+img06: 06_configure_Wifi_static.png
+img07: 07_menu_authentication.png
+img08: 08_set_passord.png
 ---
 # Plugin {{page.plugin}} ({{page.pluginId}}) for Jeedom
 
@@ -52,6 +56,42 @@ Configuration will be performed by the {{page.plugin}} plugin
 
 > :bulb: Do not power Jeedom through this device until you have finished configuring
 > Equipment in the plugin
+
+### Wi-Fi Setup
+{: .num}
+
+To set up the Shelly's Wi-Fi, you need to
+1. Turn it on.
+1. Connect to your access point (SSID: "Shelly...-...")
+1. Open the WB page at http://192.168.33.1
+1. Click `Settings` in the menu on the left
+1. Click `Wi-Fi` in the center of the page
+1. In the `Wi-Fi 1 settings` panel
+   * Select the Wi-Fi network and enter the password
+
+{% include image.html img=page.img05 %}
+
+   * If you don't have a DHCP server with a reserved IP address for Shelly
+      + Select `Static IP`
+      + Enter network configuration information
+
+{% include image.html img=page.img06 %}
+
+1. Click "Save settings"
+
+**You can reconnect to your Wi-Fi network.**
+
+### Setting the administrator password
+1. Open the web page at Shelly's new address
+1. Click `Settings` in the menu on the left
+1. Click `Authentication` in the center of the page (under **Device Settings**)
+
+{% include image.html img=page.img07 %}
+1. Select `Enable password-protected device`
+1. Enter a password
+
+{% include image.html img=page.img08 %}
+1. Click `Save Settings`
 
 # Plugin Configuration
 {: .num}

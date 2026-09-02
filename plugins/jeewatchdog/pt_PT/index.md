@@ -7,6 +7,10 @@ img01: 01_shema_shelly_usb.png
 img02: 02_shema_shelly_220.png
 img03: 03_boitier_ouvert.png
 img04: 04_boitier_ferme.png
+img05: 05_configure_Wifi.png
+img06: 06_configure_Wifi_static.png
+img07: 07_menu_authentication.png
+img08: 08_set_passord.png
 ---
 # Plugin {{page.plugin}} ({{page.pluginId}}) para o Jeedom
 
@@ -52,6 +56,42 @@ A configuração será efetuada pelo plugin {{page.plugin}}
 
 > :bulb: Não ligue o Jeedom a este equipamento antes de ter concluído a configuração de
 > o equipamento no plugin
+
+### Configuração do Wi-Fi
+{: .num}
+
+Para configurar o Wi-Fi do Shelly, é necessário
+1. Ligar à corrente.
+1. Ligar-se ao ponto de acesso (SSID: «Shelly...-...»)
+1. Abrir a página WB http://192.168.33.1
+1. Clique em «Configurações» no menu à esquerda
+1. Clique em «Wi-Fi» na parte central da página
+1. No painel «Wi-Fi 1 settings»
+   * Selecionar a rede Wi-Fi e introduzir a palavra-passe
+
+{% include image.html img=page.img05 %}
+
+   * Se não tiver um DHCP com um endereço IP reservado para o Shelly
+      + Selecionar «IP estático»
+      + Introduzir as informações de configuração de rede
+
+{% include image.html img=page.img06 %}
+
+1. Clique em «Guardar definições»
+
+**Pode voltar a ligar-se à sua rede Wi-Fi.**
+
+### Configuração da palavra-passe de administrador
+1. Abrir a página Web no novo endereço do Shelly
+1. Clique em «Configurações» no menu à esquerda
+1. Clique em «Autenticação» na parte central da página (em **Definições do dispositivo**)
+
+{% include image.html img=page.img07 %}
+1. Selecionar «Ativar dispositivo protegido por palavra-passe»
+1. Introduzir uma palavra-passe
+
+{% include image.html img=page.img08 %}
+1. Clique em «Guardar definições»
 
 # Configuração do plugin
 {: .num}
