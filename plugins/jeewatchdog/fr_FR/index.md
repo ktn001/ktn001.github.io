@@ -14,6 +14,8 @@ img08: 08_set_passord.png
 ---
 # Plugin {{page.plugin}} ({{page.pluginId}}) pour Jeedom
 
+> :warning: Le plugin est en cours de préparation et donc pas encore disponible sur le market
+
 Le plugin {{page.plugin}} gère un équipement externe qui doit recevoir régulièrement un signe de vie
 de Jeedom. Si aucun signe de vie n'est reçue durant un certain temps, l'équipement externe coupe
 l'alimentation de Jeedom durant quelques secondes pour forcer un redémarrage.
