@@ -7,6 +7,10 @@ img01: 01_shema_shelly_usb.png
 img02: 02_shema_shelly_220.png
 img03: 03_boitier_ouvert.png
 img04: 04_boitier_ferme.png
+img05: 05_configure_Wifi.png
+img06: 06_configure_Wifi_static.png
+img07: 07_menu_authentication.png
+img08: 08_set_passord.png
 ---
 # Plugin {{page.plugin}} ({{page.pluginId}}) pour Jeedom
 
@@ -50,8 +54,44 @@ Une fois le câblage prêt, vous pouvez alimenter le Shelly et y configurer une 
 fixe un password (le password n'est pas obligatoire mais fortement recommandé). Le reste de la
 configuration sera effectué par le plugin {{page.plugin}}
 
-> :bulb: Ne pas alimenter Jeedom via cet équipement avant d'avoir terminé le configuration de
+> :bulb: Ne pas alimenter Jeedom via cet équipement avant d'avoir terminé la configuration de
 > l'équipement dans le plugin
+
+### Configuration du WiFi
+{: .num}
+
+Pour configurer WiFi du Shelly, il faut
+1. Le mettre sous tension.
+1. Se connecter à son access point (SSID: "Shelly...-...")  
+1. Ouvrir la page WB http://192.168.33.1
+1. Cliquer sur `Settings` dans le menu à gauche
+1. Cliquer sur `Wifi` dans la partie centrale de la page
+1. Dans le panneau `Wi-Fi 1 settings`
+   * Sélectionner le réseau Wifi et saisir le Password
+
+      {% include image.html img=page.img05 %}
+
+   * Si vous n'avez pas un DHCP avec une adresse IP réservée pour le Shelly
+      + Sélectionner `Static IP`
+      + Saisir les informations de configuration réseau
+
+      {% include image.html img=page.img06 %}
+
+1. Cliquer sur "Save settings"
+
+**Vous pouvez vous reconnecter à votre réseau wifi.**
+
+### Configuration du password d'administration
+1. Ouvrir la page WEB à la nouvelle adresse du Shelly
+1. Cliquer sur `Settings` dans le menu à gauche
+1. Cliquer sur `Authentication` dans la partie centrale de la page (sous **Device Settings**)
+
+   {% include image.html img=page.img07 %}
+1. Sélectionner `Enable password protected device`
+1. Saisir un password
+
+   {% include image.html img=page.img08 %}
+1. Cliquer sur `Save Settings`
 
 # Configuration du plugin
 {: .num}
