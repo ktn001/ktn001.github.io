@@ -16,6 +16,11 @@ docs:
       pages:
         doc: index.html
         changeLog: changelog.html
+    jeewatchdog:
+      icon: jeewatchdog_icon.png
+      pages:
+        doc: index.html
+        changelog: changelog.html
     devolo_cpl:
       icon: devolo_cpl_icon.png
       pages:
