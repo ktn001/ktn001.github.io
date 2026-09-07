@@ -11,6 +11,7 @@ img05: 05_configure_Wifi.png
 img06: 06_configure_Wifi_static.png
 img07: 07_menu_authentication.png
 img08: 08_set_passord.png
+img09: 09_configuration_plugin.png
 ---
 # Complemento {{page.plugin}} ({{page.pluginId}}) para Jeedom
 
@@ -59,6 +60,28 @@ La configuración se realizará mediante el complemento {{page.plugin}}
 > :bulb: No conectes Jeedom a este equipo hasta que hayas terminado de configurar
 > los dispositivos en el complemento
 
+### Activación del punto de acceso
+{: .num}
+
+Comprueba si tienes una red WiFi cuyo SSID sea del tipo `Shelly<YYY>-<MAC>` (<YYY> corresponde a
+del modelo Shelly, <MAC> es la dirección MAC del Shelly).
+
+Si has encontrado una red para tu Shelly, el punto de acceso ya está activado y puedes
+Ir a la configuración de la red Wi-Fi
+
+Si no has encontrado esta red, probablemente sea porque la versión del firmware es la 2.0.0
+(o más) y tu Shelly es un Gen4. En ese caso, Zigbee está activado por defecto y el acceso
+El punto de acceso está desactivado. Puede activar el punto de acceso siguiendo estos pasos:
+
+1. Pulsa el botón físico situado en la parte trasera del Shelly y **mantenlo pulsado durante 10 segundos**.
+segundos**
+1. Al soltar el botón, el LED se apaga durante 2 o 3 segundos y, a continuación, parpadea rápidamente.
+1. Vuelve a pulsar el botón físico **durante exactamente 5 segundos**
+1. El LED parpadea lentamente, lo que indica que la red Wi-Fi «Shelly<yyy>-<MAC>» está visible
+
+> :bulb: También es posible utilizar la aplicación *Shelly Smart Control* para conectarse a través de
+> Bluetooth y activar el punto de acceso.
+
 ### Configuración del WiFi
 {: .num}
 
@@ -95,8 +118,13 @@ Para configurar la conexión Wi-Fi del Shelly, hay que
 {% include image.html img=page.img08 %}
 1. Haz clic en «Guardar configuración»
 
-# Configuración del complemento
+# Instalación y configuración del complemento
 {: .num}
+
+El complemento se instala fácilmente a través del Market. No tiene dependencias ni procesos en segundo plano y no requiere ningún
+Configuración. Basta con activarla tras la instalación.
+
+{% include image.html img=page.img09 %}
 
 
 <!--

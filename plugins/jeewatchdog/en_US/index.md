@@ -11,6 +11,7 @@ img05: 05_configure_Wifi.png
 img06: 06_configure_Wifi_static.png
 img07: 07_menu_authentication.png
 img08: 08_set_passord.png
+img09: 09_configuration_plugin.png
 ---
 # Plugin {{page.plugin}} ({{page.pluginId}}) for Jeedom
 
@@ -59,6 +60,28 @@ Configuration will be performed by the {{page.plugin}} plugin
 > :bulb: Do not power Jeedom through this device until you have finished configuring
 > Equipment in the plugin
 
+### Enabling the access point
+{: .num}
+
+Check to see if you have a Wi-Fi network with an SSID like `Shelly<YYY>-<MAC>` (<YYY> corresponds to
+for the Shelly model, <MAC> is the Shelly's MAC address).
+
+If you've found a network for your Shelly, the access point is already enabled, and you can
+Go to Wi-Fi settings
+
+If you can't find this network, it's probably because the firmware version is 2.0.0
+(or more) and your Shelly is a Gen4. In this case, Zigbee is enabled by default, and access
+The access point is disabled. You can enable the access point by following these steps:
+
+1. Press the physical button on the back of the Shelly and **hold it down for 10
+seconds**
+1. When you release the button, the LED turns off for 2 to 3 seconds and then flashes rapidly.
+1. Press the physical button again **for exactly 5 seconds**
+1. The LED flashes slowly, indicating that the `Shelly<yyy>-<MAC>` Wi-Fi network is visible
+
+> :bulb: You can also use the *Shelly Smart Control* app to connect via
+> Bluetooth and enable the AP.
+
 ### Wi-Fi Setup
 {: .num}
 
@@ -95,8 +118,13 @@ To set up the Shelly's Wi-Fi, you need to
 {% include image.html img=page.img08 %}
 1. Click `Save Settings`
 
-# Plugin Configuration
+# Installing and configuring the plugin
 {: .num}
+
+The plugin can be easily installed via the Market. It has no dependencies or daemons and requires no
+Setup. Just activate it after installation.
+
+{% include image.html img=page.img09 %}
 
 
 <!--
