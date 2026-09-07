@@ -11,6 +11,7 @@ img05: 05_configure_Wifi.png
 img06: 06_configure_Wifi_static.png
 img07: 07_menu_authentication.png
 img08: 08_set_passord.png
+img09: 09_configuration_plugin.png
 ---
 # Plugin {{page.plugin}} ({{page.pluginId}}) para o Jeedom
 
@@ -59,6 +60,28 @@ A configuração será efetuada pelo plugin {{page.plugin}}
 > :bulb: Não ligue o Jeedom a este equipamento antes de ter concluído a configuração de
 > o equipamento no plugin
 
+### Ativação do ponto de acesso
+{: .num}
+
+Verifique se tem uma rede Wi-Fi cujo SSID seja do tipo `Shelly<YYY>-<MAC>` (<YYY> corresponde a
+do modelo Shelly, <MAC> é o endereço MAC do Shelly).
+
+Se encontrou uma rede para o seu Shelly, o ponto de acesso já está ativado e pode
+avançar para a configuração do Wi-Fi
+
+Se não encontrou esta rede, é provável que seja porque a versão do firmware é a 2.0.0
+(ou mais) e que o seu Shelly é um Gen4. Nesse caso, o Zigbee está ativado por predefinição e o acesso
+O ponto de acesso está desativado. Pode ativar o ponto de acesso seguindo o procedimento abaixo:
+
+1. Prima o botão físico na parte de trás do Shelly e **mantenha-o premido durante 10
+segundos**
+1. Quando soltar o botão, o LED apaga-se durante 2 a 3 segundos e, em seguida, começa a piscar rapidamente.
+1. Prima novamente o botão físico **durante exatamente 5 segundos**
+1. O LED pisca lentamente, indicando que a rede Wi-Fi «Shelly<yyy>-<MAC>» está visível
+
+> :bulb: Também é possível utilizar a aplicação *Shelly smart control* para se ligar através de
+> Bluetooth e ativar o ponto de acesso.
+
 ### Configuração do Wi-Fi
 {: .num}
 
@@ -95,8 +118,13 @@ Para configurar o Wi-Fi do Shelly, é necessário
 {% include image.html img=page.img08 %}
 1. Clique em «Guardar definições»
 
-# Configuração do plugin
+# Instalação e configuração do plugin
 {: .num}
+
+O plugin instala-se facilmente através da loja de aplicações. Não tem dependências nem serviços em segundo plano e não requer nada
+configuração. Basta ativá-la após a instalação.
+
+{% include image.html img=page.img09 %}
 
 
 <!--

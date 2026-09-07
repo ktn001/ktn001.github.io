@@ -11,6 +11,7 @@ img05: 05_configure_Wifi.png
 img06: 06_configure_Wifi_static.png
 img07: 07_menu_authentication.png
 img08: 08_set_passord.png
+img09: 09_configuration_plugin.png
 ---
 # Plugin {{page.plugin}} ({{page.pluginId}}) für Jeedom
 
@@ -59,6 +60,28 @@ Die Konfiguration erfolgt über das Plugin {{page.plugin}}
 > :bulb: Schalten Sie Jeedom erst dann über dieses Gerät ein, wenn Sie die Konfiguration von
 > die Geräte im Plugin
 
+### Aktivierung des Access-Points
+{: .num}
+
+Überprüfen Sie, ob Sie über ein WLAN-Netzwerk verfügen, dessen SSID etwa wie folgt lautet: `Shelly<YYY>-<MAC>` (<YYY> steht für
+nach dem Shelly-Modell (<MAC> ist die MAC-Adresse des Shelly).
+
+Wenn Sie ein Netzwerk für Ihr Shelly-Gerät gefunden haben, ist der Access-Point bereits aktiviert und Sie können
+Zur WLAN-Konfiguration wechseln
+
+Wenn Sie dieses Netzwerk nicht gefunden haben, liegt das wahrscheinlich daran, dass die Firmware-Version 2.0.0 ist.
+(oder mehr) und Ihr Shelly ist ein Gen4. In diesem Fall ist Zigbee standardmäßig aktiviert und der Zugriff
+Der Access Point ist deaktiviert. Sie können den Access Point mit dem folgenden Verfahren aktivieren:
+
+1. Drücken Sie die physische Taste auf der Rückseite des Shelly und **halten Sie sie 10 Sekunden lang gedrückt**
+Sekunden**
+1. Wenn Sie die Taste loslassen, erlischt die LED für 2 bis 3 Sekunden und blinkt anschließend schnell.
+1. Drücken Sie die physische Taste erneut **genau 5 Sekunden lang**
+1. Die LED blinkt langsam, solange das WLAN-Netzwerk „Shelly<yyy>-<MAC>“ sichtbar ist
+
+> :bulb: Es ist auch möglich, die App *Shelly Smart Control* zu verwenden, um eine Verbindung über
+> Bluetooth aktivieren und den AP einschalten.
+
 ### WLAN-Einrichtung
 {: .num}
 
@@ -95,8 +118,13 @@ Um das WLAN des Shelly zu konfigurieren, müssen Sie
 {% include image.html img=page.img08 %}
 1. Klicken Sie auf „Einstellungen speichern“
 
-# Einrichtung des Plugins
+# Installation und Konfiguration des Plugins
 {: .num}
+
+Das Plugin lässt sich ganz einfach über den Market installieren. Es hat weder Abhängigkeiten noch einen Daemon und erfordert keinerlei
+Einrichtung. Nach der Installation muss es lediglich aktiviert werden.
+
+{% include image.html img=page.img09 %}
 
 
 <!--

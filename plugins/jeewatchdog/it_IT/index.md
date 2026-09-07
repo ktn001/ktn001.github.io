@@ -11,6 +11,7 @@ img05: 05_configure_Wifi.png
 img06: 06_configure_Wifi_static.png
 img07: 07_menu_authentication.png
 img08: 08_set_passord.png
+img09: 09_configuration_plugin.png
 ---
 # Plugin {{page.plugin}} ({{page.pluginId}}) per Jeedom
 
@@ -59,6 +60,28 @@ La configurazione verrà effettuata dal plugin {{page.plugin}}
 > :bulb: Non alimentare Jeedom tramite questo dispositivo prima di aver completato la configurazione di
 > le apparecchiature nel plugin
 
+### Attivazione dell'access point
+{: .num}
+
+Verificate se disponete di una rete Wi-Fi con un SSID del tipo `Shelly<YYY>-<MAC>` (<YYY> corrisponde
+del modello Shelly, <MAC> è l'indirizzo MAC dello Shelly).
+
+Se avete trovato una rete per il vostro Shelly, l'access point è già attivato e potete
+passare alla configurazione del Wi-Fi
+
+Se non avete trovato questa rete, probabilmente è perché la versione del firmware è la 2.0.0
+(o più) e che il vostro Shelly sia un Gen4. In questo caso, lo Zigbee è attivato di default e l'accesso
+L'access point è disattivato. È possibile riattivare l'access point seguendo questa procedura:
+
+1. Premere il pulsante fisico sul retro dello Shelly e **tenerlo premuto per 10
+secondi**
+1. Quando si rilascia il pulsante, il LED si spegne per 2-3 secondi, quindi lampeggia rapidamente.
+1. Premere nuovamente il pulsante fisico **per esattamente 5 secondi**
+1. Il LED lampeggia lentamente quando la rete Wi-Fi `Shelly<yyy>-<MAC>` è visibile
+
+> :bulb: È anche possibile utilizzare l'app *Shelly smart control* per connettersi tramite
+> Bluetooth e attivare l'AP.
+
 ### Configurazione del Wi-Fi
 {: .num}
 
@@ -95,8 +118,13 @@ Per configurare il WiFi di Shelly, è necessario
 {% include image.html img=page.img08 %}
 1. Fare clic su `Salva impostazioni`
 
-# Configurazione del plugin
+# Installazione e configurazione del plugin
 {: .num}
+
+Il plugin si installa facilmente tramite il market. Non presenta dipendenze né servizi in background e non richiede alcuna
+Configurazione. È sufficiente attivarla dopo l'installazione.
+
+{% include image.html img=page.img09 %}
 
 
 <!--
