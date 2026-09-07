@@ -11,6 +11,7 @@ img05: 05_configure_Wifi.png
 img06: 06_configure_Wifi_static.png
 img07: 07_menu_authentication.png
 img08: 08_set_passord.png
+img09: 09_configuration_plugin.png
 ---
 # Plugin {{page.plugin}} ({{page.pluginId}}) pour Jeedom
 
@@ -59,6 +60,28 @@ configuration sera effectué par le plugin {{page.plugin}}
 > :bulb: Ne pas alimenter Jeedom via cet équipement avant d'avoir terminé la configuration de
 > l'équipement dans le plugin
 
+### Activation de l'access-point
+{: .num}
+
+Vérifiez si vous avez un réseau WiFi dont le SSID est du genre `Shelly<YYY>-<MAC>` (<YYY> correspond
+au modèle Shelly, <MAC> est l'adresse MAC du Shelly).
+
+Si vous avez trouver un réseau pour votre Shelly, l'access-point est déjà activé et vous pouvez
+passer à la configuration du Wifi
+
+Si vous n'avez pas trouver ce réseau, c'est probablement parce que la version du firmware est 2.0.0
+(ou plus) et que votre Shelly est un Gen4. Dans ce cas, le zigbee est activé par défaut et l'access
+point est désactivé. Vous pouvez avtier l'access-point avec la procédure suivante:
+
+1. Appuyez sur le bouton physique à l'arrière du Shelly et **maintenez-le enfoncé durant pendant 10
+secondes**
+1. Lorsque vous relâchez le bouton, la LED s'étteint 2 à 3 secondes puis clignote rapidement.
+1. Appuyez à nouveau sur le bouton physique **durant exactement 5 secondes**
+1. La Led clignote lentement que le réseau WiFI `Shelly<yyy>-<MAC>` est visible
+
+> :bulb: Il est aussi possible d'utiliser l'app *Shelly smart control* pour se connecter via
+> bluetooth et activer l'AP.
+
 ### Configuration du WiFi
 {: .num}
 
@@ -95,8 +118,13 @@ Pour configurer WiFi du Shelly, il faut
    {% include image.html img=page.img08 %}
 1. Cliquer sur `Save Settings`
 
-# Configuration du plugin
+# Installation et configuration du plugin
 {: .num}
+
+Le plugin s'installe simplement via le market. Il n'a ni dépendance ni démon et ne nécessite aucun
+paramétrage. Il suffit de l'activer après l'installation.
+
+{% include image.html img=page.img09 %}
 
 
 <!--
