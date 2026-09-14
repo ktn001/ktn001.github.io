@@ -266,9 +266,9 @@ las funciones del vehículo que se transmiten a través de las API (puntos final
   > :bulb: Los comandos de tipo *info* no se crean al crear el vehículo. Se crean
 de forma dinámica tras la activación del vehículo, en función de los datos recibidos de las API.
 
-<table class="comandos">
-<thead>
-<tr>
+<table class="commandes">
+	<thead>
+		<tr>
 <th style='min-width:150px'>Nombre</th>
 <th>LogicalId</th>
 <th>Punto final de la API</th>
@@ -277,15 +277,15 @@ de forma dinámica tras la activación del vehículo, en función de los datos r
 <th>Descripción</th>
 </tr>
 </thead>
-<tbody>
+	<tbody>
 
 		<!-- -------- -->
 <!-- GLOBALES -->
 		<!-- -------- -->
-<tr>
+		<tr>
 <td class="subtitle" colspan="6">GLOBALES</td>
 </tr>
-<tr>
+		<tr>
 <td rowspan="4">Disponibilidad</td>
 <td rowspan="4">disponibilidad</td>
 <td rowspan="4">accesibilidad</td>
@@ -293,19 +293,19 @@ de forma dinámica tras la activación del vehículo, en función de los datos r
 <td>«DISPONIBLE»</td>
 <td>El vehículo está conectado</td>
 </tr>
-<tr>
+		<tr>
 <td>«NO DISPONIBLE»</td>
 <td>El vehículo está desconectado</td>
 </tr>
-<tr>
+		<tr>
 <td>«SIN ESPECIFICAR»</td>
 <td>Información no disponible</td>
 </tr>
-<tr>
+		<tr>
 <td>«QUOTA_OUT»</td>
 <td>Se ha alcanzado el límite de llamadas a la API</td>
 </tr>
-<tr>
+		<tr>
 <td rowspan="5">motivo de la indisponibilidad</td>
 <td rowspan="5">motivo de indisponibilidad</td>
 <td rowspan="5">accesibilidad</td>
@@ -313,23 +313,23 @@ de forma dinámica tras la activación del vehículo, en función de los datos r
 <td>«NO_INTERNET»</td>
 <td>Sin conexión a Internet</td>
 </tr>
-<tr>
+		<tr>
 <td>«POWER_SAVING_MODE»</td>
 <td>Vehículo en modo de espera</td>
 </tr>
-<tr>
+		<tr>
 <td>«CAR_IN_USE»</td>
 <td>Manual de uso del vehículo</td>
 </tr>
-<tr>
+		<tr>
 <td>«SIN ESPECIFICAR»</td>
 <td>Información no disponible</td>
 </tr>
-<tr>
-<td>""</td>
+		<tr>
+			<td>""</td>
 <td>El vehículo está disponible</td>
 </tr>
-<tr>
+		<tr>
 <td>cuentakilómetros</td>
 <td>cuentakilómetros</td>
 <td>cuentakilómetros</td>
@@ -337,115 +337,115 @@ de forma dinámica tras la activación del vehículo, en función de los datos r
 <td>Km</td>
 <td>Kilometraje del vehículo</td>
 </tr>
-<tr>
+		<tr>
 <td rowspan="12">servicio</td>
 <td rowspan="12">servicio</td>
 <td rowspan="12">diagnósticos</td>
 <td rowspan="12">texto</td>
 <td>"NO_WARNING"</td>
-<td>No hay que realizar ninguna tarea</td>
+<td>No hay que realizar ninguna tarea de mantenimiento</td>
 </tr>
-<tr>
+		<tr>
 <td>«REGULAR_MAINTENANCE_ALMOST_TIME_FOR_SERVICE»</td>
-<td>El plazo para este servicio está a punto de vencerse</td>
+<td>El plazo para un servicio está a punto de agotarse</td>
 </tr>
-<tr>
+		<tr>
 <td>"ENGINE_HOURS_ALMOST_TIME_FOR_SERVICE"</td>
 <td>El tiempo de funcionamiento del motor antes de la puesta en servicio está a punto de agotarse</td>
 </tr>
-<tr>
-<td>«DISTANCE_DRIVEN_ALMOST_TIME_FOR_SERVICE»</td>
-<td>Próximamente se alcanzará el límite de kilometraje para una revisión</td>
+		<tr>
+<td>«DISTANCIA RECORRIDA: TIEMPO PRÓXIMO AL DE MANTENIMIENTO»</td>
+<td>El límite de kilometraje de un servicio se alcanzará pronto</td>
 </tr>
-<tr>
-<td>"REGULAR_MAINTENANCE_TIME_FOR_SERVICE"</td>
-<td>Se ha superado el plazo de prestación del servicio</td>
+		<tr>
+<td>«REGULAR_MAINTENANCE_TIME_FOR_SERVICE»</td>
+<td>Se ha alcanzado el plazo de prestación del servicio</td>
 </tr>
-<tr>
-<td>"ENGINE_HOURS_TIME_FOR_SERVICE"</td>
+		<tr>
+<td>«ENGINE_HOURS_TIME_FOR_SERVICE»</td>
 <td>Tiempo de funcionamiento del motor antes de la puesta en servicio transcurrido</td>
 </tr>
-<tr>
-<td>"DISTANCE_DRIVEN_TIME_FOR_SERVICE"</td>
-<td>Kilometraje para un servicio alcanzado</td>
+		<tr>
+<td>«DISTANCIA_RECORRIDA_TIEMPO_DE_SERVICIO»</td>
+<td>Kilometraje para alcanzar un servicio</td>
 </tr>
-<tr>
+		<tr>
 <td>«REGULAR_MAINTENANCE_OVERDUE_FOR_SERVICE»</td>
 <td>Se ha superado el plazo de prestación del servicio</td>
 </tr>
-<tr>
-<td>"ENGINE_HOURS_OVERDUE_FOR_SERVICE"</td>
+		<tr>
+<td>«ENGINE_HOURS_OVERDUE_FOR_SERVICE»</td>
 <td>Se ha superado el tiempo de funcionamiento del motor antes de la puesta en servicio</td>
 </tr>
-<tr>
+		<tr>
 <td>«DISTANCIA RECORRIDA CON EL SERVICIO VENCIDO».</td>
-<td>Kilometraje para un servicio superado</td>
+<td>Kilometraje para un servicio caducado</td>
 </tr>
-<tr>
+		<tr>
 <td>«UNKNOWN_WARNING»</td>
 <td>Alerta desconocida</td>
 </tr>
-<tr>
+		<tr>
 <td>«SIN ESPECIFICAR»</td>
 <td>indeterminado</td>
 </tr>
-<tr>
-<td rowspan="5">Motivo de la solicitud</td>
-<td rowspan="5">serviceTrigger</td>
+		<tr>
+<td rowspan="5">Motivo de la visita</td>
+<td rowspan="5">servicio Trigger</td>
 <td rowspan="5">diagnósticos</td>
 <td rowspan="5">texto</td>
 <td>CALENDAR_TIME</td>
-<td>Tiempo transcurrido desde la última prestación del servicio</td>
+<td>Tiempo transcurrido desde el último servicio</td>
 </tr>
-<tr>
-<td>«DISTANCIA»</td>
-<td>Distancia recorrida desde el último servicio</td>
+		<tr>
+<td>«A DISTANCIA»</td>
+<td>Distancia recorrida desde la última revisión</td>
 </tr>
-<tr>
-<td>"ENGIME_HOURS"</td>
+		<tr>
+<td>«ENGIME_HOURS»</td>
 <td>Tiempo de funcionamiento del motor</td>
 </tr>
-<tr>
+		<tr>
 <td>«SIN ESPECIFICAR»</td>
 <td>Sin especificar</td>
 </tr>
-<tr>
+		<tr>
 <td>«DESCONOCIDO»</td>
 <td>Desconocido</td>
 </tr>
-<tr>
+		<tr>
 <td>Horas de funcionamiento del motor antes de la revisión</td>
-<td>engineHoursToService</td>
+<td>motorHorasHastaServicio</td>
 <td>diagnósticos</td>
 <td>digital</td>
 <td>Horario</td>
-<td>Tiempo de funcionamiento del motor hasta el próximo mantenimiento</td>
+<td>Tiempo de funcionamiento del motor hasta la próxima revisión</td>
 </tr>
-<tr>
+		<tr>
 <td>Distancia antes del servicio</td>
-<td>distanceToService</td>
+<td>distancia al servicio</td>
 <td>diagnósticos</td>
 <td>digital</td>
 <td>Kilómetros</td>
 <td>Distancia hasta la próxima parada</td>
 </tr>
-<td>Días antes del servicio</td>
+<td>Días antes de la prestación del servicio</td>
 <td>timeToService</td>
 <td>diagnósticos</td>
 <td>digital</td>
 <td>Días</td>
 <td>Número de días con el servicio.<br>La API de volvocars devuelve un número de días o un número de meses.
 El complemento convierte el número de meses en número de días. Por lo tanto, puede haber un error de 30 días.</td>
-<tr>
+		<tr>
 </tr>
 	
 		<!-- ------------ -->
 <!-- LOCALIZACIÓN -->
 		<!-- ------------ -->
-<tr>
+		<tr>
 <td class="subtitle" colspan="6">UBICACIÓN</td>
 </tr>
-<tr>
+		<tr>
 <td>posición</td>
 <td>posición</td>
 <td>alquiler</td>
@@ -453,71 +453,71 @@ El complemento convierte el número de meses en número de días. Por lo tanto, 
 <td>&lt;latitud&gt;,&lt;longitud&gt;</td>
 <td>posición del vehículo</td>
 </tr>
-<tr>
-<td>distancia &lt;nombre_sitio_1&gt;</td>
+		<tr>
+<td>a distancia &lt;nombre_sitio_1&gt;</td>
 <td>distanceSite1</td>
-<td></td>
+			<td></td>
 <td>digital</td>
-<td>contador</td>
+<td>metro</td>
 <td>Distancia entre el vehículo y el emplazamiento 1</td>
 </tr>
-<tr>
+		<tr>
 <td rowspan="2">presencia &lt;nombre_sitio_1&gt;</td>
 <td rowspan="2">presenceSite1</td>
-<td rowspan="2"></td>
+			<td rowspan="2"></td>
 <td rowspan="2">binario</td>
-<td>0</td>
+			<td>0</td>
 <td>El vehículo no se encuentra en la ubicación 1</td>
 </tr>
-<tr>
-<td>1</td>
+		<tr>
+			<td>1</td>
 <td>El vehículo se encuentra en la ubicación 1</td>
 </tr>
-<tr>
+		<tr>
 <td>a distancia &lt;nombre_sitio_2&gt;</td>
 <td>distanceSite2</td>
-<td></td>
+			<td></td>
 <td>digital</td>
-<td>contador</td>
+<td>metro</td>
 <td>Distancia entre el vehículo y el emplazamiento 1</td>
 </tr>
-<tr>
+		<tr>
 <td rowspan="2">presencia &lt;nombre_sitio_2&gt;</td>
 <td rowspan="2">presenceSite2</td>
-<td rowspan="2"></td>
+			<td rowspan="2"></td>
 <td rowspan="2">binario</td>
-<td>0</td>
-<td>El vehículo no se encuentra en la página 2</td>
+			<td>0</td>
+<td>El vehículo no se encuentra en la ubicación 2</td>
 </tr>
-<tr>
-<td>1</td>
-<td>El vehículo se encuentra en la ubicación 2</td>
+		<tr>
+			<td>1</td>
+<td>El vehículo se encuentra en la parcela 2</td>
 </tr>
 	
 		<!-- -------- -->
 <!-- SISTEMAS DE APERTURA -->
 		<!-- -------- -->
-<tr>
+		<tr>
 <td class="subtitle" colspan="6">VENTANAS Y PUERTAS</td>
 </tr>
-<tr>
+		<tr>
 <td rowspan="3">Bloqueado</td>
 <td rowspan="3">bloqueado</td>
 <td rowspan="3">puertas</td>
 <td rowspan="3">texto</td>
 <td>BLOQUEADO</td>
-<td>Bloquear el vehículo</td>
+<td>Bloqueo del vehículo</td>
 </tr>
-<tr>
+		<tr>
 <td>DESBLOQUEADO</td>
-<td>Desbloquear vehículo</td>
+<td>Desbloqueo del vehículo</td>
 </tr>
-<tr>
+		<tr>
 <td>SIN ESPECIFICAR</td>
 <td>Información no disponible</td>
 </tr>
-<tr>
-<td rowspan="8">
+		<tr>
+			<td rowspan="8">
 estado de la puerta delantera izquierda<br>
 estado de la puerta delantera derecha<br>
 estado de la puerta trasera izquierda<br>
@@ -526,7 +526,7 @@ estado de la cubierta <br>
 estado del portón trasero<br>
 estado de la trampilla<br>
 </td>
-<td rowspan="8">
+			<td rowspan="8">
 doorFlState<br>
 doorFrState<br>
 doorRlState<br>
@@ -535,60 +535,60 @@ hoodState<br>
 tailState<br>
 tankState<br>
 </td>
-<td rowspan="8">
+			<td rowspan="8">
 puertas
 </td>
-<td rowspan="12">
+			<td rowspan="12">
 texto
 </td>
 <td rowspan="3">CERRADO</td>
 <td rowspan="3">cerrado</td>
 </tr>
-<tr>
+		<tr>
 </tr>
-<tr>
+		<tr>
 </tr>
-<tr>
+		<tr>
 <td rowspan="3">AJAR</td>
 <td rowspan="3">entreabierto</td>
 </tr>
-<tr>
+		<tr>
 </tr>
-<tr>
+		<tr>
 </tr>
-<tr>
-<td rowspan="3">ABRIR</td>
+		<tr>
+<td rowspan="3">ABIERTO</td>
 <td rowspan="3">abierto</td>
 </tr>
-<tr>
+		<tr>
 </tr>
-<tr>
-<td rowspan="4">
+		<tr>
+			<td rowspan="4">
 estado de la luneta delantera izquierda<br>
 estado de la luneta delantera derecha<br>
 Estado de la luneta trasera izquierda <br>
 Estado de la luneta trasera derecha <br>
 estado del tejado<br>
 </td>
-<td rowspan="4">
+			<td rowspan="4">
 winFlState<br>
 winFrState<br>
 winRlState<br>
 winRrState<br>
 roofState<br>
 </td>
-<td rowspan="4">ventanas</td>
+<td rowspan="4">Windows</td>
 </tr>
-<tr>
-<td rowspan="3">NO ESPECIFICADO</td>
+		<tr>
+<td rowspan="3">SIN ESPECIFICAR</td>
 <td rowspan="3">Información no disponible</td>
 </tr>
-<tr>
+		<tr>
 </tr>
-<tr>
+		<tr>
 </tr>
-<tr>
-<td rowspan="2">
+		<tr>
+			<td rowspan="2">
 puerta delantera izquierda abierta<br>
 puerta delantera derecha abierta<br>
 puerta trasera izquierda abierta<br>
@@ -602,7 +602,7 @@ techo abierto<br>
 portón trasero abierto<br>
 trampilla abierta<br>
 </td>
-<td rowspan="2">
+			<td rowspan="2">
 doorFlOpen<br>
 doorFrOpen<br>
 doorRlOpen<br>
@@ -616,17 +616,17 @@ roofOpen<br>
 tailOpen<br>
 tankOpen<br>
 </td>
-<td rowspan="2"></td>
+			<td rowspan="2"></td>
 <td rowspan="2">binario</td>
-<td>0</td>
+			<td>0</td>
 <td>no está abierto</td>
 </tr>
-<tr>
-<td>1</td>
+		<tr>
+			<td>1</td>
 <td>abierto</td>
 </tr>
-<tr>
-<td rowspan="2">
+		<tr>
+			<td rowspan="2">
 puerta delantera izquierda cerrada<br>
 puerta delantera derecha cerrada<br>
 puerta trasera izquierda cerrada<br>
@@ -640,7 +640,7 @@ techo cerrado<br>
 portón trasero cerrado<br>
 compuerta cerrada<br>
 </td>
-<td rowspan="2">
+			<td rowspan="2">
 doorFlClosed<br>
 doorFrClosed<br>
 doorRlClosed<br>
@@ -654,60 +654,60 @@ roofClosed<br>
 tailClosed<br>
 tankClosed<br>
 </td>
-<td rowspan="2"></td>
+			<td rowspan="2"></td>
 <td rowspan="2">binario</td>
-<td>0</td>
+			<td>0</td>
 <td>no cerrado</td>
 </tr>
-<tr>
-<td>1</td>
+		<tr>
+			<td>1</td>
 <td>abierto</td>
 </tr>
-<tr>
+		<tr>
 <td rowspan="2">Puertas cerradas</td>
 <td rowspan="2">allDoorsClosed</td>§
-<td rowspan="2"></td>
+			<td rowspan="2"></td>
 <td rowspan="2">binario</td>
-<td>0</td>
+			<td>0</td>
 <td>una puerta, el capó o el maletero no están cerrados</td>
 </tr>
-<tr>
-<td>1</td>
+		<tr>
+			<td>1</td>
 <td>Todas las puertas, así como el capó y el maletero, están cerrados</td>
 </tr>
-<tr>
+		<tr>
 <td rowspan="2">Ventanas cerradas</td>
 <td rowspan="2">allWinsClosed</td>§
-<td rowspan="2"></td>
+			<td rowspan="2"></td>
 <td rowspan="2">binario</td>
-<td>0</td>
-<td>Una ventana o el tejado no están cerrados</td>
+			<td>0</td>
+<td>Hay una ventana o el tejado que no está cerrado</td>
 </tr>
-<tr>
-<td>1</td>
+		<tr>
+			<td>1</td>
 <td>Todas las ventanas y el tejado están cerrados</td>
 </tr>
 	
 		<!-- ---------------- -->
 <!-- Motor térmico -->
 		<!-- ---------------- -->
-<tr>
+		<tr>
 <td class="subtitle" colspan="6">MOTOR TÉRMICO</td>
 </tr>
 	
-<tr>
+		<tr>
 <td rowspan="2">motor en funcionamiento</td>
 <td rowspan="2">engineON</td>
-<td rowspan="2">engine_status</td>
+<td rowspan="2">estado del motor</td>
 <td rowspan="2">binario</td>
-<td>0</td>
+			<td>0</td>
 <td>motor parado</td>
 </tr>
-<tr>
-<td>1</td>
+		<tr>
+			<td>1</td>
 <td>motor en marcha</td>
 </tr>
-<tr>
+		<tr>
 <td>consumo de combustible</td>
 <td>consoFuel</td>
 <td>estadísticas</td>
@@ -715,7 +715,7 @@ tankClosed<br>
 <td>l/100 km</td>
 <td>consumo medio calculado por el vehículo</td>
 </tr>
-<tr>
+		<tr>
 <td>consumo de combustible (trayecto)</td>
 <td>consoFuelTrip</td>
 <td>estadísticas</td>
@@ -723,15 +723,15 @@ tankClosed<br>
 <td>l/100 km</td>
 <td>consumo medio desde el inicio del recorrido automático</td>
 </tr>
-<tr>
+		<tr>
 <td>combustible</td>
-<td>fuelAmount</td>
-<td>combustible</td>
+<td>cantidad de combustible</td>
+<td>gasóleo</td>
 <td>digital</td>
 <td>l</td>
 <td>Cantidad de combustible restante</td>
 </tr>
-<tr>
+		<tr>
 <td>autonomía térmica</td>
 <td>fuelAutonomy</td>
 <td>estadísticas</td>
@@ -739,94 +739,94 @@ tankClosed<br>
 <td>Km</td>
 <td>Autonomía con el combustible restante</td>
 </tr>
-<tr>
-<td rowspan="2">Autonomía de combustible reducida</td>
+		<tr>
+<td rowspan="2">Baja autonomía de combustible</td>
 <td rowspan="2">al_fuelAutonomy</td>
-<td rowspan="2"/>
+			<td rowspan="2"/>
 <td rowspan="2">binario</td>
-<td>0</td>
-<td>Autonomía de combustible suficiente</td>
+			<td>0</td>
+<td>Autonomía suficiente de combustible</td>
 </tr>
-<tr>
-<td>1</td>
-<td>Autonomía con poco combustible</td>
+		<tr>
+			<td>1</td>
+<td>Baja autonomía de combustible</td>
 </tr>
 	
 <!-- ACEITE -->
-<tr>
+		<tr>
 <td rowspan="5">nivel de aceite</td>
-<td rowspan="5">oilLevel</td>
+<td rowspan="5">nivel de aceite</td>
 <td rowspan="5">diagnóstico del motor</td>
 <td rowspan="5">texto</td>
 <td>«SIN ESPECIFICAR»</td>
 <td>Información no disponible</td>
 </tr>
-<tr>
+		<tr>
 <td>"NO_WARNING"</td>
 <td>Nivel normal</td>
 </tr>
-<tr>
-<td>"SERVICIO_NECESARIO"</td>
+		<tr>
+<td>«SERVICIO_NECESARIO»</td>
 <td>Requiere un servicio</td>
 </tr>
-<tr>
+		<tr>
 <td>«TOO_LOW»</td>
 <td>Nivel bajo</td>
 </tr>
-<tr>
+		<tr>
 <td>«TOO_HIGH»</td>
-<td>Nivel superior</td>
+<td>Nivel alto</td>
 </tr>
-<tr>
+		<tr>
 <td rowspan='2'>alerta de aceite</td>
 <td rowspan='2'>al_oil</td>
-<td rowspan='2'></td>
+			<td rowspan='2'></td>
 <td rowspan='2'>binario</td>
-<td>0</td>
+			<td>0</td>
 <td>El nivel de aceite es normal</td>
 </tr>
-<tr>
-<td>1</td>
-<td>Alerta (consulta el comando <i>oil_level</i> para obtener más detalles)</td>
+		<tr>
+			<td>1</td>
+			<td>Alerte (voir la commande <i>oil_level</i> pour plus de détails)</td>
 </tr>
 	
 <!-- REFRIGERANTE -->
-<tr>
+		<tr>
 <td rowspan="3">nivel del líquido refrigerante</td>
-<td rowspan="3">nivelDeRefrigerante</td>
+<td rowspan="3">nivel de refrigerante</td>
 <td rowspan="3">diagnóstico del motor</td>
 <td rowspan="3">texto</td>
 <td>«SIN ESPECIFICAR»</td>
 <td>Información no disponible</td>
 </tr>
-<tr>
+		<tr>
 <td>"NO_WARNING"</td>
 <td>Nivel normal</td>
 </tr>
-<tr>
+		<tr>
 <td>«TOO_LOW»</td>
 <td>Nivel bajo</td>
 </tr>
-<tr>
-<td rowspan='2'>Alerta de líquido refrigerante</td>
+		<tr>
+<td rowspan='2'>alerta de líquido refrigerante</td>
 <td rowspan='2'>al_coolant</td>
-<td rowspan='2'></td>
+			<td rowspan='2'></td>
 <td rowspan='2'>binario</td>
-<td>0</td>
+			<td>0</td>
 <td>El nivel es normal</td>
 </tr>
-<tr>
-<td>1</td>
-<td>Alerta (consulta el comando <i>coolant_level</i> para obtener más detalles)</td>
+		<tr>
+			<td>1</td>
+			<td>Alerte (voir la commande <i>coolant_level</i> pour plus de détails)</td>
 </tr>
 	
 		<!-- ----------------- -->
 <!-- Motor eléctrico -->
 		<!-- ----------------- -->
-<tr>
+		<tr>
 <td class="subtitle" colspan="6">MOTOR ELÉCTRICO</td>
 </tr>
-<tr>
+		<tr>
 <td>consumo eléctrico</td>
 <td>consoElectric</td>
 <td>estadísticas</td>
@@ -834,7 +834,7 @@ tankClosed<br>
 <td>kW/100 km</td>
 <td>Consumo medio calculado por el vehículo</td>
 </tr>
-<tr>
+		<tr>
 <td>Autonomía eléctrica</td>
 <td>electricAutonomy</td>
 <td>estadísticas</td>
@@ -842,139 +842,139 @@ tankClosed<br>
 <td>Km</td>
 <td>Autonomía con la carga restante</td>
 </tr>
-<tr>
+		<tr>
 <td rowspan="2">Baja autonomía eléctrica</td>
 <td rowspan="2">al_electricAutonomy</td>
-<td rowspan="2"/>
+			<td rowspan="2"/>
 <td rowspan="2">binario</td>
-<td>0</td>
+			<td>0</td>
 <td>Autonomía eléctrica suficiente</td>
 </tr>
-<tr>
-<td>1</td>
+		<tr>
+			<td>1</td>
 <td>Baja autonomía eléctrica</td>
 </tr>
-<tr>
+		<tr>
 <td>nivel de carga de la batería</td>
-<td>batteryLevel</td>
-<td>recharge_status</td>
+<td>nivel de batería</td>
+<td>estado_de_recarga</td>
 <td>digital</td>
-<td>%</td>
+			<td>%</td>
 <td>Porcentaje de carga de la batería</td>
 </tr>
-<tr>
+		<tr>
 <td rowspan="6">Estado de la carga</td>
 <td rowspan="6">estado de carga</td>
 <td rowspan="6">estado_de_recarga</td>
 <td rowspan="6">texto</td>
-<td>"CHARGING_SYSTEM_CHARGING"</td>
-<td>Cargando</td>
-<td></td>
+<td>«CHARGING_SYSTEM_CHARGING»</td>
+<td>Cargando...</td>
+			<td></td>
 </tr>
-<tr>
+		<tr>
 <td>«CHARGING_SYSTEM_IDLE»</td>
 <td>Sistema de recarga en espera</td>
 </tr>
-<tr>
+		<tr>
 <td>«CHARGING_SYSTEM_DONE»</td>
-<td>Recarga completada</td>
+<td>Carga completada</td>
 </tr>
-<tr>
+		<tr>
 <td>«CHARGING_SYSTEM_FAULT»</td>
 <td>Error en el sistema de recarga</td>
 </tr>
-<tr>
-<td>"CHARGING_SYSTEM_SCHEDULED"</td>
+		<tr>
+<td>«CHARGING_SYSTEM_SCHEDULED»</td>
 <td>Recarga programada</td>
 </tr>
-<tr>
-<td>"CHARGING_SYSTEM_UNSPECIFIED"</td>
+		<tr>
+<td>«CHARGING_SYSTEM_UNSPECIFIED»</td>
 <td>Estado indeterminado</td>
 </tr>
-<tr>
+		<tr>
 <td>Tiempo de carga restante</td>
-<td>chargingRemainingTime</td>
-<td>recharge_status</td>
+<td>tiempo restante de carga</td>
+<td>estado_de_recarga</td>
 <td>digital</td>
 <td>minutos</td>
-<td>Tiempo estimado hasta que finalice la recarga</td>
+<td>Tiempo estimado hasta que termine la recarga</td>
 </tr>
-<tr>
+		<tr>
 <td>Hora de finalización de la carga</td>
-<td>chargingEndTime</td>
-<td></td>
+<td>hora de finalización de la carga</td>
+			<td></td>
 <td>texto</td>
-<td>jj HH:MM</td>
+<td>dd hh:mm</td>
 <td>Hora prevista de finalización de la carga</td>
 </tr>
-<tr>
+		<tr>
 <td rowspan="5">Estado del enchufe</td>
-<td rowspan="5">connectorStatus</td>
+<td rowspan="5">estado del conector</td>
 <td rowspan="5">estado_de_recarga</td>
 <td rowspan="5">texto</td>
-<td>"CONNECTION_STATUS_CONNECTED_AC"</td>
+<td>«CONNECTION_STATUS_CONNECTED_AC»</td>
 <td>Conectada a una toma de corriente de CA</td>
 </tr>
-<tr>
-<td>"CONNECTION_STATUS_CONNECTED_DC"</td>
-<td>Conectada a un terminal de CC</td>
+		<tr>
+<td>«CONNECTION_STATUS_CONNECTED_DC»</td>
+<td>Conectada a un terminal de corriente continua</td>
 </tr>
-<tr>
-<td>"CONNECTION_STATUS_DISCONNECTED"</td>
+		<tr>
+<td>«CONNECTION_STATUS_DISCONNECTED»</td>
 <td>Desconectada</td>
 </tr>
-<tr>
+		<tr>
 <td>«CONNECTION_STATUS_FAULT»</td>
-<td>Confusión</td>
+<td>Un malentendido</td>
 </tr>
-<tr>
-<td>"CONNECTION_STATUS_UNSPECIFIED"</td>
+		<tr>
+<td>«CONNECTION_STATUS_UNSPECIFIED»</td>
 <td>Estado indeterminado</td>
 </tr>
 	
 		<!-- ------ -->
 <!-- LAVADORA -->
 		<!-- ------ -->
-<tr>
-<td class="subtitle" colspan="6">LIMPIACRISTALES</td>
+		<tr>
+<td class="subtitle" colspan="6">LIMPIAVENTANAS</td>
 </tr>
-<tbody>
-<tr>
+		<tbody>
+			<tr>
 <td rowspan="3">Nivel de limpieza de cristales</td>
-<td rowspan="3">washerFluidLevel</td>
+<td rowspan="3">nivel de líquido de la lavadora</td>
 <td rowspan="3">diagnósticos</td>
 <td rowspan="3">texto</td>
 <td>«SIN ESPECIFICAR»</td>
 <td>Información no disponible</td>
 </tr>
-<tr>
+			<tr>
 <td>"NO_WARNING"</td>
 <td>Nivel normal</td>
 </tr>
-<tr>
+			<tr>
 <td>«TOO_LOW»</td>
 <td>Nivel bajo</td>
 </tr>
-<tr>
-<td rowspan='2'>alerta de lavaparabrisas</td>
+			<tr>
+<td rowspan='2'>alerta de limpiacristales</td>
 <td rowspan='2'>al_washerFluid</td>
 <td rowspan='2'>binario</td>
-<td>0</td>
+				<td>0</td>
 <td>El nivel es normal</td>
 </tr>
-<tr>
-<td>1</td>
-<td>Alerta (consulta el comando <i>washer_fluid_level</i> para obtener más detalles)</td>
+			<tr>
+				<td>1</td>
+				<td>Alerte (voir la commande <i>washer_fluid_level</i> pour plus de détails)</td>
 </tr>
 		
 			<!-- ------ -->
 <!-- BRAKE -->
 			<!-- ------ -->
-<tr>
+			<tr>
 <td class="subtitle" colspan="6">LÍQUIDO DE FRENOS</td>
 </tr>
 </tbody>
-<tr>
+			<tr>
 <td rowspan="3">Nivel del líquido de frenos</td>
 <td rowspan="3">Nivel de líquido de frenos</td>
 <td rowspan="3">frenos</td>
@@ -982,40 +982,40 @@ tankClosed<br>
 <td>«SIN ESPECIFICAR»</td>
 <td>Información no disponible</td>
 </tr>
-<tr>
+			<tr>
 <td>"NO_WARNING"</td>
 <td>Nivel normal</td>
 </tr>
-<tr>
+			<tr>
 <td>«TOO_LOW»</td>
 <td>Nivel bajo</td>
 </tr>
-<tr>
+			<tr>
 <td rowspan='2'>alerta de líquido de frenos</td>
-<td rowspan='2'>al_brake_fluid</td>
+<td rowspan='2'>al_líquido_de_frenos</td>
 <td rowspan='2'>binario</td>
-<td>0</td>
+				<td>0</td>
 <td>El nivel es normal</td>
 </tr>
-<tr>
-<td>1</td>
-<td>Alerta (consulta el comando <i>brake_fluid_fluid_level</i> para obtener más detalles)</td>
+			<tr>
+				<td>1</td>
+				<td>Alerte (voir la commande <i>brake_fluid_fluid_level</i> pour plus de détails)</td>
 </tr>
 		
 			<!-- ---- -->
 <!-- TYRE -->
 			<!-- ---- -->
-<tr>
+			<tr>
 <td class="subtitle" colspan="6">PRESIÓN DE LOS NEUMÁTICOS</td>
 </tr>
-<tr>
-<td rowspan="5">
+			<tr>
+				<td rowspan="5">
 neumático delantero izquierdo<br>
 neumático delantero derecho<br>
 neumático trasero izquierdo<br>
 neumático trasero derecho
 </td>
-<td rowspan="5">
+				<td rowspan="5">
 tyreFl<br>
 tyreFr<br>
 tyreRl<br>
@@ -1026,43 +1026,43 @@ tyreRr
 <td>«SIN ESPECIFICAR»</td>
 <td>Información no disponible</td>
 </tr>
-<tr>
+			<tr>
 <td>"NO_WARNING"</td>
 <td>Presión normal</td>
 </tr>
-<tr>
+			<tr>
 <td>«VERY_LOW_PRESSURE»</td>
 <td>Presión muy baja</td>
 </tr>
-<tr>
+			<tr>
 <td>«LOW_PRESSURE»</td>
 <td>Presión baja</td>
 </tr>
-<tr>
+			<tr>
 <td>«HIGH_PRESSURE»</td>
-<td>Presión alta</td>
+<td>Presión elevada</td>
 </tr>
-<tr>
+			<tr>
 <td rowspan='2'>alerta de neumáticos</td>
 <td rowspan='2'>al_tyre</td>
-<td rowspan="2"></td>
+				<td rowspan="2"></td>
 <td rowspan='2'>binario</td>
-<td>0</td>
+				<td>0</td>
 <td>Las presiones son normales</td>
 </tr>
-<tr>
-<td>1</td>
-<td>Alerta (consulta los comandos <i>tyre_*</i> para obtener más detalles)</td>
+			<tr>
+				<td>1</td>
+				<td>Alerte (voir les commandes <i>tyre_*</i> pour plus de détails)</td>
 </tr>
 		
 			<!-- ------ -->
 <!-- LUCES -->
 			<!-- ------ -->
-<tr>
+			<tr>
 <td class="subtitle" colspan="6">ILUMINACIÓN</td>
 </tr>
-<tr>
-<td rowspan="3">
+			<tr>
+				<td rowspan="3">
 luz de freno izquierda<br>
 luz de freno derecha<br>
 luz de freno central<br>
@@ -1087,7 +1087,7 @@ intermitente delantero derecho<br>
 intermitente trasero izquierdo<br>
 luz intermitente trasera derecha
 </td>
-<td rowspan="3">
+				<td rowspan="3">
 al_brakeLightL<br>
 al_brakeLightR<br>
 al_brakeLightC<br>
@@ -1117,37 +1117,37 @@ al_turnIndicationRr
 <td>«SIN ESPECIFICAR»</td>
 <td>Información no disponible</td>
 </tr>
-<tr>
+			<tr>
 <td>"NO_WARNING"</td>
 <td>Sin fallos</td>
 </tr>
-<tr>
-<td>«FAILURE»</td>
-<td>Error</td>
+			<tr>
+<td>«FALLO»</td>
+<td>Defecto</td>
 </tr>
-<tr>
+			<tr>
 <td rowspan="2">alerta de lámparas</td>
 <td rowspan="2">al_light</td>
-<td rowspan="2"></td>
+				<td rowspan="2"></td>
 <td rowspan="2">binario</td>
-<td>0</td>
-<td>No hay ninguna lámpara defectuosa</td>
+				<td>0</td>
+<td>No hay ninguna lámpara estropeada</td>
 </tr>
-<tr>
-<td>1</td>
-<td>Por defecto (consulta los comandos de luces para más detalles)</td>
+			<tr>
+				<td>1</td>
+<td>Por defecto (consulta los mandos de las luces para obtener más detalles)</td>
 </tr>
 
 			<!-- ------ -->
 <!-- PLUGIN -->
 			<!-- ------ -->
-<tr>
+			<tr>
 <td class="subtitle" colspan="6">PLUGIN</td>
 </tr>
-<tr>
+			<tr>
 <td>mensajes para wigget</td>
 <td>msg2wigget</td>
-<td></td>
+				<td></td>
 <td>texto</td>
 <td>json</td>
 <td>Mensajes sobre el funcionamiento del widget del panel</td>
@@ -1171,8 +1171,8 @@ El vehículo llega a casa, mientras que el nivel del líquido de frenos solo se 
 {: .num}
 
 <table class="endpoint">
-<thead>
-<tr>
+	<thead>
+		<tr>
 <th rowspan=2>API</th>
 <th rowspan=2>punto final</th>
 <th rowspan=2>frecuencia</th>
@@ -1181,107 +1181,107 @@ El vehículo llega a casa, mientras que el nivel del líquido de frenos solo se 
 <th>cualquier vehículo</th>
 <th>motor térmico</th>
 <th>motor eléctrico</th>
-<tr>
+		<tr>
 </tr>
 </thead>
-<tbody>
-<tr>
+	<tbody>
+		<tr>
 <td rowspan=15>Vehículo conectado</td>
 <td>frenos</td>
 <td>60 min.</td>
-<td>24</td>
+			<td>24</td>
 </tr>
-<tr>
-<td>accesibilidad de los comandos</td>
+		<tr>
+<td>accesibilidad de control</td>
 <td>5 min.</td>
-<td>288</td>
+			<td>288</td>
 </tr>
-<tr>
-<td>comandos<sup>1</sup></td>
-<td>0</td>
+		<tr>
+			<td>commands<sup>1</sup></td>
+			<td>0</td>
 </tr>
-<tr>
-<td>detalles<sup>1</sup></td>
-<td>0</td>
+		<tr>
+			<td>details<sup>1</sup></td>
+			<td>0</td>
 </tr>
-<tr>
+		<tr>
 <td>diagnósticos</td>
 <td>10 min.</td>
-<td>144</td>
+			<td>144</td>
 </tr>
-<tr>
+		<tr>
 <td>puertas</td>
 <td>2 min.</td>
-<td>720</td>
+			<td>720</td>
 </tr>
-<tr>
+		<tr>
 <td>motor</td>
 <td>15 min.</td>
-<td></td>
-<td>96</td>
+			<td></td>
+			<td>96</td>
 </tr>
-<tr>
-<td>engine-status</td>
+		<tr>
+<td>estado del motor</td>
 <td>5 min.</td>
-<td></td>
-<td>288</td>
+			<td></td>
+			<td>288</td>
 </tr>
-<tr>
-<td>combustible</td>
+		<tr>
+<td>gasóleo</td>
 <td>30 min.</td>
-<td></td>
-<td>48</td>
+			<td></td>
+			<td>48</td>
 </tr>
-<tr>
+		<tr>
 <td>cuentakilómetros</td>
 <td>15 min.</td>
-<td>96</td>
+			<td>96</td>
 </tr>
-<tr>
+		<tr>
 <td>estadísticas</td>
 <td>10 min.</td>
-<td>144</td>
+			<td>144</td>
 </tr>
-<tr>
+		<tr>
 <td>neumáticos</td>
 <td>30 min.</td>
-<td>48</td>
+			<td>48</td>
 </tr>
-<tr>
-<td>vehículos<sup>1</sup></td>
-<td>0</td>
+		<tr>
+			<td>vehicles<sup>1</sup></td>
+			<td>0</td>
 </tr>
-<tr>
+		<tr>
 <td>advertencias</td>
 <td>30 min.</td>
-<td>48</td>
+			<td>48</td>
 </tr>
-<tr>
+		<tr>
 <td>Windows</td>
 <td>2 min.</td>
-<td>720</td>
+			<td>720</td>
 </tr>
-<tr>
+		<tr>
 <td>Alquiler</td>
 <td>alquiler</td>
 <td>1 min.</td>
-<td>1'440</td>
+			<td>1'440</td>
 </tr>
-<tr>
+		<tr>
 <td>Energía</td>
-<td>estado-de-recarga</td>
+<td>estado de recarga</td>
 <td>5 min.</td>
-<td></td>
-<td></td>
-<td>288</td>
+			<td></td>
+			<td></td>
+			<td>288</td>
 </tr>
-<tr>
+		<tr>
 <th>Total</th>
-<th></th>
-<th></th>
-<th>3672</th>
-<th>432</th>
-<th>288</th>
+			<th></th>
+			<th></th>
+			<th>3672</th>
+			<th>432</th>
+			<th>288</th>
 </tr>
 </tbody>
 </table>

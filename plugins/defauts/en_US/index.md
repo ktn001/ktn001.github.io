@@ -136,50 +136,50 @@ The following formats are supported (Please submit a request via the Jeedom foru
 {: .num}
 
 <table>
-<thead>
-<tr>
+  <thead>
+    <tr>
 <th style="text-align: left">Step</th>
 <th style="text-align: center">Device widget (color)</th>
 <th style="text-align: center">Device widget (black/white)</th>
-<th style="text-align: left">Observations</th>
+<th style="text-align: left">Comments</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td>Starting point:</td>
+  <tbody>
+    <tr>
+<td>Initial situation:</td>
 <td style="text-align:center;">{% include image.html img=page.img06 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img07 %}</td>
 <td>No faults; monitoring systems are operating normally.</td>
 </tr>
-<tr>
-<td>1<sup></sup>monitoring for abnormal conditions</td>
+    <tr>
+      <td>1<sup>ière</sup>surveillance en en état anormal</td>
 <td style="text-align:center;">{% include image.html img=page.img08 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img09 %}</td>
-<td>The fault icon indicates that a fault has occurred that has not been acknowledged.</td>
+<td>The fault icon indicates that a fault has occurred that has not been cleared.</td>
 </tr>
-<tr>
-<td>1<sup>Home</sup>Acknowledging the error</td>
+    <tr>
+      <td>1<sup>ière</sup>Acquittement du défaut</td>
 <td style="text-align:center;">{% include image.html img=page.img10 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img11 %}</td>
-<td>The fault was acknowledged by clicking on the icon (or through auto-acknowledgment). The fault icon indicates that the fault is still present.</td>
+<td>The fault was acknowledged by clicking the icon (or through auto-acknowledgment). The fault icon indicates that the fault is still present.</td>
 </tr>
-<tr>
-<td>2<sup>nd</sup> anomaly</td>
+    <tr>
+      <td>2<sup>ième</sup> anomalie</td>
 <td style="text-align:center;">{% include image.html img=page.img12 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img13 %}</td>
 <td>The error icon indicates that there is a new issue</td>
 </tr>
-<tr>
-<td>Resolution of Issues</td>
+    <tr>
+<td>Resolution of issues</td>
 <td style="text-align:center;">{% include image.html img=page.img14 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img15 %}</td>
-<td>The fault icon indicates that there has been at least one fault that has not been acknowledged.</td>
+<td>The error icon indicates that there has been at least one fault that has not been acknowledged.</td>
 </tr>
-<tr>
-<td>Resolution of Issues</td>
+    <tr>
+<td>Resolution of issues</td>
 <td style="text-align:center;">{% include image.html img=page.img06 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img07 %}</td>
-<td>The fault icon indicates that there has been at least one fault that has not been acknowledged.</td>
+<td>The error icon indicates that there has been at least one fault that has not been acknowledged.</td>
 </tr>
 </tbody>
 </table>

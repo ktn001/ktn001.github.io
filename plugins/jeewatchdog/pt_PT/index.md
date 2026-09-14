@@ -204,10 +204,10 @@ O plugin cria um cron que irá acionar regularmente um Kick. A frequência deste
 valor do parâmetro **Tempo máximo de inatividade**:
 
 <table>
-<tr><td>1 minuto</td><td>Se <b>tempo máximo</b> <= 10 minutos</td></tr>
-<tr><td>3 minutos</td><td>Se 10 minutos < <b>tempo máximo</b> <= 15 minutos</td></tr>
-<tr><td>5 minutos</td><td>Se 15 minutos < <b>tempo máximo</b> <= 30 minutos</td></tr>
-<tr><td>10 minutos</td><td>Se 30 minutos < <b>tempo máximo</b></td></tr>
+<tr><td>1 minute</td><td>Si <b>temps max</b> <= 10 minutes</td></tr>
+<tr><td>3 minutes</td><td>Si 10 minutes < <b>temps max</b> <= 15 minutes</td></tr>
+<tr><td>5 minutes</td><td>Si 15 minutes < <b>temps max</b> <= 30 minutes</td></tr>
+<tr><td>10 minutes</td><td>Si 30 minutes < <b>temps max</b></td></tr>
 </table>
 	
 ## O cenário

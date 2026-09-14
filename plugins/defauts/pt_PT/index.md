@@ -136,50 +136,50 @@ Estão disponíveis os seguintes formatos (enviem um pedido através do fórum d
 {: .num}
 
 <table>
-<thead>
-<tr>
+  <thead>
+    <tr>
 <th style="text-align: left">Etapa</th>
 <th style="text-align: center">Widget do equipamento (cor)</th>
 <th style="text-align: center">Widget do equipamento (preto/branco)</th>
 <th style="text-align: left">Observações</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+  <tbody>
+    <tr>
 <td>Situação inicial:</td>
 <td style="text-align:center;">{% include image.html img=page.img06 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img07 %}</td>
-<td>Não há avarias. Os sistemas de monitorização estão em estado normal.</td>
+<td>Sem avarias. Os sistemas de vigilância estão em estado normal.</td>
 </tr>
-<tr>
-<td>1<sup>a</sup>monitorização em caso de anomalia</td>
+    <tr>
+      <td>1<sup>ière</sup>surveillance en en état anormal</td>
 <td style="text-align:center;">{% include image.html img=page.img08 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img09 %}</td>
 <td>O ícone de falha indica que ocorreu uma anomalia que não foi resolvida.</td>
 </tr>
-<tr>
-<td>1<sup>ª</sup>Resolução do defeito</td>
+    <tr>
+      <td>1<sup>ière</sup>Acquittement du défaut</td>
 <td style="text-align:center;">{% include image.html img=page.img10 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img11 %}</td>
 <td>A falha foi confirmada com um clique no ícone (ou através da confirmação automática). O ícone de falha indica que a anomalia continua presente.</td>
 </tr>
-<tr>
-<td>2<sup>.ª</sup> anomalia</td>
+    <tr>
+      <td>2<sup>ième</sup> anomalie</td>
 <td style="text-align:center;">{% include image.html img=page.img12 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img13 %}</td>
 <td>O ícone de avaria indica que existe uma nova anomalia</td>
 </tr>
-<tr>
-<td>Eliminação de anomalias</td>
+    <tr>
+<td>Resolução das anomalias</td>
 <td style="text-align:center;">{% include image.html img=page.img14 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img15 %}</td>
-<td>O ícone de falha indica que ocorreu pelo menos uma anomalia que não foi resolvida.</td>
+<td>O ícone de falha indica que ocorreu pelo menos uma anomalia que não foi confirmada.</td>
 </tr>
-<tr>
-<td>Eliminação de anomalias</td>
+    <tr>
+<td>Resolução das anomalias</td>
 <td style="text-align:center;">{% include image.html img=page.img06 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img07 %}</td>
-<td>O ícone de falha indica que ocorreu pelo menos uma anomalia que não foi resolvida.</td>
+<td>O ícone de falha indica que ocorreu pelo menos uma anomalia que não foi confirmada.</td>
 </tr>
 </tbody>
 </table>

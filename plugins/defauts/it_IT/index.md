@@ -136,47 +136,47 @@ Sono disponibili i seguenti formati (per richiedere l'aggiunta di altri formati,
 {: .num}
 
 <table>
-<thead>
-<tr>
+  <thead>
+    <tr>
 <th style="text-align: left">Fase</th>
-<th style="text-align: center">Widget dell'apparecchio (colore)</th>
+<th style="text-align: center">Widget dell'apparecchiatura (colore)</th>
 <th style="text-align: center">Widget dell'apparecchiatura (nero/bianco)</th>
 <th style="text-align: left">Osservazioni</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+  <tbody>
+    <tr>
 <td>Situazione iniziale:</td>
 <td style="text-align:center;">{% include image.html img=page.img06 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img07 %}</td>
-<td>Nessun guasto, i sistemi di monitoraggio sono in condizioni normali.</td>
+<td>Nessun guasto, i sistemi di monitoraggio funzionano normalmente.</td>
 </tr>
-<tr>
-<td>1<sup>a</sup>monitoraggio in caso di condizioni anomale</td>
+    <tr>
+      <td>1<sup>ière</sup>surveillance en en état anormal</td>
 <td style="text-align:center;">{% include image.html img=page.img08 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img09 %}</td>
 <td>L'icona di errore indica che si è verificata un'anomalia che non è stata risolta.</td>
 </tr>
-<tr>
-<td>1<sup>iera</sup>Conferma di risoluzione del guasto</td>
+    <tr>
+      <td>1<sup>ière</sup>Acquittement du défaut</td>
 <td style="text-align:center;">{% include image.html img=page.img10 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img11 %}</td>
-<td>L'errore è stato azzerato cliccando sull'icona (o tramite azzeramento automatico). L'icona di errore indica che l'anomalia è ancora presente.</td>
+<td>L'errore è stato azzerato cliccando sull'icona (o tramite l'azzeramento automatico). L'icona di errore indica che l'anomalia è ancora presente.</td>
 </tr>
-<tr>
-<td>2<sup>°</sup> anomalia</td>
+    <tr>
+      <td>2<sup>ième</sup> anomalie</td>
 <td style="text-align:center;">{% include image.html img=page.img12 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img13 %}</td>
 <td>L'icona di errore indica che si è verificata una nuova anomalia</td>
 </tr>
-<tr>
-<td>Risoluzione degli anomali</td>
+    <tr>
+<td>Risoluzione dei malfunzionamenti</td>
 <td style="text-align:center;">{% include image.html img=page.img14 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img15 %}</td>
 <td>L'icona di errore indica che si è verificata almeno un'anomalia che non è stata risolta.</td>
 </tr>
-<tr>
-<td>Risoluzione degli anomali</td>
+    <tr>
+<td>Risoluzione dei malfunzionamenti</td>
 <td style="text-align:center;">{% include image.html img=page.img06 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img07 %}</td>
 <td>L'icona di errore indica che si è verificata almeno un'anomalia che non è stata risolta.</td>

@@ -5,4 +5,7 @@ plugin : JeeWatchdog
 lang: es_ES
 ---
 
-Complemento en fase de desarrollo.
+# Notas de la versión
+
+### 15/09/2026 beta
++ Primera versión

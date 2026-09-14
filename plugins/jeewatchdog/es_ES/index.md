@@ -204,10 +204,10 @@ El complemento crea una tarea programada que activará un Kick periódicamente. 
 Valor del parámetro **Tiempo máximo de inactividad**:
 
 <table>
-<tr><td>1 minuto</td><td>Si <b>tiempo máximo</b> <= 10 minutos</td></tr>
-<tr><td>3 minutos</td><td>Si son 10 minutos < <b>tiempo máximo</b> <= 15 minutos</td></tr>
-<tr><td>5 minutos</td><td>Si son 15 minutos < <b>tiempo máximo</b> <= 30 minutos</td></tr>
-<tr><td>10 minutos</td><td>Si 30 minutos < <b>tiempo máximo</b></td></tr>
+<tr><td>1 minute</td><td>Si <b>temps max</b> <= 10 minutes</td></tr>
+<tr><td>3 minutes</td><td>Si 10 minutes < <b>temps max</b> <= 15 minutes</td></tr>
+<tr><td>5 minutes</td><td>Si 15 minutes < <b>temps max</b> <= 30 minutes</td></tr>
+<tr><td>10 minutes</td><td>Si 30 minutes < <b>temps max</b></td></tr>
 </table>
 	
 ## El escenario
