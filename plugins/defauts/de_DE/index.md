@@ -136,50 +136,50 @@ Die folgenden Formate sind möglich (Bitte stellen Sie im Jeedom-Forum eine Anfr
 {: .num}
 
 <table>
-<thead>
-<tr>
+  <thead>
+    <tr>
 <th style="text-align: left">Schritt</th>
 <th style="text-align: center">Geräte-Widget (Farbe)</th>
 <th style="text-align: center">Geräte-Widget (schwarz/weiß)</th>
 <th style="text-align: left">Anmerkungen</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+  <tbody>
+    <tr>
 <td>Ausgangssituation:</td>
 <td style="text-align:center;">{% include image.html img=page.img06 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img07 %}</td>
-<td>Keine Störung, die Überwachungssysteme sind im Normalzustand.</td>
+<td>Keine Störungen, die Überwachungssysteme befinden sich im Normalzustand.</td>
 </tr>
-<tr>
-<td>1<sup>Überwachung</sup>bei Störzuständen</td>
+    <tr>
+      <td>1<sup>ière</sup>surveillance en en état anormal</td>
 <td style="text-align:center;">{% include image.html img=page.img08 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img09 %}</td>
-<td>Das Fehlersymbol zeigt an, dass eine Störung aufgetreten ist, die noch nicht quittiert wurde.</td>
+<td>Das Fehler-Symbol zeigt an, dass eine Störung aufgetreten ist, die noch nicht quittiert wurde.</td>
 </tr>
-<tr>
-<td>1<sup>Stufe</sup>Fehlerquittierung</td>
+    <tr>
+      <td>1<sup>ière</sup>Acquittement du défaut</td>
 <td style="text-align:center;">{% include image.html img=page.img10 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img11 %}</td>
 <td>Der Fehler wurde durch einen Klick auf das Symbol (oder durch automatische Quittierung) quittiert. Das Fehlersymbol zeigt an, dass die Störung weiterhin besteht.</td>
 </tr>
-<tr>
-<td>2<sup>.</sup> Störung</td>
+    <tr>
+      <td>2<sup>ième</sup> anomalie</td>
 <td style="text-align:center;">{% include image.html img=page.img12 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img13 %}</td>
 <td>Das Fehlersymbol zeigt an, dass eine neue Störung vorliegt</td>
 </tr>
-<tr>
+    <tr>
 <td>Behebung der Fehler</td>
 <td style="text-align:center;">{% include image.html img=page.img14 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img15 %}</td>
-<td>Das Fehler-Symbol zeigt an, dass mindestens eine Störung aufgetreten ist, die noch nicht quittiert wurde.</td>
+<td>Das Fehlersymbol zeigt an, dass mindestens eine Störung aufgetreten ist, die noch nicht quittiert wurde.</td>
 </tr>
-<tr>
+    <tr>
 <td>Behebung der Fehler</td>
 <td style="text-align:center;">{% include image.html img=page.img06 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img07 %}</td>
-<td>Das Fehler-Symbol zeigt an, dass mindestens eine Störung aufgetreten ist, die noch nicht quittiert wurde.</td>
+<td>Das Fehlersymbol zeigt an, dass mindestens eine Störung aufgetreten ist, die noch nicht quittiert wurde.</td>
 </tr>
 </tbody>
 </table>

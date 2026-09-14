@@ -136,46 +136,46 @@ Son compatibles los siguientes formatos (solicita la incorporación de otros for
 {: .num}
 
 <table>
-<thead>
-<tr>
+  <thead>
+    <tr>
 <th style="text-align: left">Paso</th>
 <th style="text-align: center">Widget del equipo (color)</th>
 <th style="text-align: center">Widget del equipo (negro/blanco)</th>
 <th style="text-align: left">Observaciones</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+  <tbody>
+    <tr>
 <td>Situación inicial:</td>
 <td style="text-align:center;">{% include image.html img=page.img06 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img07 %}</td>
-<td>No hay fallos, los sistemas de vigilancia funcionan con normalidad.</td>
+<td>No hay fallos; los sistemas de vigilancia funcionan con normalidad.</td>
 </tr>
-<tr>
-<td>1<sup>era</sup>vigilancia en caso de anomalías</td>
+    <tr>
+      <td>1<sup>ière</sup>surveillance en en état anormal</td>
 <td style="text-align:center;">{% include image.html img=page.img08 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img09 %}</td>
 <td>El icono de fallo indica que se ha producido una anomalía que no se ha resuelto.</td>
 </tr>
-<tr>
-<td>1<sup>era</sup>Confirmación del fallo</td>
+    <tr>
+      <td>1<sup>ière</sup>Acquittement du défaut</td>
 <td style="text-align:center;">{% include image.html img=page.img10 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img11 %}</td>
 <td>El fallo se ha resuelto haciendo clic en el icono (o mediante la resolución automática). El icono de fallo indica que la anomalía sigue presente.</td>
 </tr>
-<tr>
-<td>2<sup>ª</sup> anomalía</td>
+    <tr>
+      <td>2<sup>ième</sup> anomalie</td>
 <td style="text-align:center;">{% include image.html img=page.img12 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img13 %}</td>
 <td>El icono de fallo indica que hay una nueva anomalía</td>
 </tr>
-<tr>
+    <tr>
 <td>Desaparición de las anomalías</td>
 <td style="text-align:center;">{% include image.html img=page.img14 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img15 %}</td>
 <td>El icono de fallo indica que se ha producido al menos una anomalía que no se ha resuelto.</td>
 </tr>
-<tr>
+    <tr>
 <td>Desaparición de las anomalías</td>
 <td style="text-align:center;">{% include image.html img=page.img06 %}</td>
 <td style="text-align:center;">{% include image.html img=page.img07 %}</td>

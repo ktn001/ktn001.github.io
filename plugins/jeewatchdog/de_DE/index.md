@@ -204,10 +204,10 @@ Das Plugin erstellt einen Cron-Job, der regelmäßig einen Kick auslöst. Die H�
 Wert des Parameters **Maximale Inaktivitätszeit**:
 
 <table>
-<tr><td>1 Minute</td><td>Wenn <b>maximale Zeit</b> <= 10 Minuten</td></tr>
-<tr><td>3 Minuten</td><td>Wenn 10 Minuten < <b>maximale Zeit</b> <= 15 Minuten</td></tr>
-<tr><td>5 Minuten</td><td>Wenn 15 Minuten < <b>maximale Zeit</b> <= 30 Minuten</td></tr>
-<tr><td>10 Minuten</td><td>Wenn 30 Minuten < <b>Maximale Zeit</b></td></tr>
+<tr><td>1 minute</td><td>Si <b>temps max</b> <= 10 minutes</td></tr>
+<tr><td>3 minutes</td><td>Si 10 minutes < <b>temps max</b> <= 15 minutes</td></tr>
+<tr><td>5 minutes</td><td>Si 15 minutes < <b>temps max</b> <= 30 minutes</td></tr>
+<tr><td>10 minutes</td><td>Si 30 minutes < <b>temps max</b></td></tr>
 </table>
 	
 ## Das Szenario
