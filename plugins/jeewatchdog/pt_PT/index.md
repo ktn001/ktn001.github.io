@@ -3,6 +3,7 @@ layout : default
 pluginId : jeewatchdog
 plugin : JeeWatchdog
 lang: pt_PT
+
 img01: 01_shema_shelly_usb.png
 img02: 02_shema_shelly_220.png
 img03: 03_boitier_ouvert.png
@@ -12,6 +13,16 @@ img06: 06_configure_Wifi_static.png
 img07: 07_menu_authentication.png
 img08: 08_set_passord.png
 img09: 09_configuration_plugin.png
+img10: 10_configuration_equipement.png
+img11: 11_scenario.png
+img12: 12_declenchement_scenario.png
+
+action: action
+binary: binary
+info: info
+kick: kick
+maintenance: maintenance
+other: other
 ---
 # Plugin {{page.plugin}} ({{page.pluginId}}) para o Jeedom
 
@@ -27,9 +38,16 @@ Está prevista uma indisponibilidade do Jeedom.
 # Equipamento externo
 {: .num}
 
-Por enquanto, apenas os equipamentos baseados no [**Shelly plus
-1**](https://www.shelly.com/fr/products/shelly-plus-1-x1) (o suporte do [**Shelly 1
-Gen4**](https://www.shelly.com/fr/products/shelly-1-gen4) está prevista para breve)
+O plugin foi concebido para funcionar com os seguintes dispositivos:
+
++ [Shelly plus 1](https://www.shelly.com/fr/products/shelly-plus-1-x1)
++ [Shelly 1 Gen3](https://www.shelly.com/fr/products/shelly-1-gen3)
++ [Shelly 1 Mini Gen3](https://www.shelly.com/fr/products/shelly-1-mini-gen3)
++ [Shelly 1 Gen4](https://www.shelly.com/fr/products/shelly-1-gen4)
++ [Shelly 1 Mini Gen4 ](https://www.shelly.com/fr/products/shelly-1-mini-gen4)
+
+> :bulb: O plugin foi testado com um **Shelly Plus 1** e um **Shelly Gen4**. Qualquer feedback
+A experiência com outros dispositivos é bem-vinda.
 
 ## Esquema de ligações do equipamento
 {: .num}
@@ -72,12 +90,14 @@ avançar para a configuração do Wi-Fi
 Se não encontrou esta rede, é provável que seja porque a versão do firmware é a 2.0.0
 (ou mais) e que o seu Shelly é um Gen4. Nesse caso, o Zigbee está ativado por predefinição e o acesso
 O ponto de acesso está desativado. Pode ativar o ponto de acesso seguindo o procedimento abaixo:
-
 1. Prima o botão físico na parte de trás do Shelly e **mantenha-o premido durante 10
 segundos**
 1. Quando soltar o botão, o LED apaga-se durante 2 a 3 segundos e, em seguida, começa a piscar rapidamente.
 1. Prima novamente o botão físico **durante exatamente 5 segundos**
 1. O LED pisca lentamente, indicando que a rede Wi-Fi «Shelly<yyy>-<MAC>» está visível
+1. Passe à configuração do Wi-Fi descrita abaixo.
+1. O ponto de acesso será desativado ao fim de 5 minutos. Nessa altura, terá de repetir este
+procedimento a seguir caso o Wi-Fi não tenha sido configurado.
 
 > :bulb: Também é possível utilizar a aplicação *Shelly smart control* para se ligar através de
 > Bluetooth e ativar o ponto de acesso.
@@ -86,7 +106,6 @@ segundos**
 {: .num}
 
 Para configurar o Wi-Fi do Shelly, é necessário
-1. Ligar à corrente.
 1. Ligar-se ao ponto de acesso (SSID: «Shelly...-...»)
 1. Abrir a página WB http://192.168.33.1
 1. Clique em «Configurações» no menu à esquerda
@@ -126,6 +145,85 @@ configuração. Basta ativá-la após a instalação.
 
 {% include image.html img=page.img09 %}
 
+# Criação e configuração de um equipamento
+
+A configuração de um equipamento é feita a partir do menu **plugins → Monitorização → jeewatchdog**. O
+O botão **Adicionar** permite criar um novo equipamento; ao clicar num equipamento, abre-se a sua página de
+configuração.
+
+{% include image.html img=page.img10 %}
+
+Para além dos parâmetros de configuração padrão do Jeedom, devem ser definidos alguns parâmetros específicos
+devem ser configurados:
+
++ ***Modelo do equipamento***\
+O modelo do dispositivo Shelly.
++ ***Endereço IP do switch***\
+Endereço IP do Shelly (também é aceite um nome DNS).
++ ***Palavra-passe***\
+Palavra-passe do Shelly
++ ***Tempo máximo de inatividade***\
+A alimentação do Jeedom será interrompida durante alguns segundos se o Jeedom não enviar um *kick* durante esse período
+prazo. Este período é expresso em minutos.
++ ***Tempo de corte***\
+Duração, expressa em segundos, da interrupção do fornecimento de energia.
++ ***Acionador do Kick***\
+Indica se o Kick deve ser enviado ao Shelly através de um **cron** e de um **cenário**. Ver explicações
+mais abaixo
++ ***Botão «Configurar o interruptor»***\
+Botão para enviar a configuração para o Shelly. O equipamento deve ter sido guardado anteriormente
+clicar neste botão.
+
+> :warning: Não se esqueça de clicar no botão **Configurar o interruptor** depois de guardar
+> o equipamento, caso um parâmetro do watchdog tenha sido alterado.
+
+# Os comandos
+{: .num}
+
+São criados os dois comandos seguintes para cada equipamento:
+
+1. *LogicalId*: **{{page.maintenance}}**\
+*tipo*: **{{page.info}}**\
+*subtipo*: **{{page.binary}}**\
+Indica a posição do interruptor de manutenção.
+
+1. *LogicalId*: **{{page.kick}}**\
+*tipo*: **{{page.action}}**\
+*subtipo*: **{{page.other}}**\
+Comando para enviar uma mensagem ao Shelly para reiniciar o contador.
+
+# O gatilho do Kick
+{: .num}
+
+Os Kicks podem ser acionados por um cron ou por um cenário
+
+## O cron
+{: .num}
+
+O plugin cria um cron que irá acionar regularmente um Kick. A frequência deste cron depende da
+valor do parâmetro **Tempo máximo de inatividade**:
+
+<table>
+<tr><td>1 minuto</td><td>Se <b>tempo máximo</b> <= 10 minutos</td></tr>
+<tr><td>3 minutos</td><td>Se 10 minutos < <b>tempo máximo</b> <= 15 minutos</td></tr>
+<tr><td>5 minutos</td><td>Se 15 minutos < <b>tempo máximo</b> <= 30 minutos</td></tr>
+<tr><td>10 minutos</td><td>Se 30 minutos < <b>tempo máximo</b></td></tr>
+</table>
+	
+## O cenário
+{: .num}
+
+A utilização de um cenário permite realizar testes para verificar com maior precisão se o Jeedom
+funciona corretamente ao enviar um comando.
+
+Eis um exemplo de cenário que só enviará um sinal de ativação se um dispositivo Zigbee tiver sido ativado:
+
+{% include image.html img=page.img11 %}
+
+Este cenário será executado regularmente (a cada 3 minutos, por exemplo) e imediatamente após o
+Inicialização do Jeedom.
+
+{% include image.html img=page.img12 %}
 
 <!--
 vim: textwidth=100 colorcolumn=101
