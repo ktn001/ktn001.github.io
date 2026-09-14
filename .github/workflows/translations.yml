@@ -22,7 +22,7 @@ jobs:
   translate:
     runs-on: ubuntu-latest
     steps:
-      - uses: Mips2648/docs-translations@v3
+      - uses: Mips2648/docs-translations@main
         with:
           deepl_api_key: ${{ secrets.DEEPL_API_KEY }}
           target_languages: "en_US, de_DE, it_IT, es_ES, pt_PT"
