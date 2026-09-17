@@ -158,18 +158,26 @@ müssen konfiguriert werden:
 
 + ***Ausstattungsvariante***\
 Das Modell des Shelly-Geräts.
+
 + ***IP-Adresse des Switches***\
-IP-Adresse des Shelly (ein DNS-Name wird ebenfalls akzeptiert).
+IP-Adresse des Shelly (ein DNS-Name wird ebenfalls akzeptiert).\
+Über die Schaltfläche <i class="fas fa-external-link-alt"></i> rechts neben dem Eingabefeld können Sie die Seite öffnen
+Shelly-Verwaltung
+
 + ***Passwort***\
 Passwort für Shelly
+
 + ***Maximale Inaktivitätszeit***\
 Die Stromversorgung des Jeedom wird für einige Sekunden unterbrochen, wenn Jeedom während dieser Zeit keinen *Kick* gesendet hat
 Verzögerungszeit. Diese Dauer wird in Minuten angegeben.
+
 + ***Abschaltzeit***\
 Dauer der Stromunterbrechung in Sekunden.
+
 + ***Kick-Auslöser***\
 Gibt an, ob der Kick über einen **Cron** und ein **Szenario** an Shelly gesendet werden soll. Siehe Erläuterungen
 weiter unten
+
 + ***Schaltfläche „Switch konfigurieren“***\
 Schaltfläche zum Senden der Konfiguration an den Shelly. Das Gerät muss zuvor gespeichert worden sein.
 Klicken Sie auf diese Schaltfläche.

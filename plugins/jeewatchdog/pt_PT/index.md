@@ -158,18 +158,26 @@ devem ser configurados:
 
 + ***Modelo do equipamento***\
 O modelo do dispositivo Shelly.
+
 + ***Endereço IP do switch***\
-Endereço IP do Shelly (também é aceite um nome DNS).
+Endereço IP do Shelly (também é aceite um nome DNS).\
+O botão <i class="fas fa-external-link-alt"></i> à direita do campo de introdução permite abrir a página
+de gestão do Shelly
+
 + ***Palavra-passe***\
 Palavra-passe do Shelly
+
 + ***Tempo máximo de inatividade***\
 A alimentação do Jeedom será interrompida durante alguns segundos se o Jeedom não enviar um *kick* durante esse período
 prazo. Este período é expresso em minutos.
+
 + ***Tempo de corte***\
 Duração, expressa em segundos, da interrupção do fornecimento de energia.
+
 + ***Acionador do Kick***\
 Indica se o Kick deve ser enviado ao Shelly através de um **cron** e de um **cenário**. Ver explicações
 mais abaixo
+
 + ***Botão «Configurar o interruptor»***\
 Botão para enviar a configuração para o Shelly. O equipamento deve ter sido guardado anteriormente
 clicar neste botão.
