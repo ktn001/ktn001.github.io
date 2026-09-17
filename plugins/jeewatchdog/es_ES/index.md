@@ -158,18 +158,26 @@ deben configurarse:
 
 + ***Modelo de equipo***\
 El modelo del dispositivo Shelly.
+
 + ***Dirección IP del conmutador***\
-Dirección IP del Shelly (también se acepta un nombre DNS).
+Dirección IP del Shelly (también se acepta un nombre DNS).\
+El botón <i class="fas fa-external-link-alt"></i> situado a la derecha del campo de entrada permite abrir la página
+de administración de Shelly
+
 + ***Contraseña***\
 Contraseña de Shelly
+
 + ***Tiempo máximo de inactividad***\
 La alimentación de Jeedom se interrumpirá durante unos segundos si Jeedom no ha enviado un *kick* durante ese
 tiempo de espera. Esta duración se expresa en minutos.
+
 + ***Tiempo de desconexión***\
 Duración, expresada en segundos, del corte de suministro eléctrico.
+
 + ***Activador del Kick***\
 Indica si el Kick debe enviarse al Shelly mediante un **cron** y un **escenario**. Ver explicaciones
 más abajo
+
 + ***Botón «Configurar el interruptor»***\
 Botón para enviar la configuración al Shelly. El dispositivo debe haberse guardado previamente
 haz clic en este botón.

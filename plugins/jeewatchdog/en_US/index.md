@@ -158,18 +158,26 @@ must be configured:
 
 + ***Equipment Model***\
 The Shelly device model.
+
 + ***Switch IP address***\
-Shelly's IP address (a DNS name is also accepted).
+Shelly's IP address (a DNS name is also accepted).\
+The <i class="fas fa-external-link-alt"></i> button to the right of the input field opens the page
+Shelly administration
+
 + ***Password***\
 Shelly password
+
 + ***Maximum Inactivity Time***\
 Power to the Jeedom will be cut off for a few seconds if Jeedom does not send a *kick* during this
 timeout. This duration is expressed in minutes.
+
 + ***Shut-off time***\
 Duration, in seconds, of the power outage.
+
 + ***Kick Trigger***\
 Specifies whether the Kick should be sent to Shelly via a **cron** job and a **scenario**. See explanations
 below
+
 + ***Configure Switch Button***\
 Button to send the configuration to Shelly. The device must have been backed up beforehand
 Click this button.
