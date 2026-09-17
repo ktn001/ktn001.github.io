@@ -158,18 +158,26 @@ Outre les iparamètres standard de configuation Jeedom, quelques paramètreis sp
 
 + ***Modèle d'équipement***\
 Le modèle de l'appareil Shelly.
+
 + ***Adresse IP du switch***\
-Adresse IP du Shelly (un nom DNS est aussi accepté).
+Adresse IP du Shelly (un nom DNS est aussi accepté).\
+Le bouton <i class="fas fa-external-link-alt"></i> à droite de la saisie permet d'ouvrir la page
+d'administration du Shelly
+
 + ***Mot de passe***\
 Password du shelly
+
 + ***Temps max d'inactivé***\
 L'alimentation du jeedom sera coupée quelques secondes si Jeedom n'y pas envoyé de *kick* durant ce
 délai. Cette durée est exprimée en minutes.
+
 + ***Temp de coupure***\
 Durée, exprimée en secondes, de la coupure de l'alimentation.
+
 + ***Déclencheur du Kick***\
 Indique si le Kick doit être envoyé au Shelly par un **cron** et un **scénario**. Voir explications
 plus bas
+
 + ***Bouton configurer le switch***\
 Bouton pour envoyer la configuration au Shelly. L'équipement doit avoir été sauvegardé avant
 de cliquer sur ce bouton.
