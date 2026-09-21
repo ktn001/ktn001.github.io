@@ -7,6 +7,9 @@ lang: es_ES
 
 # Notas de la versión
 
+### 21/09/2026
++ La versión beta del 17/09/2026 pasa a ser estable
+
 ### 17/09/2026 beta
 + Se ha añadido un botón en la página de configuración del dispositivo para abrir una nueva pestaña con la página de administración de Shelly
 + **Experimental:** Se ha añadido compatibilidad con el *Shelly Power Strip*
