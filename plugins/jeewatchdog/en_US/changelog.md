@@ -7,6 +7,9 @@ lang: en_US
 
 # Release Notes
 
+### October 1, 2026 (BETA)
++ Fixed a bug that prevented the creation of a device
+
 ### October 1, 2026 BETA
 + Rewriting the Shelly configuration code
   + We're moving from a *brute-force* method that redefined everything to a *subtle* method that redefines only what needs to be changed.

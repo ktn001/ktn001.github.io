@@ -7,6 +7,9 @@ lang: es_ES
 
 # Notas de la versión
 
+### 01/10/2026 a BETA
++ Se ha corregido un error que impedía crear un dispositivo
+
 ### 01/10/2026 BETA
 + Reescritura del código de configuración de Shelly
   + Pasamos de un método *bruto*, que redefinía todo, a un método *sutil*, que solo redefine lo que hay que modificar.
