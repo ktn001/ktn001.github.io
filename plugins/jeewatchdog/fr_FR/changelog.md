@@ -7,6 +7,9 @@ lang: fr_FR
 
 # Release notes
 
+### 01/10/2026 bis BETA
++ Correction d'un bug qui bloquait la création d'un équipement
+
 ### 01/10/2026 BETA
 + Réécriture du code de configuration du Shelly
   + On passe d'une méthode *bourrin* qui redéfinissait tout à une méthode *en finesse* qui redéfini uniquement ce qui doit être modifié.
