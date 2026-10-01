@@ -7,6 +7,9 @@ lang: pt_PT
 
 # Notas de lançamento
 
+### 01/10/2026 bis BETA
++ Correção de um erro que impedia a criação de um equipamento
+
 ### 01/10/2026 BETA
 + Reescrita do código de configuração do Shelly
   + Passamos de um método *bruto*, que redefinia tudo, para um método *sutil*, que redefine apenas o que deve ser alterado.

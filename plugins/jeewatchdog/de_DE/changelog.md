@@ -7,6 +7,9 @@ lang: de_DE
 
 # Versionshinweise
 
+### 01.10.2026 bis BETA
++ Behebung eines Fehlers, der die Erstellung eines Geräts verhinderte
+
 ### 01.10.2026 BETA
 + Überarbeitung des Konfigurationscodes für Shelly
   + Wir wechseln von einer *groben* Methode, bei der alles neu definiert wurde, zu einer *feinfühligen* Methode, bei der nur das neu definiert wird, was geändert werden muss.

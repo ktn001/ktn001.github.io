@@ -7,6 +7,9 @@ lang: it_IT
 
 # Note di rilascio
 
+### 01/10/2026 bis BETA
++ Correzione di un bug che impediva la creazione di un dispositivo
+
 ### 01/10/2026 BETA
 + Riscrittura del codice di configurazione di Shelly
   + Si passa da un metodo *brutale*, che ridefiniva tutto, a un metodo *raffinato*, che ridefinisce solo ciò che deve essere modificato.
