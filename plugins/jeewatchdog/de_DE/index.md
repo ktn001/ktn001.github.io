@@ -45,6 +45,8 @@ Das Plugin ist für die Verwendung mit folgenden Geräten vorgesehen:
 + [Shelly 1 Mini Gen3](https://www.shelly.com/fr/products/shelly-1-mini-gen3)
 + [Shelly 1 Gen4](https://www.shelly.com/fr/products/shelly-1-gen4)
 + [Shelly 1 Mini Gen4 ](https://www.shelly.com/fr/products/shelly-1-mini-gen4)
++ [Shelly Power Strip 4 Gen4](https://www.shelly.com/fr/products/shelly-power-strip-4-gen4)
+(experimentell)
 
 > :bulb: Das Plugin wurde mit einem **Shelly Plus 1** und einem **Shelly Gen4** getestet. Jegliches Feedback
 Erfahrungen mit anderen Geräten sind willkommen.
@@ -178,12 +180,12 @@ Dauer der Stromunterbrechung in Sekunden.
 Gibt an, ob der Kick über einen **Cron** und ein **Szenario** an Shelly gesendet werden soll. Siehe Erläuterungen
 weiter unten
 
-+ ***Schaltfläche „Switch konfigurieren“***\
-Schaltfläche zum Senden der Konfiguration an den Shelly. Das Gerät muss zuvor gespeichert worden sein.
++ ***Schaltfläche***  `Konfiguration des Switches erzwingen`\
+Schaltfläche „Konfiguration auf dem Shelly erzwingen“. Das Gerät muss zuvor gespeichert worden sein.
 Klicken Sie auf diese Schaltfläche.
 
-> :warning: Vergessen Sie nicht, nach dem Speichern auf die Schaltfläche **Schalter konfigurieren** zu klicken
-> das Gerät, falls eine Watchdog-Einstellung geändert wurde.
+> :bulb: Falls erforderlich, wird der Shelly während der Sicherung automatisch (neu) konfiguriert.
+> die Ausrüstung.
 
 # Die Befehle
 {: .num}

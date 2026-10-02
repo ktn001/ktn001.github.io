@@ -45,6 +45,8 @@ O plugin foi concebido para funcionar com os seguintes dispositivos:
 + [Shelly 1 Mini Gen3](https://www.shelly.com/fr/products/shelly-1-mini-gen3)
 + [Shelly 1 Gen4](https://www.shelly.com/fr/products/shelly-1-gen4)
 + [Shelly 1 Mini Gen4 ](https://www.shelly.com/fr/products/shelly-1-mini-gen4)
++ [Shelly Power Strip 4 Gen4](https://www.shelly.com/fr/products/shelly-power-strip-4-gen4)
+(experimental)
 
 > :bulb: O plugin foi testado com um **Shelly Plus 1** e um **Shelly Gen4**. Qualquer feedback
 A experiência com outros dispositivos é bem-vinda.
@@ -178,12 +180,12 @@ Duração, expressa em segundos, da interrupção do fornecimento de energia.
 Indica se o Kick deve ser enviado ao Shelly através de um **cron** e de um **cenário**. Ver explicações
 mais abaixo
 
-+ ***Botão «Configurar o interruptor»***\
-Botão para enviar a configuração para o Shelly. O equipamento deve ter sido guardado anteriormente
++ ***Botão***  `Forçar a configuração do interruptor`\
+Botão para forçar a configuração no Shelly. O equipamento deve ter sido guardado previamente
 clicar neste botão.
 
-> :warning: Não se esqueça de clicar no botão **Configurar o interruptor** depois de guardar
-> o equipamento, caso um parâmetro do watchdog tenha sido alterado.
+> :bulb: Se necessário, o Shelly será automaticamente (re)configurado durante o processo de gravação de
+> o equipamento.
 
 # Os comandos
 {: .num}

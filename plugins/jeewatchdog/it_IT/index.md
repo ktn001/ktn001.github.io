@@ -45,6 +45,8 @@ Il plugin è progettato per funzionare con i seguenti dispositivi:
 + [Shelly 1 Mini Gen3](https://www.shelly.com/fr/products/shelly-1-mini-gen3)
 + [Shelly 1 Gen4](https://www.shelly.com/fr/products/shelly-1-gen4)
 + [Shelly 1 Mini Gen4 ](https://www.shelly.com/fr/products/shelly-1-mini-gen4)
++ [Shelly Power Strip 4 Gen4](https://www.shelly.com/fr/products/shelly-power-strip-4-gen4)
+(sperimentale)
 
 > :bulb: Il plugin è stato testato con uno **Shelly Plus 1** e uno **Shelly Gen4**. Qualsiasi feedback
 È gradita qualsiasi esperienza con altri dispositivi.
@@ -178,12 +180,12 @@ Durata, espressa in secondi, dell'interruzione dell'alimentazione.
 Indica se il comando Kick deve essere inviato a Shelly tramite un **cron** e uno **scenario**. Vedi spiegazioni
 più in basso
 
-+ ***Pulsante "Configura l'interruttore"***\
-Pulsante per inviare la configurazione a Shelly. È necessario aver prima salvato la configurazione
++ ***Pulsante***  `Forza la configurazione dello switch`\
+Pulsante per forzare la configurazione su Shelly. L'apparecchio deve essere stato salvato in precedenza
 di fare clic su questo pulsante.
 
-> :warning: Non dimenticare di cliccare sul pulsante **Configura l'interruttore** dopo aver salvato
-> l'apparecchiatura se è stato modificato un parametro del watchdog.
+> :bulb: Se necessario, lo Shelly verrà automaticamente (ri)configurato durante il salvataggio di
+> le apparecchiature.
 
 # I comandi
 {: .num}

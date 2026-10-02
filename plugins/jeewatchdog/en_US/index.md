@@ -45,6 +45,8 @@ The plugin is designed to work with the following devices:
 + [Shelly 1 Mini Gen3](https://www.shelly.com/fr/products/shelly-1-mini-gen3)
 + [Shelly 1 Gen4](https://www.shelly.com/fr/products/shelly-1-gen4)
 + [Shelly 1 Mini Gen4 ](https://www.shelly.com/fr/products/shelly-1-mini-gen4)
++ [Shelly Power Strip 4 Gen4](https://www.shelly.com/fr/products/shelly-power-strip-4-gen4)
+(experimental)
 
 > :bulb: The plugin has been tested with a **Shelly Plus 1** and a **Shelly Gen4**. Any feedback
 Experience with other devices is welcome.
@@ -178,12 +180,12 @@ Duration, in seconds, of the power outage.
 Specifies whether the Kick should be sent to Shelly via a **cron** job and a **scenario**. See explanations
 below
 
-+ ***Configure Switch Button***\
-Button to send the configuration to Shelly. The device must have been backed up beforehand
++ ***Button***  `Force switch configuration`\
+Button to force configuration on the Shelly. The device must have been backed up beforehand
 Click this button.
 
-> :warning: Don't forget to click the **Configure Switch** button after saving
-> the device if a watchdog setting has been changed.
+> :bulb: If necessary, the Shelly will be automatically (re)configured during the backup of
+> equipment.
 
 # Commands
 {: .num}

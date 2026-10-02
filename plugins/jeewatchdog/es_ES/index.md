@@ -45,6 +45,8 @@ El complemento está diseñado para funcionar con los siguientes dispositivos:
 + [Shelly 1 Mini Gen3](https://www.shelly.com/fr/products/shelly-1-mini-gen3)
 + [Shelly 1 Gen4](https://www.shelly.com/fr/products/shelly-1-gen4)
 + [Shelly 1 Mini Gen4 ](https://www.shelly.com/fr/products/shelly-1-mini-gen4)
++ [Regleta Shelly Power Strip 4 Gen4](https://www.shelly.com/fr/products/shelly-power-strip-4-gen4)
+(experimental)
 
 > :bulb: El complemento se ha probado con un **Shelly Plus 1** y un **Shelly Gen4**. Cualquier comentario
 Se agradece cualquier experiencia con otros dispositivos.
@@ -178,12 +180,12 @@ Duración, expresada en segundos, del corte de suministro eléctrico.
 Indica si el Kick debe enviarse al Shelly mediante un **cron** y un **escenario**. Ver explicaciones
 más abajo
 
-+ ***Botón «Configurar el interruptor»***\
-Botón para enviar la configuración al Shelly. El dispositivo debe haberse guardado previamente
++ ***Botón***  `Forzar la configuración del conmutador`\
+Botón para forzar la configuración en Shelly. El equipo debe haberse guardado previamente.
 haz clic en este botón.
 
-> :warning: No olvides hacer clic en el botón **Configurar el interruptor** después de guardar
-> el equipo si se ha modificado algún parámetro del watchdog.
+> :bulb: Si es necesario, el Shelly se (re)configurará automáticamente durante la copia de seguridad de
+> el equipamiento.
 
 # Los mandos
 {: .num}
