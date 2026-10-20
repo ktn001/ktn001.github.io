@@ -7,9 +7,11 @@ lang: fr_FR
 
 # Release notes
 
-### Prochaine BETA
+### 20/10/2026 BETA
 + Correction d'un bug mineur lorsqu'un kick est exécuté pendant le réécriture de script dans le Shelly
 + La commande info "maintenance" est renommée "maintenance(physique)"
++ Création d'un bouton virtuel de maintenance dans le Shelly
++ Revue du code de configuration/déconfiguration du Shelly
 
 ### 01/10/2026 bis BETA
 + Correction d'un bug qui bloquait la création d'un équipement
