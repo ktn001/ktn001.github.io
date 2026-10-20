@@ -18,10 +18,14 @@ img11: 11_scenario.png
 img12: 12_declenchement_scenario.png
 
 action: action
-binary: binary
 info: info
+binary: binary
+other: other
 kick: kick
 maintenance: maintenance
+vmaintenance: vmaintenance
+vmaintenance_on: vmaintenance_on
+vmaintenance_off: vmaintenance_off
 other: other
 ---
 # Plugin {{page.plugin}} ({{page.pluginId}}) for Jeedom
@@ -40,13 +44,14 @@ Jeedom is scheduled to be unavailable.
 
 The plugin is designed to work with the following devices:
 
-+ [Shelly Plus 1](https://www.shelly.com/fr/products/shelly-plus-1-x1)
++ [Shelly Plus 1](https://www.shelly.com/fr/products/shelly-plus-1-x1) (without a virtual button for
+(maintenance)
 + [Shelly 1 Gen3](https://www.shelly.com/fr/products/shelly-1-gen3)
 + [Shelly 1 Mini Gen3](https://www.shelly.com/fr/products/shelly-1-mini-gen3)
 + [Shelly 1 Gen4](https://www.shelly.com/fr/products/shelly-1-gen4)
 + [Shelly 1 Mini Gen4 ](https://www.shelly.com/fr/products/shelly-1-mini-gen4)
 + [Shelly Power Strip 4 Gen4](https://www.shelly.com/fr/products/shelly-power-strip-4-gen4)
-(experimental)
+(without a physical maintenance button)
 
 > :bulb: The plugin has been tested with a **Shelly Plus 1** and a **Shelly Gen4**. Any feedback
 Experience with other devices is welcome.
@@ -158,6 +163,11 @@ setup.
 In addition to the standard Jeedom configuration settings, a few specific settings must be
 must be configured:
 
++ ***Username***\
+The identifier for the device that will be used to identify the components configured in the
+Shelly.\
+This ID is generated automatically and cannot be changed.
+
 + ***Equipment Model***\
 The Shelly device model.
 
@@ -195,7 +205,22 @@ The following two commands are created for each device:
 1. *LogicalId*: **{{page.maintenance}}**\
 *type*: **{{page.info}}**\
 *subtype*: **{{page.binary}}**\
-Indicates the position of the maintenance switch.
+Position of the physical maintenance switch.
+
+1. *LogicalId*: **{{page.vmaintenance}}**\
+*type*: **{{page.info}}**\
+*subtype*: **{{page.binary}}**\
+Position of the virtual maintenance switch.
+
+1. *LogicalId*: **{{page.vmaintenance_on}}**\
+*type*: **{{page.action}}**\
+*subtype*: **{{page.other}}**\
+Command to activate the virtual maintenance button.
+
+1. *LogicalId*: **{{page.vmaintenance_off}}**\
+*type*: **{{page.action}}**\
+*subtype*: **{{page.other}}**\
+Command to disable the virtual maintenance button.
 
 1. *LogicalId*: **{{page.kick}}**\
 *type*: **{{page.action}}**\
@@ -224,7 +249,7 @@ Value of the **Max Inactivity Time** parameter:
 {: .num}
 
 Using a scenario allows you to run tests to verify more precisely whether Jeedom
-works properly when you send a kick.
+is working properly before sending a kick.
 
 Here is an example of a scenario that will send a trigger only if a Zigbee device has been activated:
 
@@ -235,6 +260,21 @@ Starting Jeedom.
 
 {% include image.html img=page.img12 %}
 
-<!--
-vim: textwidth=100 colorcolumn=101
--->
+# Maintenance mode
+
+When in maintenance mode, the Shelly does not cut off power to the Jeedom server unless it
+shows no signs of life.
+
+Depending on the model, the Shelly is configured with a physical "Now" button and/or a
+Virtual maintenance.
+
+## The physical maintenance button
+
+The maintenance switch must be connected to the `SW` terminal on the Shelly.
+
+The switch's state is directly taken into account by the script loaded into Shelly. The
+A change in the switch's state is therefore taken into account even if Jeedom is shut down.
+
+The *maintenance* command allows you to check the switch's position.
+
+## The Virtual Maintenance Button

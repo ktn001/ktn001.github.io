@@ -7,6 +7,10 @@ lang: de_DE
 
 # Versionshinweise
 
+### Nächste BETA-Version
++ Behebung eines kleinen Fehlers, der auftrat, wenn während des Skript-Umschreibens im Shelly ein „Kick“ ausgeführt wurde
++ Der Befehl „info ‚maintenance‘“ wird in „maintenance(physique)“ umbenannt.
+
 ### 01.10.2026 bis BETA
 + Behebung eines Fehlers, der die Erstellung eines Geräts verhinderte
 
