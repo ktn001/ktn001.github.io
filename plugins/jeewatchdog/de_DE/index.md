@@ -18,10 +18,14 @@ img11: 11_scenario.png
 img12: 12_declenchement_scenario.png
 
 action: action
-binary: binary
 info: info
+binary: binary
+other: other
 kick: kick
 maintenance: maintenance
+vmaintenance: vmaintenance
+vmaintenance_on: vmaintenance_on
+vmaintenance_off: vmaintenance_off
 other: other
 ---
 # Plugin {{page.plugin}} ({{page.pluginId}}) für Jeedom
@@ -40,13 +44,14 @@ Es ist mit einer Unterbrechung des Jeedom-Dienstes zu rechnen.
 
 Das Plugin ist für die Verwendung mit folgenden Geräten vorgesehen:
 
-+ [Shelly plus 1](https://www.shelly.com/fr/products/shelly-plus-1-x1)
++ [Shelly plus 1](https://www.shelly.com/fr/products/shelly-plus-1-x1) (ohne virtuelle Taste für
+Wartung)
 + [Shelly 1 Gen3](https://www.shelly.com/fr/products/shelly-1-gen3)
 + [Shelly 1 Mini Gen3](https://www.shelly.com/fr/products/shelly-1-mini-gen3)
 + [Shelly 1 Gen4](https://www.shelly.com/fr/products/shelly-1-gen4)
 + [Shelly 1 Mini Gen4 ](https://www.shelly.com/fr/products/shelly-1-mini-gen4)
 + [Shelly Power Strip 4 Gen4](https://www.shelly.com/fr/products/shelly-power-strip-4-gen4)
-(experimentell)
+(ohne physische Wartungstaste)
 
 > :bulb: Das Plugin wurde mit einem **Shelly Plus 1** und einem **Shelly Gen4** getestet. Jegliches Feedback
 Erfahrungen mit anderen Geräten sind willkommen.
@@ -155,8 +160,13 @@ Konfiguration.
 
 {% include image.html img=page.img10 %}
 
-Neben den Standardkonfigurationsparametern von Jeedom müssen einige spezifische Parameter
+Neben den Standardkonfigurationseinstellungen von Jeedom müssen einige spezifische Einstellungen vorgenommen werden
 müssen konfiguriert werden:
+
++ ***Benutzername***\
+Identifikationsnummer des Geräts, die zur Identifizierung der im
+Shelly.\
+Diese Kennung wird automatisch generiert und kann nicht geändert werden.
 
 + ***Ausstattungsvariante***\
 Das Modell des Shelly-Geräts.
@@ -195,7 +205,22 @@ Für jedes Gerät werden die folgenden beiden Befehle erstellt:
 1. *LogicalId*: **{{page.maintenance}}**\
 *Typ*: **{{page.info}}**\
 *Untertyp*: **{{page.binary}}**\
-Zeigt die Position des Wartungsschalters an.
+Stellung des physischen Wartungsschalters.
+
+1. *LogicalId*: **{{page.vmaintenance}}**\
+*Typ*: **{{page.info}}**\
+*Untertyp*: **{{page.binary}}**\
+Position des virtuellen Wartungsschalters.
+
+1. *LogicalId*: **{{page.vmaintenance_on}}**\
+*Typ*: **{{page.action}}**\
+*Untertyp*: **{{page.other}}**\
+Befehl zum Aktivieren der virtuellen Wartungstaste.
+
+1. *LogicalId*: **{{page.vmaintenance_off}}**\
+*Typ*: **{{page.action}}**\
+*Untertyp*: **{{page.other}}**\
+Befehl zum Deaktivieren der virtuellen Wartungstaste.
 
 1. *LogicalId*: **{{page.kick}}**\
 *Typ*: **{{page.action}}**\
@@ -224,7 +249,7 @@ Wert des Parameters **Maximale Inaktivitätszeit**:
 {: .num}
 
 Mithilfe eines Szenarios lassen sich Tests durchführen, um genauer zu überprüfen, ob Jeedom
-funktioniert einwandfrei, wenn man einen Kick sendet.
+funktioniert einwandfrei, bevor man einen Kick sendet.
 
 Hier ist ein Beispiel für ein Szenario, bei dem nur dann ein Signal gesendet wird, wenn ein Zigbee-Gerät aktiviert werden konnte:
 
@@ -235,6 +260,21 @@ Jeedom starten.
 
 {% include image.html img=page.img12 %}
 
-<!--
-vim: textwidth=100 colorcolumn=101
--->
+# Wartungsmodus
+
+Im Wartungsmodus unterbricht der Shelly die Stromversorgung des Jeedom-Servers nicht, wenn er nicht
+zeigt keine Lebenszeichen.
+
+Je nach Modell ist der Shelly mit einer physischen „Jetzt“-Taste und/oder einer Taste für
+virtuelle Wartung.
+
+## Die Taste für die physische Wartung
+
+Der Wartungsschalter muss an die Klemme `SW` des Shelly angeschlossen werden.
+
+Der Status des Schalters wird direkt von dem im Shelly geladenen Skript berücksichtigt. Die
+Die Statusänderung des Schalters wird somit auch dann berücksichtigt, wenn Jeedom nicht läuft.
+
+Mit dem Befehl *maintenance* lässt sich die Position des Schalters abfragen.
+
+## Die virtuelle Wartungstaste

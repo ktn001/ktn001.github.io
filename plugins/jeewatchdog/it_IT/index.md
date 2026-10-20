@@ -18,10 +18,14 @@ img11: 11_scenario.png
 img12: 12_declenchement_scenario.png
 
 action: action
-binary: binary
 info: info
+binary: binary
+other: other
 kick: kick
 maintenance: maintenance
+vmaintenance: vmaintenance
+vmaintenance_on: vmaintenance_on
+vmaintenance_off: vmaintenance_off
 other: other
 ---
 # Plugin {{page.plugin}} ({{page.pluginId}}) per Jeedom
@@ -40,13 +44,14 @@ spegnere Jeedom per alcuni secondi per forzare un riavvio.
 
 Il plugin è progettato per funzionare con i seguenti dispositivi:
 
-+ [Shelly plus 1](https://www.shelly.com/fr/products/shelly-plus-1-x1)
++ [Shelly plus 1](https://www.shelly.com/fr/products/shelly-plus-1-x1) (senza pulsante virtuale di
+manutenzione)
 + [Shelly 1 Gen3](https://www.shelly.com/fr/products/shelly-1-gen3)
 + [Shelly 1 Mini Gen3](https://www.shelly.com/fr/products/shelly-1-mini-gen3)
 + [Shelly 1 Gen4](https://www.shelly.com/fr/products/shelly-1-gen4)
 + [Shelly 1 Mini Gen4 ](https://www.shelly.com/fr/products/shelly-1-mini-gen4)
 + [Shelly Power Strip 4 Gen4](https://www.shelly.com/fr/products/shelly-power-strip-4-gen4)
-(sperimentale)
+(senza pulsante fisico di manutenzione)
 
 > :bulb: Il plugin è stato testato con uno **Shelly Plus 1** e uno **Shelly Gen4**. Qualsiasi feedback
 È gradita qualsiasi esperienza con altri dispositivi.
@@ -158,6 +163,11 @@ configurazione.
 Oltre alle impostazioni di configurazione standard di Jeedom, è necessario configurare alcune impostazioni specifiche
 devono essere configurati:
 
++ ***Nome utente***\
+ID dell'apparecchiatura che verrà utilizzato per identificare i componenti configurati nel
+Shelly.\
+Questo identificativo viene generato automaticamente e non può essere modificato.
+
 + ***Modello di apparecchiatura***\
 Il modello del dispositivo Shelly.
 
@@ -195,7 +205,22 @@ Per ogni dispositivo vengono creati i due comandi seguenti:
 1. *LogicalId*: **{{page.maintenance}}**\
 *tipo*: **{{page.info}}**\
 *sottotipo*: **{{page.binary}}**\
-Indica la posizione dell'interruttore di manutenzione.
+Posizione dell'interruttore fisico di manutenzione.
+
+1. *LogicalId*: **{{page.vmaintenance}}**\
+*tipo*: **{{page.info}}**\
+*sottotipo*: **{{page.binary}}**\
+Posizione dell'interruttore virtuale di manutenzione.
+
+1. *LogicalId*: **{{page.vmaintenance_on}}**\
+*tipo*: **{{page.action}}**\
+*sottotipo*: **{{page.other}}**\
+Comando per attivare il pulsante virtuale di manutenzione.
+
+1. *LogicalId*: **{{page.vmaintenance_off}}**\
+*tipo*: **{{page.action}}**\
+*sottotipo*: **{{page.other}}**\
+Comando per disattivare il pulsante virtuale di manutenzione.
 
 1. *LogicalId*: **{{page.kick}}**\
 *tipo*: **{{page.action}}**\
@@ -224,7 +249,7 @@ valore del parametro **Tempo massimo di inattività**:
 {: .num}
 
 L'utilizzo di uno scenario consente di eseguire dei test per verificare con maggiore precisione se Jeedom
-funziona correttamente quando si invia un kick.
+funzioni correttamente prima di inviare un kick.
 
 Ecco un esempio di scenario che invierà un comando solo se un dispositivo Zigbee è stato attivato:
 
@@ -235,6 +260,21 @@ Avvio di Jeedom.
 
 {% include image.html img=page.img12 %}
 
-<!--
-vim: textwidth=100 colorcolumn=101
--->
+# Modalità manutenzione
+
+Quando è in modalità manutenzione, Shelly non interrompe l'alimentazione del server Jeedom se non
+non dà segni di vita.
+
+A seconda del modello, lo Shelly è dotato di un pulsante fisico "Ora" e/o di un pulsante
+manutenzione virtuale.
+
+## Il pulsante di manutenzione fisica
+
+L'interruttore di manutenzione deve essere collegato al terminale `SW` dello Shelly.
+
+Lo stato dell'interruttore viene rilevato direttamente dallo script caricato su Shelly. I
+Il cambiamento di stato dell'interruttore viene quindi rilevato anche se Jeedom è spento.
+
+Il comando *manutenzione* consente di conoscere la posizione dell'interruttore.
+
+## Il pulsante di manutenzione virtuale

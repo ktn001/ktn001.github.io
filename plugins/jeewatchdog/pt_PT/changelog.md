@@ -7,6 +7,10 @@ lang: pt_PT
 
 # Notas de lançamento
 
+### Próxima versão BETA
++ Correção de um pequeno erro que ocorria quando se executava um «kick» durante a reescrita de um script no Shelly
++ O comando «info "manutenção"» passa a chamar-se «manutenção (física)»
+
 ### 01/10/2026 bis BETA
 + Correção de um erro que impedia a criação de um equipamento
 

@@ -7,6 +7,10 @@ lang: en_US
 
 # Release Notes
 
+### Upcoming BETA
++ Fixed a minor bug that occurred when a "kick" was executed while rewriting a script in Shelly
++ The "maintenance" command has been renamed to "maintenance(physical)"
+
 ### October 1, 2026 (BETA)
 + Fixed a bug that prevented the creation of a device
 

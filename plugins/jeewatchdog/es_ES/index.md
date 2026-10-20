@@ -18,10 +18,14 @@ img11: 11_scenario.png
 img12: 12_declenchement_scenario.png
 
 action: action
-binary: binary
 info: info
+binary: binary
+other: other
 kick: kick
 maintenance: maintenance
+vmaintenance: vmaintenance
+vmaintenance_on: vmaintenance_on
+vmaintenance_off: vmaintenance_off
 other: other
 ---
 # Complemento {{page.plugin}} ({{page.pluginId}}) para Jeedom
@@ -40,13 +44,14 @@ Se prevé una interrupción del servicio de Jeedom.
 
 El complemento está diseñado para funcionar con los siguientes dispositivos:
 
-+ [Shelly plus 1](https://www.shelly.com/fr/products/shelly-plus-1-x1)
++ [Shelly plus 1](https://www.shelly.com/fr/products/shelly-plus-1-x1) (sin botón virtual de
+(mantenimiento)
 + [Shelly 1 Gen3](https://www.shelly.com/fr/products/shelly-1-gen3)
 + [Shelly 1 Mini Gen3](https://www.shelly.com/fr/products/shelly-1-mini-gen3)
 + [Shelly 1 Gen4](https://www.shelly.com/fr/products/shelly-1-gen4)
 + [Shelly 1 Mini Gen4 ](https://www.shelly.com/fr/products/shelly-1-mini-gen4)
 + [Regleta Shelly Power Strip 4 Gen4](https://www.shelly.com/fr/products/shelly-power-strip-4-gen4)
-(experimental)
+(sin botón físico de mantenimiento)
 
 > :bulb: El complemento se ha probado con un **Shelly Plus 1** y un **Shelly Gen4**. Cualquier comentario
 Se agradece cualquier experiencia con otros dispositivos.
@@ -155,8 +160,13 @@ configuración.
 
 {% include image.html img=page.img10 %}
 
-Además de los parámetros de configuración estándar de Jeedom, hay que configurar algunos parámetros específicos
+Además de los parámetros estándar de configuración de Jeedom, hay que configurar algunos parámetros específicos
 deben configurarse:
+
++ ***Nombre de usuario***\
+Identificador del equipo que se utilizará para identificar los componentes configurados en el
+Shelly.\
+Este identificador se genera automáticamente y no se puede modificar.
 
 + ***Modelo de equipo***\
 El modelo del dispositivo Shelly.
@@ -195,7 +205,22 @@ Se crean los dos comandos siguientes para cada dispositivo:
 1. *LogicalId*: **{{page.maintenance}}**\
 *tipo*: **{{page.info}}**\
 *subtipo*: **{{page.binary}}**\
-Indica la posición del interruptor de mantenimiento.
+Posición del interruptor físico de mantenimiento.
+
+1. *LogicalId*: **{{page.vmaintenance}}**\
+*tipo*: **{{page.info}}**\
+*subtipo*: **{{page.binary}}**\
+Posición del interruptor virtual de mantenimiento.
+
+1. *LogicalId*: **{{page.vmaintenance_on}}**\
+*tipo*: **{{page.action}}**\
+*subtipo*: **{{page.other}}**\
+Comando para activar el botón virtual de mantenimiento.
+
+1. *LogicalId*: **{{page.vmaintenance_off}}**\
+*tipo*: **{{page.action}}**\
+*subtipo*: **{{page.other}}**\
+Comando para desactivar el botón virtual de mantenimiento.
 
 1. *LogicalId*: **{{page.kick}}**\
 *tipo*: **{{page.action}}**\
@@ -224,7 +249,7 @@ Valor del parámetro **Tiempo máximo de inactividad**:
 {: .num}
 
 El uso de un escenario permite realizar pruebas para comprobar con mayor precisión si Jeedom
-funciona correctamente al enviar un comando.
+funciona correctamente antes de enviar un «kick».
 
 A continuación se muestra un ejemplo de escenario que solo enviará una señal si se ha podido activar un dispositivo Zigbee:
 
@@ -235,6 +260,21 @@ Inicio de Jeedom.
 
 {% include image.html img=page.img12 %}
 
-<!--
-vim: textwidth=100 colorcolumn=101
--->
+# El modo de mantenimiento
+
+Cuando está en modo mantenimiento, el Shelly no corta la alimentación del servidor Jeedom si no
+no da señales de vida.
+
+Según el modelo, el Shelly se configura con un botón físico «Ahora» y/o un botón de
+mantenimiento virtual.
+
+## El botón de mantenimiento físico
+
+El interruptor de mantenimiento debe conectarse al borne «SW» del Shelly.
+
+El script cargado en el Shelly tiene en cuenta directamente el estado del interruptor. Los
+Por lo tanto, se tiene en cuenta el cambio de estado del interruptor aunque Jeedom esté apagado.
+
+El comando *mantenimiento* permite conocer la posición del interruptor.
+
+## El botón virtual de mantenimiento
