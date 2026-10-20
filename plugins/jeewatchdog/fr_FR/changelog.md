@@ -7,6 +7,10 @@ lang: fr_FR
 
 # Release notes
 
+### Prochaine BETA
++ Correction d'un bug mineur lorsqu'un kick est exécuté pendant le réécriture de script dans le Shelly
++ La commande info "maintenance" est renommée "maintenance(physique)"
+
 ### 01/10/2026 bis BETA
 + Correction d'un bug qui bloquait la création d'un équipement
 
