@@ -7,9 +7,11 @@ lang: de_DE
 
 # Versionshinweise
 
-### Nächste BETA-Version
+### 20.10.2026 BETA
 + Behebung eines kleinen Fehlers, der auftrat, wenn während des Skript-Umschreibens im Shelly ein „Kick“ ausgeführt wurde
 + Der Befehl „info ‚maintenance‘“ wird in „maintenance(physique)“ umbenannt.
++ Erstellen einer virtuellen Wartungstaste im Shelly
++ Überblick über den Konfigurations-/Dekonfigurationscode von Shelly
 
 ### 01.10.2026 bis BETA
 + Behebung eines Fehlers, der die Erstellung eines Geräts verhinderte

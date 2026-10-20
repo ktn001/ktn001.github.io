@@ -7,9 +7,11 @@ lang: it_IT
 
 # Note di rilascio
 
-### Prossima versione BETA
+### 20/10/2026 BETA
 + Correzione di un bug minore che si verificava quando veniva eseguito un kick durante la riscrittura dello script in Shelly
 + Il comando info "manutenzione" è stato rinominato "manutenzione (fisica)"
++ Creazione di un pulsante virtuale di manutenzione in Shelly
++ Panoramica sul codice di configurazione/disconfigurazione di Shelly
 
 ### 01/10/2026 bis BETA
 + Correzione di un bug che impediva la creazione di un dispositivo
