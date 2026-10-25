@@ -7,13 +7,16 @@ lang: it_IT
 
 # Note di rilascio
 
+### 25/10/2026 beta
++ Rimozione dell'avviso PHP. Grazie ancora @bernard-dandrea
+
 ### **2026/06/12**
 + Risoluzione di un errore di avvviso in PHP 8. Grazie @bernard-dandrea
 
 ### **2026/03/26**
 + Passaggio alla versione stabile della versione beta del 24/03/2026
 
-### 2026/03/24
+### 24/03/2026 beta
 + Visualizzazione di CollectDate e valueDate al passaggio del mouse sui comandi "info" del widget per il pannello
 
 ### **2026/03/23**

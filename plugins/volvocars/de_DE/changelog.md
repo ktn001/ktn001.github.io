@@ -7,13 +7,16 @@ lang: de_DE
 
 # Versionshinweise
 
+### 25.10.2026 Beta
++ PHP-Warnung behoben. Nochmals vielen Dank @bernard-dandrea
+
 ### **2026/06/12**
 + Behebung einer PHP-8-Warnung. Danke, @bernard-dandrea
 
 ### **2026/03/26**
 + Umstellung der Beta-Version vom 24.03.2026 auf die stabile Version
 
-### 2026/03/24
+### 24.03.2026 Beta
 + Anzeige von „CollectDate“ und „valueDate“ beim Bewegen des Mauszeigers über die „Info“-Schaltflächen des Widgets für das Panel
 
 ### **2026/03/23**
