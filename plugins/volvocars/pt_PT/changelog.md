@@ -7,7 +7,7 @@ lang: pt_PT
 
 # Notas de lançamento
 
-### 25/10/2026 beta
+### **2026/10/25** 
 + Eliminação do aviso PHP. Mais uma vez, obrigado @bernard-dandrea
 + Correções nos links para a documentação e o registo de alterações
 
