@@ -9,6 +9,7 @@ lang: fr_FR
 
 ### 2026/10/25 beta
 + Elimination de warning PHP. encore Merci @bernard-dandrea 
++ Corrections des liens vers la doc et le changelog
 
 ### **2026/06/12**
 + Elimination d'un warning PHP 8. Merci @bernard-dandrea
