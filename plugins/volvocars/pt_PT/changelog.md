@@ -9,6 +9,7 @@ lang: pt_PT
 
 ### 25/10/2026 beta
 + Eliminação do aviso PHP. Mais uma vez, obrigado @bernard-dandrea
++ Correções nos links para a documentação e o registo de alterações
 
 ### **2026/06/12**
 + Resolução de um aviso do PHP 8. Obrigado, @bernard-dandrea

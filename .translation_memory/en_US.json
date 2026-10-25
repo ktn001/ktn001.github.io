@@ -397,6 +397,7 @@
     "Correction pour les véhicules sans toit ouvrant:": "Correction for vehicles without a sunroof:",
     "Corrections de bugs": "Bug fixes",
     "Corrections de bugs.": "Bug fixes.",
+    "Corrections des liens vers la doc et le changelog": "Fixed links to the documentation and changelog",
     "Création": "Design",
     "Création d'un bouton virtuel de maintenance dans le Shelly": "Creating a virtual maintenance button in Shelly",
     "Création d'une table `devolo_connection` pour enregistrer l'historique des": "Create a `devolo_connection` table to store the history of",

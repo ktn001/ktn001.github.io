@@ -9,6 +9,7 @@ lang: it_IT
 
 ### 25/10/2026 beta
 + Rimozione dell'avviso PHP. Grazie ancora @bernard-dandrea
++ Correzioni dei link alla documentazione e al changelog
 
 ### **2026/06/12**
 + Risoluzione di un errore di avvviso in PHP 8. Grazie @bernard-dandrea
