@@ -7,7 +7,7 @@ lang: fr_FR
 
 # Release notes
 
-### 2026/10/25 beta
+### **2026/10/25** 
 + Elimination de warning PHP. encore Merci @bernard-dandrea 
 + Corrections des liens vers la doc et le changelog
 
