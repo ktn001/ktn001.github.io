@@ -7,13 +7,16 @@ lang: en_US
 
 # Release Notes
 
+### October 25, 2026 beta
++ Removed PHP warning. Thanks again, @bernard-dandrea
+
 ### **2026/06/12**
 + Fixing a PHP 8 warning. Thanks @bernard-dandrea
 
 ### **2026/03/26**
 + Release of the stable version on March 24, 2026, following the beta version
 
-### 2026/03/24
+### March 24, 2026 beta
 + Display CollectDate and valueDate when the mouse hovers over the "info" commands on the widget for the panel
 
 ### **2026/03/23**

@@ -7,13 +7,16 @@ lang: pt_PT
 
 # Notas de lançamento
 
+### 25/10/2026 beta
++ Eliminação do aviso PHP. Mais uma vez, obrigado @bernard-dandrea
+
 ### **2026/06/12**
 + Resolução de um aviso do PHP 8. Obrigado, @bernard-dandrea
 
 ### **2026/03/26**
 + Transição da versão beta para a versão estável em 24/03/2026
 
-### 2026/03/24
+### 24/03/2026 beta
 + Exibição de CollectDate e valueDate ao passar o rato sobre os comandos «info» do widget do painel
 
 ### **2026/03/23**

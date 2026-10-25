@@ -7,13 +7,16 @@ lang: es_ES
 
 # Notas de la versión
 
+### 25/10/2026 beta
++ Eliminación de la advertencia de PHP. Gracias de nuevo, @bernard-dandrea
+
 ### **2026/06/12**
 + Solución a un aviso de PHP 8. Gracias, @bernard-dandrea
 
 ### **2026/03/26**
 + La versión beta del 24 de marzo de 2026 pasa a ser estable
 
-### 2026/03/24
+### 24 de marzo de 2026, versión beta
 + Visualización de CollectDate y valueDate al pasar el ratón por encima de los controles «info» del widget del panel
 
 ### **2026/03/23**
