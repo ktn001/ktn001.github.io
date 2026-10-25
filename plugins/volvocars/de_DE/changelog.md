@@ -7,7 +7,7 @@ lang: de_DE
 
 # Versionshinweise
 
-### 25.10.2026 Beta
+### **2026/10/25** 
 + PHP-Warnung behoben. Nochmals vielen Dank @bernard-dandrea
 + Korrekturen bei den Links zur Dokumentation und zum Changelog
 

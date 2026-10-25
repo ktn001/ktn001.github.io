@@ -7,7 +7,7 @@ lang: en_US
 
 # Release Notes
 
-### October 25, 2026 beta
+### **2026/10/25** 
 + Removed PHP warning. Thanks again, @bernard-dandrea
 + Fixed links to the documentation and changelog
 

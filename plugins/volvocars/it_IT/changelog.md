@@ -7,7 +7,7 @@ lang: it_IT
 
 # Note di rilascio
 
-### 25/10/2026 beta
+### **2026/10/25** 
 + Rimozione dell'avviso PHP. Grazie ancora @bernard-dandrea
 + Correzioni dei link alla documentazione e al changelog
 

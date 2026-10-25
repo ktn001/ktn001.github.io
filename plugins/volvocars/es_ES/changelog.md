@@ -7,7 +7,7 @@ lang: es_ES
 
 # Notas de la versión
 
-### 25/10/2026 beta
+### **2026/10/25** 
 + Eliminación de la advertencia de PHP. Gracias de nuevo, @bernard-dandrea
 + Correcciones en los enlaces a la documentación y al registro de cambios
 
