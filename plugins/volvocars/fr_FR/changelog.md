@@ -7,6 +7,9 @@ lang: fr_FR
 
 # Release notes
 
+### **2026/10/29**
++ Réécriture du code pour l'obtention du token suite modifications dans le cloud volvocars
+
 ### **2026/10/25** 
 + Elimination de warning PHP. encore Merci @bernard-dandrea 
 + Corrections des liens vers la doc et le changelog
