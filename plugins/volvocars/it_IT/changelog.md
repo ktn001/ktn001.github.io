@@ -7,6 +7,9 @@ lang: it_IT
 
 # Note di rilascio
 
+### **2026/10/29**
++ Riscrittura del codice per l'ottenimento del token a seguito delle modifiche apportate al cloud di VolvoCars
+
 ### **2026/10/25** 
 + Rimozione dell'avviso PHP. Grazie ancora @bernard-dandrea
 + Correzioni dei link alla documentazione e al changelog

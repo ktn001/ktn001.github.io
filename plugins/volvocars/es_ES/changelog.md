@@ -7,6 +7,9 @@ lang: es_ES
 
 # Notas de la versión
 
+### **2026/10/29**
++ Reescritura del código para obtener el token tras los cambios en la nube de Volvocars
+
 ### **2026/10/25** 
 + Eliminación de la advertencia de PHP. Gracias de nuevo, @bernard-dandrea
 + Correcciones en los enlaces a la documentación y al registro de cambios

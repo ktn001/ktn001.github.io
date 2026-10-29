@@ -7,6 +7,9 @@ lang: de_DE
 
 # Versionshinweise
 
+### **2026/10/29**
++ Neuprogrammierung des Codes zur Token-Abfrage nach Änderungen in der Volvocars-Cloud
+
 ### **2026/10/25** 
 + PHP-Warnung behoben. Nochmals vielen Dank @bernard-dandrea
 + Korrekturen bei den Links zur Dokumentation und zum Changelog
