@@ -7,6 +7,9 @@ lang: it_IT
 
 # Note di rilascio
 
+### **29/10/2026** bis
++ Rinnovo del token funzionale
+
 ### **2026/10/29**
 + Riscrittura del codice per l'ottenimento del token a seguito delle modifiche apportate al cloud di VolvoCars
 

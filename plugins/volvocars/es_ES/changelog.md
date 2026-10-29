@@ -7,6 +7,9 @@ lang: es_ES
 
 # Notas de la versión
 
+### **29/10/2026** bis
++ Renovación del token funcional
+
 ### **2026/10/29**
 + Reescritura del código para obtener el token tras los cambios en la nube de Volvocars
 

@@ -7,6 +7,9 @@ lang: de_DE
 
 # Versionshinweise
 
+### **29.10.2026** bis
++ Erneuerung des Funktionstokens
+
 ### **2026/10/29**
 + Neuprogrammierung des Codes zur Token-Abfrage nach Änderungen in der Volvocars-Cloud
 

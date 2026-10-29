@@ -7,6 +7,9 @@ lang: en_US
 
 # Release Notes
 
+### **October 29, 2026** bis
++ Functional token renewal
+
 ### **2026/10/29**
 + Rewrite the code to obtain the token following changes to the VolvoCars cloud
 
