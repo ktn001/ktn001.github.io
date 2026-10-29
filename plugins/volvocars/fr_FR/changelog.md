@@ -7,6 +7,9 @@ lang: fr_FR
 
 # Release notes
 
+### **2026/10/29** bis
++ Renouvellement du token fonctionnel
+
 ### **2026/10/29**
 + Réécriture du code pour l'obtention du token suite modifications dans le cloud volvocars
 
