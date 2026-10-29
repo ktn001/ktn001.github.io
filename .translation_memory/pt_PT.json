@@ -799,6 +799,7 @@
     "Revue du code de configuration/déconfiguration du Shelly": "Análise do código de configuração/desconfiguração do Shelly",
     "Récupération manuelle de l'image": "Recuperação manual da imagem",
     "Réécriture du code de configuration du Shelly": "Reescrita do código de configuração do Shelly",
+    "Réécriture du code pour l'obtention du token suite modifications dans le cloud volvocars": "Reescrita do código para a obtenção do token, na sequência de alterações na nuvem da Volvocars",
     "Saisir l'adresse IP de l'appareil. *(Uniquement pour les appareils manageables)*": "Introduza o endereço IP do dispositivo. *(Apenas para dispositivos gerenciáveis)*",
     "Saisir l'adresse mac de l'appareil.": "Introduza o endereço MAC do dispositivo.",
     "Saisir le code que Volvo vous a envoyé par email puis cliquer sur *OK*.": "Introduza o código que a Volvo lhe enviou por e-mail e, em seguida, clique em *OK*.",

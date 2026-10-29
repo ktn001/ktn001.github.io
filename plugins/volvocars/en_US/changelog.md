@@ -7,6 +7,9 @@ lang: en_US
 
 # Release Notes
 
+### **2026/10/29**
++ Rewrite the code to obtain the token following changes to the VolvoCars cloud
+
 ### **2026/10/25** 
 + Removed PHP warning. Thanks again, @bernard-dandrea
 + Fixed links to the documentation and changelog
