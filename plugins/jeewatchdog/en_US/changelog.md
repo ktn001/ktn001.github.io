@@ -7,6 +7,9 @@ lang: en_US
 
 # Release Notes
 
+### **1/11/2026 STABLE**
++ The beta version from October 20, 2026, has been released as a stable version.
+
 ### October 20, 2026 BETA
 + Fixed a minor bug that occurred when a "kick" was executed while rewriting a script in Shelly
 + The "maintenance" command has been renamed to "maintenance(physical)"
