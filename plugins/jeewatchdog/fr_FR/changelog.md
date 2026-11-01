@@ -7,6 +7,9 @@ lang: fr_FR
 
 # Release notes
 
+### **1/11/2026 STABLE**
++ Beta du 20/10/2026 passée en stable.
+
 ### 20/10/2026 BETA
 + Correction d'un bug mineur lorsqu'un kick est exécuté pendant le réécriture de script dans le Shelly
 + La commande info "maintenance" est renommée "maintenance(physique)"
