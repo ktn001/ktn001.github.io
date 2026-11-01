@@ -7,6 +7,9 @@ lang: it_IT
 
 # Note di rilascio
 
+### **1/11/2026 STABILE**
++ La versione beta del 20/10/2026 è passata allo stato stabile.
+
 ### 20/10/2026 BETA
 + Correzione di un bug minore che si verificava quando veniva eseguito un kick durante la riscrittura dello script in Shelly
 + Il comando info "manutenzione" è stato rinominato "manutenzione (fisica)"

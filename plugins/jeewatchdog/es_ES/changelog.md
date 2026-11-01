@@ -7,6 +7,9 @@ lang: es_ES
 
 # Notas de la versión
 
+### **1/11/2026 ESTABLE**
++ La versión beta del 20/10/2026 ha pasado a ser estable.
+
 ### 20/10/2026 BETA
 + Se ha corregido un error menor que se producía al ejecutar un «kick» mientras se reescribía un script en Shelly.
 + El comando «mantenimiento» pasa a llamarse «mantenimiento (físico)».

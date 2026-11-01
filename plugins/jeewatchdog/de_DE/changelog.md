@@ -7,6 +7,9 @@ lang: de_DE
 
 # Versionshinweise
 
+### **1.11.2026 STABIL**
++ Die Beta-Version vom 20.10.2026 wurde in die stabile Version übernommen.
+
 ### 20.10.2026 BETA
 + Behebung eines kleinen Fehlers, der auftrat, wenn während des Skript-Umschreibens im Shelly ein „Kick“ ausgeführt wurde
 + Der Befehl „info ‚maintenance‘“ wird in „maintenance(physique)“ umbenannt.
