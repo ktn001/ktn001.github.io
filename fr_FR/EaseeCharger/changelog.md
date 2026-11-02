@@ -1,0 +1,1 @@
+../../plugins/EaseeCharger/fr_FR/changelog.md
