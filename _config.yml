@@ -27,7 +27,6 @@ docs:
         doc: index.html
         changelog: changelog.html
     EaseeCharger:
-      legacy: true
       icon: EaseeCharger_icon.png
       pages:
         doc: index.html

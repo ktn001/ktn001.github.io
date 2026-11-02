@@ -1,7 +1,8 @@
 ---
 layout : default
 plugin : EaseeCharger
-lang: fr_FR
+pluginId : EaseeCharger
+lang : fr_FR
 ---
 
 # Plugin "EaseeCharger" pour Jeedom
@@ -12,7 +13,7 @@ Des informations sur les chargeurs `Easee` sont disponibles sur le site [Easee](
 
 # Installation et configuration du plugin
 {: .num}
-![Configuration du plugin](/images/EaseeCharger/plugin_configuration.png)
+{% include image.html img="plugin_configuration.png" %}
 
 ## Installation du plugin
 {: .num}
@@ -30,16 +31,15 @@ Le plugin s'installe de manière standard depuis le market de Jeedom. Après l'a
     + ***Debug étendu***
     : Le module Python du démon qui assure la communication avec le cloud Easee envoi des "ping" toutes les 5 secondes pour maintenir la connection. Chaque "ping", et ses réponses, génèrent 5 messages de log de niveau `debug`. Ces messages de log sont supprimés lorsque l'option **Debug étendu** n'est pas activée.
 
-**Sécurité**   
-:   
-    + ***Log non sécurisé***
+**Sécurité**
+: + ***Log non sécurisé***
     : Les données sensibles (password, token, etc...) sont remplacées dans les logs par des `********`. L'option "**Log non sécurisé**" désactive le remplacement et laisse les données sensibles en clair dans les logs.
 
 ## Configuration du heartbeat
 {: .num}
 
-Il arrive que le flux de données en provenance du cloud Easse soit interrompu sans que la connection ne soit interrompue. Le deamon ne 
-ne détecte pas ce genre de situation qu'il ne peut donc pas gérer.
+Il arrive que le flux de données en provenance du cloud Easse soit interrompu sans que la connection
+ne soit interrompue. Le deamon ne détecte pas ce genre de situation qu'il ne peut donc pas gérer.
 
 Pour contourner ce problème, un heartbeat est automatiquement configuré lors de l'activation du plugin. Le deamon est redémarrer
 automatiquement par le heartbeat lorsque le deamon n'a pas remonté de données dans Jeedom depuis plus de 15 minutes.
@@ -52,17 +52,17 @@ Un compte permet d'accéder au cloud Easee pour gérer un ou plusieurs chargeurs
 ## Création d'un compte
 {: .num}
 
-1. Sur la page de gestion du plugin, cliquer sur l'icône de création d'un compte:  
-![Icone de création de compte](/images/EaseeCharger/icone_creation_compte.png)
+1. Sur la page de gestion du plugin, cliquer sur l'icône de création d'un compte:\
+{% include image.html img="icone_creation_compte.png" %}
 
-1. Saisir le nom du compte  
-![Saisie nom su compte](/images/EaseeCharger/saisie_nom_compte.png)  
+1. Saisir le nom du compte\
+{% include image.html img="saisie_nom_compte.png" %}\
   > :bulb: Une fois enregistré, le nom du compte ne peut plus être modifié.
 
-1. Saisir le login et le password pour se connecter au cloud et activer le compte  
-  ![Login_password](/images/EaseeCharger/saisie_login_password.png)
+1. Saisir le login et le password pour se connecter au cloud et activer le compte\
+  {% include image.html img="saisie_login_password.png" %}
 
-1. Cliquer sur `Valider`.   
+1. Cliquer sur `Valider`.\
   > :bulb: Le login et le password sont vérifiés à l'enregistrement uniquement si le compte est activé.
 
 ## Fonctionnement des comptes
@@ -91,30 +91,30 @@ Le démon n'est pas notifié lorsque le login ou le password d'un compte est mod
 
 > :bulb: Un compte doit avoir été créé avant la création d'un chargeur
 
-1. Sur la page de gestion du plugin, cliquer sur l'icône de création d'un chargeur:  
-   ![Icone de création de chargeur](/images/EaseeCharger/icone_creation_chargeur.png)
+1. Sur la page de gestion du plugin, cliquer sur l'icône de création d'un chargeur:\
+   {% include image.html img="icone_creation_chargeur.png" %}
 
-1. Saisir le nom du chargeur  
-   ![Saisie nom du chargeur](/images/EaseeCharger/saisie_nom_chargeur.png)
+1. Saisir le nom du chargeur\
+   {% include image.html img="saisie_nom_chargeur.png" %}
 
-1. Paramétrer le chargeur  
+1. Paramétrer le chargeur\
    Un chargeur est un équipement Jeedom. En plus des options de base (nom, objet, catégorie, option) des équipements, les configurations suivantes doivent être définies:
 
-   ![paramétrage du chargeur](/images/EaseeCharger/parametrage_chargeur.png)
+   {% include image.html img="parametrage_chargeur.png" %}
 
-   + **Compte**  
+   + **Compte**\
       Le compte qui doit être utilisé pour communiquer avec le serveur Easee
 
-   + **N° de série**  
+   + **N° de série**\
       Le numéro de série tel qu'il doit être saisi, par exemple, dans l'app Easee pour smartphone.
 
-   + **Widget parsonalisé**   
+   + **Widget parsonalisé**\
       Ne pas utiliser le wigdet standard de Jeedom mias le widget spécifique pour les équipements EaseeCharger.
 
-   + **Couleur**  
+   + **Couleur**\
       Couleur du chargeur. Permet de définir l'icône du chargeur.
 
-1. Cliquer sur `Valider`.   
+1. Cliquer sur `Valider`.
 
 ## Le widget personalisé
 
@@ -146,8 +146,8 @@ Les chargeurs sont créés avec les commandes suivantes:
 | Signal wifi | info | numeric | Force du signal wifi (0 si communication via le réseau cellulaire) |
 | Signal cellulaire | info | numeric | Force du signal cellulaire (0 si communication via le réseau wifi) |
 
-+ Le bouton ![créer les commandes manquantes](/images/EaseeCharger/btn_creer_cmds.png) permet de recréer les commandes qui ont été supprimées.
-+ Le bouton ![Reconfigurer les commandes](/images/EaseeCharger/btn_reconfig_cmds.png) reconfigure les commandes avec les valeurs par défaut. 
++ Le bouton {% include image.html img="btn_creer_cmds.png" %} permet de recréer les commandes qui ont été supprimées.
++ Le bouton {% include image.html img="btn_reconfig_cmds.png" %} reconfigure les commandes avec les valeurs par défaut.
 
 ## Les widget
 {: .num}
@@ -157,20 +157,20 @@ Les chargeurs sont créés avec les commandes suivantes:
 
 Le widget par défaut pour l'état du serveur présente les six situations suivantes:
 
-![debranche](/images/EaseeCharger/etat_0.png)
-![attente](/images/EaseeCharger/etat_1.png)
-![recharge](/images/EaseeCharger/etat_2.png)
-![termine](/images/EaseeCharger/etat_3.png)
-![erreur](/images/EaseeCharger/etat_4.png)
-![pret](/images/EaseeCharger/etat_5.png)
+{% include image.html img="etat_0.png" %}
+{% include image.html img="etat_1.png" %}
+{% include image.html img="etat_2.png" %}
+{% include image.html img="etat_3.png" %}
+{% include image.html img="etat_4.png" %}
+{% include image.html img="etat_5.png" %}
 
 Les options facultatives **notext : 1** et **noimage : 1** permettent de supprimer l'affichage du texte et de l'image:
 
-![option notext](/images/EaseeCharger/widget_etat_option_notext.png)
+{% include image.html img="widget_etat_option_notext.png" %}
 
 donne
 
-![pret notext](/images/EaseeCharger/etat_5_notext.png)
+{% include image.html img="etat_5_notext.png" %}
 
 ### Verrouillage du câble
 {: .num}
@@ -196,48 +196,48 @@ Le tableau suivant montre les différentes icônes en fonction de l'état du ver
       <td>non</td>
       <td>non</td>
       <td style="text-align:center">
-        <img src="/images/EaseeCharger/widget_lock_0_d_color.png"/>
-        <img src="/images/EaseeCharger/widget_lock_0_l_color.png"/>
+        {% include image.html img="widget_lock_0_d_color.png" %}
+        {% include image.html img="widget_lock_0_l_color.png" %}
       </td>
       <td style="text-align:center">
-        <img src="/images/EaseeCharger/widget_lock_0_d_bw.png"/>
-        <img src="/images/EaseeCharger/widget_lock_0_l_bw.png"/>
+        {% include image.html img="widget_lock_0_d_bw.png" %}
+        {% include image.html img="widget_lock_0_l_bw.png" %}
       </td>
     </tr>
     <tr>
       <td>oui</td>
       <td>non</td>
       <td style="text-align:center">
-        <img src="/images/EaseeCharger/widget_lock_1_d_color.png"/>
-        <img src="/images/EaseeCharger/widget_lock_1_l_color.png"/>
+        {% include image.html img="widget_lock_1_d_color.png" %}
+        {% include image.html img="widget_lock_1_l_color.png" %}
       </td>
       <td style="text-align:center">
-        <img src="/images/EaseeCharger/widget_lock_1_d_bw.png"/>
-        <img src="/images/EaseeCharger/widget_lock_1_l_bw.png"/>
+        {% include image.html img="widget_lock_1_d_bw.png" %}
+        {% include image.html img="widget_lock_1_l_bw.png" %}
       </td>
     </tr>
     <tr>
       <td>non</td>
       <td>oui</td>
       <td style="text-align:center">
-        <img src="/images/EaseeCharger/widget_lock_2_d_color.png"/>
-        <img src="/images/EaseeCharger/widget_lock_2_l_color.png"/>
+        {% include image.html img="widget_lock_2_d_color.png" %}
+        {% include image.html img="widget_lock_2_l_color.png" %}
       </td>
       <td style="text-align:center">
-        <img src="/images/EaseeCharger/widget_lock_2_d_bw.png"/>
-        <img src="/images/EaseeCharger/widget_lock_2_l_bw.png"/>
+        {% include image.html img="widget_lock_2_d_bw.png" %}
+        {% include image.html img="widget_lock_2_l_bw.png" %}
       </td>
     </tr>
     <tr>
       <td>oui</td>
       <td>oui</td>
       <td style="text-align:center">
-        <img src="/images/EaseeCharger/widget_lock_3_d_color.png"/>
-        <img src="/images/EaseeCharger/widget_lock_3_l_color.png"/>
+        {% include image.html img="widget_lock_3_d_color.png" %}
+        {% include image.html img="widget_lock_3_l_color.png" %}
       </td>
       <td style="text-align:center">
-        <img src="/images/EaseeCharger/widget_lock_3_d_bw.png"/>
-        <img src="/images/EaseeCharger/widget_lock_3_l_bw.png"/>
+        {% include image.html img="widget_lock_3_d_bw.png" %}
+        {% include image.html img="widget_lock_3_l_bw.png" %}
       </td>
     </tr>
   </tbody>
@@ -246,6 +246,6 @@ Le tableau suivant montre les différentes icônes en fonction de l'état du ver
 ### Mise en pause de la charge
 {: .num}
 
-![pause](/images/EaseeCharger/btn_pause.png) : Mise en pause le la charge
+{% include image.html img="btn_pause.png" %} : Mise en pause le la charge
 
-![continue](/images/EaseeCharger/btn_continue.png) : Reprendre une charge qui a été mise en pause
+{% include image.html img="btn_continue.png" %} : Reprendre une charge qui a été mise en pause
