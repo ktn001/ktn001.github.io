@@ -12,8 +12,8 @@ Ricordiamo che, se non sono disponibili informazioni sull'aggiornamento, signifi
 aggiornamento della documentazione, traduzione o testo.
 
 ### 13/11/2026
-+ Le funzioni di gestione dei token sono state riviste e aggiornate (nessuna modifica per
-(l'utente).
++ Le funzioni di gestione dei token sono state riviste e aggiornate. Nessuna modifica visibile per
+l'utente.
 + Il daemon è stato riscritto. Non utilizza più il modulo *signalrcore*, ma *pyeasee*. Una
 Si prevede un miglioramento della stabilità.
 + Il nome del file di log del daemon non è più *EaseeCharger_daemon.out* ma *EaseeCharger_daemon*
