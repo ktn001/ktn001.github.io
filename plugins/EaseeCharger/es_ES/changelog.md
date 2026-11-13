@@ -8,7 +8,20 @@ lang: es_ES
 
 **IMPORTANTE**
 
-Recuerda que, si no hay información sobre la actualización, es porque esta se refiere únicamente a la actualización de la documentación, la traducción o el texto.
+Recuerda que, si no hay información sobre la actualización, es porque esta solo afecta a
+actualización de documentación, traducción o texto.
+
+### 13/11/2026
++ Se han revisado y actualizado las funciones de gestión de tokens (sin cambios en
+(el usuario).
++ Se ha reescrito el daemon. Ya no utiliza el módulo *signalrcore*, sino *pyeasee*. Una
+Se espera una mejora de la estabilidad.
++ El nombre del archivo de registro del daemon ya no es *EaseeCharger_daemon.out*, sino *EaseeCharger_daemon*
++ Se han modificado los logicalId de los comandos con la información recibida de la nube. El logicalId es
+ahora el ID de la observación se transmite desde la nube a través de SignalR.
++ La información procedente de la nube cuyo valor es un código se duplica:
+  +  Un comando con el código numérico recuperado de la nube
+  +  Un comando con texto sin cifrar. Este texto se traduce al idioma de la interfaz de Jeedom.
 
 ### 17/01/2025
 + Pasar de la versión beta del 12/01/2025 a la versión estable
@@ -38,8 +51,8 @@ Recuerda que, si no hay información sobre la actualización, es porque esta se 
 
 ### 28/07/24 (Beta)
 + Rediseño del proceso de creación y actualización de pedidos.
-Se recomienda actualizar los comandos mediante el botón «Actualizar comandos» de la página de
-controles de cada cargador
+Se recomienda actualizar los comandos mediante el botón «Actualizar comandos» de la
+página de controles de cada cargador
 
 ### 26/07/2024 (Beta)
 + Corrección de widgets
@@ -63,7 +76,8 @@ controles de cada cargador
 * El puerto del demonio ya no se restablece a su valor por defecto al activar el complemento
 * Se ha cambiado el nombre de una clase en el código PHP
 * Información sobre la calidad de las señales wifi y de telefonía móvil
-* Creación de un widget para los dispositivos EaseeCharger (sin el botón para pausar la carga)
+* Creación de un widget para los dispositivos EaseeCharger (sin el botón de pausa de la
+carga)
 
 ### 24/08/2022 (Beta)
 * El puerto del demonio ya no se restablece a su valor por defecto al activar el complemento

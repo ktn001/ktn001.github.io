@@ -8,7 +8,20 @@ lang: pt_PT
 
 **IMPORTANTE**
 
-Recorde-se que, caso não haja informações sobre a atualização, isso significa que esta diz respeito apenas à atualização da documentação, da tradução ou do texto.
+Lembre-se de que, se não houver informações sobre a atualização, isso significa que esta diz respeito apenas a
+atualização de documentação, tradução ou texto.
+
+### 13/11/2026
++ As funções de gestão de tokens foram revistas e atualizadas (sem alterações para
+(o utilizador).
++ O daemon foi reescrito. Já não utiliza o módulo *signalrcore*, mas sim o *pyeasee*. Um
+Espera-se uma melhoria na estabilidade.
++ O nome do ficheiro de registo do daemon já não é *EaseeCharger_daemon.out*, mas sim *EaseeCharger_daemon*
++ Os logicalId dos comandos com as informações recebidas da nuvem foram alterados. O logicalId é
+agora o ID da observação enviada da nuvem através do SignalR.
++ As informações recebidas da nuvem cujo valor é um código são duplicadas:
+  +  Um comando com o código numérico recuperado da nuvem
+  +  Um comando com texto em claro. Este texto é traduzido para o idioma da interface do Jeedom.
 
 ### 17/01/2025
 + Passagem da versão beta de 12/01/2025 para a versão estável
@@ -38,8 +51,8 @@ Recorde-se que, caso não haja informações sobre a atualização, isso signifi
 
 ### 28/07/24 (Beta)
 + Reestruturação do processo de criação e atualização de encomendas.
-Recomenda-se atualizar os comandos através do botão «Atualizar comandos» na página dos
-comandos de cada carregador
+Recomenda-se atualizar os comandos através do botão «Atualizar comandos» na
+página de comandos de cada carregador
 
 ### 26/07/2024 (Beta)
 + Correção de widgets
@@ -63,7 +76,8 @@ comandos de cada carregador
 * A porta do daemon já não é reinicializada para o valor predefinido quando o plugin é ativado
 * Uma classe foi renomeada no código PHP
 * Informações sobre a qualidade dos sinais Wi-Fi e de rede móvel
-* Criação de um widget para os dispositivos EaseeCharger (sem o botão para pausar o carregamento)
+* Criação de um widget para os dispositivos EaseeCharger (sem o botão de pausa da
+carga)
 
 ### 24/08/2022 (Beta)
 * A porta do daemon já não é reinicializada para o valor predefinido quando o plugin é ativado

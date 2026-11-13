@@ -8,7 +8,20 @@ lang: en_US
 
 **IMPORTANT**
 
-As a reminder, if there is no information about the update, it means that the update only involves documentation, translations, or text changes.
+As a reminder, if there is no information about the update, it means that it applies only to
+documentation updates, translations, or text revisions.
+
+### 13/11/2026
++ The token management features have been reviewed and updated (no changes to
+(the user).
++ The daemon has been rewritten. It no longer uses the *signalrcore* module but *pyeasee* instead. A
+Improved stability is expected.
++ The name of the daemon's log file is no longer *EaseeCharger_daemon.out* but *EaseeCharger_daemon*
++ The logicalIDs of the commands containing data retrieved from the cloud have been changed. The logicalID is
+Now the observation ID is retrieved from the cloud via SignalR.
++ Information retrieved from the cloud, where the value is a code, is duplicated:
+  +  A command using the numeric code retrieved from the cloud
+  +  A command with plain text. This text is translated into the language of the Jeedom interface.
 
 ### 17/01/2025
 + Release of the beta version from January 12, 2025, as a stable release
@@ -39,7 +52,7 @@ As a reminder, if there is no information about the update, it means that the up
 ### 07/28/24 (Beta)
 + Redesign of the creation and updating of commands.
 We recommend updating the commands using the `Update Commands` button on the
-Commands for each charger
+Order page for each Charger
 
 ### July 26, 2024 (Beta)
 + Widget fixes
@@ -63,7 +76,8 @@ Commands for each charger
 * The daemon port is no longer reset to its default value when the plugin is activated
 * A class has been renamed in the PHP code
 * Tips for Improving Wi-Fi and Cell Phone Signal Quality
-* Creating a widget for EaseeCharger devices (without the charge pause button)
+* Creating a widget for EaseeCharger devices (without the pause button on the
+(load)
 
 ### August 24, 2022 (Beta)
 * The daemon port is no longer reset to its default value when the plugin is activated
