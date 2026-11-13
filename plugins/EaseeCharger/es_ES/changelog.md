@@ -19,6 +19,7 @@ Se espera una mejora de la estabilidad.
 + El nombre del archivo de registro del daemon ya no es *EaseeCharger_daemon.out*, sino *EaseeCharger_daemon*
 + Se han modificado los logicalId de los comandos con la información recibida de la nube. El logicalId es
 ahora el ID de la observación se transmite desde la nube a través de SignalR.
++ Se crean dinámicamente numerosos comandos nuevos al recibir información de la nube.
 + La información procedente de la nube cuyo valor es un código se duplica:
   +  Un comando con el código numérico recuperado de la nube
   +  Un comando con texto sin cifrar. Este texto se traduce al idioma de la interfaz de Jeedom.

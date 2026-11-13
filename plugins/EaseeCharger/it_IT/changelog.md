@@ -19,6 +19,7 @@ Si prevede un miglioramento della stabilità.
 + Il nome del file di log del daemon non è più *EaseeCharger_daemon.out* ma *EaseeCharger_daemon*
 + I logicalId degli ordini con le informazioni provenienti dal cloud sono stati modificati. Il logicalId è
 ora l'ID dell'osservazione recuperato dal cloud tramite SignalR.
++ Numerosi nuovi comandi creati dinamicamente al ricevimento delle informazioni dal cloud.
 + Le informazioni provenienti dal cloud il cui valore è un codice vengono duplicate:
   +  Un comando con il codice numerico recuperato dal cloud
   +  Un comando con testo in chiaro. Questo testo viene tradotto nella lingua dell'interfaccia Jeedom.

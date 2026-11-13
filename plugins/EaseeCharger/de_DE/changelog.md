@@ -19,6 +19,7 @@ Es wird eine Verbesserung der Stabilität erwartet.
 + Der Name der Protokolldatei des Daemons lautet nicht mehr *EaseeCharger_daemon.out*, sondern *EaseeCharger_daemon*
 + Die logicalId der Befehle mit den aus der Cloud übermittelten Informationen wurden geändert. Die logicalId lautet
 Jetzt die ID der Meldung, die über Signalr aus der Cloud übermittelt wurde.
++ Zahlreiche neue Befehle, die beim Empfang von Informationen aus der Cloud dynamisch erstellt werden.
 + Die aus der Cloud übermittelten Informationen, deren Wert ein Code ist, werden dupliziert:
   +  Eine Steuerung mit dem aus der Cloud abgerufenen numerischen Code
   +  Ein Befehl mit Klartext. Dieser Text wird in die Sprache der Jeedom-Benutzeroberfläche übersetzt.
