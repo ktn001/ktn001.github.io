@@ -19,6 +19,7 @@ de la mise à jour de documentation, de traduction ou de texte.
 + Le nom du fichier de log du daemon n'est plus *EaseeCharger_daemon.out* mais *EaseeCharger_daemon*
 + Les logicalId des commandes avec les infos remontées du cloud ont été changés. Le logicalId est
 maintenant l'id de l'observation remontée du cloud via signalr.
++ Nombreuses nouvelles commandes créées dynamiquement lors de la réception d'infos du cloud.
 + Les informations remontées du cloud dont la valeur est un code sont dédoublées:
   +  Une commande avec le code némérique remonté du cloud
   +  Une commande avec le texte en clair. Ce texte est traduit dans le langue de l'interface jeedom.
