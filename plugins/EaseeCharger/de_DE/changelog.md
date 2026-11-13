@@ -12,8 +12,8 @@ Zur Erinnerung: Wenn keine Informationen zum Update vorliegen, bedeutet dies, da
 Aktualisierung von Dokumentationen, Übersetzungen oder Texten.
 
 ### 13/11/2026
-+ Die Funktionen zur Token-Verwaltung wurden überarbeitet und aktualisiert (keine Änderungen bei
-(der Benutzer).
++ Die Funktionen zur Token-Verwaltung wurden überarbeitet und aktualisiert. Keine sichtbaren Änderungen für
+der Benutzer.
 + Der Daemon wurde neu geschrieben. Er verwendet nicht mehr das Modul *signalrcore*, sondern *pyeasee*. Eine
 Es wird eine Verbesserung der Stabilität erwartet.
 + Der Name der Protokolldatei des Daemons lautet nicht mehr *EaseeCharger_daemon.out*, sondern *EaseeCharger_daemon*

@@ -12,8 +12,8 @@ As a reminder, if there is no information about the update, it means that it app
 documentation updates, translations, or text revisions.
 
 ### 13/11/2026
-+ The token management features have been reviewed and updated (no changes to
-(the user).
++ The token management features have been reviewed and updated. No visible changes for
+the user.
 + The daemon has been rewritten. It no longer uses the *signalrcore* module but *pyeasee* instead. A
 Improved stability is expected.
 + The name of the daemon's log file is no longer *EaseeCharger_daemon.out* but *EaseeCharger_daemon*
