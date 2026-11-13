@@ -8,7 +8,20 @@ lang: de_DE
 
 **WICHTIG**
 
-Zur Erinnerung: Wenn keine Informationen zum Update vorhanden sind, bedeutet dies, dass es sich ausschließlich um eine Aktualisierung der Dokumentation, der Übersetzung oder des Textes handelt.
+Zur Erinnerung: Wenn keine Informationen zum Update vorliegen, bedeutet dies, dass dieses ausschließlich
+Aktualisierung von Dokumentationen, Übersetzungen oder Texten.
+
+### 13/11/2026
++ Die Funktionen zur Token-Verwaltung wurden überarbeitet und aktualisiert (keine Änderungen bei
+(der Benutzer).
++ Der Daemon wurde neu geschrieben. Er verwendet nicht mehr das Modul *signalrcore*, sondern *pyeasee*. Eine
+Es wird eine Verbesserung der Stabilität erwartet.
++ Der Name der Protokolldatei des Daemons lautet nicht mehr *EaseeCharger_daemon.out*, sondern *EaseeCharger_daemon*
++ Die logicalId der Befehle mit den aus der Cloud übermittelten Informationen wurden geändert. Die logicalId lautet
+Jetzt die ID der Meldung, die über Signalr aus der Cloud übermittelt wurde.
++ Die aus der Cloud übermittelten Informationen, deren Wert ein Code ist, werden dupliziert:
+  +  Eine Steuerung mit dem aus der Cloud abgerufenen numerischen Code
+  +  Ein Befehl mit Klartext. Dieser Text wird in die Sprache der Jeedom-Benutzeroberfläche übersetzt.
 
 ### 17/01/2025
 + Umstellung der Beta-Version vom 12.01.2025 auf die stabile Version
@@ -38,8 +51,8 @@ Zur Erinnerung: Wenn keine Informationen zum Update vorhanden sind, bedeutet die
 
 ### 28.07.24 (Beta)
 + Überarbeitung der Erstellung und Aktualisierung von Bestellungen.
-Es wird empfohlen, die Befehle über die Schaltfläche „Befehle aktualisieren“ auf der Seite der
-Bedienelemente der einzelnen Ladegeräte
+Es wird empfohlen, die Befehle über die Schaltfläche „Befehle aktualisieren“ auf der
+Bestellseite für jedes Ladegerät
 
 ### 26.07.2024 (Beta)
 + Korrektur von Widgets
@@ -63,7 +76,8 @@ Bedienelemente der einzelnen Ladegeräte
 * Der Daemon-Port wird bei der Aktivierung des Plugins nicht mehr auf den Standardwert zurückgesetzt
 * Eine Klasse wurde im PHP-Code umbenannt
 * Informationen zur Qualität von WLAN- und Mobilfunk-Signalen
-* Erstellung eines Widgets für EaseeCharger-Geräte (ohne die Schaltfläche zum Unterbrechen des Ladevorgangs)
+* Erstellung eines Widgets für EaseeCharger-Geräte (ohne die Pause-Taste der
+(Last)
 
 ### 24.08.2022 (Beta)
 * Der Daemon-Port wird bei der Aktivierung des Plugins nicht mehr auf den Standardwert zurückgesetzt

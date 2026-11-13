@@ -8,7 +8,20 @@ lang: it_IT
 
 **IMPORTANTE**
 
-Si ricorda che, se non sono disponibili informazioni sull'aggiornamento, significa che quest'ultimo riguarda esclusivamente la documentazione, la traduzione o il testo.
+Ricordiamo che, se non sono disponibili informazioni sull'aggiornamento, significa che esso riguarda esclusivamente
+aggiornamento della documentazione, traduzione o testo.
+
+### 13/11/2026
++ Le funzioni di gestione dei token sono state riviste e aggiornate (nessuna modifica per
+(l'utente).
++ Il daemon è stato riscritto. Non utilizza più il modulo *signalrcore*, ma *pyeasee*. Una
+Si prevede un miglioramento della stabilità.
++ Il nome del file di log del daemon non è più *EaseeCharger_daemon.out* ma *EaseeCharger_daemon*
++ I logicalId degli ordini con le informazioni provenienti dal cloud sono stati modificati. Il logicalId è
+ora l'ID dell'osservazione recuperato dal cloud tramite SignalR.
++ Le informazioni provenienti dal cloud il cui valore è un codice vengono duplicate:
+  +  Un comando con il codice numerico recuperato dal cloud
+  +  Un comando con testo in chiaro. Questo testo viene tradotto nella lingua dell'interfaccia Jeedom.
 
 ### 17/01/2025
 + Passaggio dalla versione beta del 12/01/2025 alla versione stabile
@@ -38,8 +51,8 @@ Si ricorda che, se non sono disponibili informazioni sull'aggiornamento, signifi
 
 ### 28/07/24 (Beta)
 + Riorganizzazione della creazione e dell'aggiornamento degli ordini.
-Si consiglia di aggiornare i comandi tramite il pulsante `Aggiorna i comandi` nella pagina dei
-comandi di ciascun caricatore
+Si consiglia di aggiornare i comandi tramite il pulsante `Aggiorna i comandi` sulla
+pagina dei comandi di ciascun caricatore
 
 ### 26/07/2024 (Beta)
 + Correzione dei widget
@@ -63,7 +76,8 @@ comandi di ciascun caricatore
 * La porta del demone non viene più reimpostata al valore predefinito all'attivazione del plugin
 * Una classe è stata rinominata nel codice PHP
 * Informazioni sulla qualità dei segnali Wi-Fi e di rete mobile
-* Creazione di un widget per i dispositivi EaseeCharger (senza il pulsante di pausa della ricarica)
+* Creazione di un widget per i dispositivi EaseeCharger (senza il pulsante di pausa della
+carico)
 
 ### 24/08/2022 (Beta)
 * La porta del demone non viene più reimpostata al valore predefinito all'attivazione del plugin
