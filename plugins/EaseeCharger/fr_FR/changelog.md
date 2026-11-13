@@ -8,7 +8,20 @@ lang: fr_FR
 
 **IMPORTANT**
 
-Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
+Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que celle-ci concerne uniquement
+de la mise à jour de documentation, de traduction ou de texte.
+
+### 13/11/2026
++ Les fonctions de gestion des token ont étés revue et mises à jour (pas changement pour
+  l'utilisateur).
++ Le deamon a été réécrit. Il n'utilise plus le module *signalrcore* mais *pyeasee*. Une
+  ammélioration de la stabilité est attendue.
++ Le nom du fichier de log du daemon n'est plus *EaseeCharger_daemon.out* mais *EaseeCharger_daemon*
++ Les logicalId des commandes avec les infos remontées du cloud ont été changés. Le logicalId est
+maintenant l'id de l'observation remontée du cloud via signalr.
++ Les informations remontées du cloud dont la valeur est un code sont dédoublées:
+  +  Une commande avec le code némérique remonté du cloud
+  +  Une commande avec le texte en clair. Ce texte est traduit dans le langue de l'interface jeedom.
 
 ### 17/01/2025
 + Passage de la beta du 12/01/2025 en stable
@@ -38,8 +51,8 @@ Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que 
 
 ### 28/07/24 (Beta)
 + Refonte de la création et de la mise à jour des commandes.   
-  Il est conseillé de mettre les commandes à jour via le bouton `Mettre à jour les commandes` sur la page des
-  commandes de chaque Chargeur 
+  Il est conseillé de mettre les commandes à jour via le bouton `Mettre à jour les commandes` sur la
+  page des commandes de chaque Chargeur 
 
 ### 26/07/2024 (Beta)
 + Correction de widgets
@@ -63,7 +76,8 @@ Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que 
 * Le port de démon n'est plus réinitialisé à la valeur par defaut lors de l'activation de plugin
 * Une class a été renommée dans le code php
 * Infos pour la qualité des signeaux wifi et cellulaire
-* Création d'un widget pour les équipements EaseeCharger (sans le bouton de mise en pause de la charge)
+* Création d'un widget pour les équipements EaseeCharger (sans le bouton de mise en pause de la
+  charge)
 
 ### 24/08/2022 (Beta)
 * La port de démon n'est plus réinitialisé à la valeur par defaut lors de l'activation de plugin
