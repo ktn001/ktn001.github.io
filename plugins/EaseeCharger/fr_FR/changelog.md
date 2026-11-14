@@ -11,7 +11,10 @@ lang: fr_FR
 Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que celle-ci concerne uniquement
 de la mise à jour de documentation, de traduction ou de texte.
 
-### 13/11/2026
+### 14/11/2026 (Beta)
++ Ajout d'un champ "Commentaire" dans la page de configuration de l'équipement.
+
+### 13/11/2026 (Beta)
 + Les fonctions de gestion des token ont étés revue et mises à jour. Pas de changement visible pour
   l'utilisateur.
 + Le deamon a été réécrit. Il n'utilise plus le module *signalrcore* mais *pyeasee*. Une
