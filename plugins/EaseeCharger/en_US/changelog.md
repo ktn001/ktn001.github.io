@@ -11,7 +11,10 @@ lang: en_US
 As a reminder, if there is no information about the update, it means that it applies only to
 documentation updates, translations, or text revisions.
 
-### 13/11/2026
+### November 14, 2026 (Beta)
++ Added a "Comment" field to the device configuration page.
+
+### November 13, 2026 (Beta)
 + The token management features have been reviewed and updated. No visible changes for
 the user.
 + The daemon has been rewritten. It no longer uses the *signalrcore* module but *pyeasee* instead. A

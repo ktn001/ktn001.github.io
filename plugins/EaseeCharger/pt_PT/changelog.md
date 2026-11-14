@@ -11,7 +11,10 @@ lang: pt_PT
 Lembre-se de que, se não houver informações sobre a atualização, isso significa que esta diz respeito apenas a
 atualização de documentação, tradução ou texto.
 
-### 13/11/2026
+### 14/11/2026 (Beta)
++ Adicionar um campo «Comentário» na página de configuração do equipamento.
+
+### 13/11/2026 (Beta)
 + As funções de gestão de tokens foram revistas e atualizadas. Não há alterações visíveis para
 o utilizador.
 + O daemon foi reescrito. Já não utiliza o módulo *signalrcore*, mas sim o *pyeasee*. Um
