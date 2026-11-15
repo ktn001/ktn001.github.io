@@ -11,6 +11,9 @@ lang: pt_PT
 Lembre-se de que, se não houver informações sobre a atualização, isso significa que esta diz respeito apenas a
 atualização de documentação, tradução ou texto.
 
+### 15/11/2026
++ Passagem da versão beta de 14/11/2026 para a versão estável
+
 ### 14/11/2026 (Beta)
 + Adicionar um campo «Comentário» na página de configuração do equipamento.
 

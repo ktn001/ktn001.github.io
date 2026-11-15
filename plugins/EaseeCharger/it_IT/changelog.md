@@ -11,6 +11,9 @@ lang: it_IT
 Ricordiamo che, se non sono disponibili informazioni sull'aggiornamento, significa che esso riguarda esclusivamente
 aggiornamento della documentazione, traduzione o testo.
 
+### 15/11/2026
++ Passaggio dalla versione beta del 14/11/2026 alla versione stabile
+
 ### 14/11/2026 (Beta)
 + Aggiunta di un campo "Commento" nella pagina di configurazione dell'apparecchio.
 

@@ -11,6 +11,9 @@ lang: de_DE
 Zur Erinnerung: Wenn keine Informationen zum Update vorliegen, bedeutet dies, dass dieses ausschließlich
 Aktualisierung von Dokumentationen, Übersetzungen oder Texten.
 
+### 15/11/2026
++ Übergang von der Beta-Version vom 14.11.2026 zur stabilen Version
+
 ### 14.11.2026 (Beta)
 + Hinzufügen eines Feldes „Kommentar“ auf der Konfigurationsseite des Geräts.
 
