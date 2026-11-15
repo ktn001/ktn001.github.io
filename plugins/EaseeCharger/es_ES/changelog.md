@@ -11,6 +11,9 @@ lang: es_ES
 Recuerda que, si no hay información sobre la actualización, es porque esta solo afecta a
 actualización de documentación, traducción o texto.
 
+### 15/11/2026
++ Paso de la versión beta del 14/11/2026 a la versión estable
+
 ### 14/11/2026 (Beta)
 + Se ha añadido un campo «Comentario» en la página de configuración del equipo.
 
