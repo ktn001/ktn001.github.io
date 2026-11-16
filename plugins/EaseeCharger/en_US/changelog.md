@@ -11,7 +11,10 @@ lang: en_US
 As a reminder, if there is no information about the update, it means that it applies only to
 documentation updates, translations, or text revisions.
 
-### 15/11/2026
+### **16/11/2026**
++ Fixed a minor bug related to plugin activation
+
+### **15/11/2026**
 + Release from beta on November 14, 2026, to stable
 
 ### November 14, 2026 (Beta)
@@ -30,7 +33,7 @@ Now the observation ID is retrieved from the cloud via SignalR.
   +  A command using the numeric code retrieved from the cloud
   +  A command with plain text. This text is translated into the language of the Jeedom interface.
 
-### 17/01/2025
+### **17/01/2025**
 + Release of the beta version from January 12, 2025, as a stable release
 
 ### January 12, 2025 (Beta)
@@ -46,13 +49,13 @@ Now the observation ID is retrieved from the cloud via SignalR.
 + Compatible with Debian 12
 + No longer uses the jQuery function
 
-### 11/11/2024
+### **11/11/2024**
 + Bug fix in dependency installation
 
-### 09/11/2024
+### **09/11/2024**
 + The daemon runs in a Python venv
 
-### 28/07/2024
+### **28/07/2024**
 + Previous beta versions have been released as stable versions
 + Updating commands when updating the plugin
 
@@ -65,16 +68,16 @@ Order page for each Charger
 + Widget fixes
 + Redesign of the command page
 
-### 24/07/2024
+### **24/07/2024**
 + Configuring a heartbeat when the plugin is activated
 
-### 1/7/2023
+### **1/7/2023**
 + URL change for Easee APIs
 
-### 17/10/2022
+### **17/10/2022**
 + Information indicating whether communication with the cloud is via Wi-Fi or cellular
 
-### 14/10/2022
+### **14/10/2022**
 * Switching to stable
 * Transparency of the widget tiles to show the background graph
 * Buttons on the devices widget for pausing and resuming

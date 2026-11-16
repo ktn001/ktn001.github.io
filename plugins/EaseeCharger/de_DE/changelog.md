@@ -11,7 +11,10 @@ lang: de_DE
 Zur Erinnerung: Wenn keine Informationen zum Update vorliegen, bedeutet dies, dass dieses ausschließlich
 Aktualisierung von Dokumentationen, Übersetzungen oder Texten.
 
-### 15/11/2026
+### **16/11/2026**
++ Behebung eines kleinen Fehlers bei der Aktivierung des Plugins
+
+### **15/11/2026**
 + Übergang von der Beta-Version vom 14.11.2026 zur stabilen Version
 
 ### 14.11.2026 (Beta)
@@ -30,7 +33,7 @@ Jetzt die ID der Meldung, die über Signalr aus der Cloud übermittelt wurde.
   +  Eine Steuerung mit dem aus der Cloud abgerufenen numerischen Code
   +  Ein Befehl mit Klartext. Dieser Text wird in die Sprache der Jeedom-Benutzeroberfläche übersetzt.
 
-### 17/01/2025
+### **17/01/2025**
 + Umstellung der Beta-Version vom 12.01.2025 auf die stabile Version
 
 ### 12.01.2025 (Beta)
@@ -46,13 +49,13 @@ Jetzt die ID der Meldung, die über Signalr aus der Cloud übermittelt wurde.
 + Kompatibel mit Debian 12
 + Verwendet die jQuery-Funktion nicht mehr
 
-### 11/11/2024
+### **11/11/2024**
 + Behebung eines Fehlers bei der Installation der Abhängigkeiten
 
-### 09/11/2024
+### **09/11/2024**
 + Der Daemon läuft in einer Python-venv
 
-### 28/07/2024
+### **28/07/2024**
 + Umstellung von früheren Beta-Versionen auf die stabile Version
 + Aktualisierung der Befehle bei der Aktualisierung des Plugins
 
@@ -65,16 +68,16 @@ Bestellseite für jedes Ladegerät
 + Korrektur von Widgets
 + Neugestaltung der Bestellseite
 
-### 24/07/2024
+### **24/07/2024**
 + Einrichtung eines Heartbeats bei der Aktivierung des Plugins
 
-### 1/7/2023
+### **1/7/2023**
 + Änderung der URLs für die Easee-APIs
 
-### 17/10/2022
+### **17/10/2022**
 + Angabe, ob die Verbindung zur Cloud über WLAN oder Mobilfunk hergestellt wird
 
-### 14/10/2022
+### **14/10/2022**
 * Umstellung auf Stallhaltung
 * Transparenz der Widget-Kacheln für die Sichtbarkeit des Hintergrunddiagramms
 * Schaltflächen im Geräte-Widget zum Starten und Stoppen

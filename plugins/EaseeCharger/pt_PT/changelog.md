@@ -11,7 +11,10 @@ lang: pt_PT
 Lembre-se de que, se não houver informações sobre a atualização, isso significa que esta diz respeito apenas a
 atualização de documentação, tradução ou texto.
 
-### 15/11/2026
+### **16/11/2026**
++ Correção de um pequeno erro na ativação do plugin
+
+### **15/11/2026**
 + Passagem da versão beta de 14/11/2026 para a versão estável
 
 ### 14/11/2026 (Beta)
@@ -30,7 +33,7 @@ agora o ID da observação enviada da nuvem através do SignalR.
   +  Um comando com o código numérico recuperado da nuvem
   +  Um comando com texto em claro. Este texto é traduzido para o idioma da interface do Jeedom.
 
-### 17/01/2025
+### **17/01/2025**
 + Passagem da versão beta de 12/01/2025 para a versão estável
 
 ### 12/01/2025 (Beta)
@@ -46,13 +49,13 @@ agora o ID da observação enviada da nuvem através do SignalR.
 + Compatível com o Debian 12
 + Já não utiliza a função jQuery
 
-### 11/11/2024
+### **11/11/2024**
 + Correção de um erro na instalação das dependências
 
-### 09/11/2024
+### **09/11/2024**
 + O daemon está a ser executado num ambiente virtual de Python (venv)
 
-### 28/07/2024
+### **28/07/2024**
 + Transição das versões beta anteriores para a versão estável
 + Atualização dos comandos durante a atualização do plugin
 
@@ -65,16 +68,16 @@ página de comandos de cada carregador
 + Correção de widgets
 + Reestruturação da página de encomendas
 
-### 24/07/2024
+### **24/07/2024**
 + Configuração de um heartbeat aquando da ativação do plugin
 
-### 1/7/2023
+### **1/7/2023**
 + Alteração do URL das APIs Easee
 
-### 17/10/2022
+### **17/10/2022**
 + Informação que indica se a comunicação com a nuvem é feita por Wi-Fi ou rede móvel
 
-### 14/10/2022
+### **14/10/2022**
 * Transição para o modo estável
 * Transparência dos mosaicos do widget para permitir a visibilidade do gráfico de fundo
 * Botões no widget dos equipamentos para ativar/desativar a pausa

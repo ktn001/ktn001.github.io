@@ -11,7 +11,10 @@ lang: it_IT
 Ricordiamo che, se non sono disponibili informazioni sull'aggiornamento, significa che esso riguarda esclusivamente
 aggiornamento della documentazione, traduzione o testo.
 
-### 15/11/2026
+### **16/11/2026**
++ Correzione di un bug minore relativo all'attivazione del plugin
+
+### **15/11/2026**
 + Passaggio dalla versione beta del 14/11/2026 alla versione stabile
 
 ### 14/11/2026 (Beta)
@@ -30,7 +33,7 @@ ora l'ID dell'osservazione recuperato dal cloud tramite SignalR.
   +  Un comando con il codice numerico recuperato dal cloud
   +  Un comando con testo in chiaro. Questo testo viene tradotto nella lingua dell'interfaccia Jeedom.
 
-### 17/01/2025
+### **17/01/2025**
 + Passaggio dalla versione beta del 12/01/2025 alla versione stabile
 
 ### 12/01/2025 (Beta)
@@ -46,13 +49,13 @@ ora l'ID dell'osservazione recuperato dal cloud tramite SignalR.
 + Compatibile con Debian 12
 + Non utilizza più la funzione jQuery
 
-### 11/11/2024
+### **11/11/2024**
 + Correzione di un bug nell'installazione delle dipendenze
 
-### 09/11/2024
+### **09/11/2024**
 + Il daemon viene eseguito in un ambiente Python (venv)
 
-### 28/07/2024
+### **28/07/2024**
 + Passaggio alla versione stabile dalle precedenti versioni beta
 + Aggiornamento dei comandi durante l'aggiornamento del plugin
 
@@ -65,16 +68,16 @@ pagina dei comandi di ciascun caricatore
 + Correzione dei widget
 + Riorganizzazione della pagina degli ordini
 
-### 24/07/2024
+### **24/07/2024**
 + Configurazione di un heartbeat all'attivazione del plugin
 
-### 1/7/2023
+### **1/7/2023**
 + Modifica dell'URL per le API Easee
 
-### 17/10/2022
+### **17/10/2022**
 + Informazioni che indicano se la comunicazione con il cloud avviene tramite Wi-Fi o rete cellulare
 
-### 14/10/2022
+### **14/10/2022**
 * Passaggio alla versione stabile
 * Trasparenza delle tessere del widget per rendere visibile il grafico di sfondo
 * Pulsanti sul widget delle apparecchiature per mettere in pausa/riprendere la riproduzione

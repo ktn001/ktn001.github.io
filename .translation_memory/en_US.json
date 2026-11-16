@@ -422,6 +422,7 @@
     "Correction d'un bug dans le tri des commandes": "Fixed a bug in command sorting",
     "Correction d'un bug du widget dashboard/action/j_h_m": "Fixed a bug in the dashboard/action/j_h_m widget",
     "Correction d'un bug mineur lorsqu'un kick est exécuté pendant le réécriture de script dans le Shelly": "Fixed a minor bug that occurred when a \"kick\" was executed while rewriting a script in Shelly",
+    "Correction d'un bug mineur à l'activation du plugin": "Fixed a minor bug related to plugin activation",
     "Correction d'un bug pour un message d'erreur dans les logs": "Fixed a bug causing an error message in the logs",
     "Correction d'un bug qui bloquait l'enregistrement du token du premier account": "Fixed a bug that prevented the token for the first account from being saved",
     "Correction d'un bug qui bloquait la création d'un équipement": "Fixed a bug that prevented the creation of a device",
