@@ -11,7 +11,10 @@ lang: es_ES
 Recuerda que, si no hay información sobre la actualización, es porque esta solo afecta a
 actualización de documentación, traducción o texto.
 
-### 15/11/2026
+### **16/11/2026**
++ Se ha corregido un error menor al activar el complemento
+
+### **15/11/2026**
 + Paso de la versión beta del 14/11/2026 a la versión estable
 
 ### 14/11/2026 (Beta)
@@ -30,7 +33,7 @@ ahora el ID de la observación se transmite desde la nube a través de SignalR.
   +  Un comando con el código numérico recuperado de la nube
   +  Un comando con texto sin cifrar. Este texto se traduce al idioma de la interfaz de Jeedom.
 
-### 17/01/2025
+### **17/01/2025**
 + Pasar de la versión beta del 12/01/2025 a la versión estable
 
 ### 12/01/2025 (Beta)
@@ -46,13 +49,13 @@ ahora el ID de la observación se transmite desde la nube a través de SignalR.
 + Compatible con Debian 12
 + Ya no utiliza la función jQuery
 
-### 11/11/2024
+### **11/11/2024**
 + Corrección de un error en la instalación de las dependencias
 
-### 09/11/2024
+### **09/11/2024**
 + El daemon se ejecuta en un entorno virtual de Python
 
-### 28/07/2024
+### **28/07/2024**
 + Transición de las versiones beta anteriores a la versión estable
 + Actualización de los comandos al actualizar el complemento
 
@@ -65,16 +68,16 @@ página de controles de cada cargador
 + Corrección de widgets
 + Rediseño de la página de pedidos
 
-### 24/07/2024
+### **24/07/2024**
 + Configuración de un «heartbeat» al activar el complemento
 
-### 1/7/2023
+### **1/7/2023**
 + Cambio de URL para las API de Easee
 
-### 17/10/2022
+### **17/10/2022**
 + Información que indica si la conexión con la nube es por wifi o por red móvil
 
-### 14/10/2022
+### **14/10/2022**
 * Cambio a modo estable
 * Transparencia de los mosaicos del widget para que se vea el gráfico de fondo
 * Botones en el widget de equipos para poner en pausa y reanudar
