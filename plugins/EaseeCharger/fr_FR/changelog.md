@@ -11,7 +11,10 @@ lang: fr_FR
 Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que celle-ci concerne uniquement
 de la mise à jour de documentation, de traduction ou de texte.
 
-### 15/11/2026
+### **16/11/2026**
++ Correction d'un bug mineur à l'activation du plugin
+
+### **15/11/2026**
 + Passage de la beta du 14/11/2026 en stable
 
 ### 14/11/2026 (Beta)
@@ -30,7 +33,7 @@ maintenant l'id de l'observation remontée du cloud via signalr.
   +  Une commande avec le code némérique remonté du cloud
   +  Une commande avec le texte en clair. Ce texte est traduit dans le langue de l'interface jeedom.
 
-### 17/01/2025
+### **17/01/2025**
 + Passage de la beta du 12/01/2025 en stable
 
 ### 12/01/2025 (Beta)
@@ -46,13 +49,13 @@ maintenant l'id de l'observation remontée du cloud via signalr.
 + Compatible Debian 12
 + N'utilise plus function Jquery
 
-### 11/11/2024
+### **11/11/2024**
 + Correction de bug dans l'installation des dépendances
 
-### 09/11/2024
+### **09/11/2024**
 + Le daemon tourne dans un venv python
 
-### 28/07/2024
+### **28/07/2024**
 + Passage en stable des betas précédentes
 + Mise à jour des commandes lors de la mise à jour du plugin
 
@@ -65,16 +68,16 @@ maintenant l'id de l'observation remontée du cloud via signalr.
 + Correction de widgets
 + Refonte de la page des commandes
 
-### 24/07/2024
+### **24/07/2024**
 + Configuration d'un heartbeat lors de l'activation du plugin
 
-### 1/7/2023
+### **1/7/2023**
 + Changement d'url pour les APIs Easee
 
-### 17/10/2022
+### **17/10/2022**
 + Info indiquant si la communication avec le cloud est en wifi ou cellulaire
 
-### 14/10/2022
+### **14/10/2022**
 * Passage en stable
 * Transparence des tuiles du widget pour visibilité du graphique de fond
 * Boutons sur le widget des équipements pour la mise en/hors pause
