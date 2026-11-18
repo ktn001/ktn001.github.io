@@ -11,6 +11,10 @@ lang: pt_PT
 Lembre-se de que, se não houver informações sobre a atualização, isso significa que esta diz respeito apenas a
 atualização de documentação, tradução ou texto.
 
+### **19/11/2026**
++ Atualização dos links para a documentação
++ Possibilidade de ter vários equipamentos ligados a um único carregador físico
+
 ### **16/11/2026**
 + Correção de um pequeno erro na ativação do plugin
 

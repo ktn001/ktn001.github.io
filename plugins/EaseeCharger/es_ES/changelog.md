@@ -11,6 +11,10 @@ lang: es_ES
 Recuerda que, si no hay información sobre la actualización, es porque esta solo afecta a
 actualización de documentación, traducción o texto.
 
+### **19/11/2026**
++ Actualización de los enlaces a la documentación
++ Posibilidad de tener varios dispositivos conectados a un mismo cargador físico
+
 ### **16/11/2026**
 + Se ha corregido un error menor al activar el complemento
 
