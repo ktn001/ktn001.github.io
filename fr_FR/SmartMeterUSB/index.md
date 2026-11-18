@@ -2,6 +2,7 @@
 layout : default
 title : SmartMeterUSB
 plugin : SmartMeterUSB
+pluginId : SmartMeterUSB
 lang : fr_FR
 ---
 {% capture imagesPath %}/images/{{ page.lang }}/{{ page.plugin }}{% endcapture %}

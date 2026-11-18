@@ -2,6 +2,7 @@
 layout : default
 title : swassist
 plugin : swassist
+pluginId : swassist
 lang: fr_FR
 ---
 

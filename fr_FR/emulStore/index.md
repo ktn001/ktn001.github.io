@@ -2,6 +2,7 @@
 layout : default
 title : emulStore
 plugin : emulStore
+pluginId : emulStore
 lang: fr_FR
 ---
 

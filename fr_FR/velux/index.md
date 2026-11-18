@@ -2,6 +2,7 @@
 layout : default
 title : velux
 plugin : velux
+pluginId : velux
 lang: fr_FR
 ---
 

@@ -20,11 +20,10 @@
 					<a class="top_nav sidenav-trigger waves-effect waves-light circle hide-on-large-only" href="#" data-target="slide-out">
 						<i class="material-icons">menu</i>
 					</a>
-					<a id="navTopLeft" class="left hide-on-med-and-down" href="/fr_FR/index.html">Plugins Jeedom de KTN</a>
-					{% if site.docs.Plugins[page.title].icon %}
-						{% capture iconPath %}/images/{{page.title}}/{{site.docs.Plugins[page.title].icon}}{% endcapture %}
-						<img id="logo_container" class="brand-logo center" src="{{iconPath}}"></img>
-					{% endif %}
+					<a id="navTopLeft" class="left hide-on-med-and-down" href="/index.html">Plugins Jeedom de KTN</a>
+					<span id="logo_container" class="brand-logo center">
+					{%- include icone.html pluginId=page.pluginId -%}
+					</span>
 					<ul class="right hide-on-med-and-down">
 						<li>Liens Jeedom:</li>
 						<li><a href="https://www.jeedom.com" target="_blank">Site</a></li>

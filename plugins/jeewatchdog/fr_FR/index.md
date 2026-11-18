@@ -30,8 +30,6 @@ other: other
 ---
 # Plugin {{page.plugin}} ({{page.pluginId}}) pour Jeedom
 
-> :warning: Le plugin est en cours de préparation et donc pas encore disponible sur le market
-
 Le plugin {{page.plugin}} gère un équipement externe qui doit recevoir régulièrement un signe de vie
 de Jeedom. Si aucun signe de vie n'est reçue durant un certain temps, l'équipement externe coupe
 l'alimentation de Jeedom durant quelques secondes pour forcer un redémarrage.
@@ -53,7 +51,7 @@ maintenance)
 + [Shelly Power Strip 4 Gen4](https://www.shelly.com/fr/products/shelly-power-strip-4-gen4)
 (sans bouton physique de maintenance)
 
-> :bulb: Le plugin a été testé avec un **Shelly plus 1** et un **Shelly Gen4**. Tout retour
+> :bulb: Le plugin a été testé avec un **Shelly plus 1** et un **Shelly 1 Gen4**. Tout retour
 d'expérience avec les autres appareils est le bienvenu.
 
 ## Schéma de câblage de l'équipement
@@ -265,7 +263,7 @@ démarrage de Jeedom.
 Lorsqu'il est en mode maintenance, le Shelly ne coupe pas l'alimentation du serveur Jeedom s'il ne
 donne pas de signe de vie.
 
-iSelon le modèle,  le shelly est configuré avec un bouton de maintenant physique et/ou un bouton de
+Selon le modèle,  le shelly est configuré avec un bouton de maintenant physique et/ou un bouton de
 maintenance virtuel.
 
 ## Le bouton de maintenance physique
@@ -273,7 +271,7 @@ maintenance virtuel.
 L'interrupteur de maintenance doit être connecté à la borne `SW` du Shelly.
 
 L'état de l'interrupteur est directement pris en compte par le script chargé dans le Shelly. Les
-changement d'état de l'interrupteur est donc pris en compte même si Jeedom est arrêté.
+changements d'état de l'interrupteur sont donc pris en compte même si Jeedom est arrêté.
 
 La commande *maintenance* permet de connaître la position de l'interrupteur.
 
