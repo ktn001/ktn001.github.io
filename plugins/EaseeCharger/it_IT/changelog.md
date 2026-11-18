@@ -11,6 +11,10 @@ lang: it_IT
 Ricordiamo che, se non sono disponibili informazioni sull'aggiornamento, significa che esso riguarda esclusivamente
 aggiornamento della documentazione, traduzione o testo.
 
+### **19/11/2026**
++ Aggiornamento dei link alla documentazione
++ Possibilità di collegare più dispositivi a un unico caricatore fisico
+
 ### **16/11/2026**
 + Correzione di un bug minore relativo all'attivazione del plugin
 

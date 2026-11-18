@@ -11,6 +11,10 @@ lang: en_US
 As a reminder, if there is no information about the update, it means that it applies only to
 documentation updates, translations, or text revisions.
 
+### **19/11/2026**
++ Updated links to the documentation
++ Ability to connect multiple devices to a single physical charger
+
 ### **16/11/2026**
 + Fixed a minor bug related to plugin activation
 
