@@ -1507,7 +1507,6 @@
     "{% include image.html img=img16 %}": "{% include image.html img=img16 %}",
     "{% include image.html img=img17 %}": "{% include image.html img=img17 %}",
     "{% include image.html img=img18 %}": "{% include image.html img=img18 %}",
-    "{% include image.html img=page.img00 %}": "{% include image.html img=page.img00 %}",
     "{% include image.html img=page.img01 %}": "{% include image.html img=page.img01 %}",
     "{% include image.html img=page.img01 -%}": "{% include image.html img=page.img01 -%}",
     "{% include image.html img=page.img02 %}": "{% include image.html img=page.img02 %}",

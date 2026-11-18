@@ -201,7 +201,7 @@ O widget predefinido para o estado do carregador apresenta as seguintes seis sit
 
 {% include image.html img=page.img08 %}
 {% include image.html img=page.img09 %}
-{% include image.html img=page.img00 %}
+{% include image.html img=page.img10 %}
 {% include image.html img=page.img11 %}
 {% include image.html img=page.img12 %}
 {% include image.html img=page.img13 %}
