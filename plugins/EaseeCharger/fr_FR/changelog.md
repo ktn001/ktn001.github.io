@@ -11,6 +11,10 @@ lang: fr_FR
 Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que celle-ci concerne uniquement
 de la mise à jour de documentation, de traduction ou de texte.
 
+### **19/11/2026**
++ Mise à jor des lien vers la documentation
++ Possibilité d'avoir plusieurs équipements pour un même chargeur physique
+
 ### **16/11/2026**
 + Correction d'un bug mineur à l'activation du plugin
 
