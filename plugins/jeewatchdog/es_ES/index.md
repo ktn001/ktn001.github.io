@@ -30,8 +30,6 @@ other: other
 ---
 # Complemento {{page.plugin}} ({{page.pluginId}}) para Jeedom
 
-> :warning: El complemento está en fase de desarrollo y, por lo tanto, aún no está disponible en el Market
-
 El complemento {{page.plugin}} gestiona un dispositivo externo que debe recibir periódicamente una señal de funcionamiento
 de Jeedom. Si no se recibe ninguna señal de actividad durante un tiempo determinado, el equipo externo se apaga
 desconectar la alimentación de Jeedom durante unos segundos para forzar un reinicio.
@@ -53,7 +51,7 @@ El complemento está diseñado para funcionar con los siguientes dispositivos:
 + [Regleta Shelly Power Strip 4 Gen4](https://www.shelly.com/fr/products/shelly-power-strip-4-gen4)
 (sin botón físico de mantenimiento)
 
-> :bulb: El complemento se ha probado con un **Shelly Plus 1** y un **Shelly Gen4**. Cualquier comentario
+> :bulb: El complemento se ha probado con un **Shelly Plus 1** y un **Shelly 1 Gen4**. Cualquier comentario
 Se agradece cualquier experiencia con otros dispositivos.
 
 ## Esquema de cableado del equipo
@@ -273,7 +271,7 @@ mantenimiento virtual.
 El interruptor de mantenimiento debe conectarse al borne «SW» del Shelly.
 
 El script cargado en el Shelly tiene en cuenta directamente el estado del interruptor. Los
-Por lo tanto, se tiene en cuenta el cambio de estado del interruptor aunque Jeedom esté apagado.
+Por lo tanto, los cambios de estado del interruptor se tienen en cuenta incluso si Jeedom está apagado.
 
 El comando *mantenimiento* permite conocer la posición del interruptor.
 

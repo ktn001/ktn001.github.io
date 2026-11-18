@@ -30,8 +30,6 @@ other: other
 ---
 # Plugin {{page.plugin}} ({{page.pluginId}}) for Jeedom
 
-> :warning: The plugin is currently in development and is therefore not yet available on the market
-
 The {{page.plugin}} plugin manages an external device that must receive a status check periodically
 from Jeedom. If no signal is received for a certain period of time, the external device shuts down
 Cut the power to Jeedom for a few seconds to force a restart.
@@ -53,7 +51,7 @@ The plugin is designed to work with the following devices:
 + [Shelly Power Strip 4 Gen4](https://www.shelly.com/fr/products/shelly-power-strip-4-gen4)
 (without a physical maintenance button)
 
-> :bulb: The plugin has been tested with a **Shelly Plus 1** and a **Shelly Gen4**. Any feedback
+> :bulb: The plugin has been tested with a **Shelly Plus 1** and a **Shelly 1 Gen4**. Any feedback
 Experience with other devices is welcome.
 
 ## Equipment Wiring Diagram
@@ -273,7 +271,7 @@ Virtual maintenance.
 The maintenance switch must be connected to the `SW` terminal on the Shelly.
 
 The switch's state is directly taken into account by the script loaded into Shelly. The
-A change in the switch's state is therefore taken into account even if Jeedom is shut down.
+Changes in the switch's state are therefore taken into account even if Jeedom is shut down.
 
 The *maintenance* command allows you to check the switch's position.
 

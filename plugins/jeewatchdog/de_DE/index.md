@@ -30,8 +30,6 @@ other: other
 ---
 # Plugin {{page.plugin}} ({{page.pluginId}}) für Jeedom
 
-> :warning: Das Plugin befindet sich derzeit in der Entwicklung und ist daher noch nicht im Market verfügbar
-
 Das Plugin {{page.plugin}} verwaltet ein externes Gerät, das regelmäßig ein Lebenszeichen empfangen muss
 von Jeedom. Wenn über einen bestimmten Zeitraum kein Lebenszeichen empfangen wird, schaltet sich das externe Gerät ab
 die Stromversorgung von Jeedom für einige Sekunden unterbrechen, um einen Neustart zu erzwingen.
@@ -53,7 +51,7 @@ Wartung)
 + [Shelly Power Strip 4 Gen4](https://www.shelly.com/fr/products/shelly-power-strip-4-gen4)
 (ohne physische Wartungstaste)
 
-> :bulb: Das Plugin wurde mit einem **Shelly Plus 1** und einem **Shelly Gen4** getestet. Jegliches Feedback
+> :bulb: Das Plugin wurde mit einem **Shelly Plus 1** und einem **Shelly 1 Gen4** getestet. Jegliches Feedback
 Erfahrungen mit anderen Geräten sind willkommen.
 
 ## Schaltplan der Anlage
@@ -273,7 +271,7 @@ virtuelle Wartung.
 Der Wartungsschalter muss an die Klemme `SW` des Shelly angeschlossen werden.
 
 Der Status des Schalters wird direkt von dem im Shelly geladenen Skript berücksichtigt. Die
-Die Statusänderung des Schalters wird somit auch dann berücksichtigt, wenn Jeedom nicht läuft.
+Änderungen des Schalterzustands werden daher auch dann berücksichtigt, wenn Jeedom nicht läuft.
 
 Mit dem Befehl *maintenance* lässt sich die Position des Schalters abfragen.
 
