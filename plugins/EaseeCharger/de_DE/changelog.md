@@ -11,6 +11,9 @@ lang: de_DE
 Zur Erinnerung: Wenn keine Informationen zum Update vorliegen, bedeutet dies, dass dieses ausschließlich
 Aktualisierung von Dokumentationen, Übersetzungen oder Texten.
 
+### **21/11/2026**
++ Behebung eines kleinen Fehlers bei der Token-Verwaltung
+
 ### **19/11/2026**
 + Aktualisierung der Links zur Dokumentation
 + Möglichkeit, mehrere Geräte an ein und dasselbe physische Ladegerät anzuschließen

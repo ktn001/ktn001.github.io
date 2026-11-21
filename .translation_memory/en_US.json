@@ -414,6 +414,7 @@
     "Connected-vehicle": "Connected vehicle",
     "Consomation moyenne calculé par le véhicule": "Average fuel consumption calculated by the vehicle",
     "Core version 4.4.9 ou supérieure requise": "Core version 4.4.9 or later required",
+    "Coreection d'un bug mineur dans la gestion des tokens": "Fixed a minor bug in token management",
     "Correction d'un bug (Magic 2 LAN DINrail)": "Bug fix (Magic 2 LAN DINrail)",
     "Correction d'un bug JS dans le modal macInfos": "Fixed a JavaScript bug in the macInfos modal",
     "Correction d'un bug dans la sélection du pays.": "Fixed a bug in the country selection.",
