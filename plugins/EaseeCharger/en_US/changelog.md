@@ -11,6 +11,9 @@ lang: en_US
 As a reminder, if there is no information about the update, it means that it applies only to
 documentation updates, translations, or text revisions.
 
+### **21/11/2026**
++ Fixed a minor bug in token management
+
 ### **19/11/2026**
 + Updated links to the documentation
 + Ability to connect multiple devices to a single physical charger
