@@ -11,6 +11,9 @@ lang: fr_FR
 Pour rappel s’il n’y a pas d’information sur la mise à jour, c’est que celle-ci concerne uniquement
 de la mise à jour de documentation, de traduction ou de texte.
 
+### **21/11/2026**
++ Coreection d'un bug mineur dans la gestion des tokens
+
 ### **19/11/2026**
 + Mise à jor des lien vers la documentation
 + Possibilité d'avoir plusieurs équipements pour un même chargeur physique
